@@ -1230,6 +1230,22 @@ void CvUnitCombat::GenerateAirCombatInfo(CvUnit& kAttacker, CvUnit* pkDefender, 
 
 		iAttackerTotalDamageInflicted = std::max(pkDefender->getDamage(), pkDefender->getDamage() + iAttackerDamageInflicted);
 
+		
+#if defined(MOD_COMBAT_HANDICAP)
+		//handicap for combat
+		CvPlayerAI& kDefenderPlayer = GET_PLAYER(pkDefender->getOwner());
+		CvPlayerAI& kAttackerPlayer = GET_PLAYER(kAttacker.getOwner());
+		//if human attack ai (but not barb)
+		if(!kDefenderPlayer.isBarbarian() 
+			&& CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_COMPUTER
+			&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			iAttackerDamageInflicted *= kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstAI();
+			iAttackerDamageInflicted /= 100;
+		}
+#endif
+
 		// Calculate defense damage
 		iDefenderDamageInflicted = pkDefender->GetAirStrikeDefenseDamage(&kAttacker);
 
@@ -1263,7 +1279,21 @@ void CvUnitCombat::GenerateAirCombatInfo(CvUnit& kAttacker, CvUnit* pkDefender, 
 		iMaxXP = 1000;
 
 		iAttackerDamageInflicted = kAttacker.GetAirCombatDamage(/*pUnit*/ NULL, pCity, /*bIncludeRand*/ true, iInterceptionDamage);
-
+		
+#if defined(MOD_COMBAT_HANDICAP)
+		//handicap for combat
+		CvPlayerAI& kDefenderPlayer = GET_PLAYER(pkDefender->getOwner());
+		CvPlayerAI& kAttackerPlayer = GET_PLAYER(kAttacker.getOwner());
+		//if human attack ai (but not barb)
+		if(!kDefenderPlayer.isBarbarian() 
+			&& CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_COMPUTER
+			&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			iAttackerDamageInflicted *= kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstAICity();
+			iAttackerDamageInflicted /= 100;
+		}
+#endif
 		// Cities can't be knocked to less than 1 HP
 		if(iAttackerDamageInflicted + pCity->getDamage() >= pCity->GetMaxHitPoints())
 		{

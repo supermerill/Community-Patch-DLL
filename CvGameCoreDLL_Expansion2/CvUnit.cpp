@@ -12567,6 +12567,51 @@ int CvUnit::GetMaxRangedCombatStrength(const CvUnit* pOtherUnit, const CvCity* p
 	// Kamikaze attack
 	if(getKamikazePercent() != 0)
 		iModifier += getKamikazePercent();
+	
+#if defined(MOD_COMBAT_HANDICAP)
+		//handicap for combat
+		CvPlayerAI *kDefenderPlayer = NULL;
+		if(pOtherUnit != NULL){
+			kDefenderPlayer = &GET_PLAYER(pOtherUnit->getOwner());
+		}else if(pCity != NULL){
+			kDefenderPlayer = &GET_PLAYER(pCity->getOwner());
+		}
+		if(kDefenderPlayer != NULL){
+			//if human attack/defend ai (but not barb)
+			if( !kDefenderPlayer->isBarbarian() 
+				&& CvPreGame::slotStatus(kDefenderPlayer->GetID()) == SS_COMPUTER
+				&& CvPreGame::slotStatus(kPlayer.GetID()) == SS_TAKEN)
+			{
+				//add def bonus as reduce damage
+				// because AI bonus is allways 0
+				iModifier += kPlayer.getHandicapInfo().getRangeCombatModifierHumanAgainstAI();
+			}
+			//if human against human
+			else if(kDefenderPlayer != NULL
+				&& CvPreGame::slotStatus(kPlayer.GetID()) == SS_TAKEN
+				&& CvPreGame::slotStatus(kDefenderPlayer->GetID()) == SS_TAKEN)
+			{
+				// choose the bonus as a positive delta from my and other and not bonus to atk, and bonus to def
+				//because: 
+				// unit X with combat force of 10 and a bonus of 100 from terrain, handicap bonus of 50
+				// unit Y with combat force of 20, handicap bonus of 50
+				// SAME handicap bonus => don't change the combat result
+				// wihout handicap: 20 vs 20 => draw
+				// with handicap added to def & att => 25 vs 30 => X is the looser => KO!
+				// with handicap computed only to attack (ie here) => 20 VS 20 OK
+
+				//compute the effective handicap against an other player
+				// if i have an handicap of 35 and other as an handicap of 20, so the effective delta is 15
+				int myBonus = kPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+				int otherBonus = kDefenderPlayer->getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+				
+				// use positive-only bonus. If it's negative here, it can be positive when we compute the other
+				// side human combat strength
+				if(myBonus > otherBonus)
+					iModifier += myBonus - otherBonus;
+			}
+		}
+#endif
 
 	// If the empire is unhappy, then Units get a combat penalty
 #if defined(MOD_GLOBAL_CS_RAZE_RARELY)

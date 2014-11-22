@@ -217,6 +217,9 @@
 #define MOD_BALANCE_CORE_POLICIES					(MOD_COMMUNITY_PATCH && gCustomMods.isMOD_BALANCE_CORE_POLICIES())
 #endif
 
+// Changes for add more handicap values for combat mod by Merill
+#define MOD_COMBAT_HANDICAP							gCustomMods.isCOMBAT_HANDICAP()
+
 // Changes for the CivIV Diplomacy Features mod by Putmalk - AFFECTS SAVE GAME DATA FORMAT (v36)
 #define MOD_DIPLOMACY_CIV4_FEATURES                 gCustomMods.isDIPLOMACY_CIV4_FEATURES()
 

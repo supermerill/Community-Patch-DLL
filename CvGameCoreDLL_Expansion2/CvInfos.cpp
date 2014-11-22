@@ -2809,6 +2809,22 @@ CvHandicapInfo::CvHandicapInfo() :
 	m_iBarbSpawnMod(0),
 	m_iBarbarianCombatModifier(0),
 	m_iAIBarbarianCombatModifier(0),
+#if defined(MOD_COMBAT_HANDICAP)
+	m_iMeleeCombatModifierHumanAgainstAI(0),
+	m_iMeleeCombatModifierHumanAgainstHuman(0),
+	m_iRangeCombatModifierHumanAgainstAI(0),
+	m_iRangeCombatModifierHumanAgainstHuman(0),
+	m_iCityCombatModifierHumanAgainstAI(0),
+	m_iCityCombatModifierHumanAgainstHuman(0),
+	m_iMeleeAttackDmgMultHumanAgainstAI(100),
+	m_iMeleeAttackDmgMultHumanAgainstHuman(100),
+	m_iRangeAttackDmgMultHumanAgainstAI(100),
+	m_iRangeAttackDmgMultHumanAgainstHuman(100),
+	m_iRangeAttackDmgMultHumanAgainstAICity(100),
+	m_iRangeAttackDmgMultHumanAgainstHumanCity(100),
+	m_iCityAttackDmgMultHumanAgainstAI(100),
+	m_iCityAttackDmgMultHumanAgainstHuman(100),
+#endif
 	m_iEarliestBarbarianReleaseTurn(0),
 	m_iBarbarianLandTargetRange(0),
 	m_iBarbarianSeaTargetRange(0),
@@ -3004,6 +3020,64 @@ int CvHandicapInfo::getAIBarbarianCombatModifier() const
 {
 	return m_iAIBarbarianCombatModifier;
 }
+#if defined(MOD_COMBAT_HANDICAP)
+int CvHandicapInfo::getMeleeCombatModifierHumanAgainstAI() const
+{
+	return m_iMeleeCombatModifierHumanAgainstAI;
+}
+int CvHandicapInfo::getMeleeCombatModifierHumanAgainstHuman() const
+{
+	return m_iMeleeCombatModifierHumanAgainstHuman;
+}
+int CvHandicapInfo::getRangeCombatModifierHumanAgainstAI() const
+{
+	return m_iRangeCombatModifierHumanAgainstAI;
+}
+int CvHandicapInfo::getRangeCombatModifierHumanAgainstHuman() const
+{
+	return m_iRangeCombatModifierHumanAgainstHuman;
+}
+int CvHandicapInfo::getCityCombatModifierHumanAgainstAI() const
+{
+	return m_iCityCombatModifierHumanAgainstAI;
+}
+int CvHandicapInfo::getCityCombatModifierHumanAgainstHuman() const
+{
+	return m_iCityCombatModifierHumanAgainstHuman;
+}
+int CvHandicapInfo::getMeleeAttackDmgMultHumanAgainstAI() const
+{
+	return m_iMeleeAttackDmgMultHumanAgainstAI;
+}
+int CvHandicapInfo::getMeleeAttackDmgMultHumanAgainstHuman() const
+{
+	return m_iMeleeAttackDmgMultHumanAgainstHuman;
+}
+int CvHandicapInfo::getRangeAttackDmgMultHumanAgainstAI() const
+{
+	return m_iRangeAttackDmgMultHumanAgainstAI;
+}
+int CvHandicapInfo::getRangeAttackDmgMultHumanAgainstHuman() const
+{
+	return m_iRangeAttackDmgMultHumanAgainstHuman;
+}
+int CvHandicapInfo::getRangeAttackDmgMultHumanAgainstAICity() const
+{
+	return m_iRangeAttackDmgMultHumanAgainstAICity;
+}
+int CvHandicapInfo::getRangeAttackDmgMultHumanAgainstHumanCity() const
+{
+	return m_iRangeAttackDmgMultHumanAgainstHumanCity;
+}
+int CvHandicapInfo::getCityAttackDmgMultHumanAgainstAI() const
+{
+	return m_iCityAttackDmgMultHumanAgainstAI;
+}
+int CvHandicapInfo::getCityAttackDmgMultHumanAgainstHuman() const
+{
+	return m_iCityAttackDmgMultHumanAgainstHuman;
+}
+#endif
 //------------------------------------------------------------------------------
 int CvHandicapInfo::getEarliestBarbarianReleaseTurn() const
 {
@@ -3217,6 +3291,22 @@ bool CvHandicapInfo::CacheResults(Database::Results& kResults, CvDatabaseUtility
 	m_iBarbSpawnMod = kResults.GetInt("BarbSpawnMod");
 	m_iBarbarianCombatModifier = kResults.GetInt("BarbarianBonus");
 	m_iAIBarbarianCombatModifier = kResults.GetInt("AIBarbarianBonus");
+#if defined(MOD_COMBAT_HANDICAP)
+	m_iMeleeCombatModifierHumanAgainstAI = kResults.GetInt("MeleeHumanVsAIBonus");
+	m_iMeleeCombatModifierHumanAgainstHuman = kResults.GetInt("MeleeHumanVsHumanBonus");
+	m_iRangeCombatModifierHumanAgainstAI = kResults.GetInt("RangeHumanVsAIBonus");
+	m_iRangeCombatModifierHumanAgainstHuman = kResults.GetInt("RangeHumanVsHumanBonus");
+	m_iCityCombatModifierHumanAgainstAI = kResults.GetInt("CityHumanVsAIBonus");
+	m_iCityCombatModifierHumanAgainstHuman = kResults.GetInt("CityHumanVsHumanBonus");
+	m_iMeleeAttackDmgMultHumanAgainstAI = kResults.GetInt("MeleeHumanVsAIAtkDmgMultPercent");
+	m_iMeleeAttackDmgMultHumanAgainstHuman = kResults.GetInt("MeleeHumanVsHumanAtkDmgMultPercent");
+	m_iRangeAttackDmgMultHumanAgainstAI = kResults.GetInt("RangeHumanVsAIAtkDmgMultPercent");
+	m_iRangeAttackDmgMultHumanAgainstHuman = kResults.GetInt("RangeHumanVsHumanAtkDmgMultPercent");
+	m_iRangeAttackDmgMultHumanAgainstAICity = kResults.GetInt("RangeHumanVsAICityAtkDmgMultPercent");
+	m_iRangeAttackDmgMultHumanAgainstHumanCity = kResults.GetInt("RangeHumanVsHumanCityAtkDmgMultPercent");
+	m_iCityAttackDmgMultHumanAgainstAI = kResults.GetInt("CityHumanVsAIAtkDmgMultPercent");
+	m_iCityAttackDmgMultHumanAgainstHuman = kResults.GetInt("CityHumanVsHumanAtkDmgMultPercent");
+#endif
 	m_iEarliestBarbarianReleaseTurn = kResults.GetInt("EarliestBarbarianReleaseTurn");
 	m_iBarbarianLandTargetRange = kResults.GetInt("BarbarianLandTargetRange");
 	m_iBarbarianSeaTargetRange = kResults.GetInt("BarbarianSeaTargetRange");
