@@ -209,6 +209,9 @@
 	<!-- The hurry sub-feature of DIPLOMACY_CITYSTATES -->
     <Row Class="6" Name="DIPLOMACY_CITYSTATES_HURRY" Value="1"/>
 
+	<!-- Activation for combat handicap entries in database -->
+	<Row Class="5" Name="COMBAT_HANDICAP" Value="1"/>
+	  
 	<!-- Changes for the Civ4 Diplomacy Features mod by Putmalk (v36) -->
 	<!-- See also: "Diplomacy - CivIV Features" -->
     <Row Class="6" Name="DIPLOMACY_CIV4_FEATURES" Value="0"/>
