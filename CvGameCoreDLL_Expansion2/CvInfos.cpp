@@ -3380,6 +3380,9 @@ bool CvHandicapInfo::CacheResults(Database::Results& kResults, CvDatabaseUtility
 //======================================================================================================
 CvGameSpeedInfo::CvGameSpeedInfo() :
 	m_iDealDuration(0),
+#if defined(MOD_BALANCE_CORE)
+	m_iStartingHappiness(0),
+#endif
 	m_iGrowthPercent(0),
 	m_iTrainPercent(0),
 	m_iConstructPercent(0),
@@ -3422,6 +3425,12 @@ int CvGameSpeedInfo::GetDealDuration() const
 {
 	return m_iDealDuration;
 }
+#if defined(MOD_BALANCE_CORE)
+int CvGameSpeedInfo::GetStartingHappiness() const
+{
+	return m_iStartingHappiness;
+}
+#endif
 //------------------------------------------------------------------------------
 int CvGameSpeedInfo::getGrowthPercent() const
 {
@@ -3596,6 +3605,9 @@ bool CvGameSpeedInfo::CacheResults(Database::Results& kResults, CvDatabaseUtilit
 		return false;
 
 	m_iDealDuration					= kResults.GetInt("DealDuration");
+#if defined(MOD_BALANCE_CORE)
+	m_iStartingHappiness			= kResults.GetInt("StartingHappiness");
+#endif
 	m_iGrowthPercent				= kResults.GetInt("GrowthPercent");
 	m_iTrainPercent					= kResults.GetInt("TrainPercent");
 	m_iConstructPercent				= kResults.GetInt("ConstructPercent");

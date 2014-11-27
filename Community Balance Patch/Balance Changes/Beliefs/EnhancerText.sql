@@ -27,12 +27,12 @@ SET Text = 'Use Faith to purchase land units. Missionaries convert adjacent Barb
 WHERE Tag = 'TXT_KEY_BELIEF_HEATHEN_CONVERSION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_RELIGION' AND Value= 1 );
 
 UPDATE Language_en_US
-SET Text = 'Heeathen Conversion'
+SET Text = 'Holy Warriors'
 WHERE Tag = 'TXT_KEY_BELIEF_HEATHEN_CONVERSION_SHORT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_RELIGION' AND Value= 1 );
 
 -- Itinerant Preachers (Religious Celebrations)
 UPDATE Language_en_US
-SET Text = '+1 [ICON_HAPPINESS_1] Happiness for every two Cities following this religion, +1 [ICON_HAPPINESS_1] Happiness for every 4 followers of this religion in non-enemy foreign cities.'
+SET Text = '+1 [ICON_HAPPINESS_1] Happiness for every two Cities following this religion, +1 [ICON_HAPPINESS_1] Happiness for every 6 followers of this religion in non-enemy foreign cities.'
 WHERE Tag = 'TXT_KEY_BELIEF_ITINERANT_PREACHERS' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_RELIGION' AND Value= 1 );
 
 UPDATE Language_en_US

@@ -3947,6 +3947,14 @@ int CvLeague::CalculateStartingVotesForMember(PlayerTypes ePlayer, bool bForceUp
 			}
 		}
 #endif
+#if defined(MOD_BALANCE_CORE_POLICIES)
+		int iPolicyVotes = 0;
+		if(MOD_BALANCE_CORE_POLICIES)
+		{
+			iPolicyVotes = GET_PLAYER(ePlayer).GetFreeWCVotes();
+			iVotes += iPolicyVotes;
+		}
+#endif
 
 		// World Religion
 		int iWorldReligionVotes = GetExtraVotesForFollowingReligion(ePlayer);
@@ -4035,6 +4043,14 @@ int CvLeague::CalculateStartingVotesForMember(PlayerTypes ePlayer, bool bForceUp
 			{
 				Localization::String sTemp = Localization::Lookup("TXT_KEY_LEAGUE_OVERVIEW_MEMBER_DETAILS_RELIGION_REFORMATION_VOTES");
 				sTemp << iReligionVotes;
+				pMember->sVoteSources += sTemp.toUTF8();
+			}
+#endif
+#if defined(MOD_BALANCE_CORE_POLICIES)
+			if(MOD_BALANCE_CORE_POLICIES && iPolicyVotes > 0)
+			{
+				Localization::String sTemp = Localization::Lookup("TXT_KEY_LEAGUE_OVERVIEW_MEMBER_DETAILS_PATRONAGE_FINISHER_VOTES");
+				sTemp << iPolicyVotes;
 				pMember->sVoteSources += sTemp.toUTF8();
 			}
 #endif
@@ -4702,8 +4718,14 @@ int CvLeague::GetExtraVotesForFollowingReligion(PlayerTypes ePlayer)
 			{
 #if defined(MOD_DIPLOMACY_CITYSTATES_RESOLUTIONS)
 				if (MOD_DIPLOMACY_CITYSTATES_RESOLUTIONS) {
-					//Did you found the religion? More votes for you.
-					if(GC.getGame().GetGameReligions()->GetReligionCreatedByPlayer(ePlayer) == eReligion)
+					const CvReligion* pReligion = GC.getGame().GetGameReligions()->GetReligion(eReligion, ePlayer);
+					CvPlot* pkPlot = NULL;
+					if(pReligion)
+					{
+						pkPlot = GC.getMap().plot(pReligion->m_iHolyCityX, pReligion->m_iHolyCityY);
+					}
+					//Did you found the religion and own the Holy City? More votes for you.
+					if((GC.getGame().GetGameReligions()->GetReligionCreatedByPlayer(ePlayer) == eReligion) && ((pkPlot != NULL) && (pkPlot->getOwner() == ePlayer)))
 					{
 						PlayerTypes eLoopPlayer;
 						int iReligionAlly = 0;
@@ -4718,14 +4740,16 @@ int CvLeague::GetExtraVotesForFollowingReligion(PlayerTypes ePlayer)
 						iVotes += it->GetEffects()->iVotesForFollowingReligion;
 						iVotes += iReligionAlly++;
 					}
-					//What if we share the faith??
+					//Did you found it, but you don't own the Holy City anymore? You are only a follower, then.
+					else if((GC.getGame().GetGameReligions()->GetReligionCreatedByPlayer(ePlayer) == eReligion) && ((pkPlot != NULL) && (pkPlot->getOwner() != ePlayer)))
+					{
+						iVotes += it->GetEffects()->iVotesForFollowingReligion;
+					}
+					//What if we share the faith, but didn't create it?
 					else if((GC.getGame().GetGameReligions()->GetReligionCreatedByPlayer(ePlayer) != eReligion) && (GET_PLAYER(ePlayer).GetReligions()->HasReligionInMostCities(eReligion)))
 					{
-						const CvReligion* pReligion = GC.getGame().GetGameReligions()->GetReligion(eReligion, ePlayer);
-						CvPlot* pkPlot = GC.getMap().plot(pReligion->m_iHolyCityX, pReligion->m_iHolyCityY);
-
 						//Who owns the holy city? They get the bonus.
-						if(pkPlot && (pkPlot->getOwner() == ePlayer))
+						if((pkPlot != NULL) && (pkPlot->getOwner() == ePlayer))
 						{
 							PlayerTypes eLoopPlayer;
 							int iReligionAlly = 0;

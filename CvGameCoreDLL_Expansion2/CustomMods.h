@@ -17,13 +17,13 @@
  *****  See the comment in CvDllVersion.h regarding the DLL GUID value  *****
  *****                                                                  *****
  *****                                                                  *****
- *****          This DLL is based on the 1.0.3.144 source code          *****
+ *****          This DLL is based on the 1.0.3.276 source code          *****
  *****                                                                  *****
  ****************************************************************************
  ****************************************************************************/
 #define MOD_DLL_GUID {0xbf9bf7f0, 0xe078, 0x4d4e, { 0x8a, 0x3e, 0x84, 0x71, 0x2f, 0x85, 0xaa, 0x2b }} //{BF9BF7F0-E078-4d4e-8A3E-84712F85AA2B}
-#define MOD_DLL_NAME "Community Patch v65 (PNM v51+)"
-#define MOD_DLL_VERSION_NUMBER ((uint) 65)
+#define MOD_DLL_NAME "Community Patch v66 (PNM v51+)"
+#define MOD_DLL_VERSION_NUMBER ((uint) 66)
 #define MOD_DLL_VERSION_STATUS ""			// a (alpha), b (beta) or blank (released)
 #define MOD_DLL_CUSTOM_BUILD_NAME ""
 
@@ -215,6 +215,7 @@
 #define MOD_BALANCE_CORE_BELIEFS					(MOD_COMMUNITY_PATCH && gCustomMods.isMOD_BALANCE_CORE_BELIEFS())
 #define MOD_BALANCE_CORE_FOLLOWER_POP_WONDER		(MOD_COMMUNITY_PATCH && gCustomMods.isMOD_BALANCE_CORE_FOLLOWER_POP_WONDER())
 #define MOD_BALANCE_CORE_POLICIES					(MOD_COMMUNITY_PATCH && gCustomMods.isMOD_BALANCE_CORE_POLICIES())
+#define MOD_BALANCE_CORE_BARBARIAN_THEFT			(MOD_COMMUNITY_PATCH && gCustomMods.isMOD_BALANCE_CORE_BARBARIAN_THEFT())
 #endif
 
 // Changes for add more handicap values for combat mod by Merill
@@ -993,6 +994,7 @@ public:
 	MOD_OPT_DECL(MOD_BALANCE_CORE_BELIEFS);
 	MOD_OPT_DECL(MOD_BALANCE_CORE_FOLLOWER_POP_WONDER);
 	MOD_OPT_DECL(MOD_BALANCE_CORE_POLICIES);
+	MOD_OPT_DECL(MOD_BALANCE_CORE_BARBARIAN_THEFT);
 
 	MOD_OPT_DECL(COMBAT_HANDICAP); 
 

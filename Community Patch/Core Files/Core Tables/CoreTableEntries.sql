@@ -1,3 +1,8 @@
+-- Table for Growth Extra Yield Buildings
+CREATE TABLE IF NOT EXISTS Building_GrowthExtraYield (
+BuildingType text, YieldType text, Yield integer
+);
+
 -- Create buildings that cannot have access to fresh water.
 
 ALTER TABLE Buildings ADD COLUMN 'IsNoWater' boolean default false;
@@ -39,9 +44,9 @@ ALTER TABLE HandicapInfos ADD COLUMN 'RangeHumanVsHumanCityAtkDmgMultPercent' in
 ALTER TABLE HandicapInfos ADD COLUMN 'CityHumanVsAIAtkDmgMultPercent' integer default 100;
 ALTER TABLE HandicapInfos ADD COLUMN 'CityHumanVsHumanAtkDmgMultPercent' integer default 100;
 
--- Combat Bonus vs Higher Pop Civilization.
+-- Grants additional starting happiness based on gamespeed.
 
-ALTER TABLE Traits ADD COLUMN 'CombatBonusVsHigherPop' integer default 0;
+ALTER TABLE GameSpeeds ADD COLUMN 'StartingHappiness' integer default 0;
 
 -- No unhappiness from Isolation.
 
@@ -54,6 +59,10 @@ ALTER TABLE Traits ADD COLUMN 'IsNoReligiousStrife' boolean default false;
 -- Earn a free building only in your capital as your trait. No tech requirement.
 
 ALTER TABLE Traits ADD COLUMN 'FreeCapitalBuilding' text default NULL;
+
+-- Combat Bonus vs Higher Pop Civilization.
+
+ALTER TABLE Traits ADD COLUMN 'CombatBonusVsHigherPop' integer default 0;
 
 -- Earn a set number of free buildings. Uses standard 'FreeBuilding' trait (i.e. Carthage). No tech requirement.
 
@@ -188,6 +197,26 @@ ALTER TABLE Policies ADD COLUMN 'ExtraMoves' integer default 0;
 -- Religious Pressure Mod Trade Route
 ALTER TABLE Policies ADD COLUMN 'TradeReligionModifier' integer default 0;
 
+-- Free Votes
+ALTER TABLE Policies ADD COLUMN 'DoubleQuestInfluence' boolean default false;
+
+-- Double XP from Quests
+ALTER TABLE Policies ADD COLUMN 'FreeWCVotes' integer default 0;
+
+-- GP Expend Influence Boost
+ALTER TABLE Policies ADD COLUMN 'InfluenceGPExpend' integer default 0;
+
+-- Free Trade Route
+ALTER TABLE Policies ADD COLUMN 'FreeTradeRoute' integer default 0;
+
+-- Free Spy
+ALTER TABLE Policies ADD COLUMN 'FreeSpy' integer default 0;
+
+-- Gold from Internal Trade Routes
+ALTER TABLE Policies ADD COLUMN 'InternalTradeGold' integer default 0;
+
+-- Boost Culture Bomb from Citadel
+ALTER TABLE Policies ADD COLUMN 'CitadelBoost' integer default 0;
 -- New Beliefs
 
 -- Combat bonus v. other religions in our lands
@@ -218,3 +247,7 @@ ALTER TABLE Buildings ADD COLUMN 'IsReformation' boolean default false;
 
 -- Allows for Building to be unlocked by a specific policy (not a branch)
 ALTER TABLE Buildings ADD COLUMN 'PolicyType' text default NULL;
+
+-- New Goody Hut Additions
+ALTER TABLE GoodyHuts ADD COLUMN 'Production' integer default 0;
+ALTER TABLE GoodyHuts ADD COLUMN 'GoldenAge' integer default 0;

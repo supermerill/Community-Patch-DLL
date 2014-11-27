@@ -15,6 +15,9 @@
 !*.civ5sln
 !*.dll
 !*.txt
+!*.dds
+!*.gr2
+!*.ftsxml
 BuildOutput/
 BuildTemp/
 /Build
