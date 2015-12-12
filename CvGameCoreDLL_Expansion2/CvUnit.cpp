@@ -12264,6 +12264,53 @@ int CvUnit::GetMaxAttackStrength(const CvPlot* pFromPlot, const CvPlot* pToPlot,
 		iModifier += iTempModifier;
 	}
 
+#if defined(MOD_COMBAT_HANDICAP)
+	{
+		//handicap for combat
+		CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
+		CvPlayerAI *kOtherPlayer = NULL;
+		if(pDefender != NULL)
+		{
+			kOtherPlayer = &GET_PLAYER(pDefender->getOwner());
+		}
+		if(kOtherPlayer != NULL){
+			//if human attack/defend ai (but not barb)
+			if( !kOtherPlayer->isBarbarian() 
+				&& CvPreGame::slotStatus(kOtherPlayer->GetID()) == SS_COMPUTER
+				&& CvPreGame::slotStatus(kPlayer.GetID()) == SS_TAKEN)
+			{
+				//add def bonus as reduce damage
+				// because AI bonus is allways 0
+				iModifier += kPlayer.getHandicapInfo().getRangeCombatModifierHumanAgainstAI();
+			}
+			//if human against human
+			else if(kOtherPlayer != NULL
+				&& CvPreGame::slotStatus(kPlayer.GetID()) == SS_TAKEN
+				&& CvPreGame::slotStatus(kOtherPlayer->GetID()) == SS_TAKEN)
+			{
+				// choose the bonus as a positive delta from my and other and not bonus to atk, and bonus to def
+				//because: 
+				// unit X with combat force of 10 and a bonus of 100 from terrain, handicap bonus of 50
+				// unit Y with combat force of 20, handicap bonus of 50
+				// SAME handicap bonus => don't change the combat result
+				// wihout handicap: 20 vs 20 => draw
+				// with handicap added to def & att => 25 vs 30 => X is the looser => KO!
+				// with handicap computed only to attack (ie here) => 20 VS 20 OK
+
+				//compute the effective handicap against an other player
+				// if i have an handicap of 35 and other as an handicap of 20, so the effective delta is 15
+				int myBonus = kPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+				int otherBonus = kOtherPlayer->getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+				
+				// use positive-only bonus. If it's negative here, it can be positive when we compute the other
+				// side human combat strength
+				if(myBonus > otherBonus)
+					iModifier += myBonus - otherBonus;
+			}
+		}
+	}
+#endif
+
 	// Temporary attack bonus (Policies, etc.)
 	if(GET_PLAYER(getOwner()).GetAttackBonusTurns() > 0)
 	{
@@ -12441,6 +12488,54 @@ int CvUnit::GetMaxDefenseStrength(const CvPlot* pInPlot, const CvUnit* pAttacker
 	// Defense against Ranged
 	if(bFromRangedAttack)
 		iModifier += rangedDefenseModifier();
+
+	
+#if defined(MOD_COMBAT_HANDICAP)
+	{
+		//handicap for combat
+		CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
+		CvPlayerAI *kOtherPlayer = NULL;
+		if(pAttacker != NULL)
+		{
+			kOtherPlayer = &GET_PLAYER(pAttacker->getOwner());
+		}
+		if(kOtherPlayer != NULL){
+			//if human attack/defend ai (but not barb)
+			if( !kOtherPlayer->isBarbarian() 
+				&& CvPreGame::slotStatus(kOtherPlayer->GetID()) == SS_COMPUTER
+				&& CvPreGame::slotStatus(kPlayer.GetID()) == SS_TAKEN)
+			{
+				//add def bonus as reduce damage
+				// because AI bonus is allways 0
+				iModifier += kPlayer.getHandicapInfo().getRangeCombatModifierHumanAgainstAI();
+			}
+			//if human against human
+			else if(kOtherPlayer != NULL
+				&& CvPreGame::slotStatus(kPlayer.GetID()) == SS_TAKEN
+				&& CvPreGame::slotStatus(kOtherPlayer->GetID()) == SS_TAKEN)
+			{
+				// choose the bonus as a positive delta from my and other and not bonus to atk, and bonus to def
+				//because: 
+				// unit X with combat force of 10 and a bonus of 100 from terrain, handicap bonus of 50
+				// unit Y with combat force of 20, handicap bonus of 50
+				// SAME handicap bonus => don't change the combat result
+				// wihout handicap: 20 vs 20 => draw
+				// with handicap added to def & att => 25 vs 30 => X is the looser => KO!
+				// with handicap computed only to attack (ie here) => 20 VS 20 OK
+
+				//compute the effective handicap against an other player
+				// if i have an handicap of 35 and other as an handicap of 20, so the effective delta is 15
+				int myBonus = kPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+				int otherBonus = kOtherPlayer->getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+				
+				// use positive-only bonus. If it's negative here, it can be positive when we compute the other
+				// side human combat strength
+				if(myBonus > otherBonus)
+					iModifier += myBonus - otherBonus;
+			}
+		}
+	}
+#endif
 
 #if defined(MOD_BALANCE_CORE)
 	//If Japan, you should get stronger as you lose health.
@@ -12661,17 +12756,21 @@ int CvUnit::GetMaxRangedCombatStrength(const CvUnit* pOtherUnit, const CvCity* p
 		iModifier += getKamikazePercent();
 	
 #if defined(MOD_COMBAT_HANDICAP)
+	{
 		//handicap for combat
-		CvPlayerAI *kDefenderPlayer = NULL;
-		if(pOtherUnit != NULL){
-			kDefenderPlayer = &GET_PLAYER(pOtherUnit->getOwner());
-		}else if(pCity != NULL){
-			kDefenderPlayer = &GET_PLAYER(pCity->getOwner());
+		CvPlayerAI *kOtherPlayer = NULL;
+		if(pOtherUnit != NULL)
+		{
+			kOtherPlayer = &GET_PLAYER(pOtherUnit->getOwner());
 		}
-		if(kDefenderPlayer != NULL){
+		else if(pCity != NULL)
+		{
+			kOtherPlayer = &GET_PLAYER(pCity->getOwner());
+		}
+		if(kOtherPlayer != NULL){
 			//if human attack/defend ai (but not barb)
-			if( !kDefenderPlayer->isBarbarian() 
-				&& CvPreGame::slotStatus(kDefenderPlayer->GetID()) == SS_COMPUTER
+			if( !kOtherPlayer->isBarbarian() 
+				&& CvPreGame::slotStatus(kOtherPlayer->GetID()) == SS_COMPUTER
 				&& CvPreGame::slotStatus(kPlayer.GetID()) == SS_TAKEN)
 			{
 				//add def bonus as reduce damage
@@ -12679,9 +12778,9 @@ int CvUnit::GetMaxRangedCombatStrength(const CvUnit* pOtherUnit, const CvCity* p
 				iModifier += kPlayer.getHandicapInfo().getRangeCombatModifierHumanAgainstAI();
 			}
 			//if human against human
-			else if(kDefenderPlayer != NULL
+			else if(kOtherPlayer != NULL
 				&& CvPreGame::slotStatus(kPlayer.GetID()) == SS_TAKEN
-				&& CvPreGame::slotStatus(kDefenderPlayer->GetID()) == SS_TAKEN)
+				&& CvPreGame::slotStatus(kOtherPlayer->GetID()) == SS_TAKEN)
 			{
 				// choose the bonus as a positive delta from my and other and not bonus to atk, and bonus to def
 				//because: 
@@ -12695,14 +12794,15 @@ int CvUnit::GetMaxRangedCombatStrength(const CvUnit* pOtherUnit, const CvCity* p
 				//compute the effective handicap against an other player
 				// if i have an handicap of 35 and other as an handicap of 20, so the effective delta is 15
 				int myBonus = kPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
-				int otherBonus = kDefenderPlayer->getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
-				
+				int otherBonus = kOtherPlayer->getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+
 				// use positive-only bonus. If it's negative here, it can be positive when we compute the other
 				// side human combat strength
 				if(myBonus > otherBonus)
 					iModifier += myBonus - otherBonus;
 			}
 		}
+	}
 #endif
 
 	// If the empire is unhappy, then Units get a combat penalty

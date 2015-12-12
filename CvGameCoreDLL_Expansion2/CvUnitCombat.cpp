@@ -198,9 +198,7 @@ void CvUnitCombat::GenerateMeleeCombatInfo(CvUnit& kAttacker, CvUnit* pkDefender
 			iDefenderDamageInflicted /= 3;
 		}
 		
-	MER_LOG("GenerateMeleeCombatInfo UNIT vs UNIT");
 #if defined(MOD_COMBAT_HANDICAP)
-	MER_LOG("GenerateMeleeCombatInfo UNIT vs UNIT MOD_COMBAT_HANDICAP");
 		//handicap for combat
 		CvPlayerAI& kDefenderPlayer = GET_PLAYER(pkDefender->getOwner());
 		CvPlayerAI& kAttackerPlayer = GET_PLAYER(kAttacker.getOwner());
@@ -209,7 +207,6 @@ void CvUnitCombat::GenerateMeleeCombatInfo(CvUnit& kAttacker, CvUnit* pkDefender
 			&& CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_COMPUTER
 			&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
 		{
-	MER_LOG("GenerateMeleeCombatInfo UNIT vs UNIT MOD_COMBAT_HANDICAP VS AI");
 			//add def bonus as reduce damage
 			iAttackerDamageInflicted *= kAttackerPlayer.getHandicapInfo().getMeleeAttackDmgMultHumanAgainstAI();
 			iAttackerDamageInflicted /= 100;
@@ -217,10 +214,14 @@ void CvUnitCombat::GenerateMeleeCombatInfo(CvUnit& kAttacker, CvUnit* pkDefender
 		else if(CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_TAKEN
 				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
 		{
-	MER_LOG("GenerateMeleeCombatInfo UNIT vs UNIT MOD_COMBAT_HANDICAP VS HUMAN");
 			//add def bonus as reduce damage
-			iAttackerDamageInflicted *= kAttackerPlayer.getHandicapInfo().getMeleeAttackDmgMultHumanAgainstHuman();
-			iAttackerDamageInflicted /= 100;
+			int def = kDefenderPlayer.getHandicapInfo().getMeleeAttackDmgMultHumanAgainstHuman();
+			int att = kAttackerPlayer.getHandicapInfo().getMeleeAttackDmgMultHumanAgainstHuman();
+			if(att>def)
+			{
+				iAttackerDamageInflicted *= (100 + att - def);
+				iAttackerDamageInflicted /= 100;
+			}
 		}
 #endif
 
@@ -625,8 +626,13 @@ void CvUnitCombat::GenerateRangedCombatInfo(CvUnit& kAttacker, CvUnit* pkDefende
 				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
 		{
 			//add def bonus as reduce damage
-			iDamage *= kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
-			iDamage /= 100;
+			int def = kDefenderPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+			int att = kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+			if(att>def)
+			{
+				iDamage *= (100 + att - def);
+				iDamage /= 100;
+			}
 		}
 #endif
 
@@ -673,8 +679,13 @@ void CvUnitCombat::GenerateRangedCombatInfo(CvUnit& kAttacker, CvUnit* pkDefende
 				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
 		{
 			//add def bonus as reduce damage
-			iDamage *= kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHumanCity();
-			iDamage /= 100;
+			int def = kDefenderPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHumanCity();
+			int att = kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHumanCity();
+			if(att>def)
+			{
+				iDamage *= (100 + att - def);
+				iDamage /= 100;
+			}
 		}
 #endif
 
@@ -782,8 +793,13 @@ void CvUnitCombat::GenerateRangedCombatInfo(CvCity& kAttacker, CvUnit* pkDefende
 				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
 		{
 			//add def bonus as reduce damage
-			iDamage *= kAttackerPlayer.getHandicapInfo().getCityAttackDmgMultHumanAgainstHuman();
-			iDamage /= 100;
+			int def = kDefenderPlayer.getHandicapInfo().getCityAttackDmgMultHumanAgainstHuman();
+			int att = kAttackerPlayer.getHandicapInfo().getCityAttackDmgMultHumanAgainstHuman();
+			if(att>def)
+			{
+				iDamage *= (100 + att - def);
+				iDamage /= 100;
+			}
 		}
 #endif
 
@@ -1355,8 +1371,13 @@ void CvUnitCombat::GenerateAirCombatInfo(CvUnit& kAttacker, CvUnit* pkDefender, 
 				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
 		{
 			//add def bonus as reduce damage
-			iAttackerDamageInflicted *= kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
-			iAttackerDamageInflicted /= 100;
+			int def = kDefenderPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+			int att = kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+			if(att>def)
+			{
+				iAttackerDamageInflicted *= (100 + att - def);
+				iAttackerDamageInflicted /= 100;
+			}
 		}
 #endif
 
@@ -1411,8 +1432,13 @@ void CvUnitCombat::GenerateAirCombatInfo(CvUnit& kAttacker, CvUnit* pkDefender, 
 				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
 		{
 			//add def bonus as reduce damage
-			iAttackerDamageInflicted *= kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHumanCity();
-			iAttackerDamageInflicted /= 100;
+			int def = kDefenderPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHumanCity();
+			int att = kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHumanCity();
+			if(att>def)
+			{
+				iAttackerDamageInflicted *= (100 + att - def);
+				iAttackerDamageInflicted /= 100;
+			}
 		}
 #endif
 		// Cities can't be knocked to less than 1 HP
