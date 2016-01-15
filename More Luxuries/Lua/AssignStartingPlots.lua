@@ -10113,7 +10113,10 @@ function AssignStartingPlots:PlaceFish(frequency, plot_list)
 					local res_plot = Map.GetPlot(x, y)
 					if res_plot:GetResourceType(-1) == -1 then
 						-- Placing fish here. First decide impact radius of this fish.
-						local fish_radius = Map.Rand(7, "Fish Radius - Place Fish LUA");
+						local fish_radius = Map.Rand(8, "Fish Radius - Place Fish LUA");
+						if fish_radius > 7 then
+							fish_radius = 0;
+						end
 						if fish_radius > 5 then
 							fish_radius = 3;
 						end
@@ -10869,7 +10872,7 @@ function AssignStartingPlots:PlaceStrategicAndBonusResources()
 	
 	-- Place Bonus Resources
 	print("Map Generation - Placing Bonuses");
-	self:PlaceFish(10 * bonus_multiplier, self.coast_list);
+	self:PlaceFish(6 * bonus_multiplier, self.coast_list);
 	self:PlaceSexyBonusAtCivStarts()
 	self:AddExtraBonusesToHillsRegions()
 	
