@@ -247,6 +247,7 @@ protected:
 	static int lSaveReplay(lua_State* L);
 
 	static int lAddPlayer(lua_State* L);
+	static int lAddPlayerMinor(lua_State* L);
 
 	static int lSetPlotExtraYield(lua_State* L);
 	static int lChangePlotExtraCost(lua_State* L);

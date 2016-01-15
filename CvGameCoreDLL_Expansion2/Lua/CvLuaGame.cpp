@@ -1765,6 +1765,12 @@ int CvLuaGame::lAddPlayer(lua_State* L)
 	return BasicLuaMethod(L, &CvGame::addPlayer);
 }
 //------------------------------------------------------------------------------
+//void addPlayerMinor(PlayerTypes eNewPlayer);
+int CvLuaGame::lAddPlayerMinor(lua_State* L)
+{
+	return BasicLuaMethod(L, &CvGame::addPlayerMinor);
+}
+//------------------------------------------------------------------------------
 //void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield);
 int CvLuaGame::lSetPlotExtraYield(lua_State* L)
 {

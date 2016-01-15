@@ -10644,6 +10644,26 @@ void CvGame::showEndGameSequence()
 	GC.GetEngineUserInterface()->OpenEndGameMenu();
 }
 
+void CvGame::addPlayerMinor(PlayerTypes eMinorPlayer)
+{
+	//useful?
+	CvPreGame::setNumMinorCivs(CvPreGame::numMinorCivs() + 1);
+
+	CivilizationTypes eMinorCiv = (CivilizationTypes)GC.getMINOR_CIVILIZATION();
+	CvMinorCivInfo* pMinorCivInfo = GC.getMinorCivInfo(CvPreGame::minorCivType(eMinorPlayer));
+
+	CvPreGame::setSlotStatus(eMinorPlayer, SS_COMPUTER);
+	CvPreGame::setNetID(eMinorPlayer, -1);
+	CvPreGame::setHandicap(eMinorPlayer, (HandicapTypes)GC.getMINOR_CIV_HANDICAP());
+	CvPreGame::setCivilization(eMinorPlayer, eMinorCiv);
+	CvPreGame::setLeaderHead(eMinorPlayer, (LeaderHeadTypes)GC.getBARBARIAN_LEADER());
+	CvPreGame::setPlayerColor(eMinorPlayer, (PlayerColorTypes)pMinorCivInfo->getDefaultPlayerColor());
+	CvPreGame::setMinorCiv(eMinorPlayer, true);
+
+	GET_PLAYER(eMinorPlayer).init(eMinorPlayer);
+}
+
+
 //	--------------------------------------------------------------------------------
 void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv)
 {

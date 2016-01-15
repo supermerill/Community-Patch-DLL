@@ -472,7 +472,9 @@ public:
 
 	void saveReplay();
 
+	// you need to add "eNewPlayer" inside a team (setTeam) before calling any of these 2 methods.
 	void addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv);
+	void addPlayerMinor(PlayerTypes eMinorPlayer);
 
 	void testVictory();
 	bool testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScore = NULL) const;
