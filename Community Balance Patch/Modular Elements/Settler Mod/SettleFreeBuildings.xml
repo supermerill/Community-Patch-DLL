@@ -123,10 +123,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_COLONIST</UnitType>
-			<BuildingClassType>BUILDINGCLASS_WATERMILL</BuildingClassType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_COLONIST</UnitType>
 			<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
 		</Row>
 		<Row>
