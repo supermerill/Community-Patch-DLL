@@ -19048,6 +19048,17 @@ void CvCity::updateStrengthValue()
 	}
 #endif
 
+#if defined(MOD_BALANCE_CORE)
+	//if a land unit is inside, be sure that his strent is at least his strength.
+	if (pGarrisonedUnit && pGarrisonedUnit->getDomainType() == DOMAIN_LAND)
+	{
+		double UnitStrenth = pGarrisonedUnit->GetBaseCombatStrength();
+		if (m_iStrengthValue < UnitStrenth)
+		{
+			m_iStrengthValue = UnitStrenth;
+		}
+	}
+#endif
 	DLLUI->setDirty(CityInfo_DIRTY_BIT, true);
 }
 
