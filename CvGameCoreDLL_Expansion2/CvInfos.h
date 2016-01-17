@@ -840,6 +840,22 @@ public:
 	int getBarbSpawnMod() const;
 	int getBarbarianCombatModifier() const;
 	int getAIBarbarianCombatModifier() const;
+#if defined(MOD_COMBAT_HANDICAP)
+	int getMeleeCombatModifierHumanAgainstAI() const;
+	int getMeleeCombatModifierHumanAgainstHuman() const;
+	int getRangeCombatModifierHumanAgainstAI() const;
+	int getRangeCombatModifierHumanAgainstHuman() const;
+	int getCityCombatModifierHumanAgainstAI() const;
+	int getCityCombatModifierHumanAgainstHuman() const;
+	int getMeleeAttackDmgMultHumanAgainstAI() const;
+	int getMeleeAttackDmgMultHumanAgainstHuman() const;
+	int getRangeAttackDmgMultHumanAgainstAI() const;
+	int getRangeAttackDmgMultHumanAgainstHuman() const;
+	int getRangeAttackDmgMultHumanAgainstAICity() const;
+	int getRangeAttackDmgMultHumanAgainstHumanCity() const;
+	int getCityAttackDmgMultHumanAgainstAI() const;
+	int getCityAttackDmgMultHumanAgainstHuman() const;
+#endif
 	int getEarliestBarbarianReleaseTurn() const;
 	int getBarbarianLandTargetRange() const;
 	int getBarbarianSeaTargetRange() const;
@@ -916,6 +932,22 @@ protected:
 	int m_iBarbSpawnMod;
 	int m_iBarbarianCombatModifier;
 	int m_iAIBarbarianCombatModifier;
+#if defined(MOD_COMBAT_HANDICAP)
+	int m_iMeleeCombatModifierHumanAgainstAI;
+	int m_iMeleeCombatModifierHumanAgainstHuman;
+	int m_iRangeCombatModifierHumanAgainstAI;
+	int m_iRangeCombatModifierHumanAgainstHuman;
+	int m_iCityCombatModifierHumanAgainstAI;
+	int m_iCityCombatModifierHumanAgainstHuman;
+	int m_iMeleeAttackDmgMultHumanAgainstAI;
+	int m_iMeleeAttackDmgMultHumanAgainstHuman;
+	int m_iRangeAttackDmgMultHumanAgainstAI;
+	int m_iRangeAttackDmgMultHumanAgainstHuman;
+	int m_iRangeAttackDmgMultHumanAgainstAICity;
+	int m_iRangeAttackDmgMultHumanAgainstHumanCity;
+	int m_iCityAttackDmgMultHumanAgainstAI;
+	int m_iCityAttackDmgMultHumanAgainstHuman;
+#endif
 	int m_iEarliestBarbarianReleaseTurn;
 	int m_iBarbarianLandTargetRange;
 	int m_iBarbarianSeaTargetRange;

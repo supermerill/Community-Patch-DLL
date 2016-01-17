@@ -1,5 +1,5 @@
-﻿/*	-------------------------------------------------------------------------------------------------------
-	� 1991-2012 Take-Two Interactive Software and its subsidiaries.  Developed by Firaxis Games.  
+/*	-------------------------------------------------------------------------------------------------------
+	? 1991-2012 Take-Two Interactive Software and its subsidiaries.  Developed by Firaxis Games.  
 	Sid Meier's Civilization V, Civ, Civilization, 2K Games, Firaxis Games, Take-Two Interactive Software 
 	and their respective logos are all trademarks of Take-Two interactive Software, Inc.  
 	All other marks and trademarks are the property of their respective owners.  
@@ -26,6 +26,20 @@
 
 #define POST_QUICK_COMBAT_DELAY	110
 #define POST_COMBAT_DELAY		1
+
+// Comment out this line to switch off all custom mod logging
+#define MER_MODSLOG "MERMods.log"
+
+// Custom mod logger
+#if defined(MER_MODSLOG)
+#define	MER_LOG(sFmt, ...) {  \
+	CvString sMsg;  \
+	CvString::format(sMsg, sFmt, __VA_ARGS__);  \
+	LOGFILEMGR.GetLog(MER_MODSLOG, FILogFile::kDontTimeStamp)->Msg(sMsg.c_str());  \
+}
+#else
+#define	MER_LOG(sFmt, ...) __noop
+#endif
 
 //	---------------------------------------------------------------------------
 static int GetPostCombatDelay()
@@ -195,6 +209,7 @@ void CvUnitCombat::GenerateMeleeCombatInfo(CvUnit& kAttacker, CvUnit* pkDefender
 			iDefenderDamageInflicted /= 3;
 		}
 
+
 #if defined(MOD_BALANCE_CORE)
 		if(kAttacker.getForcedDamageValue() != 0)
 		{
@@ -212,7 +227,33 @@ void CvUnitCombat::GenerateMeleeCombatInfo(CvUnit& kAttacker, CvUnit* pkDefender
 		{
 			iAttackerDamageInflicted += pkDefender->getChangeDamageValue();
 		}
+#endif#if defined(MOD_COMBAT_HANDICAP)
+		//handicap for combat
+		CvPlayerAI& kDefenderPlayer = GET_PLAYER(pkDefender->getOwner());
+		CvPlayerAI& kAttackerPlayer = GET_PLAYER(kAttacker.getOwner());
+		//if human attack ai (but not barb)
+		if(!kDefenderPlayer.isBarbarian() 
+			&& CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_COMPUTER
+			&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			iAttackerDamageInflicted *= kAttackerPlayer.getHandicapInfo().getMeleeAttackDmgMultHumanAgainstAI();
+			iAttackerDamageInflicted /= 100;
+		}
+		else if(CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_TAKEN
+				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			int def = kDefenderPlayer.getHandicapInfo().getMeleeAttackDmgMultHumanAgainstHuman();
+			int att = kAttackerPlayer.getHandicapInfo().getMeleeAttackDmgMultHumanAgainstHuman();
+			if(att>def)
+			{
+				iAttackerDamageInflicted *= (100 + att - def);
+				iAttackerDamageInflicted /= 100;
+			}
+		}
 #endif
+
 		int iAttackerTotalDamageInflicted = iAttackerDamageInflicted + pkDefender->getDamage();
 		int iDefenderTotalDamageInflicted = iDefenderDamageInflicted + kAttacker.getDamage();
 
@@ -618,7 +659,33 @@ void CvUnitCombat::GenerateRangedCombatInfo(CvUnit& kAttacker, CvUnit* pkDefende
 		{
 			iDamage += pkDefender->getChangeDamageValue();
 		}
+#endif#if defined(MOD_COMBAT_HANDICAP)
+		//handicap for combat
+		CvPlayerAI& kDefenderPlayer = GET_PLAYER(pkDefender->getOwner());
+		CvPlayerAI& kAttackerPlayer = GET_PLAYER(kAttacker.getOwner());
+		//if human attack ai (but not barb)
+		if(!kDefenderPlayer.isBarbarian() 
+			&& CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_COMPUTER
+			&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			iDamage *= kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstAI();
+			iDamage /= 100;
+		}
+		else if(CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_TAKEN
+				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			int def = kDefenderPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+			int att = kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+			if(att>def)
+			{
+				iDamage *= (100 + att - def);
+				iDamage /= 100;
+			}
+		}
 #endif
+
 		if(iDamage + pkDefender->getDamage() > GC.getMAX_HIT_POINTS())
 		{
 			iDamage = GC.getMAX_HIT_POINTS() - pkDefender->getDamage();
@@ -645,6 +712,33 @@ void CvUnitCombat::GenerateRangedCombatInfo(CvUnit& kAttacker, CvUnit* pkDefende
 		iMaxXP = 1000;
 
 		iDamage = kAttacker.GetRangeCombatDamage(/*pDefender*/ NULL, pCity, /*bIncludeRand*/ true);
+
+#if defined(MOD_COMBAT_HANDICAP)
+		//handicap for combat
+		CvPlayerAI& kDefenderPlayer = GET_PLAYER(pkDefender->getOwner());
+		CvPlayerAI& kAttackerPlayer = GET_PLAYER(kAttacker.getOwner());
+		//if human attack ai (but not barb)
+		if(!kDefenderPlayer.isBarbarian() 
+			&& CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_COMPUTER
+			&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			iDamage *= kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstAICity();
+			iDamage /= 100;
+		}
+		else if(CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_TAKEN
+				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			int def = kDefenderPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHumanCity();
+			int att = kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHumanCity();
+			if(att>def)
+			{
+				iDamage *= (100 + att - def);
+				iDamage /= 100;
+			}
+		}
+#endif
 
 		// Cities can't be knocked to less than 1 HP
 		if(iDamage + pCity->getDamage() >= pCity->GetMaxHitPoints())
@@ -742,7 +836,34 @@ void CvUnitCombat::GenerateRangedCombatInfo(CvCity& kAttacker, CvUnit* pkDefende
 		{
 			iDamage += pkDefender->getChangeDamageValue();
 		}
+#endif		
+#if defined(MOD_COMBAT_HANDICAP)
+		//handicap for combat
+		CvPlayerAI& kDefenderPlayer = GET_PLAYER(pkDefender->getOwner());
+		CvPlayerAI& kAttackerPlayer = GET_PLAYER(kAttacker.getOwner());
+		//if human attack ai (but not barb)
+		if(!kDefenderPlayer.isBarbarian() 
+			&& CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_COMPUTER
+			&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			iDamage *= kAttackerPlayer.getHandicapInfo().getCityAttackDmgMultHumanAgainstAI();
+			iDamage /= 100;
+		}
+		else if(CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_TAKEN
+				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			int def = kDefenderPlayer.getHandicapInfo().getCityAttackDmgMultHumanAgainstHuman();
+			int att = kAttackerPlayer.getHandicapInfo().getCityAttackDmgMultHumanAgainstHuman();
+			if(att>def)
+			{
+				iDamage *= (100 + att - def);
+				iDamage /= 100;
+			}
+		}
 #endif
+
 		if(iDamage + pkDefender->getDamage() > GC.getMAX_HIT_POINTS())
 		{
 			iDamage = GC.getMAX_HIT_POINTS() - pkDefender->getDamage();
@@ -1344,6 +1465,33 @@ void CvUnitCombat::GenerateAirCombatInfo(CvUnit& kAttacker, CvUnit* pkDefender, 
 
 		iAttackerTotalDamageInflicted = std::max(pkDefender->getDamage(), pkDefender->getDamage() + iAttackerDamageInflicted);
 
+#if defined(MOD_COMBAT_HANDICAP)
+		//handicap for combat
+		CvPlayerAI& kDefenderPlayer = GET_PLAYER(pkDefender->getOwner());
+		CvPlayerAI& kAttackerPlayer = GET_PLAYER(kAttacker.getOwner());
+		//if human attack ai (but not barb)
+		if(!kDefenderPlayer.isBarbarian() 
+			&& CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_COMPUTER
+			&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			iAttackerDamageInflicted *= kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstAI();
+			iAttackerDamageInflicted /= 100;
+		}
+		else if(CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_TAKEN
+				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			int def = kDefenderPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+			int att = kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHuman();
+			if(att>def)
+			{
+				iAttackerDamageInflicted *= (100 + att - def);
+				iAttackerDamageInflicted /= 100;
+			}
+		}
+#endif
+
 		// Calculate defense damage
 		iDefenderDamageInflicted = pkDefender->GetAirStrikeDefenseDamage(&kAttacker);
 
@@ -1389,6 +1537,32 @@ void CvUnitCombat::GenerateAirCombatInfo(CvUnit& kAttacker, CvUnit* pkDefender, 
 
 		iAttackerDamageInflicted = kAttacker.GetAirCombatDamage(/*pUnit*/ NULL, pCity, /*bIncludeRand*/ true, iInterceptionDamage);
 
+#if defined(MOD_COMBAT_HANDICAP)
+		//handicap for combat
+		CvPlayerAI& kDefenderPlayer = GET_PLAYER(pkDefender->getOwner());
+		CvPlayerAI& kAttackerPlayer = GET_PLAYER(kAttacker.getOwner());
+		//if human attack ai (but not barb)
+		if(!kDefenderPlayer.isBarbarian() 
+			&& CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_COMPUTER
+			&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			iAttackerDamageInflicted *= kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstAICity();
+			iAttackerDamageInflicted /= 100;
+		}
+		else if(CvPreGame::slotStatus(kDefenderPlayer.GetID()) == SS_TAKEN
+				&& CvPreGame::slotStatus(kAttackerPlayer.GetID()) == SS_TAKEN)
+		{
+			//add def bonus as reduce damage
+			int def = kDefenderPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHumanCity();
+			int att = kAttackerPlayer.getHandicapInfo().getRangeAttackDmgMultHumanAgainstHumanCity();
+			if(att>def)
+			{
+				iAttackerDamageInflicted *= (100 + att - def);
+				iAttackerDamageInflicted /= 100;
+			}
+		}
+#endif
 		// Cities can't be knocked to less than 1 HP
 		if(iAttackerDamageInflicted + pCity->getDamage() >= pCity->GetMaxHitPoints())
 		{

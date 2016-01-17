@@ -386,6 +386,9 @@
 
 #endif
 
+// Changes for add more handicap values for combat mod by Merill
+#define MOD_COMBAT_HANDICAP							gCustomMods.isCOMBAT_HANDICAP()
+
 // Changes for the CivIV Diplomacy Features mod by Putmalk - AFFECTS SAVE GAME DATA FORMAT (v36)
 #define MOD_DIPLOMACY_CIV4_FEATURES                 gCustomMods.isDIPLOMACY_CIV4_FEATURES()
 
@@ -1272,6 +1275,8 @@ public:
 	MOD_OPT_DECL(BALANCE_CORE_JFD);
 	MOD_OPT_DECL(BALANCE_CORE_MILITARY_RESISTANCE);
 	MOD_OPT_DECL(BALANCE_CORE_PANTHEON_RESET_FOUND);
+
+	MOD_OPT_DECL(COMBAT_HANDICAP); 
 
 	MOD_OPT_DECL(DIPLOMACY_CIV4_FEATURES); 
 
