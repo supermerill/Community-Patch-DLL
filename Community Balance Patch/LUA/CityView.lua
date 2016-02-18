@@ -1881,6 +1881,7 @@ function OnCityViewUpdate()
 			Controls.NoAutoSpecialistCheckbox2:SetDisabled( true );
 			
 			-- Other
+			Controls.IndependanceCityButton:SetDisabled( true );
 			Controls.RazeCityButton:SetDisabled( true );
 			Controls.UnrazeCityButton:SetDisabled( true );
 			
@@ -1909,6 +1910,7 @@ function OnCityViewUpdate()
 			Controls.NoAutoSpecialistCheckbox2:SetDisabled( false );
 			
 			-- Other
+			Controls.IndependanceCityButton:SetDisabled( false );
 			if (not g_bRazeButtonDisabled) then
 				Controls.RazeCityButton:SetDisabled( false );
 				Controls.UnrazeCityButton:SetDisabled( false );
@@ -2635,6 +2637,30 @@ function OnReturnToMapButton()
 	Events.SerialEventExitCityScreen();
 end
 Controls.ReturnToMapButton:RegisterCallback( Mouse.eLClick, OnReturnToMapButton);
+
+
+-------------------------------------------------
+-------------------------------------------------
+function OnIndependenceButton()
+
+	local pCity = UI.GetHeadSelectedCity();
+	
+	if (pCity == nil) then
+		return;
+	end;
+	
+	-- todo: instead, create a new city-state and give them this city
+	-- if i'm the creator, give them entirely
+	-- if i'm not the creator, give them like a conquest that can be liberated
+	local popupInfo = {
+		Type = ButtonPopupTypes.BUTTONPOPUP_CONFIRM_CITY_TASK,
+		Data1 = pCity:GetID(),
+		Data2 = TaskTypes.TASK_RAZE,
+		}
+    
+	Events.SerialEventGameMessagePopup( popupInfo );
+end
+Controls.IndependenceCityButton:RegisterCallback( Mouse.eLClick, OnIndependenceButton);
 
 -------------------------------------------------
 -------------------------------------------------
