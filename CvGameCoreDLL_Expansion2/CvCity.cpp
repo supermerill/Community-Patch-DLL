@@ -14893,20 +14893,20 @@ int CvCity::getHappinessDelta() const
 //	--------------------------------------------------------------------------------
 int CvCity::getThresholdAdditions() const
 {
-	int iModifier = GC.getBALANCE_UNHAPPY_CITY_BASE_VALUE();
+	int iModifier = GC.getBALANCE_UNHAPPY_CITY_BASE_VALUE(); //1
 
 	//Let's modify this based on the number of player techs - more techs means the threshold goes higher.
-	int iTech = (int)(GET_TEAM(getTeam()).GetTeamTechs()->GetNumTechsKnown() * 100 * /*1.5*/ GC.getBALANCE_HAPPINESS_TECH_BASE_MODIFIER());
+	int iTech = (int)(GET_TEAM(getTeam()).GetTeamTechs()->GetNumTechsKnown() * 100 * /*1.3*/ GC.getBALANCE_HAPPINESS_TECH_BASE_MODIFIER());
 	//Dividing it by the num of techs to get a % - num of techs artificially increased to slow rate of growth
-	iTech /= max(1, GC.getNumTechInfos());
+	iTech /= max(1, GC.getNumTechInfos()); // between 0 and 130
 	
 	iModifier += iTech;
 
-	//Increase threshold based on # of citizens. Is slight, but makes larger cities more and more difficult to maintain.
-	int iPopMod = getPopulation() * GC.getBALANCE_HAPPINESS_BASE_CITY_COUNT_MULTIPLIER();
+	//Increase threshold based on # of citizens. Is slight, but makes larger cities more and more difficult to maintain. => 1.5 per pop
+	int iPopMod = getPopulation() * /* 150 */GC.getBALANCE_HAPPINESS_BASE_CITY_COUNT_MULTIPLIER();
 	iPopMod /= 100;
 
-	iModifier += iPopMod;
+	iModifier += iPopMod; 
 
 	if(isCapital())
 	{
