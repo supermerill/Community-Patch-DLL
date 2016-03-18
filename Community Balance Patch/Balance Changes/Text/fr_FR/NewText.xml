@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 12/14/2014 8:42:49 PM -->
+<GameData>
+	<Language_fr_FR>
+		<Row Tag="TXT_KEY_POLICY_UNIVERSAL_HEALTHCARE_A_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]Autarcie[ENDCOLOR][NEWLINE]Les [ICON_INTERNATIONAL_TRADE] Routes Commerciales Interne génèrent +10 [ICON_GOLD] Or, et les [ICON_CONNECTED] Connection urbaines génèrent +3 [ICON_PRODUCTION] Production.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_UNIVERSAL_HEALTHCARE_A">
+			<Text>Autarcie</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_UNIVERSAL_HEALTHCARE_TEXT_A">
+			<Text>L'Autarcie est la qualité d'être auto-suffisant. Habituellement, le terme est appliqué aux Etats politiques ou à leurs systèmes économiques. L'autarcie existe chaque fois qu'une entité peut survivre ou poursuivre ses activités sans aide extérieure ni commerce international. Si une économie autosuffisante refuse également tous les échanges avec le monde extérieur, alors elle est appelé une économie fermée. L'autarcie est pas nécessairement un phénomène économique, par exemple une autarcie militaire est un Etat qui pourrait se défendre sans l'aide d' un autre pays. L'Autarcie peut être considéré comme la politique d'un État ou d'une autre entité lorsqu'elle cherche à être autonome dans son ensemble, mais peut aussi se limiter à un champ étroit comme la possession d'une matière première clé.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_POLICY_UNIVERSAL_HEALTHCARE_F_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]Assurance Maladie[ENDCOLOR][NEWLINE]Recevez un Hôpital gratuit dans chaque Ville. +50 [ICON_CULTURE] Culture quand un Citoyen est né dans une Ville, le bonus s'améliore en changeant d'ére technologique.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_UNIVERSAL_HEALTHCARE_F">
+			<Text>Assurance Maladie</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_MORRIGAN">
+			<Text>Gagnez [ICON_GOLD] Or, [ICON_CULTURE] Culture, et [ICON_GOLDEN_AGE] Points d'Age d'Or pour chaque tué</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_MORRIGAN_SHORT">
+			<Text>Morrigan, Porteur de Conflits</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_EPONA">
+			<Text>Recevez +20 [ICON_RESEARCH] Science, [ICON_CULTURE] Culture, et [ICON_FOOD] Nouriture à chaque fosi que vos frontières s'agrandissent, le bonus s'améliore en changeant d'ére technologique</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_EPONA_SHORT">
+			<Text>Epona, La grande Jument</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_NUADA">
+			<Text>+1 [ICON_CULTURE] Culture pour chaque groupe de 15 [ICON_GOLD] Or par tour, et +1 [ICON_GOLDEN_AGE] Points d'Age d'Or pour chaque groupe de 12 [ICON_RESEARCH] Science par tour</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_NUADA_SHORT">
+			<Text>Nuada, Le Roi à la main d'Argent</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_CERNUNNOS">
+			<Text>+1 [ICON_FOOD] Nouriture pour les Forêts, +1 [ICON_PRODUCTION] Production pour les Jungles</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_CERNUNNOS_SHORT">
+			<Text>Cernunos, Le Cerf à Cornes</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_LUGH">
+			<Text>+5 [ICON_CULTURE] Culture, [ICON_RESEARCH] Science, et [ICON_GOLD] Or dans les Villes avec un Spécialiste, +1 [ICON_CULTURE] Culture pour les Merveilles Mondiales</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_LUGH_SHORT">
+			<Text>Lugh, Celui qui est Doué</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_RHIANNON">
+			<Text>+3 [ICON_GOLDEN_AGE] Points d'Age d'Or, [ICON_RESEARCH] Science, et [ICON_GOLD] Or dans chaque Ville</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_RHIANNON_SHORT">
+			<Text>Rhiannon, Déesse de la souveraineté</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_MANANNAN">
+			<Text>+2 [ICON_FOOD] Nouriture, +3 [ICON_PRODUCTION] Production, et +4 [ICON_GOLD] Or dans les Villes cotières</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_MANANNAN_SHORT">
+			<Text>Mannanan, fils de la mer</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_OGMA">
+			<Text>+1 [ICON_RESEARCH] Science pour chaque groupe de 2 [ICON_CITIZEN] Citoyens dans la Ville, et +6 [ICON_CULTURE] Culture quand un [ICON_CITIZEN] Citoyen est né</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_OGMA_SHORT">
+			<Text>Ogma, le Sage</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_BRAN">
+			<Text>+100% pour la [ICON_RANGE_STRENGTH] puissance de combat à distance, +25% [ICON_FOOD] Natalité, et +1 [ICON_CULTURE] Culture dans chaque Ville</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_BRAN_SHORT">
+			<Text>Bran, le Gardien Endormi</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_DAGDA">
+			<Text>+1 [ICON_CULTURE] Culture, [ICON_GOLD] Or, et [ICON_RESEARCH] Science pour chaque groupe de 3 Adeptes</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_DAGDA_SHORT">
+			<Text>Dagda, le Saint-Père</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_POLICY_UNIVERSAL_HEALTHCARE_O_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]Paix, Terre, Pain[ENDCOLOR][NEWLINE][ICON_HAPPINESS_3] Pauvreté réduite de 20% et [ICON_FOOD] Natalité augmenté de 20% dans toutes les villes.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_UNIVERSAL_HEALTHCARE_O">
+			<Text>Paix, Terre, Pain</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_UNIVERSAL_HEALTHCARE_TEXT_O">
+			<Text>La phrase 'Paix, Terre, Pain', popularisé par Lenin et d'autres gens lors des premiers jours de la révolutions soviétique, mettait en avant leur désir de se concertrer sur els besoins des paysans pauvre de russie. Les premiers décrêts Bolchevique des années 1910 et 1920 ont été révélé aussi tôt que le succès de la révolution fût annoncé. Les décrêts se conformaient au slogan Bolchevique populaire 'Paix, Terre et Pain', portés par les masses durant les jours de juillets (juillet 1917), un soulèvement des travailleurs et des forces militaires.</Text>
+		</Row>	
+		<Row Tag="TXT_KEY_PROCESS_CULTURE">
+			<Text>Arts</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROCESS_CULTURE_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]Arts[ENDCOLOR] convertit 20% de la [ICON_PRODUCTION] Production de cette Ville en [ICON_CULTURE] Culture.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROCESS_CULTURE_STRATEGY">
+			<Text>Investir la production dans l'art est un bon moyen pour améliorer la génération de cuture de votre Civilisation, pour pouvoir prendre rapidement la doctrine suivante ou pour atteindre une victoire Touristique.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROCESS_FOOD">
+			<Text>Fermeing</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROCESS_FOOD_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]Fermeing[ENDCOLOR] convertit 20% of [ICON_PRODUCTION] Production of this Ville into [ICON_FOOD] Nouriture.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROCESS_FOOD_STRATEGY">
+			<Text>Investir de la production en agriculture est un bon moyen d'améliorer la croissance de la ville, ce qui peut être utile si vous avez besoin d'une ville plus grande.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_POLICY_FIRST_ON_MOON">
+			<Text>Premier sur la Lune</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_MANHATTAN_PROJECT">
+			<Text>Bombe Atomique</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_RESOLUTION_TOURISM_PENALTY">
+			<Text>Interdiction de Voyage</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOLUTION_TOURISM_PENALTY_HELP">
+			<Text>Restreint les voyages internationnaux entre Civilisations. Réduit le modificateur de [ICON_TOURISM] Tourisme les Civilisations de 50%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOLUTION_TOURISM_BONUS">
+			<Text>Système de Passports</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOLUTION_TOURISM_BONUS_HELP">
+			<Text>Augmente le nombre de voyages internationnaux entre Civilisations. Augmente le modificateur de [ICON_TOURISM] Tourisme pour les Civilisations de 50%.</Text>
+		</Row>
+	</Language_fr_FR>
+</GameData>

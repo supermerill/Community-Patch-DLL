@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 3/2/2016 4:32:36 PM -->
+<!-- TODO: french traduction -->
+<GameData>
+	<Language_fr_FR>
+		<Row Tag="TXT_KEY_THEMING_BONUS_ROYAL_LIBRARY">
+			<Text>Knowledge from Around the World</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_ROYAL_LIBRARY_THEMING_BONUS_HELP">
+			<Text>To maximize your bonus, make sure both Chefs-d'Oeuvre are from foreign Civilisations</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CO_CITY_TOURISM_GA_BONUS">
+			<Text>{1_Num} [ICON_TOURISM] Tourisme from {2_Num}% of the [ICON_CULTURE] Culture of your [ICON_CAPITAL] Capital (Carnival Bonus)</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_DOGE_PALACE">
+			<Text>Palais du Doge</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_DOGE_PALACE_TEXT">
+			<Text>
+				The Doge's Palace (Italian: Palazzo Ducale) is a palace built in Venetian Gothic style, et one of the main landmarks of the city of Venice, northern Italy. The palace was the residence of the Doge of Venice, the supreme authority of the Republic of Venice, opening as a museum in 1923. Today, it is one of the 11 museums run by the Fondazione Musei Civici di Venezia.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_DOGE_PALACE_STRATEGY">
+			<Text>Unique Venetian replacement for the Palace. This building has higher yields et defense than the standard Palace, et improves Personnage Illustre generation by 15% in your [ICON_CAPITAL] Capital. Produces +5 [ICON_TOURISM] when you research Guilds, but does not contain a slot pour un Chef-d'Oeuvre. [NEWLINE][NEWLINE]Enemy Spies in this Ville cannot perform Advanced Spy Actions, meaning that your Capital is well-defended agagnentt the theft of Or, Science, et other important resources.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_DOGE_PALACE_HELP">
+			<Text>+15% [ICON_GREAT_PEOPLE] Personnage Illustre rate. +5 [ICON_TOURISM] when you research Guilds. Enemy [ICON_SPY] Spies cannot perform Advanced Spy Actions in this Ville.[NEWLINE][NEWLINE]When one of the following actions is completed, receive a [ICON_TOURISM] Tourisme boost based on your recent [ICON_CULTURE] Culture output:[NEWLINE][ICON_BULLET] Earn a [ICON_GREAT_PEOPLE] Personnage Illustre[NEWLINE][ICON_BULLET] Build a [ICON_GOLDEN_AGE] Merveille Mondiale[NEWLINE][ICON_BULLET] Win a [ICON_WAR] War[NEWLINE][ICON_BULLET] Enter a new [ICON_RESEARCH] Era[NEWLINE][NEWLINE][ICON_CONNECTED] Connecting other Villes to the [ICON_CAPITAL] Capital by Road will produce additional [ICON_GOLD] Or.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_THEMING_BONUS_BROADCAST_TOWER_NATIONAL">
+			<Text>KCIV 101.5FM - #1 for Classic Jams</Text>
+		</Row>
+		<Row Tag="TXT_KEY_THEMING_BONUS_BROADCAST_TOWER_CLASSICS">
+			<Text>KSID 107.7FM - Today's Hits, Yesterday's Favorites</Text>
+		</Row>
+		<Row Tag="TXT_KEY_THEMING_BONUS_BROADCAST_TOWER_ALL">
+			<Text>KGAZ 89.5FM - Eclectic Radio Mix</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BROADCAST_TOWER_THEMING_BONUS_HELP">
+			<Text>To maximize your bonus, make sure both Chefs-d'Oeuvre meet one of the following criteria: [NEWLINE]1.) Both from the same Era [NEWLINE]2.) Both from different Eras.[NEWLINE]3.) Both from consecutive Eras.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_SKOLA">
+			<Text>Skola</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_SKOLA_TEXT">
+			<Text>Swedish state schools are funded by tax money. This goes for both primary et secondary school (Swedish: grundskola), high school (Swedish: gymnasium) et universities. When studying at a university, however, you might have to pay pour unccommodation et literature. There are private schools as well who also receive funding from the government, but they may charge a fee from the parents.[NEWLINE][NEWLINE]Compulsory education starts at seven years of age, avec un optional year in förskola (pre-school). The Swedish primary school is split into three parts; Lågstadiet – “the low stage”, which covers grades 1 to 3. This is where you learn the basics of the three main subjects – in Swedish called kärnämnen – Swedish, English et mathematics. It also includes some natural science. Mellanstadiet – “the middle stage”, which covers grades 4 to 6, introduces the children to more detailed subjects. Woodwork et needlework, social et domestic science, et even a second, foreign language in grade 6, a B-språk (B-language). The languages available are usually French, Spanish or German depending on the school. Högstadiet, “the high stage”, is the last stage of the compulsory education, between grades 7 et 9. This is when studies get more in-depth et are taken to an international level.[NEWLINE][NEWLINE]Swedish children take national exams at grades 3, 6 et 9. Children at grade 3 take these exams in two of the three main subjects: Swedish et mathematics. In grade 5 the exams extend to the third main subject, English, et in grade 9 the exams also extend to natural science, foreign languages, et one of the four subjects in "Samhällsorientering" (geography, history, religious studies, et civics). They first receive grades in grade 6. The grading system is letter-based, ranging from A-F, where F is the lowest grade et A is the highest. F means "not approved", while all other ratings above F mean "approved". There are only objectives for E, C et A; D means the person has met most (but not all) objectives for C, while B means the person has met most objectives for A. When applying to gymnasium (high schools) or universities, a meritvärde (“meritous point value”) is calculated. E is worth 10 points, D 12.5 points, C 15 points, et so on. Children not being approved in Swedish, English et mathematics will have to study at a special high school program called the “individual program”. Once they are approved, they may apply to an ordinary high school program. Swedes study at high school for three years, between the ages of 16 et 18.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SKOLA_STRATEGY">
+			<Text>Unique Swedish replacement for the Public School. This building is cheaper et costs less maintenance than the building it replaces, et also boosts the city's [ICON_CULTURE] Culture.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SKOLA_HELP">
+			<Text>Réduit [ICON_HAPPINESS_3] Illettrisme. +1 [ICON_CULTURE] Culture pour chaque groupe de 5 [ICON_CITIZEN] Citoyens, et +1 [ICON_RESEARCH] Science pour chaque groupe de 3 [ICON_CITIZEN] Citoyens in the Ville.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_BASILICA_DESC">
+			<Text>Basilica</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_BASILICA_TEXT">
+			<Text>The Latin word basilica, has three distinct applications in modern English. The word was originally used to describe an open, Roman, public court building, usually located adjacent to the forum of a Roman town. By extension it was applied to Christian buildings of the same form et continues to be used in an architectural sense to describe those buildings avec un central nave et aisles. Later, the term came to refer specifically to a large et important church that has been given special ceremonial rights by the Pope.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_BASILICA_STRATEGY">
+			<Text>Unique Byzantine replacement for the Temple. This building does not require maintenance, boosts the city's [ICON_PEACE] Foi output based on the number of [ICON_CITIZEN] Citoyens in the city, et doubles Religious Pressure génèrentd by Routes Commerciales.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_BASILICA_HELP">
+			<Text>+1 [ICON_PEACE] Foi pour chaque groupe de 3 [ICON_CITIZEN] Citoyens in the Ville. Réduit [ICON_HAPPINESS_3] Divisions Religieuses et doubles Religious Pressure génèrentd by Routes Commerciales.[NEWLINE]Nearby [ICON_RES_INCENSE] Incense: +1 [ICON_CULTURE] Culture, +1 [ICON_PEACE] Foi.[NEWLINE]Nearby [ICON_RES_WINE] Wine: +1 [ICON_CULTURE] Culture, +1 [ICON_PEACE] Foi.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GREAT_COTHON">
+			<Text>Grand Cothon</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GREAT_COTHON_PEDIA">
+			<Text>A cothon is an artificial, protected inner harbor such as that in Carthage during the Punic Wars around 200 BC. The cothon at Carthage was divided into a rectangular merchant harbor followed by an inner protected harbor reserved for military use only. This inner harbor was circular et surrounded by an outer ring of structures divided into a series of docking bays for ship maintenance, along avec un island structure at its centre that also housed navy ships. Each individual docking bay featured a raised slipway. Above the raised docking bays was a second level consisting of warehouses where oars et rigging were kept along with supplies such as wood et canvas. On the island structure there existed a raised 'cabin' where the admiral in command could observe the whole harbor along with the surrounding sea. Altogether the inner docking complex could house up to 220 ships. The entire harbor was protected by an outer wall et the main entrance could be closed off with Fer chains.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GREAT_COTHON_STRATEGY">
+			<Text>Unique Carthaginian replacement for the East India Company. Must have built a Marché in the city. In addition to the normal bonuses provided by the East India Company, the Grand Cothon provides additional gold for both recipient et target of trade routes from the city where it is built, et two additional trade routes. All Harbors in your empire also gagnent +3 Production. Unlike the East India Company, the Grand Cothon is made available in the Classical Era with the discovery of Currency.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GREAT_COTHON_HELP">
+			<Text>Must have built a Marché in the city.[NEWLINE][NEWLINE]+5 [ICON_GOLD] Or for outgoing [ICON_INTERNATIONAL_TRADE] Routes Commerciales, +3 [ICON_GOLD] Or for incoming [ICON_INTERNATIONAL_TRADE] Routes Commerciales. Grants two additional [ICON_INTERNATIONAL_TRADE] Routes Commerciales, et all Harbors gagnent +3 [ICON_PRODUCTION] Production. Recevez a free copy of all Ressource de Luxes around the Ville. Réduit [ICON_HAPPINESS_3] Pauvreté. The cost goes up the more cities there are in the empire.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_MAUSOLEUM_HELP">
+			<Text>Gain [ICON_PEACE] Foi when an owned unit is killed in battle. Le bonus s'améliore en changeant d'ère.[NEWLINE][NEWLINE]+5 [ICON_PEACE] Foi from all Holy Sites.[NEWLINE][NEWLINE]May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief. [NEWLINE][NEWLINE]Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MAUSOLEUM">
+			<Text>Mausolé</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MAUSOLEUM_STRATEGY">
+			<Text>Build the Mausolé to gagnent [ICON_PEACE] Foi from casualties in war et to improve all Holy Sites. Constructing this National Wonder will also allow you to choose a Réforme Belief. May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MAUSOLEUM_TEXT">
+			<Text>A mausoleum is an external free-standing building constructed as a monument enclosing the interment space or burial chamber of a deceased person or people. A monument without the interment is a cenotaph. A mausoleum may be considered a type of tomb, or the tomb may be considered to be dans un périmètre de the mausoleum. A Christian mausoleum sometimes includes a chapel.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_HEAVENLY_THRONE_HELP">
+			<Text>May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion.[NEWLINE][NEWLINE]+5 [ICON_PEACE] Foi from all Holy Sites.[NEWLINE][NEWLINE]Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief. [NEWLINE][NEWLINE]Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_HEAVENLY_THRONE">
+			<Text>Trône Céleste</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_HEAVENLY_THRONE_STRATEGY">
+			<Text>Build the Trône Céleste pour un big boost to your Ville Sainte's base yields et to improve all Holy Sites. Constructing this National Wonder will also allow you to choose a Réforme Belief. May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_HEAVENLY_THRONE_TEXT">
+			<Text>A throne is the seat of state of a potentate or dignitary, especially the seat occupied by a sovereign on state occasions; or the seat occupied by a pope or bishop on ceremonial occasions. "Throne" in an abstract sense can also refer to the monarchy or the Crown itself, an instance of metonymy, et is also used in many expressions such as "the power behind the throne".</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_GREAT_ALTAR_HELP">
+			<Text>+15% Unité militaire [ICON_PRODUCTION] Production.[NEWLINE][NEWLINE]+5 [ICON_PRODUCTION] Production from all Holy Sites.[NEWLINE][NEWLINE] May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief. [NEWLINE][NEWLINE]Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GREAT_ALTAR">
+			<Text>Grand Autel</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GREAT_ALTAR_STRATEGY">
+			<Text>Build the Grand Autel pour un boost to Unité militaire production et to improve all Holy Sites. Constructing this National Wonder will also allow you to choose a Réforme Belief. May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GREAT_ALTAR_TEXT">
+			<Text>An altar is any structure upon which offerings such as sacrifices are made for religious purposes. Altars are usually found at shrines, et they can be located in temples, churches et other places of worship. Today they are used particularly in Christianity, Buddhism, Hinduism, Shinto, Taoism, as well as in Neopaganism et Ceremonial Magic. Judaism used such a structure until the destruction of the Second Temple. Many historical faiths also made use of them, including Greek et Norse religion.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_RELIQUARY_HELP">
+			<Text>+5 [ICON_TOURISM] Tourisme from all Holy Sites.[NEWLINE][NEWLINE]May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief. [NEWLINE][NEWLINE]Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%.[NEWLINE][NEWLINE]Contains 4 slots for Chefs-d'Oeuvre Artistique or Artéfacts. +10 [ICON_PEACE] Foi if Themed.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_RELIQUARY">
+			<Text>Reliquaire</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_RELIQUARY_STRATEGY">
+			<Text>Build the Reliquaire pour un powerful Tourism-centric bonus et bonuses pour unll Holy Sites. The building's Tourisme bonus is only possible if all four Works Artistique/Artéfacts come from differing players. Constructing this National Wonder will also allow you to choose a Réforme Belief. May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_RELIQUARY_TEXT">
+			<Text>A reliquary is a container for relics. These may be the purported physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures. The authenticity of any given relic is often a matter of debate; for that reason, some churches require documentation of the relic's provenance. Relics have long been important to Buddhists, Christians, Hindus et many other religions. In these cultures, reliquaries are often presented in shrines, churches, or temples to which the faithful make pilgrimages in order to gagnent blessings. In Central West Africa, reliquaries used in the Bwete rituals contain objects considered magical, or the bones of ancestors, et are commonly constructed avec un guardian figure attached to the reliquary.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_THEMING_BONUS_RELIQUARY_HELP">
+			<Text>To maximize your bonus, make sure the Chef-d'Oeuvre Slots are all filled with Works Artistique/Artéfacts from differing players.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_THEMING_BONUS_RELIQUARY">
+			<Text>Holy Reliquaire of {2_CivAdjective}</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_DIVINE_COURT_HELP">
+			<Text>+5 [ICON_GOLD] Or from all Holy Sites.[NEWLINE][NEWLINE]May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief. [NEWLINE][NEWLINE]Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_DIVINE_COURT">
+			<Text>Sanctuaire Céleste</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_DIVINE_COURT_STRATEGY">
+			<Text>Build the Sanctuaire Céleste pour un boost to Or output et to improve all Holy Sites. Constructing this National Wonder will also allow you to choose a Réforme Belief. May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_DIVINE_COURT_TEXT">
+			<Text>A beth din ("house of judgment," or divine court) is a rabbinical court of Judaism. In ancient times, it was the building block of the legal system in the Biblical Land of Israel. Today, it is invested with legal powers in a number of religious matters (din Torah, "matter of litigation," plural dinei Torah) both in Israel et in Jewish communities in the Diaspora, where its judgments hold varying degrees of authority (depending upon the jurisdiction et subject matter) in matters specifically related to Jewish religious life.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_SACRED_GARDEN_HELP">
+			<Text>+5 [ICON_FOOD] Nouriture from all Holy Sites.[NEWLINE][NEWLINE]May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief. [NEWLINE][NEWLINE]Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SACRED_GARDEN">
+			<Text>Jardin Sacré</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SACRED_GARDEN_STRATEGY">
+			<Text>Build the Jardin Sacré pour un boost to Culture output et to improve all Holy Sites. Constructing this National Wonder will also allow you to choose a Réforme Belief. May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SACRED_GARDEN_TEXT">
+			<Text>Religion has been an important influence on Jardin design. Temple Jardins were made in Mesopotamia et Ancient Egypt. Sacred groves were made in ancient India, Greece, Rome, China et Japan. Sacred trees were important in Celtic et Germanic Europe et still are important in India. Many groves or forests were sacred in ancient India et continue to be so in modern Hindu worship. Buddhism had a significant influence on Jardin design, with the Zen Jardins of China et Japan as famous examples. In Christianity, particularly Catholicism et Anglicanism, Mary Jardins are common among churches et institutions. The practise of creating sacred Jardins is re-invigorated et adapted for modern times in the Ringing Cedars Series of books by Russian author Vladimir Megre.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_HOLY_COUNCIL_HELP">
+			<Text>+5 [ICON_RESEARCH] Science from all Holy Sites.[NEWLINE][NEWLINE]May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief. [NEWLINE][NEWLINE]Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_HOLY_COUNCIL">
+			<Text>Conseil Sacré</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_HOLY_COUNCIL_STRATEGY">
+			<Text>Build the Conseil Sacré pour un boost to Nouriture output et to improve all Holy Sites. Constructing this National Wonder will also allow you to choose a Réforme Belief. May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_HOLY_COUNCIL_TEXT">
+			<Text>An ecumenical Conseil (or holy Conseil) is a conference of ecclesiastical dignitaries et theological experts convened to discuss et settle matters of Eglise doctrine et practice in which those entitled to vote are convoked from the whole world (oikoumene) et which secures the approbation of the whole Eglise.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_APOSTOLIC_PALACE_HELP">
+			<Text>+4 [ICON_GOLDEN_AGE] Age d'Or points.[NEWLINE][NEWLINE]+5 [ICON_GOLDEN_AGE] Points d'Age d'Or from all Holy Sites.[NEWLINE][NEWLINE]May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief. [NEWLINE][NEWLINE]Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_APOSTOLIC_PALACE">
+			<Text>Palais Apostolique</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_APOSTOLIC_PALACE_STRATEGY">
+			<Text>Build the Palais Apostolique for more rapid Ages d'Or et to improve all Holy Sites. Constructing this National Wonder will also allow you to choose a Réforme Belief. May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_APOSTOLIC_PALACE_TEXT">
+			<Text>The Latin word basilica has three distinct applications in modern English. The word was originally used to describe an open, Roman, public court building, usually located adjacent to the forum of a Roman town. By extension it was applied to Christian buildings of the same form et continues to be used in an architectural sense to describe those buildings avec un central nave et aisles. Later, the term came to refer specifically to a large et important church, the Palais Apostolique, that has been given special ceremonial rights by the Pope.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_GRAND_OSSUARY_HELP">
+			<Text>+5 [ICON_CULTURE] Culture from all Holy Sites.[NEWLINE][NEWLINE]May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief. [NEWLINE][NEWLINE]Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 50%, et increases the city's resistance to conversion by 20%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GRAND_OSSUARY">
+			<Text>Grand Ossuaire</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GRAND_OSSUARY_STRATEGY">
+			<Text>Build the Ossuaire for lots of Foi et to improve all Holy Sites. Constructing this National Wonder will also allow you to choose a Réforme Belief. May only be constructed in a Ville Sainte, et only if at least 20% of the global population follows your Religion. Réduit [ICON_HAPPINESS_3] Religious Division, et allows you to select a Réforme Belief.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GRAND_OSSUARY_TEXT">
+			<Text>An Ossuaire is a chest, box, building, well, or site made to serve as the final resting place of human skeletal remains. They are frequently used where burial space is scarce. A body is first buried in a temporary grave, then after some years the skeletal remains are removed et placed in an Ossuaire. The greatly reduced space taken up by an Ossuaire means that it is possible to store the remains of many more people in a single tomb than if the original coffins were left as is. In Persia, the Zoroastrians used a deep well for this function from the earliest times (circa 3,000 years ago) et called it astudan (literally, "the place for the bones"). There are many rituals et regulations in the Zoroastrian faith concerning the astudans. Among the pre-7th-century Sogdians in the region of central Asia, the name pour un Ossuaire was tanbar.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_BATH">
+			<Text>Bains</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GROVE">
+			<Text>Conseil</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_HERBALIST">
+			<Text>Herboristerie</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_WELL">
+			<Text>Puit</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_WIND_PLANT">
+			<Text>Eolienne</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_STOCKYARD">
+			<Text>Agroalimentaire</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT">
+			<Text>Usine au Charbon</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MINEFIELD">
+			<Text>Champ de Mines</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GROVE_STRATEGY">
+			<Text>The Conseil offers a small sum of Science, but is availble very early. Build this building if you wish to have a technological advantage over your rivals, though the value of this advantage diminishes rapidly beyond the Ancient Era.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_BATH_STRATEGY">
+			<Text>The Bath increases the speed at which Personnage Illustre are génèrentd in the city by 20% (5% less than the Jardin), génère Science based on the Ville's Culture rate, et boosts the yields of Citrus et Cocoa resources. Bains can be constructed only in cities not next to a river. Nécessite an Aqueduc in order to be constructed.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_HERBALIST_STRATEGY">
+			<Text>The Herboristerie increases Ville growth, et improves the yields on nearby Jungle et Forêt cases. Nécessite a nearby Forêt or Jungle in order to be constructed. Build them early to maximize the bonus, et to take advantage of regions avec un large number of features.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_WELL_STRATEGY">
+			<Text>The Puit can only be constructed dans une ville not on a river. The Puit increases the city's Nouriture et Production based on the city's population, but has a lower efficiency (per citizen) than a Moulin à eau.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_WIND_PLANT_STRATEGY">
+			<Text>The Eolienne is a Modern-era building which can only be constructed dans une ville not on a river. The Eolienne increases the Production output of every Prairie et Plaines case the city works.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GROCER_STRATEGY">
+			<Text>The Epicerie is a Renaissance-era building which can only be constructed if you have already built an Aqueduc in the Ville. The Epicerie helps your Ville grow more quickly, et combats Pauvreté.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_STOCKYARD_STRATEGY">
+			<Text>The Agroalimentaire is an Industrial-era building which can only be constructed if you have already built a Epicerie in the Ville. An Agroalimentaire helps your Ville grow more quickly, however the use of Horses is a risky tradeoff during an era in which Cavalry is still quite powerful.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT_STRATEGY">
+			<Text>The Usine au Charbon is a Modern-era building which can only be constructed if you have enough Charbon et you have already built a Usine in the Ville. The Usine au Charbon helps your Production, however it negatively impacts Pauvreté.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MINEFIELD_STRATEGY">
+			<Text>The Minefield is a Modern-era building which can only be constructed if you have enough Fer et you have already built a Harbor in the Ville. The Minefield increases coastal city defense by +8, hit points by 50, et reduces the movement of enemy naval units et embarked units by 1.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GROVE_HELP">
+			<Text>Grants 15 [ICON_RESEARCH] Science une fois construite.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_WELL_HELP">
+			<Text>+1 [ICON_FOOD] Nouriture et +1 [ICON_PRODUCTION] Production pour chaque groupe de 5 [ICON_CITIZEN] Citoyens in the Ville. [NEWLINE][NEWLINE]Ville must not be built next to a River. Cannot be built if the Ville already has a Watermill.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_HERBALIST_HELP">
+			<Text>+1 [ICON_FOOD] Nouriture on nearby Forêt et Jungle cases. [NEWLINE][NEWLINE]Ville must have a workable Forêt or Jungle case in its borders.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_BATH_HELP">
+			<Text>10% of the Ville's [ICON_CULTURE] Culture output is added to the Ville's [ICON_RESEARCH] Science every turn. +20% [ICON_GREAT_PEOPLE] Personnage Illustre generation in this Ville.[NEWLINE]Nearby [ICON_RES_CITRUS] Citrus: +1 [ICON_FOOD] Nouriture, +1 [ICON_GOLD] Or.[NEWLINE]Nearby [ICON_RES_COCOA] Cocoa: +1 [ICON_FOOD] Nouriture, +1 [ICON_GOLD] Or.[NEWLINE][NEWLINE]Ville must not be built next to a River, et Nécessite an Aqueduc. Cannot be built if the Ville already has a Jardin.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GROCER_HELP">
+			<Text>Carries over 25% of [ICON_FOOD] Nouriture after Ville growth (effect stacks with Aqueduc). Réduit [ICON_HAPPINESS_3] Pauvreté.[NEWLINE][NEWLINE]Nécessite an Aqueduc in the Ville.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_WIND_PLANT_HELP">
+			<Text>+2 [ICON_PRODUCTION] Production on every Prairie et Plaines case. Nécessite [ICON_RES_ALUMINUM] Aluminum to be constructed. [NEWLINE][NEWLINE]Ville must not be built next to a River.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_STOCKYARD_HELP">
+			<Text>+15% [ICON_FOOD] Nouriture. Each source of [ICON_RES_WHEAT] Blé [ICON_RES_BANANA] Bananas, [ICON_RES_DEER] Deer, et [ICON_RES_BISON] Bison worked by this Ville produces +1 [ICON_FOOD] Nouriture. [NEWLINE][NEWLINE]Nécessite 2 [ICON_RES_HORSE] Horses.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT_HELP">
+			<Text>+15% [ICON_PRODUCTION] Production. Nécessite 2 [ICON_RES_COAL] Charbon. Increases [ICON_HAPPINESS_3] Pauvreté, et cannot be built if you have a Nuclear or Solar plant in the Ville. Nécessite a Usine in the Ville.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MINEFIELD_HELP">
+			<Text>Nécessite 1 [ICON_RES_IRON] Fer. Enemy Naval Units et Embarked Units must expend 1 extra [ICON_MOVES] movement per Tile if they move into a Tile worked by this Ville.[NEWLINE][NEWLINE]Ville must be built on the coast.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_GROVE_TEXT">
+			<Text>A Conseil is a governing body in an organised community. It is most common in subsistence cultures, with Conseil membership being the condition or quality of being a political leader of a community. Over time, as communities grew, the importance of Conseils diminished in favor of larger governing institutions.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_BATH_TEXT">
+			<Text>Throughout history, societies devised systems to enable water to be brought to population centres. Ancient Greece utilized small bathtubs, wash basins, et foot Bains for personal cleanliness. The earliest findings of Bains date from the mid-2nd millennium BC in the palace complex at Knossos, Crete, et the luxurious alabaster bathtubs excavated in Akrotiri, Santorini. The Greeks established public Bains et showers dans un périmètre de gymnasiums for relaxation et personal hygiene. In fact, the word gymnasium comes from the Greek word gymnos, meaning naked. Ancient Rome developed a network of Aqueducs to supply water to all large towns et population centres et had indoor plumbing, with pipes that terminated in homes et at public wells et fountains. The Roman public Bains were called thermae. With the fall of the Roman Empire the Aqueduc network fell into disrepair et most of it ceased to be used. In the Middle Ages, bathing commonly took place in public bathhouses. However, public nudity was frowned upon by liturgical factions of the period. Public Bains were also havens for prostitution, which created opposition to the public Bains. Rich people bathed at home, most likely in their bedroom, as 'bath' rooms were not common. Bathing was done in large, wooden tubs avec un linen cloth laid in it to protect the bather from splinters. Additionally, during the Renaissance et Protestant Réforme, the quality et condition of the clothing (as opposed to the actual cleanliness of the body itself) were thought to reflect the soul of an individual. Clean clothing also reflected one's social status; clothes made the man or woman. Additionally, from the late Middle Ages through to the end of the 18th century, etiquette et medical manuals advised people to only wash the parts of the body that were visible to the public; for example, the ears, hands, feet, et face et neck. This did away with the public Bains et left the cleaning of oneself to the privacy of one's home.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_HERBALIST_TEXT">
+			<Text>Herbalism is use of plants for medicinal purposes, et the study of such use. Plants have been the basis for medical treatments through much of human history, et such traditional medicine is still widely practiced today. Modern medicine recognizes herbalism as a form of alternative medicine, as the practice of herbalism is not strictly based on evidence gathered using the scientific method. Modern medicine, does, however, make use of many plant-derived compounds as the basis for evidence-tested pharmaceutical drugs, et phytotherapy works to apply modern standards of effectiveness testing to herbs et medicines that are derived from natural sources.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_WELL_TEXT">
+			<Text>Wood-lined wells are known from the early Neolithic Linear Pottery culture, for example in Kückhoven (an outlying centre of Erkelenz), dated 5090 BC et Eythra, dated 5200 BC in Schletz (an outlying centre of Asparn an der Zaya) in Austria. Australian Aborigines relied on wells to survive the harsh Australian desert. They would dig down, scooping out sand et mud to reach clean water, then cover the source with spinifex to prevent spoilage. Non-Aborigines call these native wells, soaks or soakages. Stepwells are common in the west of India. In these wells, the water may be reached by descending a set of steps. They may be covered et are often of architectural significance. Many stepwells were also used for leisure, providing relief from the daytime heat. A qanat is an ancient water collection system made up of a series of wells et linked underground water channels that collects flowing water from a source usually a distance away, stores it, et then brings the water to the surface using gravity. Much of the population of Iran et other arid countries in Asia et North Africa historically depended upon the water from qanats; the areas of population corresponded closely to the areas where qanats are possible. In Egypt, shadoofs et sakiehs are used. When compared to each other however, the Sakkieh is much more efficient, as it can bring up water from a depth of 10 metres (versus the 3 metres of the shadoof). The Sakieh is the Egyptian version of the Noria. From the Fer Age onwards, wells are common archaeological features, both with wooden shafts et shaft linings made from wickerwork. The world's oldest known wells, located in Cyprus, date to 7500 BC. Two wells from the Neolithic period, around 6500 BC, have been discovered in Israel. One is in Atlit, on the northern coast of Israel, et the other is the Jezreel Valley.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_GROCER_TEXT">
+			<Text>Beginning as early as the 14th century, a Epicerie (or "purveyor") was a dealer in comestible dry goods such as spices, peppers, sugar, et (later) cocoa, tea et coffee. These items were bought in bulk, hence the term Epicerie from the French "grossier" meaning wholesaler, this term derived from Medieval Latin "grossarius" from which we also derive the word gross (meaning a quantity of twelve dozen, or 144). As increasing numbers of staple foodstuffs became available in cans et other less-perishable packaging, the trade expanded its province. Today, Epiceries deal in a wide range of staple food-stuffs including such perishables as meats, produce et dairy products. Such goods are, hence, Epicerieies.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_WIND_PLANT_TEXT">
+			<Text>Wind power is the conversion of wind energy into a useful form of energy, such as using wind turbines to produce electrical power, windmills for mechanical power, windpumps for water pumping or drainage, or sails to propel ships. Large wind farms consist of hundreds of individual wind turbines which are connected to the electric power transmission network. For new constructions, onshore wind is an inexpensive source of electricity, competitive with or in many places cheaper than fossil fuel plants. Small onshore wind farms provide electricity to isolated locations. Utility companies increasingly buy surplus electricity produced by small domestic wind turbines. Offshore wind is steadier et stronger than on land, et offshore farms have less visual impact, but construction et maintenance costs are considerably higher. Wind power, as an alternative to fossil fuels, is plentiful, renewable, widely distributed, clean, produces no greenhouse gas emissions during operation et uses little land. The effects on the envFerment are generally less problematic than those from other power sources. As of 2011, Denmark is generating more than a quarter of its electricity from wind et 83 countries around the world are using wind power to supply the electricity grid. In 2010 wind energy production was over 2.5% of total worldwide electricity usage, et growing rapidly at more than 25% per annum. Wind power is very consistent from year to year but has significant variation over shorter time scales. As the proportion of windpower in a region increases, a need to upgrade the grid, et a lowered ability to supplant conventional production can occur. Power management techniques such as having excess capacity storage, geographically distributed turbines, dispatchable backing sources, storage such as pumped-storage hydroelectricity, exporting et importing power to neighboring areas or reducing demand when wind production is low, can greatly mitigate these problems.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_STOCKYARD_TEXT">
+			<Text>Agroalimentaire is the business of agricultural production. The term was coined in 1957 by Orberg et Davis. It includes agrichemicals, breeding, crop production (farming et contract farming), distribution, farm machinery, processing, et seed supply, as well as marchéing et retail sales. All agents of the food et fiber value chain et those institutions that influence it are part of the Agroalimentaire system. Within the agriculture industry, "Agroalimentaire" is used simply as a portmanteau of agriculture et business, referring to the range of activities et disciplines encompassed by modern food production. There are academic degrees in et departments of Agroalimentaire, Agroalimentaire trade associations, Agroalimentaire publications, et so forth, worldwide. Examples of Agroalimentairees include seed et agrichemical producers like Dow AgroSciences, DuPont, Monsanto, et Syngenta; AB Agri (part of Associated British Nouritures) animal feeds, biofuels, et micro-ingredients, ADM, grain transport et processing; John Deere, farm machinery producer; Ocean Spray, farmer's cooperative; et Purina Fermes, agritourism farm.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_COAL_PLANT_TEXT">
+			<Text>A fossil fuel power station burns fossil fuels such as Charbon, natural gas or petroleum (oil) to produce electricity. Central station fossil-fuel power plants are designed on a large scale for continuous operation. In many countries, such plants provide most of the electrical energy used. Fossil-fuel power stations have machinery to convert the heat energy of combustion into mechanical energy, which then operates an electrical generator. The prime mover may be a steam turbine, a gas turbine or, in small plants, a reciprocating internal combustion engine. All plants use the energy extracted from expanding gas, either steam or combustion gases. Very few MHD generators have been built which directly convert the energy of moving hot gas into electricity.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_MINEFIELD_TEXT">
+			<Text>A naval mine is a self-contained explosive device placed in water to damage or destroy surface ships or submarines. Unlike depth charges, mines are deposited et left to wait until they are triggered by the approach of, or contact with, an enemy vessel. Naval mines can be used offensively—to hamper enemy shipping movements or lock vessels into a harbour; or defensively—to protect friendly vessels et create "safe" zones.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_SLATER_MILL">
+			<Text>Le Moulin Slater</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SLATER_MILL_HELP">
+			<Text>Ville must be built next to a River. Grants a free Usine in the city, et a large boost to [ICON_PRODUCTION] Production. Also grants two free [ICON_RES_COAL] Charbon.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_SLATER_MILL_TEXT">
+			<Text>A National Historic Monument Historique, the Slater Mill is located next to the Blackstone River in Pawtucket, Rhode Island. Modeled after cotton spinning mills first established in England, the Slater Mill is the first water-powered cotton spinning mill in North America to utilize the Arkwright system of cotton spinning as developed by Richard Arkwright. Samuel Slater, the mill's founder, apprenticed as a young man in Belper, England with industrialist Jedediah Strutt. Shortly after immigrating to the United States, Slater was hired by Moses Brown of Providence, Rhode Island to produce a working set of machines necessary to spin cotton yarn using water-power. Construction of the machines, as well as a dam, waterway, waterwheel et mill was completed in 1793. Manufacturing was based on Richard Arkwright's cotton spinning system which included carding, drawing, et spinning machines. Slater initially hired children et families to work in his mill, establishing a pattern that was replicated throughout the Blackstone Valley et known as the "Rhode Island System". It was later eclipsed by Francis Cabot Lowell's Waltham System. Slater Mill was the first property to be listed on the National Register of Historic Places, et was designated a National Historic Monument Historique on November 13, 1966.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_SLATER_MILL_QUOTE">
+			<Text>[NEWLINE][TAB][TAB]"If I do not make as good of yarn as they do in England, I will have nothing for my services, but will throw the whole of what I have attempted over the bridge."[NEWLINE][TAB][TAB] - Samuel Slater[NEWLINE][TAB]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MOTHERLAND_STATUE">
+			<Text>The Motherland Calls</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_MOTHERLAND_STATUE_HELP">
+			<Text>Nécessite Ordre. 1 Free Social Policy. Greatly reduces [ICON_HAPPINESS_3] Crime dans toutes les villes. Recevez a free Police Station in the city. Negates the [ICON_TOURISM] Tourisme bonus from other players technologies.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_MOTHERLAND_STATUE_TEXT">
+			<Text>The Motherland Calls, also called Mother Motherland, Mother Motherland Is Calling, simply The Motherland, or The Mamayev Monument, is a statue in Mamayev Kurgan in Volgograd, Russia, commemorating the Battle of Stalingrad. It was designed by sculptor Yevgeny Vuchetich et structural engineer Nikolai Nikitin, et declared the largest statue in the world in 1967. Compared with the later higher statues, The Motherland Calls is significantly more complex from an engineering point of view, due to its characteristic posture avec un sword raised high in the right hand et the left hand extended in a calling gesture. The technology behind the statue is based on a combination of prestressed concrete with wire ropes structure, a solution which can be found also in another work of Nikitin's, the super-tall Ostankino Tower in Moscow. It is the tallest statue of a woman in the world.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MOTHERLAND_STATUE_QUOTE">
+			<Text>[NEWLINE][TAB][TAB]"Everyone imposes his own system as far as his army can reach."[NEWLINE][TAB][TAB] - Josef Stalin[NEWLINE][TAB]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_BLETCHLEY_PARK">
+			<Text>Bletchley Park</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_BLETCHLEY_PARK_HELP">
+			<Text>Recevez a free Laboratoire de recherche in the city. Provides two additional espions et levels up all your existing espions. Also provides a 15% reduction in enemy spy effectiveness in all Villes.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_BLETCHLEY_PARK_TEXT">
+			<Text>Bletchley Park, in Milton Keynes, Buckinghamshire, was the central site of the United Kingdom's Government Code et Cypher School, which during the Second World War regularly penetrated the secret communications of the Axis Power, most importantly the German Enigma et Lorenz ciphers. The official historian of World War II British Intelligence has written that the "Ultra" intelligence produced at Bletchley shortened the war by two to four years, et that without it the outcome of the war would have been uncertain. The site is now an educational et historical attraction memorialising et celebrating those accomplishments.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_BLETCHLEY_PARK_QUOTE">
+			<Text>[NEWLINE][TAB][TAB]"Bletchley Park: the goose that laid the golden eggs et never cackled."[NEWLINE][TAB][TAB] - Winston Churccolline[NEWLINE][TAB]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_EMPIRE_STATE_BUILDING">
+			<Text>Empire State Building</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_EMPIRE_STATE_BUILDING_HELP">
+			<Text>Recevez a free Stock Exchange in the city, et a free Personnage Illustre de votre choix. Spécialistes dans toutes les villes produce +1 [ICON_GOLD] Or.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_EMPIRE_STATE_BUILDING_TEXT">
+			<Text>The Empire State Building is a 103-story skyscraper located in Midtown Manhattan, New York Ville, at the intersection of Fifth Avenue et West 34th Street. It has a roof height of 1,250 feet (380 m), et with its antenna spire included, it stands a total of 1,454 feet (443 m) high.[6] Its name is derived from the nickname for New York, the Empire State. It stood as the world's tallest building for nearly 40 years, from its completion in early 1931 until the topping out of the original World Trade Center's North Tower in late 1970. Following the September 11 attacks in 2001, the Empire State Building was agagnent the tallest building in New York (although it was no longer the tallest in the US or the world), until One World Trade Center reached a greater height on April 30, 2012. The Empire State Building is currently the fourth-tallest completed skyscraper in the United States (after the One World Trade Center, the Willis Tower et Trump International Hotel et Tower, both in Chicago), et the 25th-tallest in the world (the tallest now is Burj Khalifa, located in Dubai). It is also the fifth-tallest freestanding structure in the Americas.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_EMPIRE_STATE_BUILDING_QUOTE">
+			<Text>[NEWLINE][TAB][TAB]"The importance of money flows from it being a link between the present et the future."[NEWLINE][TAB][TAB] - John Maynard Keynes[NEWLINE][TAB]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CERN">
+			<Text>CERN</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CERN_HELP">
+			<Text>Recevez a massive one-time [ICON_RESEARCH] Science Boost une fois construite, et +35 [ICON_INFLUENCE] Influence avec unll Cité-Etat in the world.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_CERN_TEXT">
+			<Text>The European Organization for Nuclear Research, known as CERN, is a European research organization whose purpose is to operate the world's largest particle physics laboratory. Established in 1954, the organization is based in the northwest suburbs of Geneva on the Franco–Swiss border, et has 21 European member states. Israel is the first (and currently only) non-European country granted full membership. The term CERN is also used to refer to the laboratory, which in 2013 counted 2513 staff members, et hosted some 12,313 fellows, associates, apprentices as well as visiting scientists et engineers representing 608 universities et research facilities et 113 nationalities. CERN's main function is to provide the particle accelerators et other infrastructure needed for high-energy physics research – as a result, numerous experiments have been constructed at CERN following international collaborations. It is also the birthplace of the World Wide Web. The main site at Meyrin has a large computer centre containing powerful data processing facilities, primarily for experimental-data analysis; because of the need to make these facilities available to researchers elsewhere, it has historically been a major wide area networking hub.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CERN_QUOTE">
+			<Text>[NEWLINE][TAB][TAB]"When you look at a vacuum in a quantum theory of fields, it isn't exactly nothing."[NEWLINE][TAB][TAB] - Dr. Peter Higgs[NEWLINE][TAB]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_STUPA">
+			<Text>Stupa</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_STUPA_STRATEGY">
+			<Text>Ne peut être construit que dans les villes suivant une religion ayant la croyance avec les Stupas. Contruisez ce bâtiment en l'achetant avec de la [ICON_PEACE] Foi. Build the Stupa to gagnent Foi and, once you have researched Architecture, Tourisme in the Ville.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_STUPA_TEXT">
+			<Text>A stupa is a mound-like or hemispherical structure containing Buddhist relics, typically the ashes of Buddhist monks, used by Buddhists as a place of meditation.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_STUPA_HELP">
+			<Text>+4 [ICON_TOURISM] Tourisme once you have researched Architecture. Réduit [ICON_HAPPINESS_3] Illettrisme. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_CHURCH">
+			<Text>Eglise</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CHURCH_STRATEGY">
+			<Text>Ne peut être construit que dans les villes suivant une religion ayant la croyance avec les Eglises. Contruisez ce bâtiment en l'achetant avec de la [ICON_PEACE] Foi. Build the Eglise to gagnent Foi et a Chef-d'Oeuvre Musical slot in the Ville. Also makes missionaries more effective.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CHURCH_TEXT">
+			<Text>A church building, often simply called a church, is a building used for religious activities, particularly worship services. The term in its architectural sense is most often used by Christians to refer to their religious buildings but can be used by other religions. In traditional Christian architecture, the church is often arranged in the shape of a Christian cross. When viewed from plan view the longest part of a cross is represented by the aisle et the junction of the cross is located at the altar area.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_CHURCH_HELP">
+			<Text>Réduit [ICON_HAPPINESS_3] Ennui. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 50%, et increases the city's resistance to conversion by 20%. All Missionaires born in this Ville can spread Religion three times.</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_BUILDING_MANDIR">
+			<Text>Mandir</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MANDIR_STRATEGY">
+			<Text>Ne peut être construit que dans les villes suivant une religion ayant la croyance avec les Mandirs. Contruisez ce bâtiment en l'achetant avec de la [ICON_PEACE] Foi. Build the Mandir to gagnent Foi, Nouriture, et a Chef-d'Oeuvre Musical slot in the Ville. Protects your Ville from certain Advanced Spy Actions.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MANDIR_TEXT">
+			<Text>A Hindu temple is a house of god(s). It is a space et structure designed to bring human beings et gods together, infused with symbolism to express the ideas et beliefs of Hinduism.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_MANDIR_HELP">
+			<Text>Réduit [ICON_HAPPINESS_3] Pauvreté. +5% [ICON_FOOD] Nouriture in the Ville. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%. Enemy [ICON_SPY] Spies in this Ville cannot assassinate [ICON_GREAT_PEOPLE] Personnage Illustre or disrupt Unit [ICON_PRODUCTION] Production.</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_BUILDING_SYNAGOGUE">
+			<Text>Synagogue</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SYNAGOGUE_STRATEGY">
+			<Text>Ne peut être construit que dans les villes suivant une religion ayant la croyance avec les Synagogues. Contruisez ce bâtiment en l'achetant avec de la [ICON_PEACE] Foi. Build the Synagogue to gagnent Foi, Production, et a Chef-d'Oeuvre of Writing slot in the Ville. The Ville génère more Science during 'Fête du Roi.'</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SYNAGOGUE_TEXT">
+			<Text>A synagogue, also spelled synagog, is a Jewish house of prayer. Synagogues have a large hall for prayer (the main sanctuary), et may also have smaller rooms for study et sometimes a social hall et offices. Some have a separate room for Torah study, called the beth midrash.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_SYNAGOGUE_HELP">
+			<Text>Réduit [ICON_HAPPINESS_3] Crime. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%. During 'Fête du Roi', Ville [ICON_RESEARCH] Science augmenté de +15%.</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_BUILDING_ORDER">
+			<Text>Ordre</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_ORDER_STRATEGY">
+			<Text>Ne peut être construit que dans les villes suivant une religion ayant la croyance avec les Ordres. Contruisez ce bâtiment en l'achetant avec de la [ICON_PEACE] Foi. Build the Ordre to gagnent Foi, additional Ville Hit Points et [ICON_STRENGTH] Force, +10 XP for Military units, et the Morale promotion for your land units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_ORDER_HELP">
+			<Text>+10 XP et the [COLOR_POSITIVE_TEXT]Morale[ENDCOLOR] promotion for land Military units produced dans cette ville. Grants additional Ville Hit Points et [ICON_STRENGTH] Force. Réduit [ICON_HAPPINESS_3] Crime. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_ORDER_TEXT">
+			<Text>A military order is any one of a variety of Christian societies of knights that were founded from the Middle Ages onwards for the purpose of crusading – propagating or defending the faith (originally Catholic, et after the Réforme sometimes Protestant), either in the Holy Land or agagnentt Islam (as, for example, during the Reconquista) or pagans (mainly in the Baltic region) in Europe. Many orders have, since the end of the Crusades et the Ottoman incursions, become secularized, et are usually represented by Roman Catholic ceremonial, missionary et charitable organizations in modern times.</Text>
+		</Row>
+
+		<!-- Cathédrale/Mosquée/Pagode-->
+		<Row Tag="TXT_KEY_BUILDING_CATHEDRAL_HELP">
+			<Text>Réduit [ICON_HAPPINESS_3] Pauvreté. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%. Fermes near this Ville génèrent +1 [ICON_GOLD] Or.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MOSQUE_HELP">
+			<Text>Réduit [ICON_HAPPINESS_3] Illettrisme. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%. +20% [ICON_CULTURE] Culture in the Ville during [ICON_GOLDEN_AGE] Ages d'Or.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PAGODA_HELP">
+			<Text>Réduit [ICON_HAPPINESS_3] Ennui. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, et increases the city's resistance to conversion by 20%. +2 to all Ville Yields pour chaque World Religion that has at least one Adepte in this Ville.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_THRONE_ROOM">
+			<Text>Salle Du Trône</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CAPITAL_THRONE_ROOM_HELP">
+			<Text>+25% [ICON_GOLDEN_AGE] Age d'Or duration. Allows pour un Musician Spécialiste in your [ICON_CAPITAL] Capital. Has a slot pour un [ICON_GREAT_WORK] Chef-d'Oeuvre Musical. Can only be constructed via the Tradition Finisher.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CAPITAL_THRONE_ROOM_PEDIA">
+			<Text>A throne room is the room, often rather a hall, in the official residence of the crown, either a palace or a fortified castle, where the throne of a senior figure (usually a monarch) is set up with elaborate pomp— usually raised, often with steps, et under a canopy, both of which are part of the original notion of the Greek word thronos.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_TREASURY">
+			<Text>Trésor Public</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_TREASURY_HELP">
+			<Text>+15% [ICON_GREAT_PEOPLE] Personnage Illustre Rate in all Villes. Allows pour un Merchant specialist in your Capital. Can only be constructed via the Majesty Policy.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_TREASURY_PEDIA">
+			<Text>The term treasury was first used in Classical times to describe the votive buildings erected to house gifts to the gods, such as the Siphnian Treasury in Delphi or many similar buildings erected in Olympia, Greece by competing city-states to impress others during the ancient Olympic Games. In Ancient Greece treasuries were almost always physically incorporated dans un périmètre de religious buildings such as temples, thus making state funds sacrosanct et adding moral constraints to the penal ones to those who would have access to these funds.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CAPITAL_ENGINEER">
+			<Text>Garde Royale</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CAPITAL_ENGINEER_HELP">
+			<Text>Allows pour un Ingénieur specialist in your [ICON_CAPITAL] Capital. Can only be constructed via the Justice Policy.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CAPITAL_ENGINEER_PEDIA">
+			<Text>A Royal Guard describes any group of military bodyguards, soldiers or armed retainers responsible for the protection of a royal person, such as Emperor/Empress, King/Queen, or Prince/Princess. They often are an elite unit of the regular armed forces, or are designated as such, et may maintain special rights or privileges.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_GARDEN">
+			<Text>Jardins Royaux</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_GARDEN_HELP">
+			<Text>Allows pour un Writer Spécialiste in your [ICON_CAPITAL] Capital. Has a slot pour un [ICON_GREAT_WORK] Chef-d'Oeuvre of Writing. Boosts the [ICON_CULTURE] Culture output of Jardins et Monuments by +2 in all Villes. Can only be constructed via the Splendor Policy.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_GARDEN_PEDIA">
+			<Text>A Jardin is a planned space, usually outdoors, set aside for the display, cultivation, et enjoyment of plants et other forms of nature. The Jardin can incorporate both natural et man-made materials. The most common form today is known as a residential Jardin, but the term Jardin has traditionally been a more general one. Zoos, which display wild animals in simulated natural habitats, were formerly called zoological Jardins.[1][2] Western Jardins are almost universally based on plants, with Jardin often signifying a shortened form of botanical Jardin.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_COURT_CHAPEL">
+			<Text>Chapelle de la Cour</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_COURT_CHAPEL_HELP">
+			<Text>Allows pour un Musician specialist in your [ICON_CAPITAL] Capital. Has a slot pour un [ICON_GREAT_WORK] Chef-d'Oeuvre Musical. Can only be constructed via the Sovereignty Policy.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_COURT_CHAPEL_PEDIA">
+			<Text>A chapel is a religious place of fellowship, prayer et worship that is attached to a larger, often nonreligious institution or that is considered an extension of a primary religious institution. It may be part of a larger structure or complex, such as a college, hospital, palace, prison, funeral home, church, synagogue or mosque, located on board a military or commercial ship, or it may be an entirely free-standing building, sometimes with its own grounds. Many military installations have chapels for the use of military personnel, normally under the leadership of a military chaplain.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_ASTROLOGER">
+			<Text>Astrologues Royaux</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_ASTROLOGER_HELP">
+			<Text>Allows pour un Scientifique specialist in your [ICON_CAPITAL] Capital. Can only be constructed via the Devotion Policy.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PALACE_ASTROLOGER_PEDIA">
+			<Text>Astrology, in its broadest sense, is the search for meaning in the sky. Early evidence for humans making conscious attempts to measure, record, et predict seasonal changes by reference to astronomical cycles, apparaît as markings on bones et cave walls, which show that lunar cycles were being noted as early as 25,000 years ago. This was a first step towards recording the Moon's influence upon tides et rivers, et towards organising a communal calendar. Fermeers addressed agricultural needs with increasing knowledge of the constellations that appear in the different seasons—and used the rising of particular star-groups to herald annual floods or seasonal activities. By the 3rd millennium BCE, civilisations had sophisticated awareness of celestial cycles, et may have oriented temples in alignment with heliacal risings of the stars.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_INDUS_CANAL">
+			<Text>Harappan Reservoir</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_INDUS_CANAL_TEXT">
+			<Text>The ancient Harappan et Indus Valley Civilisations of Northwest South Asia, including Pakistan et parts of India, were prominent in hydraulic engineering, et had many water supply et sanitation devices that were the first of their kind. Among other things, they contained the world's earliest known system of flush toilets. These existed in many homes, et were connected to a common sewerage pipe. Most houses also had private wells. Ville walls functioned as a barrier agagnentt floods, et massive reservoirs were often constructed along these walls to collect this floodwater to save for droughts.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_INDUS_CANAL_HELP">
+			<Text>Unique Indian replacement for the Aqueduc. Carries over 30% of [ICON_FOOD] Nouriture after Ville growth. Grants +1 [ICON_PRODUCTION] Production from Flood Plaines and, +1 [ICON_FOOD] Nouriture from Fermes. Réduit [ICON_HAPPINESS_3] Pauvreté slightly.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_INDUS_CANAL_STRATEGY">
+			<Text>Build these unique Aqueducs to rapidly increase your city's population size et productivity, especially if the city is settled on or near Flood Plainess.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_DOJO">
+			<Text>Dojo</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_DOJO_TEXT">
+			<Text>A dojo is a Japanese term which literally means "place of the way". Initially, dōjōs were adjunct to temples. The term can refer to a formal training place pour uny of the Japanese do arts[which?] but typically it is considered the formal gathering place for students of any Japanese martial arts style such as karate, judo, or samurai, to conduct training, examinations et other related encounters. The concept of a dōjō only referring to a training place specifically for Asian martial arts is a Western concept; in Japan, any physical training facility, including professional wrestling schools, may be called dōjō because of its close martial arts roots.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_DOJO_HELP">
+			<Text>Unique Japanese replacement for the Armurerie. Réduit [ICON_HAPPINESS_3] Crime, et does not require a Casernes in the Ville. Grants +25 Experience to all military units trained dans cette ville. All Melee et Gun units trained dans cette ville recieve the [COLOR_POSITIVE_TEXT]Eight Virtues of Bushido[ENDCOLOR] Promotion.[NEWLINE]Nearby [ICON_RES_IRON] Fer: +2 [ICON_CULTURE] Culture, +2 [ICON_PRODUCTION] Production.[NEWLINE]Nearby [ICON_RES_HORSE] Horses: +2 [ICON_CULTURE] Culture, +2 [ICON_PRODUCTION] Production.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_DOJO_STRATEGY">
+			<Text>Build these unique Armories to produce dominant military units, et to génèrent additional Culture et Production. Does not require a Casernes. All Melee et Gun units trained dans cette ville recieve the Eight Virtues of Bushido Promotion, which offers one of eight possible promotions to these unit types after their first combat.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_ODEON">
+			<Text>Acropole</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_ODEON_TEXT">
+			<Text>An acropolis is a settlement, especially a citadel, built upon an area of elevated ground—frequently a colline with precipitous sides, chosen for purposes of defense. In many parts of the world, acropoleis became the nuclei of large cities of classical antiquity, such as ancient Rome, et for this reason they are sometimes prominent landmarks in modern cities avec uncient pasts, such as modern Rome. The word acropolis literally means in Greek "upper city," et though associated primarily with the Greek cities Athens, Argos ( with Larissa), Thebes (with Cadmea), et Corinth (with its Acrocorinth), may be applied generically to all such citadels, including Rome, Jerusalem, Celtic Bratislava, many in Asia Minor, or even Château Rock in Edinburgh. An example in Ireland is the Rock of Cashel. Acropolis is also the term used by archaeologists et historians for the urban Castro culture settlements located in Northwestern Iberian collinetops.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_ODEON_HELP">
+			<Text>+2 [ICON_TOURISM] Tourisme once you research Philosophy. +33% [ICON_GREAT_WRITER] Great Writer Rate in the Ville, et all Writers' Guilds produce +1 [ICON_GOLD] Or.[NEWLINE][NEWLINE]Whenever you destroy an enemy unit, receive +5 [ICON_CULTURE] Culture in the Ville, le bonus s'améliore en changeant d'ére technologique.[NEWLINE]Nearby [ICON_RES_DYE] Dye: +1 [ICON_CULTURE] Culture, +1 [ICON_GOLD] Or.[NEWLINE]Nearby [ICON_RES_SILK] Silk: +1 [ICON_CULTURE] Culture, +1 [ICON_GOLD] Or.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_ODEON_STRATEGY">
+			<Text>Unique Greek replacement for the Amphithéatre. Build Acropoli to boost your city's Défense, Culture, et Tourism, especially while at war for the latter two. Also boosts the Ville's Great Writer rate et the value of Writers' Guilds. Produces +2 [ICON_TOURISM] Tourisme once you research Philosophy.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_FLAVIAN_COLOSSEUM">
+			<Text>Colisée</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDING_FLAVIAN_COLOSSEUM_TEXT">
+			<Text>The Flavian Amphithéatre, or Colosseum, is one of the most famous venues in all of history. Though Ancient Rome had only one Colosseum, variations on the design were reproduced throughout the empire, et to the present day. A colosseum is an outdoor venue where the public can watch sports events. Depending upon the time et place, the events might be gladiatorial contests, American football games, or soccer matches. Of the three contests mentioned, the gladiatorial battles were perhaps the hardest on the players involved, the soccer matches (occasionally) just about as dangerous for the participants.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_FLAVIAN_COLOSSEUM_HELP">
+			<Text>+2 [ICON_TOURISM] Tourism. Whenever you defeat a Land Unit, produce +3 [ICON_GREAT_GENERAL] Great General points (+3 [ICON_GREAT_ADMIRAL] Great Admiral points if a Naval Unit) et +3 [ICON_GOLDEN_AGE] Age d'Or points, le bonus s'améliore en changeant d'ére technologique. [NEWLINE][NEWLINE]Casernes, Forge, et Armurerie in this Ville gagnent +2 [ICON_PRODUCTION] Production.[NEWLINE][NEWLINE][ICON_CITY_CONNECTED] Connection urbaines produce +2% more [ICON_GOLD] Or.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_FLAVIAN_COLOSSEUM_STRATEGY">
+			<Text>Unique Roman replacement for the Arène. Build the Colosseum to boost your city's Culture, Tourism, et Production, et to maximize your empire's gagnent from the victories of your conquering armies. Every Colosseum slightly increases the Or value of Connection urbaines, thus allowing Rome to benefit from large, sprawling empires.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_STEAM_MILL">
+			<Text>Moulin à Vapeur</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_STEAM_MILL_TEXT">
+			<Text>Stationary steam engines are fixed steam engines used for pumping or driving mills et factories, et for power generation. They are distinct from locomotive engines used on railways, traction engines for heavy steam haulage on roads, steam cars (and other motor vehicles), agricultural engines used for ploughing or threshing, marine engines, et the steam turbines used as the mechanism of power generation for most nuclear power plants. They were introduced during the 18th century et widely made for the whole of the 19th century et most of the first half of the 20th century, only declining as electricity supply et the internal combustion engine became more widespread.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_STEAM_MILL_HELP">
+			<Text>+1 [ICON_PRODUCTION] Production pour chaque groupe de 3 [ICON_CITIZEN] Citoyens in the Ville. Trade routes other players make to a city avec un Steam Mill will génèrent an extra 3 [ICON_GOLD] Or for the city owner et the trade route owner gagnent an additional 3 [ICON_GOLD] Or for the trade route.[NEWLINE]Nearby [ICON_RES_COAL] Charbon: +3 [ICON_PRODUCTION] Production.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_STEAM_MILL_STRATEGY">
+			<Text>Unique English replacement for the Usine. The Steam Mill is cheaper, Nécessite no [ICON_RES_COAL] Charbon, is available earlier than the Usine, et provides additional Production to [ICON_RES_COAL] Charbon worked by the Ville. The Steam Mill also boosts the city's Or income from Routes Commerciales, thus encouraging other Civlizations to trade with you. Since Steam Mills do not require Charbon, you can use your Charbon surplus to build Seaports et Usine au Charbons, or you can trade it away pour un large amount of gold.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SIEGE_WORKSHOP">
+			<Text>Siege Foundry</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_SIEGE_WORKSHOP_TEXT">
+			<Text>A foundry is a factory that produces metal castings. Metals are cast into shapes by melting them into a liquid, pouring the metal in a mold, et removing the mold material or casting after the metal has solidified as it cools. The most common metals processed are aluminium et cast Fer. However, other metals, such as bronze, brass, steel, magnesium, et zinc, are also used to produce castings in foundries. In this process, parts of desired shapes et sizes can be formed. In the context of war, foundries were essential to the production of cannonry et other essential siege equipment.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SIEGE_WORKSHOP_HELP">
+			<Text>15% of the Ville's [ICON_PRODUCTION] Production output is added to the Ville's [ICON_RESEARCH] Science every turn. +50% [ICON_PRODUCTION] Production towards Siege units. All Siege units trained in this Ville receive the [COLOR_POSITIVE_TEXT]Volley[ENDCOLOR] Promotion for free.[NEWLINE]Nearby [ICON_RES_IRON] Fer: +1 [ICON_PRODUCTION] Production, +1 [ICON_GOLD] Or.[NEWLINE]Nearby [ICON_RES_COPPER] Copper: +1 [ICON_PRODUCTION] Production, +1 [ICON_GOLD] Or.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SIEGE_WORKSHOP_STRATEGY">
+			<Text>Unique Ottoman replacement for the Forge. Generates more Science than the Forge, produces Siege units much more quickly than normal, et grants them the [COLOR_POSITIVE_TEXT]Volley[ENDCOLOR] Promotion for free. Use these attributes to build a massive force of artillery to take down an enemy's walls et conquer their lands!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MOMA">
+			<Text>The Smithsonian</Text>
+		</Row>
+		<Row Tag="TXT_KEY_THEMING_BONUS_MOMA">
+			<Text>The Smithsonian Archives</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MOMA_THEMING_BONUS_HELP">
+			<Text>To maximize your bonus, make sure the Chef-d'Oeuvre Slots are all filled with Art from different Eras et different Civilisations.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_MOMA_TEXT">
+			<Text>The Smithsonian Institution, established in 1846 "for the increase et diffusion of knowledge," is a group of museums et research centers administered by the Government of the United States. Originally organized as the "United States National Musée," that name ceased to exist as an administrative entity in 1967. Termed "the nation's attic" for its eclectic holdings of 138 million items, the Institution's nineteen museums, nine research centers, et zoo include historical et architectural landmarks, mostly located in the District of Columbia. Additional facilities are located in Arizona, Maryland, Massachusetts, New York Ville, Virginia, et Panama. A further 170 museums are Smithsonian Affiliates. The Institution's thirty million annual visitors are admitted without charge. Funding comes from the Institution's endowment, private et corporate contributions, membership dues, government support, as well as retail, concession et licensing revenues. Institution publications include Smithsonian et Air et Space magazines.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MOMA_HELP">
+			<Text>Unique American replacement for the Hermitage. A city must have a Musée before it can construct the Smithsonian.[NEWLINE][NEWLINE]+25% [ICON_CULTURE] Culture in the Ville, et 50% of the [ICON_CULTURE] Culture from Chefs-d'Oeuvre, Merveilles Mondiales, Merveilles Naturelles, et Improvements is added to the [ICON_TOURISM] Tourisme output of the city. Boosts [ICON_CULTURE] Culture et [ICON_RESEARCH] Science output of Musées in all Villes by +5. Contains 3 Slots for Chefs-d'Oeuvre Artistique or Artéfacts.[NEWLINE][NEWLINE]+5 [ICON_RESEARCH] Science et +5 [ICON_CULTURE] Culture if Themed.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MOMA_STRATEGY">
+			<Text>Unique American replacement for the Hermitage. In addition to the bonuses of the Hermitage, the Smithsonian boosts Culture et Tourisme in the Ville greatly. The Smithsonian also boosts the Culture et Science output of all Musées in your Empire. The Smithsonian is avaialable later than the Hermitage, however, et Nécessite a Musée instead of an Opera. The cost goes up the more cities there are in the empire.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_MISSION">
+			<Text>Mission</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_MISSION_TEXT">
+			<Text>The history of Spain's missions in the American South et Southwest reveals much about Spain's strategy, contributions, et failures in these regions. The expeditions of Francisco Vázquez de Coronado (1540 42) et Juan de Oñate (1598) convinced Spanish authorities that no wealthy Indian empires like that of the Aztecs were to be found north of Mexico. Consequently the Spanish came to view the northern frontier of their empire as a defensive barrier et as a place where pagan souls might be saved. In what are now the states of Florida, Texas, New Mexico, Arizona, et California, missions were founded to propagate the doctrines of the Roman Catholic church. To protect these missions as well as the mines et ranches of Mexico from attack from the north, the Spanish established presidios fortified garrisons of troops. Franciscan priests founded a series of missions in Florida after 1573, mainly along the Atlantic et Gulf coasts. The first missions in New Mexico were established by friars accompanying Oñate's expedition of 1598; during the next 100 years Franciscan priests founded more than 40 additional missions, most of them along the Rio Grande. Especially influential was Father Alonso de Benavides, who directed the founding of 10 missions between 1625 et 1629 et thereafter promoted them ably in Spain. By 1680 missions had been established among most of the New Mexican Indians.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MISSION_HELP">
+			<Text>Gain 3x the [ICON_PEACE] Foi et [ICON_GOLD] Or output of the Ville, respectively, as an [COLOR_POSITIVE_TEXT]Instant Boost[ENDCOLOR] every time a [ICON_CITIZEN] Citoyen est né in this Ville. [NEWLINE][NEWLINE]Boosts [ICON_RELIGION] Religious Pressure et Resistance of this city by 15%. Does not require Remparts in order to be built, et can be purchased with [ICON_PEACE] Foi.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MISSION_STRATEGY">
+			<Text>Unique Spanish replacement for the Château. It is cheaper than the Château, has no maintenance, does not require Remparts in order to be built, et can be purchased with Foi. Grants a bunch of Foi et Or when Citoyens are born in Ville (based on the current yields of the city when the new citizen est né). Boosts the city's religious pressure by 15% et resistance to foreign conversion by 15%, thus making the city more effective at converting nearby cities. Build these unique Châteaus to quickly boost a Ville's Défense, bypass the need for Remparts, et to bolster your Religion.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_JELLING_STONES">
+			<Text>Jelling Stones</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_JELLING_STONES_PEDIA">
+			<Text>The Jelling Stones are massive carved runestones from the 10th century, found at the town of Jelling in Denmark. The older of the two Jelling stones was raised by King Gorm the Old in memory of his wife Thyra. The larger of the two stones was raised by King Gorm's son, Harald Bluetooth in memory of his parents, celebrating his conquest of Denmark et Norway, et his conversion of the Danes to Christianity. The runic inscriptions on these stones are considered the most well known in Denmark.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_JELLING_STONES_HELP">
+			<Text>+15% [ICON_GREAT_PEOPLE] Personnage Illustre rate, et an instant boost of 25 [ICON_CULTURE] Culture. Whenever you defeat a Unit, gagnent +5 [ICON_PRODUCTION] Production et +5 [ICON_CULTURE] Culture in the Ville, le bonus s'améliore en changeant d'ére technologique.[NEWLINE][NEWLINE]+1 [ICON_FOOD] Nouriture et +1 [ICON_GOLD] Or from Coast et Ocean Tiles, et +1 [ICON_PRODUCTION] Production from Sea Resources worked by this Ville.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_JELLING_STONES_STRATEGY">
+			<Text>Unique Danish replacement for the Lighthouse. In addition to the Lighthouse's bonuses, Jelling Stones produce [ICON_CULTURE] Culture et [ICON_PRODUCTION] Production when you defeat a Unit, et increase the Personnage Illustre rate for the city where it is built by 15%. Grants 25 [ICON_CULTURE] Culture une fois construite. Unlike the Lighthouse, the Ville does not have to be built on the coast.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SEOWON">
+			<Text>Seowon</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_SEOWON_TEXT">
+			<Text>Seowon were the most common educational institution of Korea during the mid- to late Joseon Dynasty. They were private institutions, et combined the functions of a Confucian shrine et a preparatory school. In educational terms, the seowon were primarily occupied with preparing students for the national civil service examinations. In most cases, seowon served only pupils of the aristocratic yangban class.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SEOWON_HELP">
+			<Text>+20% [ICON_GREAT_PEOPLE] Personnage Illustre rate in this Ville. +1 [ICON_RESEARCH] Science from Jungle et Forêt cases worked by this Ville. Gain 50% of the [ICON_RESEARCH] Science output of the Ville as an instant boost to your current Research when a [ICON_CITIZEN] Citoyen est né in this Ville. Réduit [ICON_HAPPINESS_3] Illettrisme.[NEWLINE][NEWLINE] Allows Archaeologists to be built dans cette ville. [NEWLINE][NEWLINE]Ville must have a Bibliothèque.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SEOWON_STRATEGY">
+			<Text>Unique Korean replacement for the Université. Generates more Science than the Université, et also génère Foi. The increased Personnage Illustre rate will help you produce Personnage Illustre more quickly, thus helping you to maximize Korea's Unique Ability.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_YURT">
+			<Text>Ger</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_YURT_TEXT">
+			<Text>A yurt, called a 'Ger' by Mongolians, is a portable, bent dwelling structure traditionally used by nomads in the steppes of Central Asia as their home. The structure comprises a crown or compression wheel, usually steam bent, supported by roof ribs which are bent down at the end where they meet the lattice wall (agagnent, steam bent). The top of the wall is prevented from spreading by means of a tension band which opposes the force of the roof ribs. The structure is usually covered by layers of fabric et sheep's wool felt for insulation et weatherproofing. The traditional decoration dans un périmètre de a yurt is primarily pattern based. These patterns are generally not according to taste, but are derived from sacred ornaments with certain symbolism. Symbols representing Force are among the most common, including the khas (swastika) et four powerful beasts (lion, tiger, garuda et dragon), as well as stylized representations of the five elements (fire, water, earth, metal, et wood), considered to be the fundamental, unchanging elements of the cosmos. Such patterns are commonly used in the home with the belief that they will bring Force et offer protection.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_YURT_HELP">
+			<Text>10% of the Ville's [ICON_FOOD] Nouriture output is added to the Ville's [ICON_RESEARCH] Science every turn. [ICON_GOLD] Or et [ICON_CULTURE] Cost of acquiring new cases reduced by 25% dans cette ville.[NEWLINE][NEWLINE] Allows [ICON_FOOD] Nouriture to be moved from this city along trade routes inside your civilization.[NEWLINE]Nearby [ICON_RES_COW] Cows: +1 [ICON_FOOD] Nouriture.[NEWLINE]Nearby [ICON_RES_SHEEP] Sheep: +1 [ICON_FOOD] Nouriture.[NEWLINE]Nearby [ICON_RES_HORSE] Horses: +1 [ICON_FOOD] Nouriture.[NEWLINE]Nearby [ICON_RES_WHEAT] Blé: +1 [ICON_FOOD].[NEWLINE]Nearby [ICON_RES_BANANA] Bananas: +1 [ICON_FOOD] Nouriture.[NEWLINE]Nearby [ICON_RES_DEER] Deer: +1 [ICON_FOOD] Nouriture.[NEWLINE]Nearby [ICON_RES_BISON] Bison: +1 [ICON_FOOD] Nouriture.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_YURT_STRATEGY">
+			<Text>Unique Mongolian replacement for the Grenier. In addition to the Grenier's bonuses, the Ger provides Nouriture from livestock. It also provides a small amount of Foi, et has no maintenance. Build Gers in your cities to maximize their growth, et to get an early Panthéon.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_THEMING_BONUS_BUILDING_PARTHENON">
+			<Text>Hall des Antiquités</Text>
+		</Row>
+		<Row Tag="TXT_KEY_THEMING_BONUS_BUILDING_NOTRE_DAME">
+			<Text>SAnctuaire Saint</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PARTHENON_THEMING_BONUS_HELP">
+			<Text>To maximize your bonus, make sure both Chefs-d'Oeuvre were created by you.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_NOTRE_DAME_THEMING_BONUS_HELP">
+			<Text>To maximize your bonus, make sure both Chefs-d'Oeuvre were created by Players other than the owner.</Text>
+		</Row>
+	</Language_fr_FR>
+</GameData>

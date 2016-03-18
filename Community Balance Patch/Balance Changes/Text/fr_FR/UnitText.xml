@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 3/2/2016 5:01:33 PM -->
+<GameData>
+	<Language_fr_FR>
+		<Row Tag="TXT_KEY_PROMOTION_MARSH_WALKER">
+			<Text>Marsh Walkers</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MARSH_WALKER_HELP">
+			<Text>Double movement on Marsh et Flood Plain cases. Barbarian only.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_WHITE_WALKER">
+			<Text>White Walkers</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_WHITE_WALKER_HELP">
+			<Text>Double movement on Snow et Tundra cases. Barbarian only.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_WOODS_WALKER">
+			<Text>Woods Walkers</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_WOODS_WALKER_HELP">
+			<Text>Double movement on Forêt et Jungle cases. Barbarian only.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_DESERT_WALKER">
+			<Text>Desert Walkers</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DESERT_WALKER_HELP">
+			<Text>Double movement on Desert cases. Barbarian only.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_COAST_WALKER">
+			<Text>Coast Walkers</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_COAST_WALKER_HELP">
+			<Text>Double movement on Coastal cases. Barbarian only.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_HILL_WALKER">
+			<Text>Hill Walkers</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_HILL_WALKER_HELP">
+			<Text>Double movement on Hill cases. Barbarian only.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_DEFENSE_BOOST">
+			<Text>Fersides</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_DEFENSE_BOOST_HELP">
+			<Text>+20% Combat Bonus when defending.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_UNIT_GUERILLA">
+			<Text>Mercenaries</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_GUERILLA_TEXT">
+			<Text>Soldiers in private military companies (PMCs) are the contemporary strand of the mercenary trade, providing logistics, soldiers, military training, et other services. Thus, PMC contractors are civilians (in governmental, international, et civil organizations) authorized to accompany an army to the field; hence, the term civilian contractor. Nevertheless, PMCs may use armed force, hence defined as: "legally established enterprises that make a profit, by either providing services involving the potential exercise of [armed] force in a systematic way et by military means, and/or by the transfer of that potential to clients through training et other practices, such as logistics support, equipment procurement, et intelligence gathering."</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_GUERILLA_STRATEGY">
+			<Text>Use Mercenaries as a cheap, if slightly less effective means of defending your land from invaders, or as the flanks of a precision attack. Mercenaries receive a large bonus for flanking, so deploy them wisely! Only available if you have unlocked the Finisher policy of the Autorité Branch. Can only be obtained via a [ICON_GOLD] Or purchase.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_HELP_GUERILLA">
+			<Text>Flank attack bonus increased, et receives bonuses when embarked or attacking over rivers.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_HONOR_BONUS">
+			<Text>Conscription</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_HONOR_BONUS_HELP">
+			<Text>+10% [ICON_STRENGTH] Force</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_KILL_HEAL">
+			<Text>Logistics</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_KILL_HEAL_HELP">
+			<Text>Heal 20 points when you destoy an enemy unit.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_I">
+			<Text>Trailblazer I</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_I_HELP">
+			<Text>Double Movement in Jungles et Forêts</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_II">
+			<Text>Trailblazer II</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_II_HELP">
+			<Text>Double Movement in Desert et Snow</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_III">
+			<Text>Trailblazer III</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_III_HELP">
+			<Text>Ignores Zone of Control, Can Use Enemy Roads/Railroads</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_KNOCKOUT_I">
+			<Text>Bonus v. Gun (25)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_KNOCKOUT_I_HELP">
+			<Text>+20% [ICON_STRENGTH] Force VS Gun (Melee) Units</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_KNOCKOUT_II">
+			<Text>Bonus v. Siege (25)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_KNOCKOUT_II_HELP">
+			<Text>+25% [ICON_STRENGTH] Force VS Siege Units</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_COERCION">
+			<Text>Coercion</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_COERCION_HELP">
+			<Text>Defeated land units may join your side. +100% to Flank Attack Bonus.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_CHARGE_II">
+			<Text>Charge II</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CHARGE_II_HELP">
+			<Text>+10% [ICON_STRENGTH] Puissance de combat when attacking in [COLOR_POSITIVE_TEXT]OPEN[ENDCOLOR] Terrain, +25% [ICON_STRENGTH] Puissance de combat VS [COLOR_POSITIVE_TEXT]Wounded Units[ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_GUERILLA_FIGHTER_HELP">
+			<Text>+50% Flank Attack et Wounded Attack Bonus. Ignores ZOC et Terrain Movement Penalties, et +10 HP when healing in Friendly Territory.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUERILLA_FIGHTER">
+			<Text>Guerilla Fighter</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ATTACK_BONUS_SWEDEN_HELP">
+			<Text>+10% [ICON_STRENGTH] Force when attacking.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ATTACK_BONUS_SWEDEN">
+			<Text>No Retreat</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ATLATL_ATTACK">
+			<Text>Atlatl Strike</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ATLATL_ATTACK_HELP">
+			<Text>+50% Ranged [ICON_RANGE_STRENGTH] Puissance de combat VS [COLOR_POSITIVE_TEXT]Wounded[ENDCOLOR] Units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_MISFIRE">
+			<Text>Difficult Target</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_MISFIRE_HELP">
+			<Text>-25% [ICON_RANGE_STRENGTH] Ranged Force vs. Naval units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MODERN_RANGED_PENALTY_I">
+			<Text>Covering Fire I</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MODERN_RANGED_PENALTY_I_HELP">
+			<Text>-50% [ICON_RANGE_STRENGTH] Ranged Force vs. Armor Units, Fortified Units, et Villes. +20% [ICON_STRENGTH] Force when defending, et enemy units dans un périmètre de 2 cases suffer -15% [ICON_STRENGTH] Force.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MODERN_RANGED_PENALTY_II">
+			<Text>Covering Fire II</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MODERN_RANGED_PENALTY_II_HELP">
+			<Text>-25% [ICON_RANGE_STRENGTH] Ranged Force vs. Fortified Units et Villes. +15% [ICON_STRENGTH] Force when defending, et enemy units dans un périmètre de 2 cases suffer -10% [ICON_STRENGTH] Force.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ENSLAVEMENT">
+			<Text>Forced Labor</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ENSLAVEMENT_HELP">
+			<Text>Recevez [ICON_PRODUCTION] Production in your Capital when you defeat an enemy unit.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_RAIDER">
+			<Text>Raider</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_RAIDER_HELP">
+			<Text>Flank attack bonus increased by 100%. Steal gold equal to 50% of the damage inflicted on a city. Is able to use enemy roads.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_FALLOUT_REDUCTION">
+			<Text>Fallout Resistance</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FALLOUT_REDUCTION_HELP">
+			<Text>Damage from Fallout reduced by 10.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_FALLOUT_IMMUNITY">
+			<Text>Fallout Immunity</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FALLOUT_IMMUNITY_HELP">
+			<Text>Ignores damage from Fallout.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_ICE_BREAKERS">
+			<Text>Ice Breakers</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ICE_BREAKERS_HELP">
+			<Text>Allows Workboats to move through Ice cases.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_RECON_EXPERIENCE">
+			<Text>Reconnaissance</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_RECON_EXPERIENCE_HELP">
+			<Text>Gains XP from revealing cases</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_BIG_CITY_PENALTY">
+			<Text>Major Penalty Attacking Villes (75)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BIG_CITY_PENALTY_HELP">
+			<Text>75% Penalty Attacking Villes</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_FASTER_GENERAL">
+			<Text>Faster General</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FASTER_GENERAL_HELP">
+			<Text>+1 [ICON_MOVES] Movement</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_BARBARIAN_BONUS">
+			<Text>Brute Force</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BARBARIAN_BONUS_HELP">
+			<Text>+33% [ICON_STRENGTH] Combat Bonus VS Barbarians</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_BUSHIDO">
+			<Text>Eight Virtues of Bushido</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BUSHIDO_HELP">
+			<Text>Promotion is replaced avec un randomly chosen new promotion after the unit completes its first combat</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_RIGHTEOUSNESS">
+			<Text>Righteousness</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_RIGHTEOUSNESS_HELP">
+			<Text>Attack Wounded Mod (15%). +10 HP if you destroy an enemy unit</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_COURAGE">
+			<Text>Courage</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_COURAGE_HELP">
+			<Text>Attack Fortified Mod (15%). +10 HP if you destroy an enemy unit</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_BENEVOLENCE">
+			<Text>Benevolence</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BENEVOLENCE_HELP">
+			<Text>Units in adjacent cases receive +5 HP when healing. +10 HP if you destroy an enemy unit</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_RESPECT">
+			<Text>Respect</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_RESPECT_HELP">
+			<Text>+15% [ICON_STRENGTH] Force versus Melee et Gun units. +10 HP if you destroy an enemy unit</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_SINCERITY">
+			<Text>Sincerity</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SINCERITY_HELP">
+			<Text>+25% Experience gagnented from combat. +10 HP if you destroy an enemy unit</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_BUSHIDO_HONOR">
+			<Text>Honor</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BUSHIDO_HONOR_HELP">
+			<Text>+15% [ICON_STRENGTH] Force outside of friendly lands. +10 HP if you destroy an enemy unit</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_LOYALTY">
+			<Text>Loyalty</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_LOYALTY_HELP">
+			<Text>+15% [ICON_STRENGTH] Force inside friendly lands. +10 HP if you destroy an enemy unit</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PROMOTION_SELF_CONTROL">
+			<Text>Self Control</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SELF_CONTROL_HELP">
+			<Text>+15% [ICON_STRENGTH] Force when defending. +10 HP if you destroy an enemy unit</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_HELP">
+			<Text>+150% [ICON_STRENGTH] Force versus Air et Helicopter Units</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_II_HELP">
+			<Text>+150% [ICON_STRENGTH] Force versus Air et Helicopter Units</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_UNIT_EXPLORER_CBP">
+			<Text>Explorer</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_EXPLORER_STRATEGY_CBP">
+			<Text>Explorers are a useful counterpart to Caravels when setting out to explore across the ocean during the Medieval et Renaissance periods. They are fairly weak and, therefore, are easily defeated by contemporary military units, however their reconaissance abilities are unparalleled.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_HELP_EXPLORER_CBP">
+			<Text>Mid-game exploration unit that is stronger et has additional sight while embarked. Use these units to discover new lands.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_EXPLORER_TEXT_CBP">
+			<Text>Exploration is the act of searching for the purpose of discovery of information or resources. Exploration occurs in all non-sessile animal species, including humans. In human history, its most dramatic rise was during the Age of Discovery when European explorers sailed et charted much of the rest of the world, largely in a pursuit of material wealth. Since then, major explorations after the Age of Discovery have occurred for reasons mostly aimed at information discovery.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_ZEPPELIN_CBP">
+			<Text>Zeppelin</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_ZEPPELIN_STRATEGY_CBP">
+			<Text>Zeppelins are a useful exploration unit that apparaît during the Industrial Era. They are fairly weak and, therefore, are easily defeated by contemporary military units. Their reconaissance abilities are unparalleled, especially due to their ability to hover.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_HELP_ZEPPELIN_CBP">
+			<Text>Industrial-era exploration unit. Use these units to explore or to monitor your borders. It is capable of hovering over all terrain, however it takes damage if it ends its turn on a mountain.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_ZEPPELIN_TEXT_CBP">
+			<Text>A Zeppelin was a type of rigid airship named after the German Count Ferdinand von Zeppelin who pioneered rigid airship development at the beginning of the 20th century. Zeppelin's ideas were first formulated in 1874 et developed in detail in 1893. They were patented in Germany in 1895 et in the United States in 1899. After the outstanding success of the Zeppelin design, the word zeppelin came to be commonly used to refer to all rigid airships. Zeppelins were first flown commercially in 1910 by Deutsche Luftschiffahrts-AG (DELAG), the world's first airline in revenue service. By mid-1914, DELAG had carried over 10,000 fare-paying passengers on over 1,500 flights. During World War I the German military made extensive use of Zeppelins as bombers et scouts, killing over 500 people in bombing raids in Britain.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_FRIENDLY_CITY_BELIEF_BONUS_CBP">
+			<Text>Defender of the Foi</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_ENEMY_CITY_BELIEF_BONUS_CBP">
+			<Text>Crusader Zeal</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_NAVAL_DEFENSE_CITY">
+			<Text>Difficult Target</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_TRAIT_LOW_POP_BONUS">
+			<Text>Lower Population than Enemy</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_UNIT_ELEPHANT_RIDER">
+			<Text>War Elephant</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_ELEPHANT_RIDER_STRATEGY">
+			<Text>War Elephants are more expensive et slower than the Cavalier, but they are also much more powerful. They can move after attacking et strike fear into nearby enemy units, giving them a negative combat modifier. You must have a source of [ICON_RES_IVORY] Ivory to construct War Elephants, et the city where you wish to build them must have a Casernes. Unlike other Unité militaires, War Elephants do not consume resources when constructed.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_ELEPHANT_RIDER_HELP">
+			<Text>Powerful early game Mounted Unit that is weak to Spearmen. This Unit has a higher [ICON_STRENGTH] Puissance de combat than other Mounted Units et strikes fear into nearby enemy units. It is, however, much slower et more expensive than the Cavalier. [NEWLINE][NEWLINE]You must have a source of [ICON_RES_IVORY] Ivory et a Casernes in order to construct this unit.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_ELEPHANT_RIDER_TEXT">
+			<Text>A War Elephant was an elephant trained et guided by humans for combat. Their main use was to charge the enemy, breaking their ranks et instilling terror. Elephantry are military units with elephant-mounted troops. They were first employed in India, the practice spreading out across south-east Asia et westwards into the Mediterranean. Their most famous use in the West was by the Greek general Pyrrhus of Epirus et in significant numbers by the armies of Carthage, including briefly by Hannibal.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MONGOL_TERROR">
+			<Text>Steppe Nomads</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MONGOL_TERROR_HELP">
+			<Text>+2 [ICON_MOVES] Movement, et ignores Zone of Control</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_FREE_LUXURY">
+			<Text>Voyage of Discovery</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MISSION_FREE_LUXURY_HELP">
+			<Text>If the unit is in owned territoire, this order will expend the unit, granting you two free copies of a Ressource de Luxe not available on this map. These Resources will not appear on the map, but can be traded to other civilizations.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MISSION_FREE_LUXURY_HELP_DISABLED">
+			<Text>Unit must be in owned territoire to use this ability.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_BUSHIDO">
+			<Text>Bushido</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_UNIT_PIONEER">
+			<Text>Pioneer</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_PIONEER_STRATEGY">
+			<Text>Use this unit to construct new cities. It cannot defend itself, so accompany it avec un combat unit. When founded, cities built by Pioneers automatically receive a selection of buildings, start with 3 Citoyens, et claim additional territoire. As such, the costs of expansion, in terms of Bonheur et Maintenance are much greater than Settlers. [NEWLINE][NEWLINE]Note: the bonuses for constructing buildings from the Progrès et Industrie policy branches do apply to the buildings constructed by Pioneers, so expect a large boost to your culture or income when you settle new lands with this unit!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_PIONEER_TEXT">
+			<Text>
+				Pioneers are any of the people in history who migrated to join in settling et developing new areas. The term especially refers to those who were going to settle any territoire which had previously not been settled or developed by European or American society, although the territoire may have been inhabited by or utilized by native peoples. The pioneer concept et ethos greatly predate the migration to parts of the United States now called Western, as many places now considered as East were also settled by pioneers from the coast. For example, Daniel Boone, a key figure in American history, settled in Kentucky, when that "Dark et Bloody Ground" was still undeveloped. One important development in the Western settlement was the Homestead Act, which provided formal legislation which regulated the settlement process.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_HELP_PIONEER">
+			<Text>Founds new Villes avec undvanced infrastructure et additional population. [NEWLINE][NEWLINE][ICON_FOOD] Growth of the Ville is stopped while this Unit is being built.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_COLONIST">
+			<Text>Colonist</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_COLONIST_STRATEGY">
+			<Text>Use this unit to construct new cities. It cannot defend itself, so accompany it avec un combat unit. When founded, cities built by Colonists  automatically receive a selection of buildings, start with 5 Citoyens et claim additional territoire. As such, the costs of expansion, in terms of Bonheur et Maintenance are much greater than Pioneers. [NEWLINE][NEWLINE]Note: the bonuses for constructing buildings from the Progrès et Industrie policy branches do apply to the buildings constructed by Colonists, so expect a large boost to your Culture or income when you settle new lands with this unit!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_COLONIST_TEXT">
+			<Text>
+				Studying throughout history, one can witness how colonists, a type of setter, very often occupied land previously home to long-established peoples, designated as indigenous (also called "natives", "Aborigines" or, in the Americas, "Indians"). In some cases (such as Australia), as colonialist mentalities et laws change, the legal ownership of some lands is contested by indigenous people, who either claim or seek restoration of traditional usage, land rights, native title et related forms of legal ownership or partial control. The word "settler" was not originally usually used in relation to unfree labour immigrants, such as slaves (e.g. in the United States), indentured labourers (such as in Colonial America), or convicts (such as in British America, c. 1615–1775; Australia 1788-1868). More recently descendants of these immigrants may argue that they have as much right to use the word "settler" as the descendants of free immigrants. In the figurative usage, a "person who goes first or does something first" also applies to the American English use of "pioneer" to refer to a settler—a person who has migrated to a less occupied area et established permanent residence there, often to colonize the area; as first recorded in English in 1605. In United States history it refers to those people who helped to settle new lands. In this usage, pioneers are usually among the first to an area, whereas settlers can arrive after first settlement et join others in the process of human settlement.[citation needed] This correlates with the work of military pioneers who were tasked with construction of camps before the main body of troops would arrive at the designated camp site.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_HELP_COLONIST">
+			<Text>Founds new Villes avec undvanced infrastructure et additional population. [NEWLINE][NEWLINE][ICON_FOOD] Growth of the Ville is stopped while this Unit is being built.</Text>
+		</Row>
+	</Language_fr_FR>
+</GameData>

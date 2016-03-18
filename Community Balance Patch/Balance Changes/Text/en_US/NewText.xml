@@ -13,7 +13,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_UNIVERSAL_HEALTHCARE_F_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]Universal Healthcare[ENDCOLOR][NEWLINE]Receive a free Hospital in every City. +50 [ICON_CULTURE] when a Citizen is born in any City, scaling with Era.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Universal Healthcare[ENDCOLOR][NEWLINE]Receive a free Hospital in every City. +50 [ICON_CULTURE] Culture when a Citizen is born in any City, scaling with Era.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_UNIVERSAL_HEALTHCARE_F">
 			<Text>Universal Healthcare</Text>
@@ -104,7 +104,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]Farming[ENDCOLOR] converts 20% of [ICON_PRODUCTION] Production of this City into [ICON_FOOD] Food.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROCESS_FOOD_STRATEGY">
-			<Text>Investing production in farming is a good way to boost your City's growth, which can be useful if you are falling behind in technologies, or you simply need bigger cities.</Text>
+			<Text>Investing production in farming is a good way to boost your City's growth, which can be useful if you need bigger cities.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_FIRST_ON_MOON">
