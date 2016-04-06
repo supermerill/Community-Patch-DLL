@@ -65,7 +65,7 @@ SET Text = 'Suprématie aérienne'
 WHERE Tag = 'TXT_KEY_POLICY_MILITARISM' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Suprématie aérienne[ENDCOLOR][NEWLINE]Recevez un Aéroport gratuit dans chaque Ville. +25% [ICON_PRODUCTION] Production pour la construction d''unité aérienne. Vous pouvez construire des [COLOR_POSITIVE_TEXT]Zeros[ENDCOLOR].'
+SET Text = '[COLOR_POSITIVE_TEXT]Suprématie aérienne[ENDCOLOR][NEWLINE]Recevez un Aéroport gratuit dans chaque ville. +25% [ICON_PRODUCTION] Production pour la construction d''unité aérienne. Vous pouvez construire des [COLOR_POSITIVE_TEXT]Zeros[ENDCOLOR].'
 WHERE Tag = 'TXT_KEY_POLICY_MILITARISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -105,7 +105,7 @@ WHERE Tag = 'TXT_KEY_POLICY_TOTAL_WAR_HELP' AND EXISTS (SELECT * FROM COMMUNITY 
 -- United Front
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Front uni[ENDCOLOR][NEWLINE]+200% de de dons d''unités des Cités-Etat Militariste durant les guerres contre un ennemi commun. +30 [ICON_INFLUENCE] Influence pour les dons d''unités aux Cité-Etat.'
+SET Text = '[COLOR_POSITIVE_TEXT]Front uni[ENDCOLOR][NEWLINE]+200% de de dons d''unités des cités-étatsMilitariste durant les guerres contre un ennemi commun. +30 [ICON_INFLUENCE] Influence pour les dons d''unités aux Cité-Etat.'
 WHERE Tag = 'TXT_KEY_POLICY_UNITED_FRONT_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Autarky
@@ -113,7 +113,7 @@ WHERE Tag = 'TXT_KEY_POLICY_UNITED_FRONT_HELP' AND EXISTS (SELECT * FROM COMMUNI
 -- Arsenal of Democracy
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Arsenal de la démocratie[ENDCOLOR][NEWLINE]+15% [ICON_PRODUCTION] Production pour les Unités militaires. +10 [ICON_INFLUENCE] Influence avec toutes les Cités-Etat quand vous utilisez un [ICON_GREAT_PEOPLE] Personnage Illustre.'
+SET Text = '[COLOR_POSITIVE_TEXT]Arsenal de la démocratie[ENDCOLOR][NEWLINE]+15% [ICON_PRODUCTION] Production pour les Unités militaires. +10 [ICON_INFLUENCE] Influence avec toutes les cités-étatsquand vous utilisez un [ICON_GREAT_PEOPLE] Personnage Illustre.'
 WHERE Tag = 'TXT_KEY_POLICY_ARSENAL_DEMOCRACY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Capitalism
@@ -131,7 +131,7 @@ WHERE Tag = 'TXT_KEY_POLICY_OPEN_SOCIETY_HELP' AND EXISTS (SELECT * FROM COMMUNI
 -- Covert Action
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Actions clandestines[ENDCOLOR][NEWLINE]Les chance de truquer une élection dans les Cités-Etat est doublé. Recevez un ou plus d''[ICON_SPY] Espions supplémentaires (basé sur le nombre de cités-états en jeu).'
+SET Text = '[COLOR_POSITIVE_TEXT]Actions clandestines[ENDCOLOR][NEWLINE]Les chances de truquer une élection dans les cités-étatsest doublé. Recevez un ou plus d''[ICON_SPY] Espions supplémentaires (basé sur le nombre de cités-états en jeu).'
 WHERE Tag = 'TXT_KEY_POLICY_COVERT_ACTION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Creative Expression
@@ -175,7 +175,7 @@ WHERE Tag = 'TXT_KEY_POLICY_SPACE_PROCUREMENTS_HELP' AND EXISTS (SELECT * FROM C
 -- Academy of Sciences
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Academie des Sciences[ENDCOLOR][NEWLINE]Réduit [ICON_HAPPINESS_3] l''Illettrisme de 10% dans toutes les villes. Recevez une école publique gratuite dans chaque Ville.'
+SET Text = '[COLOR_POSITIVE_TEXT]Academie des Sciences[ENDCOLOR][NEWLINE]Réduit [ICON_HAPPINESS_3] l''Illettrisme de 10% dans toutes les villes. Recevez une école publique gratuite dans chaque ville.'
 WHERE Tag = 'TXT_KEY_POLICY_ACADEMY_SCIENCES_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Cultural Revolution
@@ -205,7 +205,7 @@ WHERE Tag = 'TXT_KEY_POLICY_HERO_OF_THE_PEOPLE_HELP' AND EXISTS (SELECT * FROM C
 -- Fer Curtain
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Rideau de fer[ENDCOLOR][NEWLINE]Un tribunal gratuit pour chaque ville annexée. +50% [ICON_FOOD] Nouriture ou [ICON_PRODUCTION] Production pour les  Routes Commerciales internes. Les [ICON_CONNECTED] connections urbaines génèrent +3 [ICON_GOLD] Or.'
+SET Text = '[COLOR_POSITIVE_TEXT]Rideau de fer[ENDCOLOR][NEWLINE]Un tribunal gratuit pour chaque ville annexée. +50% [ICON_FOOD] Nouriture ou [ICON_PRODUCTION] Production pour les  routes commerciales internes. Les [ICON_CONNECTED] connections urbaines génèrent +3 [ICON_GOLD] Or.'
 WHERE Tag = 'TXT_KEY_POLICY_IRON_CURTAIN_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Party Leadership
@@ -224,7 +224,7 @@ SET Text = '[COLOR_POSITIVE_TEXT]Tactiques de guérilla[ENDCOLOR][NEWLINE]+15% bo
 WHERE Tag = 'TXT_KEY_POLICY_PATRIOTIC_WAR_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Les tactiques de guérilla permettent une forme de combats non conventionnel dans laquelle de petis groupes de combattants tels que des civils armés ou de troupe irrréguilères utilisent des techniques tels que l''enbuscade, le sabotage, les raids, petite guerre, attaques éclairs, et utilisant leur mobilité pour combattre des troupes militaires régulières plus nombreuses et moins mobiles .'
+SET Text = 'Les tactiques de guérilla permettent une forme de combats non conventionnel dans laquelle de petis groupes de combattants tels que des civils armés ou de troupe irrégulières utilisent des techniques tels que l''enbuscade, le sabotage, les raids, petite guerre, attaques éclairs, et utilisant leur mobilité pour combattre des troupes militaires régulières plus nombreuses et moins mobiles .'
 WHERE Tag = 'TXT_KEY_POLICY_PATRIOTIC_WAR_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Resettlement
@@ -248,7 +248,7 @@ WHERE Tag = 'TXT_KEY_POLICY_SKYSCRAPERS_TEXT' AND EXISTS (SELECT * FROM COMMUNIT
 
 -- Socialist Realism
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Realisme socialiste[ENDCOLOR][NEWLINE]Recevez un Musée gratuit dans chaque Ville. Les Musées produisent +2 [ICON_CULTURE] Culture.'
+SET Text = '[COLOR_POSITIVE_TEXT]Realisme socialiste[ENDCOLOR][NEWLINE]Recevez un Musée gratuit dans chaque ville. Les Musées produisent +2 [ICON_CULTURE] Culture.'
 WHERE Tag = 'TXT_KEY_POLICY_SOCIALIST_REALISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Worker's Faculties
@@ -278,7 +278,7 @@ WHERE Tag = 'TXT_KEY_POLICY_FIVE_YEAR_PLAN_HELP' AND EXISTS (SELECT * FROM COMMU
 
 -- Opener/Finisher
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]L''Esthétique[ENDCOLOR] améliore l''efficacité avec laquelle la civilisation génère de la [ICON_CULTURE] Culture et du [ICON_TOURISM] Tourisme.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter l''esthétique permet de:[ENDCOLOR][NEWLINE] [ICON_BULLET] +5% de vitesse d''apparition des Ecrivains illustres, artistes illustres, et Musicians illustres dans toutes les villes. [NEWLINE] [ICON_BULLET] Recevez un grand montant de [ICON_CULTURE] Culture chaque fois que vous utilisez un [ICON_GREAT_PEOPLE] Personnage Illustre.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]chaque doctrique Esthétique débloquée vous donne:[ENDCOLOR][NEWLINE] [ICON_BULLET] +5% de vitesse d''apparition des Ecrivains illustres, artistes illustres, et Musicians illustres dans toutes les villes.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter toutes les doctrine de l''Esthétisme vous donne:[ENDCOLOR][NEWLINE] [ICON_BULLET] Débloque la merveille [COLOR_CYAN]Uffizi[ENDCOLOR].[NEWLINE] [ICON_BULLET] Double les bonus thématique de [ICON_TOURISM] Tourisme des bâtiemnts et merveilles. [NEWLINE] [ICON_BULLET] Vous permt de voir des Sites Antiques Cachés.[NEWLINE] [ICON_BULLET] Vous donne l''accès aux doctrines de l''ère de la Renaissance, peut importe votre ère actuelle. [NEWLINE] [ICON_BULLET] Vous donne [COLOR_CYAN]1[ENDCOLOR] point (sur [COLOR_CYAN]3[ENDCOLOR] requit au total) vers l''accès aux Idéologies. [NEWLINE] [ICON_BULLET] Vous permet d''acheter des [ICON_GREAT_MUSICIAN] Musiciens illustres avec de la [ICON_PEACE] Foi à partir de l''ère Industrielle.'
+SET Text = '[COLOR_POSITIVE_TEXT]L''Esthétique[ENDCOLOR] améliore l''efficacité avec laquelle la civilisation génère de la [ICON_CULTURE] Culture et du [ICON_TOURISM] Tourisme.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter l''esthétique permet de:[ENDCOLOR][NEWLINE] [ICON_BULLET] +5% de vitesse d''apparition des Ecrivains illustres, artistes illustres, et Musicians illustres dans toutes les villes. [NEWLINE] [ICON_BULLET] Recevez un grand montant de [ICON_CULTURE] Culture chaque fois que vous utilisez un [ICON_GREAT_PEOPLE] Personnage Illustre.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Chaque doctrique Esthétique débloquée vous donne aussi:[ENDCOLOR][NEWLINE] [ICON_BULLET] +5% de vitesse d''apparition des Ecrivains illustres, artistes illustres, et Musicians illustres dans toutes les villes.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter toutes les doctrine de l''Esthétisme vous donne:[ENDCOLOR][NEWLINE] [ICON_BULLET] Débloque la merveille [COLOR_CYAN]Uffizi[ENDCOLOR].[NEWLINE] [ICON_BULLET] Double les bonus thématique de [ICON_TOURISM] Tourisme des bâtiemnts et merveilles. [NEWLINE] [ICON_BULLET] Vous permt de voir des Sites Antiques Cachés.[NEWLINE] [ICON_BULLET] Vous donne l''accès aux doctrines de l''ère de la Renaissance, peut importe votre ère actuelle. [NEWLINE] [ICON_BULLET] Vous donne [COLOR_CYAN]1[ENDCOLOR] point (sur [COLOR_CYAN]3[ENDCOLOR] requit au total) vers l''accès aux Idéologies. [NEWLINE] [ICON_BULLET] Vous permet d''acheter des [ICON_GREAT_MUSICIAN] Musiciens illustres avec de la [ICON_PEACE] Foi à partir de l''ère Industrielle.'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_AESTHETICS_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Cultural Centers (now Humanities)
@@ -348,82 +348,81 @@ UPDATE Language_fr_FR
 SET Text = 'Industrie'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_COMMERCE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
- -- ICI A CONTINUER TODO fIXME ???
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]L''industrie[ENDCOLOR] provides bonuses to empires focused on [ICON_GOLD] Or et [ICON_PRODUCTION] Production.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting Industrie grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] 25 [ICON_GOLD] Or every time you construct a building. Scales with Era. [NEWLINE] [ICON_BULLET] -5% [ICON_GOLD] Or needed for purchases.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Each Industrie policy unlocked grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] -5% [ICON_GOLD] Or needed for purchases.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting all Doctrines in Industrie grants:[ENDCOLOR][NEWLINE] [ICON_BULLET] Unlocks building [COLOR_CYAN]Big Ben[ENDCOLOR]. [NEWLINE] [ICON_BULLET] +1 [ICON_HAPPINESS_1] Bonheur pour chaque owned Luxury. [NEWLINE] [ICON_BULLET] Spécialistes gagnent +2 [ICON_PRODUCTION] Production.[NEWLINE] [ICON_BULLET] Provides [COLOR_CYAN]1[ENDCOLOR] point (of [COLOR_CYAN]3[ENDCOLOR] required in total) towards unlocking access to Ideologies. [NEWLINE] [ICON_BULLET] Allows for the purchase of [ICON_GREAT_MERCHANT] Great Merchants with [ICON_PEACE] Foi starting in the Industrial Era.'
+SET Text = '[COLOR_POSITIVE_TEXT]L''industrie[ENDCOLOR] offre des bonus aux empires en se focalisant sur l''[ICON_GOLD] Or et la [ICON_PRODUCTION] Production.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter l''Industrie vous accorde:[ENDCOLOR] [NEWLINE] [ICON_BULLET] 25 [ICON_GOLD] Or chaque fois que vous produisez un bâtiment. Ces bonus croissent selon votre Ere technologique. [NEWLINE] [ICON_BULLET] -5% [ICON_GOLD] Or demandé par achat.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Chaque doctrine de l''Industrie vous donne aussi:[ENDCOLOR] [NEWLINE] [ICON_BULLET] -5% [ICON_GOLD] Or demandé par achat.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter toutes les doctrines de l''industrie vous accorde:[ENDCOLOR][NEWLINE] [ICON_BULLET] Débloque [COLOR_CYAN]Big Ben[ENDCOLOR]. [NEWLINE] [ICON_BULLET] +1 [ICON_HAPPINESS_1] Bonheur pour chaque ressoruce de luxe possédé. [NEWLINE] Les [ICON_BULLET] Spécialistes gagnent +2 [ICON_PRODUCTION] Production.[NEWLINE] [ICON_BULLET] Vous donne [COLOR_CYAN]1[ENDCOLOR] point (sur [COLOR_CYAN]3[ENDCOLOR] requit au total) t vers l''accès aux Idéologies. [NEWLINE] [ICON_BULLET] Vous permet d''acheter des [ICON_GREAT_MERCHANT] marchants illustres avec de la [ICON_PEACE] Foi à partir de l''ère Industrielle.'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_COMMERCE_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Industrie is the production of a good or service dans un périmètre de an economy. Manufacturing industry became a key sector of production et labour in European et North American countries during the Industrial Revolution, upsetting previous mercancase et feudal economies. This occurred through many successive rapid advances in technology, such as the production of steel et Charbon. Following the Industrial Revolution, perhaps a third of world economic output is derived from manufacturing industries. Many developed countries et many developing/semi-developed countries (China, India etc.) depend significantly on manufacturing industry. Industries, the countries they reside in, et the economies of those countries are interlinked in a complex web of interdependence.'
+SET Text = 'L''industrie est l''activité de production de biens ou services au sein d''une économie. L''industrie manufacturière est devenue un secteur clé de la production et d''emploi de main-d''œuvre dans les pays européens et nord-américains au cours de la révolution industrielle, bouleversants les économies marchandes et féodales antérieures. Ceci s''efectua à travers de nombreux progrès technologique rapides et successifs, tels que la production de masse d''acier et de charbon. Suite à la révolution industrielle, peut-être un tiers de la production économique mondiale provient des industries manufacturières. De nombreux pays développés et de nombreux pays en développement / pays semi-développés (Chine, Inde, etc.) dépendent de manière significative sur l''industrie manufacturière.Les industries, les pays où elles résident et les économies de ces pays sont reliés entre eux dans un réseau complexe d''interdépendance.'
 WHERE Tag = 'TXT_KEY_POLICY_COMMERCE_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Mercenary Army
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Division of Labor[ENDCOLOR][NEWLINE]+2 [ICON_PRODUCTION] Production et +1 [ICON_GOLD] Or from Windmills, Workshops, et Factories. [ICON_GOLD] Or investments in Buildings reduce their [ICON_PRODUCTION] Production cost by an additional 15%.'
+SET Text = '[COLOR_POSITIVE_TEXT]Division du travail[ENDCOLOR][NEWLINE]+2 [ICON_PRODUCTION] Production et +1 [ICON_GOLD] Or pour les Moulins à vent, Ateliers, et Usines. L''[ICON_GOLD] Or investit dans les bâtiments réduisent leur coût de [ICON_PRODUCTION] Production de 15% supplémentaire.'
 WHERE Tag = 'TXT_KEY_POLICY_TRADE_UNIONS_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'The division of labour is the specialization of cooperating individuals who perform specific tasks et roles. Because of the large amount of labour saved by giving workers specialized tasks in Industrial Revolution-era factories, some classical economists as well as some mechanical engineers such as Charles Babbage were proponents of division of labour. Also, having workers perform single or limited tasks eliminated the long training period required to train craftsmen, who were replaced with lesser paid but more productive unskilled workers. Historically, an increasingly complex division of labour is associated with the growth of total output et trade, the rise of capitalism, et of the complexity of industrialised processes.'
+SET Text = 'La division du travail est la spécialisation et la mise en coopération de personnes qui effectuent des tâches et des rôles spécifiques. La grande quantité de travail épargné en donnant aux travailleurs des tâches spécialisées dans les usines, a été pronée par certains certains économistes classiques ainsi que des ingénieurs mécaniques tels que Charles Babbage, grands partisans de la division du travail à l''ère de la révolution industrielle. En outre la longue période de formation nécessaire pour former des artisans n''est plus nécessaire en ne donnant aux travailleurs que des tâches simples et limités, ce qui permet d''employer des travailleurs non qualifiés, payé moins cher et magré tout plus productifs. Historiquement, une division de plus en plus complexe du travail est associée à la croissance de la production et du commerce, la montée du capitalisme et de la complexité des processus industriels.'
 WHERE Tag = 'TXT_KEY_POLICY_TRADE_UNIONS_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Division of Labor'
+SET Text = 'Division du travail'
 WHERE Tag = 'TXT_KEY_POLICY_TRADE_UNIONS' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Wagon Trains (now called Turnpikes)
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Free Trade[ENDCOLOR][NEWLINE]+2 [ICON_GOLD] Or from Land [ICON_INTERNATIONAL_TRADE] International Routes Commerciales. Pauvreté Threshold reduced by 20% in all Villes.'
+SET Text = '[COLOR_POSITIVE_TEXT]Libre échange[ENDCOLOR][NEWLINE]+2 [ICON_GOLD] Or pour les [ICON_INTERNATIONAL_TRADE] Routes commerciales internationales terrestres. Seuil de pauvreté réduit de 20% dans toutes les villes.'
 WHERE Tag = 'TXT_KEY_POLICY_CARAVANS_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Free Trade'
+SET Text = 'Libre échange'
 WHERE Tag = 'TXT_KEY_POLICY_CARAVANS' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
-UPDATE Language_fr_FR
-SET Text = 'Free trade is a policy followed by some international marchés in which governments do not restrict imports from or exports to other countries. Free trade is exemplified by the European Economic Area et the North American Free Trade Agreement, which have established open marchés. Most nations are today members of the World Trade Organization (WTO) multilateral trade agreements. However, most governments still impose some protectionist policies that are intended to support local employment, such as applying tariffs to imports or subsidies to exports. Governments may also restrict free trade to limit exports of natural resources. Other barriers that may hinder trade include import quotas, taxes, et non-tariff barriers, such as regulatory legislation.'
+UPDATE Language_en_US
+SET Text = 'Le libre-échange est une politique suivie par certains marchés internationaux dans lesquels les gouvernements ne limitent pas les importations ou exportations en provenance ou vers d''autres pays. Le libre-échange est illustré par l''Espace économique européen et de l''Accord de libre-échange nord-américain, qui ont établi des marchés ouverts. La plupart des pays sont aujourd''hui membres de l'' Organisation mondiale du commerce (OMC) et ont ratifiés des accords commerciaux multilatéraux. Cependant, la plupart des gouvernements imposent encore des politiques protectionnistes qui sont destinées à soutenir l''emploi local, telles que l''application de taxes à l''importation ou des subventions aux exportations. Les gouvernements peuvent également restreindre le libre-échange afin de limiter les exportations de ressources naturelles. D''autres obstacles qui peuvent entraver le commerce comprennent des quotas d''importation, les taxes et les obstacles non tarifaires, tels que la législation réglementaire.'
 WHERE Tag = 'TXT_KEY_POLICY_CARAVANS_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Mercantilism
-UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Mercantilism[ENDCOLOR][NEWLINE] +2 [ICON_RESEARCH] Science et +2 [ICON_CULTURE] Culture from every Bureau des Douanes, Bank, et Stock Exchange. Yields from Internal [ICON_INTERNATIONAL_TRADE] Routes Commerciales increased by 33%.'
+UPDATE Language_en_US
+SET Text = '[COLOR_POSITIVE_TEXT]Mercantilisme[ENDCOLOR][NEWLINE] +2 [ICON_RESEARCH] Science and +2 [ICON_CULTURE] Culture pour chaque Bureau de douane, Banque et Bourse. L''efficacité des [ICON_INTERNATIONAL_TRADE] Routes commerciales internes est augmentés de 33%.'
 WHERE Tag = 'TXT_KEY_POLICY_MERCANTILISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Entrepreneurship
-UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Entrepreneurship[ENDCOLOR][NEWLINE]Great Merchants are earned 25% plus vite. +1 [ICON_GOLD] Or et +1 [ICON_PRODUCTION] Production from every Mine, Carrière, et Lumbermill.'
+UPDATE Language_en_US
+SET Text = '[COLOR_POSITIVE_TEXT]Entreprenariat[ENDCOLOR][NEWLINE]Les Marchants illustres appraissent 25% plus vite. +1 [ICON_GOLD] Or et +1 [ICON_PRODUCTION] Production pour chaque Mine, Carrière et Scierie.'
 WHERE Tag = 'TXT_KEY_POLICY_ENTREPRENEURSHIP_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 --Protectionism
 
-UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Protectionism[ENDCOLOR][NEWLINE]Recevez an additional [ICON_INTERNATIONAL_TRADE] Route Commerciale, et receive +2 [ICON_GOLD] Or from Naval [ICON_INTERNATIONAL_TRADE] International Routes Commerciales.'
+UPDATE Language_en_US
+SET Text = '[COLOR_POSITIVE_TEXT]Protectionisme[ENDCOLOR][NEWLINE]Recevez une [ICON_INTERNATIONAL_TRADE] Route commerciale supplémentaire, et recevez +2 [ICON_GOLD] Or des [ICON_INTERNATIONAL_TRADE] Routes commerciales internationales maritimes.'
 WHERE Tag = 'TXT_KEY_POLICY_PROTECTIONISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
--- Opener -- Now called Impérialisme -- Grants +1 Movement et +1 Sight for Naval Units, et speeds production of land units by +5%, avec un additional +4% pour chaque policy unlocked in Impérialisme. Recevez 1 extra happiness pour chaque owned luxury, et 1 Bonheur pour chaque garrisoned unit.
-UPDATE Language_fr_FR
+-- Opener -- Now called Imperialism -- Grants +1 Movement and +1 Sight for Naval Units, and speeds production of land units by +5%, with an additional +4% for every policy unlocked in Imperialism. Receive 1 extra happiness for every owned luxury, and 1 Happiness for every garrisoned unit.
+UPDATE Language_en_US
 SET Text = 'IMPERIALISM'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_EXPLORATION_CAP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
-UPDATE Language_fr_FR
-SET Text = 'Impérialisme'
+UPDATE Language_en_US
+SET Text = 'Imperialisme'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_EXPLORATION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
-UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Impérialisme[ENDCOLOR] enhances your ability to spread your empire through military power, particularly naval (and later air) supremacy.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting Impérialisme grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +1 [ICON_MOVES] Movement for Naval units et +1 Sight for Naval combat units. [NEWLINE] [ICON_BULLET] +5% [ICON_PRODUCTION] Production towards Naval et Air units.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Each Impérialisme policy unlocked grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +4% [ICON_PRODUCTION] Production towards Naval et Air units.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting all policies in Impérialisme grants:[ENDCOLOR][NEWLINE] [ICON_BULLET] Unlocks building the [COLOR_CYAN]Brandeburg Gate[ENDCOLOR]. [NEWLINE] [ICON_BULLET] Air units start with the [COLOR_POSITIVE_TEXT]Range[ENDCOLOR] Promotion, et Naval units start with the [COLOR_POSITIVE_TEXT]Fersides[ENDCOLOR] Promotion. [NEWLINE] [ICON_BULLET] All Ocean, Coast et Lake cases gagnent +1 [ICON_RESEARCH] Science et +1 [ICON_PRODUCTION] Production.[NEWLINE] [ICON_BULLET] Provides [COLOR_CYAN]1[ENDCOLOR] point (of [COLOR_CYAN]3[ENDCOLOR] required in total) towards unlocking access to Ideologies. [NEWLINE] [ICON_BULLET] Allows for the purchase of [ICON_GREAT_ADMIRAL] Great Admirals with [ICON_PEACE] Foi starting in the Industrial Era.'
+UPDATE Language_en_US
+SET Text = '[COLOR_POSITIVE_TEXT]L''Imperialisme[ENDCOLOR] améliore votre capacité à agrandir votre empire à travers de votre capacité militaire, plus particulièrement votre supprémacie navale (et plus tard aérienne).[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter l''Imperialisme vous donne:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +1 [ICON_MOVES] Mouvement pour les unités navales et +1 vision pour les unités navales militaires. [NEWLINE] [ICON_BULLET] +5% [ICON_PRODUCTION] Production pour les unités navales et aérienne.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Chaque doctrine de l'' Imperialisme vous donne aussi:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +4% [ICON_PRODUCTION] Production pour les unités navales et aérienne.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter toutes les doctrines de l''Imperialisme vous donne:[ENDCOLOR][NEWLINE] [ICON_BULLET] Débloque la [COLOR_CYAN]Porte de Brandeburg[ENDCOLOR]. [NEWLINE] [ICON_BULLET] Les unités aérienne commencent avec la promotion [COLOR_POSITIVE_TEXT]Portée[ENDCOLOR], et les unités navales commencent avec la promotion [COLOR_POSITIVE_TEXT]Cuirasse[ENDCOLOR]. [NEWLINE] [ICON_BULLET] Toutes les cases d''ocean, de côtes et les lacs gagnent +1 [ICON_RESEARCH] Science et +1 [ICON_PRODUCTION] Production.[NEWLINE] [ICON_BULLET] Vous donne [COLOR_CYAN]1[ENDCOLOR] point (sur [COLOR_CYAN]3[ENDCOLOR] requit au total) t vers l''accès aux Idéologies. [NEWLINE] [ICON_BULLET] Vous permet d''acheter des [ICON_GREAT_ADMIRAL] Amiraux illustres avec de la [ICON_PEACE] Foi à partir de l''ère Industrielle.'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Maritime Infrastructure -- Now Martial Law
 UPDATE Language_fr_FR
-SET Text = 'Martial Law'
+SET Text = 'Loi martiale'
 WHERE Tag = 'TXT_KEY_POLICY_MARITIME_INFRASTRUCTURE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Martial Law[ENDCOLOR][NEWLINE][ICON_GOLD] Or required for Unité militaire upgrades reduced by 25%. [ICON_PUPPET] villes Fantoche receive a +25% [ICON_PRODUCTION] Production modifier, et [ICON_OCCUPIED] Occupied cities a +33% [ICON_PRODUCTION] Production modifier.'
+SET Text = '[COLOR_POSITIVE_TEXT]Loi martiale[ENDCOLOR][NEWLINE]L''[ICON_GOLD] Or nécéssaire pour mettre à jour les Unités militaires est réduit de 25%. Les [ICON_PUPPET] villes fantoche reçoivent un bonus de +25% [ICON_PRODUCTION] Production, et [ICON_OCCUPIED] les villes occupés un bonus de +33% [ICON_PRODUCTION] Production.'
 WHERE Tag = 'TXT_KEY_POLICY_MARITIME_INFRASTRUCTURE_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Martial law is the imposition of the highest-ranking military officer as the military governor or as the head of the government, thus removing all power from the previous executive, legislative, et judicial branches of government. It is usually imposed temporarily when the government or civilian authorities fail to function effectively (e.g., maintain order et security, or provide essential services).'
+SET Text = 'La loi martiale est l''imposition de l''officier militaire le plus haut gradé en tant que gouverneur militaire ou en tant que chef du gouvernement, éliminant ainsi toute la puissance de l''exécutif précédent, législatif et judiciaire du gouvernement. Il est généralement imposé temporairement lorsque le gouvernement ou les autorités civiles ne parviennent pas à fonctionner de manière efficace (par exemple, maintenir l''ordre et la sécurité, ou de fournir des services essentiels).'
 WHERE Tag = 'TXT_KEY_POLICY_MARITIME_INFRASTRUCTURE_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Merchant Navy -- Now called Exploitation -- +1 Nouriture et +1 Production from Snow, Desert et Montagne Tiles
@@ -432,29 +431,29 @@ SET Text = 'Exploitation'
 WHERE Tag = 'TXT_KEY_POLICY_MERCHANT_NAVY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Exploitation[ENDCOLOR][NEWLINE]Fermes et Plantations gagnent +1 [ICON_PRODUCTION] Production et +1 [ICON_FOOD] Nouriture. Unité militaires can be upgraded in territoire owned by allied Cité-Etat.'
+SET Text = '[COLOR_POSITIVE_TEXT]Exploitation[ENDCOLOR][NEWLINE]Les Fermes et Plantations gagnent +1 [ICON_PRODUCTION] Production et +1 [ICON_FOOD] Nouriture. Les unités militaires peuvent être améliorés dans le territoire des cités-étatsalliés.'
 WHERE Tag = 'TXT_KEY_POLICY_MERCHANT_NAVY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Exploitation is the use of someone or something in an unjust or cruel manner, or generally as a means to an end. Most often, the word exploitation is used to refer to economic exploitation; that is, the act of using another person as a means to profit, particularly using their labor without offering or providing them fair compensation.'
+SET Text = 'L''exploitation est l''utilisation de quelqu''un ou quelque chose d''une manière injuste ou cruelle, ou généralement comme un moyen pour une fin. Le plus souvent, le mot d''exploitation est utilisé pour faire référence à l''exploitation économique, qui est le fait d''utiliser une autre personne comme un moyen de tirer profit, en particulier en utilisant leur travail sans offrir ou leur fournir une compensation équitable .'
 WHERE Tag = 'TXT_KEY_POLICY_MERCHANT_NAVY_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Naval Tradition -- Military Tradition -- +25% to Great Admiral et Great General Production -- Casernes, Armories et Military Academies provide +1 Science.
 UPDATE Language_fr_FR
-SET Text = 'Military Tradition'
+SET Text = 'Tradition militaire'
 WHERE Tag = 'TXT_KEY_POLICY_NAVAL_TRADITION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Military Tradition[ENDCOLOR][NEWLINE]Earn [ICON_GREAT_ADMIRAL] Great Admirals et [ICON_GREAT_GENERAL] Great Generals 33% more quickly. Casernes, Armories et Military Academies provide +3 [ICON_RESEARCH] Science et +1 [ICON_CULTURE] Culture.'
+SET Text = '[COLOR_POSITIVE_TEXT]Tradition militaire[ENDCOLOR][NEWLINE]Générez les [ICON_GREAT_ADMIRAL] Amiraux illustres et les [ICON_GREAT_GENERAL] Généraux illustres 33% plus rapidement. Les Casernes, Armureries et Académies militaires produisent +3 [ICON_RESEARCH] Science et +1 [ICON_CULTURE] Culture.'
 WHERE Tag = 'TXT_KEY_POLICY_NAVAL_TRADITION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Military tradition is the specific set of practices associated with the military or soldiers in general. The concept may describe the styles of military uniform, drill, or even the music of a military unit.'
+SET Text = 'La tradition militaire est l''ensemble des pratiques spécifiques associées à l''armée ou aux soldats en général. Le concept peut décrire les styles de l''uniforme militaire, des exercices, ou même la musique d''une unité militaire .'
 WHERE Tag = 'TXT_KEY_POLICY_NAVAL_TRADITION_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Navigation School -- Now called Exploration -- Recevez a free Great Admiral -- Reveals all Capitals et starts a Age d''Or.
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Exploration[ENDCOLOR][NEWLINE] Recevez a free [ICON_GREAT_ADMIRAL] Great Admiral. All undiscovered [ICON_CAPITAL] Capitals are revealed. Embarked units receive +2 [ICON_MOVES] Movement, et [ICON_GREAT_GENERAL] Great Generals recieve +1 [ICON_MOVES] Movement.'
+SET Text = '[COLOR_POSITIVE_TEXT]Exploration[ENDCOLOR][NEWLINE] Recevez un [ICON_GREAT_ADMIRAL] Amiral illustre. Toutes les [ICON_CAPITAL] Capitales inconnues sont révélés. Les unités embarqués reçoivent +2 [ICON_MOVES] Movement, et les [ICON_GREAT_GENERAL] Généraux illustres reçoivent +1 [ICON_MOVES] Mouvement.'
 WHERE Tag = 'TXT_KEY_POLICY_NAVIGATION_SCHOOL_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -462,20 +461,20 @@ SET Text = 'Exploration'
 WHERE Tag = 'TXT_KEY_POLICY_NAVIGATION_SCHOOL' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Exploration is the act of searching for the purpose of discovery of information or resources. Exploration occurs in all non-sessile animal species, including humans. In human history, its most dramatic rise was during the Age of Discovery when European explorers sailed et charted much of the rest of the world, largely in a pursuit of material wealth. Since then, major explorations after the Age of Discovery have occurred for reasons mostly aimed at information discovery.'
+SET Text = 'L''exploration est l''acte de partir en quête dans le but de découvrir des informations ou des ressources. L''exploration se produit chez toutes les espèces animales non sessiles, y compris les humains. Dans l''histoire humaine, sa hausse la plus spectaculaire a été au cours de l''âge des découvertes lorsque les explorateurs européens ont navigué et cartographié une grande partie du reste du monde, en grande partie dans une poursuite de richesse matérielle. Depuis lors, les grandes explorations après l''âge des découvertes ont eu lieu pour des raisons principalement destinées à la découverte d''informations.'
 WHERE Tag = 'TXT_KEY_POLICY_NAVIGATION_SCHOOL_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Treasure Fleets -- Now called Civilizing Mission -- Recevez a free Base militaire, et a lump sum of Or, when you conquer a city. Reduced maintenance.
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Civilizing Mission[ENDCOLOR][NEWLINE]Recevez a free Usine, et un montant important de [ICON_GOLD] Or, when you conquer a city. No [ICON_GOLD] Or maintenance for Garrisons.'
+SET Text = '[COLOR_POSITIVE_TEXT]Mission civilisatrice[ENDCOLOR][NEWLINE]Recevez une Usine gratuite, et un montant important d''[ICON_GOLD] Or, lorsque vous conquérez une ville. Pas de coût en [ICON_GOLD] Or pour la maintenance des Garnisons.'
 WHERE Tag = 'TXT_KEY_POLICY_TREASURE_FLEETS_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Civilizing Mission'
+SET Text = 'Mission civilisatrice'
 WHERE Tag = 'TXT_KEY_POLICY_TREASURE_FLEETS' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'The mission civilisatrice (the French for "civilizing mission") is a rationale for intervention or colonization, proposing to contribute to the spread of civilization, mostly amounting to the Westernization of indigenous peoples. It was notably the underlying principle of French et Portuguese colonial rule in the late 19th et early 20th centuries. It was influential in the French colonies of Algeria, French West Africa, et Indochina, et in the Portuguese colonies of Angola, Guinea, Mozambique et Timor. The European colonial powers felt it was their duty to bring Western civilization to what they perceived as backward peoples. Rather than merely govern colonial peoples, the Europeans would attempt to Westernize them in accordance avec un colonial ideology known as "assimilation".'
+SET Text = 'La mission civilisatrice est une justification de l''intervention ou de la colonisation, proposant de contribuer à la propagation de la civilisation, principalement l''occidentalisation des peuples autochtones. Ce fut notamment le principe sous-jacent de la domination coloniale française et portugaise à la fin du 19e et début du 20e siècle. C''était une idée répnadue pour ce qui concernait les colonies françaises de l''Algérie, l''Afrique occidentale française , et en Indochine , et dans les colonies portugaises de l''Angola, la Guinée, le Mozambique et le Timor. Les puissances coloniales européennes ont estimé qu''il était de leur devoir d'' apporter la civilisation occidentale à ce qu''ils considéraient comme des peuples arriérés. Plutôt que de se contenter de gouverner les peuples coloniaux, les Européens ont tenté de les occidentaliser, conformément à une idéologie coloniale connue sous le nom d''«assimilation».'
 WHERE Tag = 'TXT_KEY_POLICY_TREASURE_FLEETS_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Honor Opener/Finisher
@@ -488,11 +487,11 @@ SET Text = 'Autorité'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_HONOR' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Autorité[ENDCOLOR] will greatly benefit warlike et expansionist civilizations.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting Autorité grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +25% combat bonus VS Barbarians, et receive announcements when Barbarian Camps spawn in revealed territoire. [NEWLINE] [ICON_BULLET] Gain [ICON_CULTURE] Culture when you kill Units et clear Barbarian Camps. [NEWLINE] [ICON_BULLET] +5% [ICON_PRODUCTION] Production towards land units.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Each Autorité policy unlocked grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +3% [ICON_PRODUCTION] Production towards land units.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting all policies in Autorité grants:[ENDCOLOR][NEWLINE] [ICON_BULLET] Unlocks building the [COLOR_CYAN]Armée de Terre Cuite[ENDCOLOR]. [NEWLINE] [ICON_BULLET]Allows the purchasing of Landsknechts, Foreign Legions, et Mercenaries as their prerequisite technologies are researched.[NEWLINE] [ICON_BULLET] Grants access to Medieval Era Policy Branches, ignoring Era requirement.[NEWLINE] [ICON_BULLET] Provides [COLOR_CYAN]1[ENDCOLOR] point (of [COLOR_CYAN]3[ENDCOLOR] required in total) towards unlocking access to Ideologies.[NEWLINE] [ICON_BULLET] Allows for the purchase of [ICON_GREAT_GENERAL] Great Generals with [ICON_PEACE] Foi starting in the Industrial Era.'
+SET Text = '[COLOR_POSITIVE_TEXT]L''autorité[ENDCOLOR] apporte de nombreux béénfices aux civilisations guerrières et expansionistes.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter l''Autorité octroie:[ENDCOLOR] [NEWLINE] [ICON_BULLET] un bonus de combat de 25% contre les Barbares, et vous recevez une notification chaque fois que l''un de leurs campements apparaît près de votre territoire. [NEWLINE] [ICON_BULLET] Votre empire reçoit de la [ICON_CULTURE] Culture lorsque vous éliminez  des unités et razez  des camps barbare. [NEWLINE] [ICON_BULLET] +5% [ICON_PRODUCTION] Production pour les unités terrestres.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Chaque doctrine de l''Autorité vous donne aussi:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +3% [ICON_PRODUCTION] Production pour les unités terrestres.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter toutes les doctrines de l''Autorité vous donne:[ENDCOLOR][NEWLINE] [ICON_BULLET] Débloque l''[COLOR_CYAN]Armée de Terre Cuite[ENDCOLOR]. [NEWLINE] [ICON_BULLET]Permet l''achat de Landsknechts, Légions étrangères et Mercenaires si leur prérequi technologique est recherché.[NEWLINE] [ICON_BULLET] Vous donne l''accès aux doctrines de l''ère de la Renaissance, peut importe votre ère actuelle. [NEWLINE] [ICON_BULLET] Vous donne [COLOR_CYAN]1[ENDCOLOR] point (sur [COLOR_CYAN]3[ENDCOLOR] requit au total) vers l''accès aux Idéologies. [NEWLINE] [ICON_BULLET] Vous permet d''acheter des [ICON_GREAT_GENERAL] Généraux illustres avec de la [ICON_PEACE] Foi à partir de l''ère Industrielle.'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_HONOR_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'The word authority (Derived from the Latin word auctoritas) can be used to mean power given by the state (in the form of government, judges, police officers, etc.) or by academic knowledge of an area (someone can be an authority on a subject).'
+SET Text = 'Le mot autorité (Derivé du Latin auctoritas) peut être utilisé pour signifier la puissance accordé par l''état (sous la forme du gouvernement, juges, officiers de police, etc.) ou par par des connaissances académiques d''un domaine (quelqu''un peut être une autorité sur un sujet).'
 WHERE Tag = 'TXT_KEY_POLICY_HONOR_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Warrior Code (Now Impérialisme)
@@ -501,37 +500,37 @@ SET Text = 'Imperium'
 WHERE Tag = 'TXT_KEY_POLICY_WARRIOR_CODE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Imperium[ENDCOLOR][NEWLINE]A free Settler apparaît prêt de la[ICON_CAPITAL] Capital. Recevez 50 [ICON_GOLDEN_AGE] Points d''Age d''Or et [ICON_CULTURE] Culture when you found or conquer Villes, scaling with era. Conquest bonus also scales based on Ville [ICON_CITIZEN] population.'
+SET Text = '[COLOR_POSITIVE_TEXT]Imperium[ENDCOLOR][NEWLINE]Un colon gratuit apparaît prêt de la[ICON_CAPITAL] Capitale. Recevez 50 [ICON_GOLDEN_AGE] Points d''Age d''Or et de [ICON_CULTURE] Culture lorsque vous fondez ou conquérez des villes, le bonus s''améliore en changeant d''ére technologique. Le bonus de Conquête s''améliroe aussi en focntion de la [ICON_CITIZEN] population de la ville.'
 WHERE Tag = 'TXT_KEY_POLICY_WARRIOR_CODE_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Imperium is a Latin word which, in a broad sense, translates roughly as ''power to command.'' In ancient Rome, different kinds of power or authority were distinguished by different terms. Imperium referred to the sovereignty of the state over the individual.'
+SET Text = 'Imperium est un mot Latin qui, dans un sens large, se traduit à peu près par ''le pouvoir de commander''. Dans la rome antique, différentes formes de pouvoir ou d''autorité étaient distingués par différents termes. Imperium fait référence à la souveraineté de l''etat au-dessus de l''individu.'
 WHERE Tag = 'TXT_KEY_POLICY_WARRIORCODE_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Discipline (Now Tribute)
 UPDATE Language_fr_FR
-SET Text = 'Tribute'
+SET Text = 'Tribut'
 WHERE Tag = 'TXT_KEY_POLICY_DISCIPLINE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Tribute[ENDCOLOR][NEWLINE]Villes gagnent +25 [ICON_PRODUCTION] Production et [ICON_FOOD] Nouriture when their borders expand. Recevez 50 [ICON_CULTURE] Culture when you demand Tribute from Cité-Etat. Les bonus croissent selon l''Ere technologique.'
+SET Text = '[COLOR_POSITIVE_TEXT]Tribut[ENDCOLOR][NEWLINE]Les villes gagnent +25 [ICON_PRODUCTION] Production et [ICON_FOOD] Nouriture quand leurs fontière s''étendent. Recevez 50 [ICON_CULTURE] Culture quand vous demandez un Tribut à une Cité-Etat. Les bonus croissent selon l''Ere technologique.'
 WHERE Tag = 'TXT_KEY_POLICY_DISCIPLINE_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'A tribute is wealth, often in kind, that one party gives to another as a sign of respect or, as was often the case in historical contexts, of submission or allegiance. Various ancient states exacted tribute from the rulers of land which the state conquered or otherwise threatened to conquer.'
+SET Text = 'Un tribut est une richesse, souvent en nature, qu''une des aprties donne à l''autre en signe de respect ou, comme c''était souvent le cas dans le contexte historique, en signe d''allégence ou de soumission. Divers anciens états exigeaient un tribut des dirigeants des pays conquis ou menacé.'
 WHERE Tag = 'TXT_KEY_POLICY_DISCIPLINE_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Military Tradition (Now Dominance)
 UPDATE Language_fr_FR
-SET Text = 'Dominance'
+SET Text = 'Domination'
 WHERE Tag = 'TXT_KEY_POLICY_MILITARY_TRADITION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Dominance[ENDCOLOR][NEWLINE]Killing a military unit génère [ICON_RESEARCH] Science based on the [ICON_STRENGTH] Force of the defeated unit. All Melee units heal for 20 points after killing a military unit.'
+SET Text = '[COLOR_POSITIVE_TEXT]Domination[ENDCOLOR][NEWLINE]Eliminer une unité militaire génère de la [ICON_RESEARCH] Science en focntion de la [ICON_STRENGTH] Force de l''unité défaite. Toutes les unités en mélée se soignent de 20 points après l''élimination d''une unité militaire.'
 WHERE Tag = 'TXT_KEY_POLICY_MILITARY_TRADITION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Power - or dominance - is the ability to influence behavior, et may not be fully assessable until it is challenged with equal force. Unlike power, which can be latent, dominance is a manifest condition characterized by individual, situational et relationship patterns in which attempts to control another party or parties may or may not be accepted.'
+SET Text = 'Le pouvoir - ou domination - est la capacité à influencer le comportement, et  to influence behavior, et ne peut pas être évalué sans être cotesté par une force égale. Contrairement au pouvoir, qui peut être latent, la domination est une condition manifeste caractérisé par des modèles de situation et de relations individuelles où les tentatives de contrôle d''une autre partie peut ou non être accepté.'
 WHERE Tag = 'TXT_KEY_POLICY_MILITARYTRADITION_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Military Caste (Now Conscription)
@@ -540,29 +539,29 @@ SET Text = 'Discipline'
 WHERE Tag = 'TXT_KEY_POLICY_MILITARY_CASTE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Discipline[ENDCOLOR][NEWLINE]Each Ville avec un garrison génère +1 [ICON_HAPPINESS_1] Bonheur et +3 [ICON_CULTURE] Culture. [ICON_GOLD] Or maintenance for Units reduced by 15%, et Routes by 50%.'
+SET Text = '[COLOR_POSITIVE_TEXT]Discipline[ENDCOLOR][NEWLINE]Chaque ville avec une garnison génère +1 [ICON_HAPPINESS_1] Bonheur et +3 [ICON_CULTURE] Culture. L''[ICON_GOLD] Or nécéssaire pour la maintenance des Unités est réduit de 15%, et celui pour l''entretient des Routes de 50%.'
 WHERE Tag = 'TXT_KEY_POLICY_MILITARY_CASTE_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'In a military structure, discipline refers to a soldier''s willingness to follow legitimate orders, to respect superior officers, et to put their life in jeopardy or even die when required. Disciplined soldiers are expected to uphold the dignity of their uniform when off-duty et to protect the weak et helpless. Lapses in discipline may lead to military punishment or even courts-martial et discharge.'
+SET Text = 'Dans une structure militaire, la discipline se réfère à la volonté d''un soldat de suivre les ordres légitimes, à respecter les officiers supérieurs, et de mettre leur vie en danger ou même mourir si nécessaire. Les soldats disciplinés sont tenus de respecter la dignité de leur uniforme lors de leurs permissions et de protéger les faibles. Des manqueemnts dans la discipline peut conduire à des sanctions militaires ou même des cours martiales.'
 WHERE Tag = 'TXT_KEY_POLICY_MILITARYCASTE_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Professional Army (Now Martial Law)
 UPDATE Language_fr_FR
-SET Text = 'Honor'
+SET Text = 'Honeur'
 WHERE Tag = 'TXT_KEY_POLICY_PROFESSIONAL_ARMY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Honor[ENDCOLOR][NEWLINE]Units gagnent +10% [ICON_STRENGTH] Force. A Unité militaire spawns near all Villes that reach a multiple of 8 [ICON_CITIZEN] Citoyens (or have already exceeded 8 [ICON_CITIZEN] Citoyens).'
+SET Text = '[COLOR_POSITIVE_TEXT]Honeur[ENDCOLOR][NEWLINE]Les unités gagnent +10% [ICON_STRENGTH] de Force. Une Unité militaire apparaît prêt de toutes les villes qui atteignent une population ayant un multiple de 8 [ICON_CITIZEN] Citoyens (ou qui ont déjà plus de 8 [ICON_CITIZEN] Citoyens).'
 WHERE Tag = 'TXT_KEY_POLICY_PROFESSIONAL_ARMY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'In an "honorable" society, the citizens'' status is based upon the society''s judgment of their personal qualities. Qualities that are usually considered honorable include fealty, honesty, integrity, et courage. In many such societies men are expected to "defend their honor" to the death, as any loss of honor is considered far worse than loss of life.'
+SET Text = 'Dans une société «honorable», le statut des citoyens repose sur le jugement de la société de leurs qualités personnelles. Les qualités qui sont habituellement considérés comme honorables comprennent la fidélité, l''honnêteté, l''intégrité et le courage. Dans beaucoup de ces sociétés, les hommes sont censés «défendre leur honneur» à la mort, toute perte d''honneur est considéré comme bien pire que la perte de la vie.'
 WHERE Tag = 'TXT_KEY_POLICY_PROFESSIONALARMY_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Foreign Legion Text
-UPDATE Language_fr_FR
-SET Text = 'Special Infantry Unit of the Modern Era. May only be received as free units through the Volunteer Army principe of the Freedom Ideology, or for [ICON_GOLD] Or purchase through completing the Autorité Policy Branch. This Unit has a combat bonus outside of friendly territoire but is otherwise very similar to Riflemen.'
+UPDATE Language_en_US
+SET Text = 'Unit" d''Infantrie spéciale de l''ère Moderne. Ne peut être reçu qu''en tant qu''unité gratuite à travers la doctrine Armée volontaire de l''idéologie Egalité, ou par un achat via de l''[ICON_GOLD] Or avec la complétion de la branche Authorité. Cette unité a un bonus de combat en dehors du territoire ami mais est sinon similaire au Fantassin.'
 WHERE Tag = 'TXT_KEY_UNIT_HELP_FOREIGN_LEGION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -579,37 +578,37 @@ SET Text = 'Progrès'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_LIBERTY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Progrès[ENDCOLOR] is best for civilizations which desire robust infrastructure et scientific advancement.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting Progrès grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] Recevez 20 [ICON_RESEARCH] Science when a [ICON_CITIZEN] Citoyen est né in your [ICON_CAPITAL] Capital, le bonus s''améliore en changeant d''ére technologique. [NEWLINE] [ICON_BULLET] Recevez 10 [ICON_CULTURE] Culture when a Technologie is researched.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Each Progrès policy unlocked grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] Gain an additional 10 [ICON_CULTURE] Culture when a Technologie is researched, le bonus s''améliore en changeant d''ére technologique.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting all policies in Progrès grants:[ENDCOLOR][NEWLINE] [ICON_BULLET] Unlocks building the [COLOR_CYAN]Parthenon[ENDCOLOR]. [NEWLINE] [ICON_BULLET] Recevez 20 [ICON_GOLD] Or when a citizen est né in any city, le bonus s''améliore en changeant d''ére technologique.[NEWLINE] [ICON_BULLET] Grants access to Medieval Era Policy Branches, ignoring Era requirement.[NEWLINE] [ICON_BULLET] Provides [COLOR_CYAN]1[ENDCOLOR] point (of [COLOR_CYAN]3[ENDCOLOR] required in total) towards unlocking access to Ideologies.[NEWLINE] [ICON_BULLET] Allows for the purchase of [ICON_GREAT_WRITER] Great Writers with [ICON_PEACE] Foi starting in the Industrial Era.'
+SET Text = '[COLOR_POSITIVE_TEXT]Progrès[ENDCOLOR] est la meilleure branche pour les civilisations qui désirent une infrastructure robuste et une avance scientifique.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter le Progrès vous donne:[ENDCOLOR] [NEWLINE] [ICON_BULLET] Recevez 20 [ICON_RESEARCH] Science quand un [ICON_CITIZEN] Citoyen nait dans votre [ICON_CAPITAL] Capitale, le bonus s''améliore en changeant d''ére technologique. [NEWLINE] [ICON_BULLET] Recevez 10 [ICON_CULTURE] Culture quand une Technologie est recherché.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Chaque doctrine du Progrès vous donne aussi:[ENDCOLOR] [NEWLINE] [ICON_BULLET] Gagnez 10 [ICON_CULTURE] Culture additionnelle quand une Technologie est recherché, le bonus s''améliore en changeant d''ére technologique.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter toutes les doctrines du Progrès vous donne:[ENDCOLOR][NEWLINE] [ICON_BULLET] Débloquez le [COLOR_CYAN]Parthenon[ENDCOLOR]. [NEWLINE] [ICON_BULLET] Recevez 20 [ICON_GOLD] Or quand un citoyen nait dans une ville, le bonus s''améliore en changeant d''ére technologique.[NEWLINE] [ICON_BULLET] Vous donne l''accès aux doctrines de l''ère Médiévale, peut importe votre ère actuelle. [NEWLINE] [ICON_BULLET] Vous donne [COLOR_CYAN]1[ENDCOLOR] point (sur [COLOR_CYAN]3[ENDCOLOR] requit au total) vers l''accès aux Idéologies. [NEWLINE] [ICON_BULLET] Vous permet d''acheter des [ICON_GREAT_WRITER] Ecrivains illustres avec de la [ICON_PEACE] Foi à partir de l''ère Industrielle.'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_LIBERTY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'In intellectual history, the Idea of Progrès is the idea that advances in technology, science, et social organization can produce an improvement in the human condition. That is, people can become better in terms of quality of life (social progress) through economic development (modernization), et the application of science et technology (scientific progress). The assumption is that the process will happen once people apply their reason et skills, for it is not divinely foreordained. The role of the expert is to identify hindrances that slow or neutralize progress.'
+SET Text = 'Dans l''histoire intellectuelle , l''idée de progrès est l''idée que les avancées technologiques, scientifiques, et de l''organisation sociale peuvent produire une amélioration de la condition humaine. Autrement dit, les gens peuvent voir leur qualité de vie amélioré (progrès social) grâce au développement économique (modernisation), et grâce à la science et la technologie (progrès scientifique). On suppose que ce processus ne se produit que si les gens raisonnent et utilisent leurs compétences, car ce processus n''est pas inné. Le rôle de l''expert est d''identifier les obstacles qui ralentissent ou neutralise les progrès.'
 WHERE Tag = 'TXT_KEY_CIV5_POLICY_LIBERTY_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Collective Rule (Now Code of Laws)
 UPDATE Language_fr_FR
-SET Text = 'Organization'
+SET Text = 'Organisation'
 WHERE Tag = 'TXT_KEY_POLICY_COLLECTIVE_RULE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Organization[ENDCOLOR][NEWLINE] Villes earn +10 [ICON_FOOD] Nouriture et [ICON_CULTURE] Culture when they construct Buildings. Les bonus croissent selon l''Ere technologique.'
+SET Text = '[COLOR_POSITIVE_TEXT]Organisation[ENDCOLOR][NEWLINE] les villes gagnent +10 [ICON_FOOD] Nouriture et [ICON_CULTURE] Culture quand un bâtiemnt est construit. Les bonus croissent selon l''Ere technologique.'
 WHERE Tag = 'TXT_KEY_POLICY_COLLECTIVE_RULE_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Ville organization, also called ''Urban planning,'' is a technical et political process concerned with the use of land et design of the urban envFerment, including air et water et infrastructure passing into et out of urban areas such as transportation et distribution networks. Urban planning guides et ensures the orderly development of settlements et satellite communities which commute into et out of urban areas or share resources with it. It concerns itself with research et analysis, strategic thinking, architecture, urban design, public consultation, policy recommendations, implementation et management.'
+SET Text = 'l''organisation de la ville, également appelé '''' urbanisme '''', est un processus technique et politique qui organise l''utilisation des terres et la conception de l''environnement urbain, y compris l''air et l''eau et les infrastructures telles que les réseaux de transport et de distribution. La planification urbaine guide et assure le développement ordonné des zones constructibles et des communautés satellites afin de partager les ressources avec elles. Elle se préoccupe de la recherche et de l''analyse, la réflexion stratégique, l''architecture, le design urbain, consultation publique, des recommandations de politique, la mise en œuvre et de gestion.'
 WHERE Tag = 'TXT_KEY_CIV5_POLICY_COLLECTIVERULE_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Citoyenship
 UPDATE Language_fr_FR
-SET Text = 'Liberty'
+SET Text = 'Liberté'
 WHERE Tag = 'TXT_KEY_POLICY_CITIZENSHIP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Liberty[ENDCOLOR][NEWLINE]A Worker apparaît prêt de la[ICON_CAPITAL] Capital.[NEWLINE] +1 [ICON_MOVES] Movement pour unll Civilian Units.'
+SET Text = '[COLOR_POSITIVE_TEXT]Liberté[ENDCOLOR][NEWLINE]Un ouvrier apparaît prêt de la[ICON_CAPITAL] Capitale.[NEWLINE] +1 [ICON_MOVES] Mouvement pour les unités civiles.'
 WHERE Tag = 'TXT_KEY_POLICY_CITIZENSHIP_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'The modern concept of political liberty has its origins in the Greek concepts of free labor et slave labor. To be free, to the Greeks, was to not have a master, to be independent from a master (to live like one likes). That was the original Greek concept of freedom. It is closely linked with the concept of democracy.'
+SET Text = 'Le concept moderne de la liberté politique a ses origines dans les concepts grecs du libre travail et du travail des esclaves. Pour être libre, chez les Grecs, était nécessaire de ne pas avoir de maître et d''être indépendant d''un maître (pour vivre comme il nous plaît). Ce fut le concept grec originel de la liberté. Elle est étroitement liée à la notion de démocratie.'
 WHERE Tag = 'TXT_KEY_CIV5_POLICY_CITIZENSHIP_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Republic (Now Civil Ingénieurs)
@@ -618,37 +617,37 @@ SET Text = 'Expertise'
 WHERE Tag = 'TXT_KEY_POLICY_REPUBLIC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Expertise[ENDCOLOR][NEWLINE] +15% [ICON_PRODUCTION] Production towards buildings. Tile improvement construction rate increased by 25%.'
+SET Text = '[COLOR_POSITIVE_TEXT]Expertise[ENDCOLOR][NEWLINE] +15% [ICON_PRODUCTION] Production pour les bâtiments. La vistesse d''amélioration des cases est augmenté de 25%.'
 WHERE Tag = 'TXT_KEY_POLICY_REPUBLIC_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'An expert is someone widely recognized as a reliable source of technique or skill whose faculty for judging or deciding rightly, justly, or wisely is accorded authority et status by peers or the public in a specific well-distinguished domain. An expert, more generally, is a person with extensive knowledge or ability based on research, experience, or occupation et in a particular area of study. Experts are called in pour undvice on their respective subject, but they do not always agree on the particulars of a field of study. An expert can be believed, by virtue of credential, training, education, profession, publication or experience, to have special knowledge of a subject beyond that of the average person, sufficient that others may officially (and legally) rely upon the individual''s opinion. Historically, an expert was referred to as a sage (Sophos). The individual was usually a profound thinker distinguished for wisdom et sound judgment.'
+SET Text = 'Un expert est une personne largement reconnue comme une source fiable de techniques ou de compétences dont la faculté de juger ou de décider vraiment, justement, ou à bon escient. Ce statut est accordé d''autorité par des pairs ou le public pour un domaine spécifique. Un expert, plus généralement, est une personne ayant une connaissance approfondie ou une capacité basée sur la recherche, l''expérience ou le travail et dans un domaine d''étude particulier. Les experts sont convoqués pour des conseils sur leur sujet respectif, mais ils ne sont pas toujours d''accord sur les détails d''un domaine d''étude. Un expert peut être cru, en vertu de ses titres de compétences, sa formation, son éducation, sa profession, ses publications ou son expérience, d''avoir des connaissances particulières dans un domaine supérieur à une personne moyenne, suffisante pour que d''autres peuvent officiellement (et légalement) compter sur son opinion. Historiquement, un expert a été désigné comme un sage (Sophos). L''individu était généralement un profond penseur distingué par sa sagesse et son jugement.'
 WHERE Tag = 'TXT_KEY_CIV5_POLICY_REPUBLIC_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Representation 
 UPDATE Language_fr_FR
-SET Text = 'Equality'
+SET Text = 'Equité'
 WHERE Tag = 'TXT_KEY_POLICY_REPRESENTATION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Equality[ENDCOLOR][NEWLINE]+2 [ICON_PRODUCTION] Production dans chaque Ville, et +1 [ICON_HAPPINESS_1] Bonheur pour chaque groupe de 15 [ICON_CITIZEN] Citoyens in [ICON_PUPPET] Villes non-Fantoche .'
+SET Text = '[COLOR_POSITIVE_TEXT]Equité[ENDCOLOR][NEWLINE]+2 [ICON_PRODUCTION] Production dans chaque ville, et +1 [ICON_HAPPINESS_1] Bonheur pour chaque groupe de 15 [ICON_CITIZEN] Citoyens dans les [ICON_PUPPET] villes non-Fantoche .'
 WHERE Tag = 'TXT_KEY_POLICY_REPRESENTATION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Social equality is a state of affairs in which all people dans un périmètre de a specific society or isolated group have the same status in certain respects, often including civil rights, freedom of speech, property rights, et equal access to social goods et services. However, it also includes concepts of health equity, economic equality et other social securities. It also includes equal opportunities et obligations, et so involves the whole of society. Social equality Nécessite the absence of legally enforced social class or caste boundaries et the absence of discrimination motivated by an inalienable part of a person''s identity.'
+SET Text = 'L''égalité sociale est une situation dans laquelle toutes les personnes au sein d''une société ou d''un groupe isolé ont le même statut, à certains égards, y compris souvent les droits civils, la liberté d''expression, les droits de propriété, et l''égalité d''accès aux biens et aux services sociaux. Toutefois, elle comprend également des concepts de l''équité en santé, l''égalité économique ainsi que d''autres service de sécurité sociale. Il comprend également l''égalité des chances et des obligations, et implique donc l'' ensemble de la société. L''égalité sociale exige l''absence de limites de classes ou de castes sociales imposées par la loi et l''absence de discrimination motivée par une partie inaliénable de l''identité d''une personne'
 WHERE Tag = 'TXT_KEY_CIV5_POLICY_REPRESENTATION_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Meritocracy
 UPDATE Language_fr_FR
-SET Text = 'Fraternity'
+SET Text = 'Fraternité'
 WHERE Tag = 'TXT_KEY_POLICY_MERITOCRACY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Fraternity[ENDCOLOR][NEWLINE]+2 [ICON_FOOD] Nouriture dans chaque Ville, et +2 [ICON_RESEARCH] Science from [ICON_CONNECTED] Connection urbaines.'
+SET Text = '[COLOR_POSITIVE_TEXT]Fraternité[ENDCOLOR][NEWLINE]+2 [ICON_FOOD] Nouriture dans chaque ville, et +2 [ICON_RESEARCH] Science pour les [ICON_CONNECTED] Connection urbaines.'
 WHERE Tag = 'TXT_KEY_POLICY_MERITOCRACY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'In philosophy, fraternity is a kind of ethical relationship between people, which is based on love et solidarity. A synonym of fraternity is brotherhood. Fraternity is mentioned in the national motto of France, Liberté, égalité, fraternité (Liberty, equality, fraternity). Today, connotions of fraternities vary according to the context, including companionships et brotherhoods dedicated to the religious, intellectual, academic, physical and/or social pursuits of its members. Additionally, in modern times, it sometimes connotes a secret society, especially regarding freemasonry, odd fellows et various academic et student societies.'
+SET Text = 'Dans la philosophie, la fraternité est une sorte de relation éthique entre les gens, qui est basé sur l''amour et la solidarité. Le fraternité est mentionné dans la devise nationale Française: Liberté, égalité, fraternité. Aujourd''hui, les connotions de fraternités varient selon le contexte, parmis celle-ci les compagnonnages et communautés dédiés aux activités religieuses, intellectuelles, académiques, physiques et/ou sociaux de ses membres. En outre, dans les temps modernes, elle possède parfois une conotation de société secrète, en particulier en ce qui concerne la franc-maçonnerie et les diverses sociétés universitaires et étudiantes.'
 WHERE Tag = 'TXT_KEY_CIV5_POLICY_MERITOCRACY_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Finisher
@@ -663,167 +662,167 @@ SET Text = 'Mécénat'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_PATRONAGE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Mécénat[ENDCOLOR] improves your abiltiy to interact with Cité-Etat, Spies, et the Congrès Mondial.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting Mécénat grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] Resting point for [ICON_INFLUENCE] Influence avec unll Cité-Etat is increased by 20. [NEWLINE] [ICON_BULLET] Cité-Etat Quest Rewards increased by +25%.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Each Mécénat policy unlocked grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET]Your Cité-Etat [ICON_INFLUENCE] Influence degrades 5% slower.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting all policies in Mécénat grants:[ENDCOLOR][NEWLINE] [ICON_BULLET] Unlocks building the [COLOR_CYAN]Forbidden Palace[ENDCOLOR]. [NEWLINE] [ICON_BULLET] Allied Cité-Etat will occasionally gift you [ICON_GREAT_PEOPLE] Personnage Illustre. [NEWLINE] [ICON_BULLET] When you complete a [ICON_INTERNATIONAL_TRADE] Route Commerciale to a Cité-Etat, receive a [ICON_TOURISM] Tourisme boost avec unll known Civs based on your recent [ICON_CULTURE] Culture output.[NEWLINE] [ICON_BULLET] Grants access to Renaissance Era Policy Branches, ignoring Era requirement. [NEWLINE] [ICON_BULLET] Provides [COLOR_CYAN]1[ENDCOLOR] point (of [COLOR_CYAN]3[ENDCOLOR] required in total) towards unlocking access to Ideologies.'
+SET Text = '[COLOR_POSITIVE_TEXT]Mécénat[ENDCOLOR] améliore vos espions, votre capacité d''interaction avec les cités-états, et avec le Congrès Mondial.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter le Mécénat vous donne:[ENDCOLOR] [NEWLINE] [ICON_BULLET] Seuil d''[ICON_INFLUENCE] influence +20 sur toutes les cités-états. [NEWLINE] [ICON_BULLET] les récompenses de quête des cités-états sont améliorés de +25%.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Chaque doctrine du Mécénat vous donne aussi:[ENDCOLOR] [NEWLINE] [ICON_BULLET]Votre [ICON_INFLUENCE] influence sur les cités-etats  diminue 5% moins vite.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter toutes les doctrines du mécénat vous donne:[ENDCOLOR][NEWLINE] [ICON_BULLET] Débloque le [COLOR_CYAN]Cité interdite[ENDCOLOR]. [NEWLINE] [ICON_BULLET] Les cités-états alliées vous offriront parfois spontanément des [ICON_GREAT_PEOPLE] personnages illustres. [NEWLINE] [ICON_BULLET] Quand vous complétez une [ICON_INTERNATIONAL_TRADE] route commerciale à destination d''une cité état, vous recevez un bonus de [ICON_TOURISM] Tourisme avec toutes les civilisations connues, en se basant sur votre production de [ICON_CULTURE] Culture.[NEWLINE] [ICON_BULLET] Vous donne l''accès aux doctrines de l''ère de la Renaissance, peut importe votre ère actuelle. [NEWLINE] [ICON_BULLET] Vous donne [COLOR_CYAN]1[ENDCOLOR] point (sur [COLOR_CYAN]3[ENDCOLOR] requit au total) vers l''accès aux Idéologies.'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_PATRONAGE_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Mécénat is the domain of the wealthy et powerful, et is the capacity of a political entity to interact with other political entities. In many societies, statecraft is managed by a few individuals: the Royal Family, say, or the merchant princes. Today, statecraft is largely a democratic process, though some things remain the exclusive domain of those with enough influence.'
+SET Text = 'Le mécénat est le domaine des riches et des puissants , et la capacité d''une entité politique à interagir avec d''autres entités politiques. Dans de nombreuses sociétés, l''art de gouverner est géré par quelques individus: la famille royale, par exemple, ou les princes marchands. Aujourd''hui, l''art de gouverner est en grande partie un processus démocratique, bien que certaines choses restent le domaine exclusif de ceux qui ont assez d''influence.'
 WHERE Tag = 'TXT_KEY_POLICY_PATRONAGE_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Philanthropy
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Informants[ENDCOLOR][NEWLINE]Recevez one or more additional [ICON_SPY] Spies (based on number of Cité-Etat in game).'
+SET Text = '[COLOR_POSITIVE_TEXT]Informateurs[ENDCOLOR][NEWLINE]Recevez au moins un [ICON_SPY] Espion (nombre basé sur la quantité de cités-états en jeu).'
 WHERE Tag = 'TXT_KEY_POLICY_PHILANTHROPY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Informants'
+SET Text = 'Informateurs'
 WHERE Tag = 'TXT_KEY_POLICY_PHILANTHROPY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'An informant is a person who provides privileged information about a person or organization to an agency. The term is usually used dans un périmètre de the law enforcement world, where they are officially known as confidential or criminal informants (CI), et can often refer pejoratively to the supply of information without the consent of the other parties with the intent of malicious, personal or financial gagnent. However, the term is used in politics, industry et academia.'
+SET Text = 'Un informateur est une personne qui fournit des informations privilégiées sur une personne ou une organisation à une agence. Le terme est généralement utilisé dans le monde de l''application des lois, où ils sont officiellement connus comme informateurs confidentiels ou criminels (CI) , et peut souvent se référer péjorativement à la fourniture d''informations sans le consentement des autres parties dans le but de malveillace ou de gain financier. Cependant le terme est aussi utilisé dans la politique, l''industrie et le milieu universitaire.'
 WHERE Tag = 'TXT_KEY_POLICY_PHILANTHROPY_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Consulates
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Consulates[ENDCOLOR][NEWLINE]Gain an additional Délégé in the Congrès Mondial pour chaque groupe de 8 Cité-Etat in the game, et the chance of rigging elections in Cité-Etat is increased by 50%.'
+SET Text = '[COLOR_POSITIVE_TEXT]Consulats[ENDCOLOR][NEWLINE]Recevez un Délégé supplémentaire au Congrès Mondial pour chaque groupe de 8 cités-états en jeu, et la probabilité de truquer les elections dans une cité-état est augmenté de 50%.'
 WHERE Tag = 'TXT_KEY_POLICY_CONSULATES_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
--- Scholasticism
+-- Scholasticism (Scolastique)
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Scholasticism[ENDCOLOR][NEWLINE]All Cité-Etat which are [COLOR_POSITIVE_TEXT]Allies[ENDCOLOR] provide a [ICON_RESEARCH] Science bonus equal to 33% of what they produce for themselves.'
+SET Text = '[COLOR_POSITIVE_TEXT]Scolastique[ENDCOLOR][NEWLINE]Toutes les cités-états [COLOR_POSITIVE_TEXT]alliées[ENDCOLOR] octroient un bonus de [ICON_RESEARCH] Science égal à 33% de ce qu''elles produisent pour elles-mêmes.'
 WHERE Tag = 'TXT_KEY_POLICY_SCHOLASTICISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Cultural Diplomacy
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Cultural Diplomacy[ENDCOLOR][NEWLINE]Quantity of Resources gifted by Cité-Etat increased by 100%. [ICON_HAPPINESS_1] Bonheur from gifted Luxuries increased by 50%.'
+SET Text = '[COLOR_POSITIVE_TEXT]Diplomatie culturelle[ENDCOLOR][NEWLINE]QLa quantité de ressources offertes par les cités-états augmente de 100%. Le [ICON_HAPPINESS_1] bonheur lié aux ressources de luxe offertes augmente de 50%.'
 WHERE Tag = 'TXT_KEY_POLICY_CULTURAL_DIPLOMACY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Merchant Confederacy
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Merchant Confederacy[ENDCOLOR][NEWLINE]+3 [ICON_GOLD] Or from [ICON_INTERNATIONAL_TRADE] Routes Commerciales with Cité-Etat. Gain +1 [ICON_INFLUENCE] Influence (par tour) with Cité-Etat that you have a [ICON_INTERNATIONAL_TRADE] Route Commerciale with.'
+SET Text = '[COLOR_POSITIVE_TEXT]Confédération marchande[ENDCOLOR][NEWLINE]+3 [ICON_GOLD] Or pour les [ICON_INTERNATIONAL_TRADE] routes commerciales établies avec des cités-états. Recevez +1 [ICON_INFLUENCE] Influence (par tour) avec les cités-états tavec qui vous avez une [ICON_INTERNATIONAL_TRADE] route commerciale.'
 WHERE Tag = 'TXT_KEY_POLICY_MERCHANT_CONFEDERACY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Piété Opener
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Piété[ENDCOLOR] capitalizes on your investment in religion et trade.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting Piété grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET]+100% Pressure in nearby Villes without your majority [ICON_RELIGION] Religion. [NEWLINE] [ICON_BULLET] All Religions (or just your founded [ICON_RELIGION] Religion, if you have one) spread to owned Villes without a majority from 50% further away.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Each Piété policy unlocked grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +3% [ICON_GOLD] Or in Villes avec un Temple.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting all Doctrines in Piété grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] Unlocks building the [COLOR_CYAN]Université of Sankore.[ENDCOLOR][NEWLINE] [ICON_BULLET] Yields from Internal [ICON_INTERNATIONAL_TRADE] Routes Commerciales originating in your [ICON_CAPITAL] Capital or a Ville Sainte increased by 33%. [NEWLINE] [ICON_BULLET] Villes that follow your [ICON_RELIGION] Majority Religion génèrent +2 of every Yield.[NEWLINE] [ICON_BULLET] Grants access to Renaissance Era Policy Branches, ignoring Era requirement.[NEWLINE] [ICON_BULLET] Provides [COLOR_CYAN]1[ENDCOLOR] point (of [COLOR_CYAN]3[ENDCOLOR] required in total) towards unlocking access to Ideologies.[NEWLINE] [ICON_BULLET] Allows for the purchase of [ICON_GREAT_ARTIST] Great Artists with [ICON_PEACE] Foi starting in the Industrial Era.'
+SET Text = 'La [COLOR_POSITIVE_TEXT]Piété[ENDCOLOR] capitalise sur votre investisment dans votre religion et votre commerce.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter la piété donne:[ENDCOLOR] [NEWLINE] [ICON_BULLET]+100% Pression dans les villes proches qui n''ont pas votre [ICON_RELIGION] Religion en tant que religion majoritaire. [NEWLINE] [ICON_BULLET] Toutes les religions (ou juste la [ICON_RELIGION] religion que vous avez fondé, si vous en avez une) se répandent dans vos villes qui ne l''on pas encore adopté de 50% plus loin.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Chaque doctrine de la Piété débloqué vous donne:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +3% [ICON_GOLD] Or dans les villes avec un Temple.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter toutes les doctrines de la Piété vous donne:[ENDCOLOR] [NEWLINE] [ICON_BULLET] Débloque l''[COLOR_CYAN]Université de Sankore.[ENDCOLOR][NEWLINE] [ICON_BULLET] Les bonus des [ICON_INTERNATIONAL_TRADE] routes commerciales internes partant de votre [ICON_CAPITAL] Capitale ou de votre ville sainte sont augmentés de 33%. [NEWLINE] Les [ICON_BULLET] villes qui suivent votre [ICON_RELIGION] religion majoritaire génèrent +2 de chaque type de production (production, science, nouriture, etc...).[NEWLINE] [ICON_BULLET] Vous donne l''accès aux doctrines de l''ère de la Renaissance, peut importe votre ère actuelle. [NEWLINE] [ICON_BULLET] Vous donne [COLOR_CYAN]1[ENDCOLOR] point (sur [COLOR_CYAN]3[ENDCOLOR] requit au total) vers l''accès aux Idéologies. [NEWLINE] [ICON_BULLET] Vous permet d''acheter des [ICON_GREAT_ARTIST] Artistes illustres avec de la [ICON_PEACE] Foi à partir de l''ère Industrielle.'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_PIETY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Organized Religion
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Organized Religion[ENDCOLOR][NEWLINE] -25% [ICON_PEACE] Foi purchase costs. +1 [ICON_PEACE] Foi et +1 [ICON_CULTURE] Culture from Temples.'
+SET Text = '[COLOR_POSITIVE_TEXT]Religion organisée[ENDCOLOR][NEWLINE] -25% de coût en [ICON_PEACE] Foi pour les achats. +1 [ICON_PEACE] Foi et +1 [ICON_CULTURE] Culture pour les Temples.'
 WHERE Tag = 'TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Mandate of Heaven (Now Syncretism)
 UPDATE Language_fr_FR
-SET Text = 'Syncretism'
+SET Text = 'Syncrétisme '
 WHERE Tag = 'TXT_KEY_POLICY_MANDATE_OF_HEAVEN' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Syncretism[ENDCOLOR][NEWLINE] +2 [ICON_RESEARCH] Science et +2 [ICON_PRODUCTION] Production from Marchés, Caravansaries, et Harbors in Villes that follow your Religion. Your Religion spreads 50% more quickly over [ICON_INTERNATIONAL_TRADE] Routes Commerciales.'
+SET Text = '[COLOR_POSITIVE_TEXT]Syncrétisme[ENDCOLOR][NEWLINE] +2 [ICON_RESEARCH] Science et +2 [ICON_PRODUCTION] Production pour les Marchés, Caravansérails, et Ports dans les villes qui suivent votre religion. Votre religion se répand 50% plus rapidement à travers les [ICON_INTERNATIONAL_TRADE] routes commerciales.'
 WHERE Tag = 'TXT_KEY_POLICY_MANDATE_OF_HEAVEN_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Syncretism is the combining of different, often contradictory beliefs, while blending practices of various schools of thought. Syncretism involves the merger et analogizing of several originally discrete traditions, especially in the theology et mythology of religion, thus asserting an underlying unity et allowing pour un inclusive approach to other faiths.'
+SET Text = 'Le syncrétisme est la combinaison de différentes croyances, souvent contradictoires, tout en mélangeant les pratiques des différentes écoles de pensée. Le syncrétisme implique la fusion, l''analogie de plusieurs traditions initialement distinctes, en particulier dans la théologie et la mythologie de la religion, affirmant ainsi une unité sous-jacente et en permettant une approche inclusive à d''autres religions.'
 WHERE Tag = 'TXT_KEY_POLICY_MANDATEOFHEAVEN_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Theocracy (Now Divine Right)
 UPDATE Language_fr_FR
-SET Text = 'Divine Right'
+SET Text = 'Droit divin'
 WHERE Tag = 'TXT_KEY_POLICY_THEOCRACY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Divine Right[ENDCOLOR][NEWLINE]Border growth is doubled in Villes during [ICON_GOLDEN_AGE] Ages d''Or et ''We Love the King'' Day. Temples génèrent +1 [ICON_HAPPINESS_1] Bonheur.'
+SET Text = '[COLOR_POSITIVE_TEXT]Droit divin[ENDCOLOR][NEWLINE]La croissance des frontières est doublé dans les villes pendant un [ICON_GOLDEN_AGE] Age d''Or et ''Nous aimons notre roi''. Les temples génèrent +1 [ICON_HAPPINESS_1] Bonheur.'
 WHERE Tag = 'TXT_KEY_POLICY_THEOCRACY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'The divine right of kings, or divine-right theory of kingship, is a political et religious doctrine of royal et political legitimacy. It asserts that a monarch is subject to no earthly authority, deriving the right to rule directly from the will of Dieu. The king is thus not subject to the will of his people, the aristocracy, or any other estate of the realm, including (in the view of some, especially in Protestant countries) the Eglise. According to this doctrine, only Dieu can judge an unjust king. The doctrine implies that any attempt to depose the king or to restrict his powers runs contrary to the will of Dieu et may constitute a sacrilegious act. It is often expressed in the phrase "by the Grace of Dieu," attached to the titles of a reigning monarch.'
+SET Text = 'Le droit divin des rois, ou la théorie de droit divin de la royauté, est une doctrine politique et religieuse de la légitimité royale et politique. Il affirme qu''un monarque n''est soumis à aucune autorité terrestre.Le droit de gouverner dérive directement de la volonté de Dieu. Le roi n''est donc pas soumis à la volonté de son peuple, de l''aristocratie, ou de tout autre domaine du royaume, y compris (dans la vue de certains, en particulier dans les pays protestants) de l''Eglise. Selon cette doctrine, Dieu seul peut juger un roi injuste. Cette doctrine implique que toute tentative de renverser le roi ou de restreindre ses pouvoirs est contraire à la volonté de Dieu et peut donc constituer un acte de sacrilège. Ceci est souvent exprimé par l''expression "par la grâce de Dieu, " attaché aux titres d''un monarque régnant.'
 WHERE Tag = 'TXT_KEY_POLICY_THEOCRACY_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
--- Réforme (Now Monasticism)
+-- Réforme (Now Monachisme)
 UPDATE Language_fr_FR
-SET Text = 'Monasticism'
+SET Text = 'Monachisme'
 WHERE Tag = 'TXT_KEY_POLICY_REFORMATION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Monasticism[ENDCOLOR][NEWLINE] Can purchase Monasteries with [ICON_PEACE] Foi (+2 [ICON_PEACE] Foi, +2 [ICON_FOOD] Nouriture, +2 [ICON_RESEARCH] Science, 1 Scientifique slot).'
+SET Text = '[COLOR_POSITIVE_TEXT]Monachisme[ENDCOLOR][NEWLINE] Vous pouvez acheter des Monastères avec de la [ICON_PEACE] Foi (+2 [ICON_PEACE] Foi, +2 [ICON_FOOD] Nouriture, +2 [ICON_RESEARCH] Science, 1 emplacement pour Scientifique).'
 WHERE Tag = 'TXT_KEY_POLICY_REFORMATION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Monasticism or monkhood is a religious way of life in which one renounces worldly pursuits to devote oneself fully to spiritual work. Monastic life plays an important role in many Christian churches, especially in the Catholic et Orthodox traditions. Similar forms of religious life also exist in other faiths, most notably in Buddhism, but also in Hinduism et Jainism, although the expressions differ considerably.'
+SET Text = 'Le monachisme ou vie monastique est un mode de vie religieuse dans laquelle on renonce activités mondaines pour se consacrer pleinement au travail spirituel. La vie monastique joue un rôle important dans de nombreuses églises chrétiennes, en particulier dans les traditions catholiques et orthodoxes. Des formes similaires de la vie religieuse existent aussi dans d''autres religions, notamment dans le bouddhisme, mais aussi dans l''hindouisme et le jaïnisme, bien que les expressions diffèrent considérablement.'
 WHERE Tag = 'TXT_KEY_POLICY_REFORMATION_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
--- Free Religion (Now Tolerance)
+-- Free Religion (Now Iconography)
 UPDATE Language_fr_FR
-SET Text = 'Iconography'
+SET Text = 'Iconographie'
 WHERE Tag = 'TXT_KEY_POLICY_FREE_RELIGION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Iconography[ENDCOLOR][NEWLINE]All Spécialistes produce +1 [ICON_PEACE] Foi. A [ICON_GREAT_ARTIST] Great Artist apparaît near your [ICON_CAPITAL] Capital.'
+SET Text = '[COLOR_POSITIVE_TEXT]Iconographie[ENDCOLOR][NEWLINE]Tous les spécialistes produisent +1 [ICON_PEACE] Foi. Un [ICON_GREAT_ARTIST] artiste illustre apparaît prêt de votre [ICON_CAPITAL] capitale.'
 WHERE Tag = 'TXT_KEY_POLICY_FREE_RELIGION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Iconography is the branch of art history which studies the identification, description, et the interpretation of the content of images: the subjects depicted, the particular compositions et details used to do so, et other elements that are distinct from artistic style. One meaning of Iconography (based on a non-standard translation of the Greek et Russian equivalent terms) is the production of religious images, called icons, in the Byzantine et Orthodox Christian tradition; that is covered at Icon. In art history, "an iconography" may also mean a particular depiction of a subject in terms of the content of the image, such as the number of figures used, their placing et gestures. The term is also used in many academic fields other than art history, for example semiotics et media studies, et in general usage, for the content of images, the typical depiction in images of a subject, et related senses. Sometimes distinctions have been made between Iconology et Iconography, although the definitions, et so the distinction made, varies. When referring to movies, genres are immediately recognizable through their iconography, motifs that become associated avec un specific genre through repetition.'
+SET Text = 'L''iconographie est la branche de l''histoire de l''art qui étudie l''identification, la description et l''interprétation du contenu des images: les sujets représentés, les compositions et les détails particuliers utilisés pour la faire, et d''autres éléments distincts de style artistique. Un sens de l''iconographie (basé sur une traduction non-standard du grec et des termes équivalents russes) consiste en la production d''images religieuses appelées icônes, dans la tradition byzantine et orthodoxe chrétienne. Dans l''histoire de l''art, "une iconographie" peut aussi signifier une représentation particulière d''un sujet dans le contenu de l''image, tels que le nombre de chiffres utilisés, leur placement et les gestes. Le terme est également utilisé dans de nombreux domaines académiques autres que l''histoire de l''art, par exemple, la sémiotique et les études sur les médias, et dans l''usage général, pour le contenu des images, la représentation typique dans les images d''un sujet, et les sens associés. Parfois des distinctions ont été faites entre Iconologie et iconographie, bien que les définitions, et ainsi de la distinction faite, varie. Lorsque l''on se réfère à des films, les genres sont immédiatement reconnaissables par leur iconographie, des motifs qui deviennent associés avec un genre spécifique par leur répétition.'
 WHERE Tag = 'TXT_KEY_POLICY_FREERELIGION_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Monastère
 UPDATE Language_fr_FR
-SET Text = '+2 [ICON_FOOD] Nouriture, +2 [ICON_RESEARCH] Science, +2 [ICON_PEACE] Foi, et 1 Scientifique slot.'
+SET Text = '+2 [ICON_FOOD] Nouriture, +2 [ICON_RESEARCH] Science, +2 [ICON_PEACE] Foi, et 1 emplacement pour scientifique.'
 WHERE Tag = 'TXT_KEY_BUILDING_MONASTERY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Monasteries increase [ICON_PEACE] Foi, [ICON_FOOD] Nouriture, et [ICON_RESEARCH] Science output, especially if you can afford to use the Scientifique specialist. Can only be built if you have unlocked the Monasticism Policy in the Piété branch. Contruisez ce bâtiment en l''achetant avec de la [ICON_PEACE] Foi.'
+SET Text = 'Les monastères augmente la production de [ICON_PEACE] Foi, [ICON_FOOD] Nouriture, et [ICON_RESEARCH] Science, spécialement si l''on peut se permettre d''utilsier l''emplacement pour un scientifique. Ne peut être construit que si l''on a débloqué la doctrine Monastique dans la branche Piété. Contruisez ce bâtiment en l''achetant avec de la [ICON_PEACE] Foi.'
 WHERE Tag = 'TXT_KEY_BUILDING_MONASTERY_STRATEGY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Opener -- Free Science per city when happy, additional per policy taken. Closer grants 33% boost to GS, 20% boost to Growth.
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Rationalisme[ENDCOLOR] focuses on maximizing [ICON_FOOD] Growth et [ICON_RESEARCH] Science output.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting Rationalisme grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] A [ICON_GOLDEN_AGE] Age d''Or begins. [NEWLINE] [ICON_BULLET] +5% [ICON_RESEARCH] Science when your empire is [ICON_HAPPINESS_1] Happy.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Each Rationalisme policy unlocked grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +1% [ICON_RESEARCH] Science when your empire is [ICON_HAPPINESS_1] Happy.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting all Doctrines in Rationalisme grants:[ENDCOLOR][NEWLINE] [ICON_BULLET] Unlocks building the [COLOR_CYAN]Porcelain Tower.[ENDCOLOR] [NEWLINE] [ICON_BULLET] +33% [ICON_GREAT_SCIENTIST] Scientifique Illustre rate dans toutes les villes. [NEWLINE] [ICON_BULLET] +25% [ICON_FOOD] Growth dans toutes les villes.[NEWLINE] [ICON_BULLET] Provides [COLOR_CYAN]1[ENDCOLOR] point (of [COLOR_CYAN]3[ENDCOLOR] required in total) towards unlocking access to Ideologies. [NEWLINE] [ICON_BULLET] Allows for the purchase of [ICON_GREAT_SCIENTIST] Scientifique Illustres with [ICON_PEACE] Foi starting in the Industrial Era.'
+SET Text = 'Le [COLOR_POSITIVE_TEXT]Rationalisme[ENDCOLOR] est spécialiser dans l''optimisation de votre [ICON_FOOD] taux de natalité et votre production de [ICON_RESEARCH] Science.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter le rationalisme vous donne:[ENDCOLOR] [NEWLINE] [ICON_BULLET] Un [ICON_GOLDEN_AGE] Age d''Or débute. [NEWLINE] [ICON_BULLET] +5% [ICON_RESEARCH] Science tant que votre empire est [ICON_HAPPINESS_1] heureux.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Chaque doctrine du rationalisme débloqué vous donne:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +1% [ICON_RESEARCH] Science tant que votre empire est [ICON_HAPPINESS_1] heureux.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter toutes les doctrines du rationalisme vous donne:[ENDCOLOR][NEWLINE] [ICON_BULLET] Débloque la [COLOR_CYAN]Tour de Porcelaine.[ENDCOLOR] [NEWLINE] [ICON_BULLET] +33% à la vitesse d''apparition des [ICON_GREAT_SCIENTIST] scientifiques illustres dans toutes vos villes. [NEWLINE] [ICON_BULLET] +25% [ICON_FOOD] croissance dans toutes les villes.[NEWLINE] [ICON_BULLET] Vous donne [COLOR_CYAN]1[ENDCOLOR] point (sur [COLOR_CYAN]3[ENDCOLOR] requit au total) vers l''accès aux Idéologies. [NEWLINE] [ICON_BULLET] Vous permet d''acheter des [ICON_GREAT_SCIENTIST] scientifiques illustres avec de la [ICON_PEACE] Foi à partir de l''ère Industrielle.'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_RATIONALISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Humanism (now Enlightenment) -- boost when happy
 UPDATE Language_fr_FR
-SET Text = 'Enlightenment'
+SET Text = 'Lumières'
 WHERE Tag = 'TXT_KEY_POLICY_HUMANISM' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Enlightenment[ENDCOLOR][NEWLINE]+10% [ICON_RESEARCH] Science et +10% [ICON_FOOD] Growth in all Villes during [ICON_GOLDEN_AGE] Ages d''Or.'
+SET Text = '[COLOR_POSITIVE_TEXT]Lumières[ENDCOLOR][NEWLINE]+10% [ICON_RESEARCH] Science et +10% [ICON_FOOD] Croissance dans toutes les villes pendant un [ICON_GOLDEN_AGE] Age d''Or.'
 WHERE Tag = 'TXT_KEY_POLICY_HUMANISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'The Age of Enlightenment (or simply the Enlightenment or Age of Reason) is the time period in which cultural et social changes occurred emphasizing reason, analysis et individualism rather than traditional ways of thinking. Initiated by philosophes beginning in late 17th-century Western Europe the process of change fueled from voluntary organizations of men who were committed to the betterment of society. These men convened at coffeehouses, salons et masonic lodges. Institutions that were deeply rooted in society, such as religion et the government began to be questioned et a greater emphasis was placed on ways to reform society with toleration, science et skepticism.'
+SET Text = 'Le Siècle des Lumières est la période de temps dans lequel les changements culturels et sociaux ont eu lieu en insistant sur la raison, l''analyse et l''individualisme plutôt que les méthodes traditionnelles de la pensée. Initié par des Philosophes à compter de la fin du 17ème siècle en Europe occidentale, le processus de changement est alimenté par des organisations volontaires d''hommes qui sont engagé pour l''amélioration de la société. Ces hommes se réunisent dans les cafés, les salons et les loges maçonniques. Les institutions qui sont profondément ancrés dans la société, tels que la religion et le gouvernement commencent à être remis en question et une plus grande emphase est mis sur les moyens de réformer la société dans la tolérance, la science et le scepticisme scientifique.'
 WHERE Tag = 'TXT_KEY_POLICY_HUMANISM_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Scientific Revolution
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Academics[ENDCOLOR][NEWLINE]+1 [ICON_RESEARCH] Science et +1 [ICON_GOLD] Or from every Spécialiste.'
+SET Text = '[COLOR_POSITIVE_TEXT]Académiciens[ENDCOLOR][NEWLINE]+1 [ICON_RESEARCH] Science et +1 [ICON_GOLD] Or pour chaque Spécialiste.'
 WHERE Tag = 'TXT_KEY_POLICY_SCIENTIFIC_REVOLUTION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Academics'
+SET Text = 'Académiciens'
 WHERE Tag = 'TXT_KEY_POLICY_SCIENTIFIC_REVOLUTION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Academia is the nationally et internationally recognized establishment of professional scholars et students, usually centered around colleges et universities, who are engaged in higher education et research. The word comes from the akademeia in ancient Greece, which derives from the Athenian hero, Akademos. Outside the city walls of Athens, the gymnasium was made famous by Plato as a center of learning. The sacred space, dedicated to the goddess of wisdom, Athena, had formerly been an olive grove, hence the expression "the groves of Academe."'
+SET Text = 'Les académies sont des institutions reconnus nationalement et internationalement dans lesquels des savants, reconnus par leur pairs, veillent aux codes et usages de leur discipline. Le mot viens du grec ancien akademeia, qui dérive du nom du héros Athénien, Akademos. En-dehors des murs de la cité d''Athène,le  Outside the city walls of Athens, le gymnasium de Platon était un centre d''enseignement fameux. L''espace sacré, consacré à la déesse de la sagesse, Athena, The sacred space, dedicated to the goddess of wisdom, Athena, ayant été autrefois une oliveraie, d''où l''expression anglaise "the groves of Academe" (le monde académique).'
 WHERE Tag = 'TXT_KEY_POLICY_SCIENTIFIC_REVOLUTION_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Secularism
 
 UPDATE Language_fr_FR
-SET Text = 'Scientific Revolution'
+SET Text = 'Révolution Scientifique'
 WHERE Tag = 'TXT_KEY_POLICY_SECULARISM' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Scientific Revolution[ENDCOLOR][NEWLINE]+10% to Global Monopoly Yield Modifiers (including [ICON_GOLDEN_AGE] Ages d''Or), et +2 to Global Monopoly Yields (including [ICON_HAPPINESS_1] Bonheur).'
+SET Text = '[COLOR_POSITIVE_TEXT]Révolution Scientifique[ENDCOLOR][NEWLINE]+10% aux modificateurs de production des Monopoles Globals (y comprit pour l''augmentation de durée des [ICON_GOLDEN_AGE] Ages d''Or), et +2 aux autres effets des Monopoles Globals (y comprit le [ICON_HAPPINESS_1] Bonheur supplémentaire).'
 WHERE Tag = 'TXT_KEY_POLICY_SECULARISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'A scientific revolution is a period when rapid advances in human knowledge or technology overturns the current worldview, as a result triggering yet more advancements in thought et knowledge. Much of Europe underwent a scientific revolution in the 16th century, following the publication of Nicolaus Copernicus'' work, "On the Revolutions of the Heavenly Spheres" et Andreas Vesalius'' "On the Fabric of the Human Body In Seven Books." Both used modern (for the period) scientific practices to examine parts of the world around them et overturned incorrect scientific theories, some dating back to the ancient Greeks. Following the success of these books, the floodgates were opened, et scientists began carefully examining everything around them, et human knowledge increased exponentially over the succeeding centuries.'
+SET Text = 'Une révolution scientifique est une période de l''Histoire au cours de laquelle d''importantes avancées au niveau de la technologie et du savoir humains modifient radicalement la perspective contemporaine. En conséquence, de nouveaux avancements scientifiques et philosophiques cruciaux sont effectués. La majeure partie de l''Europe vécut une révolution scientifique au XVIe siècle suite à la publication des ouvrages de Nicolas Copernic, "Des révolutions des sphères célestes", et d''André Vésale, "Sur le fonctionnement du corps humain" (en sept tomes). Ces deux œuvres prônaient l''usage de pratiques scientifiques modernes (pour l''époque) dans le but d''examiner des éléments du monde environnant et de prouver le caractère erroné de certaines théories scientifiques (dont certaines remontaient à la Grèce antique). Le succès de ces ouvrages ouvrit de nombreuses vannes, et les scientifiques commencèrent à étudier attentivement leur environnement, avec pour conséquence un enrichissement exponentiel des connaissances humaines au cours des siècles qui suivirent.'
 WHERE Tag = 'TXT_KEY_POLICY_SECULARISM_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Sovereignty
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Empiricism[ENDCOLOR][NEWLINE]+3 [ICON_RESEARCH] Science et +2 [ICON_PRODUCTION] Production from all Strategic Resources.'
+SET Text = '[COLOR_POSITIVE_TEXT]Empirisme[ENDCOLOR][NEWLINE]+3 [ICON_RESEARCH] Science et +2 [ICON_PRODUCTION] Production pour toutes les Ressources Stratégiques.'
 WHERE Tag = 'TXT_KEY_POLICY_SOVEREIGNTY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -831,22 +830,22 @@ SET Text = 'Empiricism'
 WHERE Tag = 'TXT_KEY_POLICY_SOVEREIGNTY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Empiricism is a theory which states that knowledge comes only or primarily from sensory experience. One of several views of epistemology, the study of human knowledge, along with rationalism et skepticism, empiricism emphasizes the role of experience et evidence, especially sensory experience, in the formation of ideas, over the notion of innate ideas or traditions; empiricists may argue however that traditions (or customs) arise due to relations of previous sense experiences.'
+SET Text = 'L''empirisme est une théorie qui stipule que la connaissance vient uniquement ou principalement de l''expérience sensorielle. Un des points de vue de l''épistémologie est l''étude de la connaissance humaine, avec le rationalisme et le scepticisme. L''empirisme insiste sur le rôle de l''expérience et des preuves, en particulier l''expérience sensorielle, dans la formation des idées, sur la notion d''idées ou de traditions innées; les empiristes peuvent faire valoir cependant que les traditions (ou coutumes) se posent en raison de relations d''expériences sensorielles antérieures.'
 WHERE Tag = 'TXT_KEY_POLICY_SOVEREIGNTY_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Free Thought
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Free Thought[ENDCOLOR][NEWLINE]+2 [ICON_RESEARCH] Science et +2 [ICON_CULTURE] Culture from Villages, et -100% [ICON_HAPPINESS_3] Divisions Religieuses dans toutes les villes.'
+SET Text = '[COLOR_POSITIVE_TEXT]Liberté de pensée[ENDCOLOR][NEWLINE]+2 [ICON_RESEARCH] Science et +2 [ICON_CULTURE] Culture pour chaque Village, et -100% [ICON_HAPPINESS_3] de Divisions Religieuses dans toutes les villes.'
 WHERE Tag = 'TXT_KEY_POLICY_FREE_THOUGHT_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Opener
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Tradition[ENDCOLOR] focuses on generating Personnage Illustre et the construction of an impressive Capital.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting Tradition grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +3 [ICON_CULTURE] Culture et +2 [ICON_FOOD] Nouriture in the [ICON_CAPITAL] Capital. [NEWLINE] [ICON_BULLET] +5% [ICON_FOOD] Growth in all Villes.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Each Tradition policy unlocked grants:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +4% [ICON_FOOD] Growth in all Villes, et +1 [ICON_FOOD] Nouriture in your [ICON_CAPITAL] Capital.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopting all Doctrines in Tradition grants:[ENDCOLOR][NEWLINE] [ICON_BULLET] Unlocks building the [COLOR_CYAN]Hanging Jardins[ENDCOLOR]. [NEWLINE] [ICON_BULLET] +1 [ICON_FOOD] Nouriture from all Personnage Illustre Improvements et Monuments historiques, et [COLOR_CYAN]Throne Room[ENDCOLOR] built in [ICON_CAPITAL] Capital (+1 to all Yields, 1 Musician Spécialiste, 1 [ICON_GREAT_WORK] Chef-d''Oeuvre Musical slot, [ICON_GOLDEN_AGE] Ages d''Or last 25% longer).[NEWLINE] [ICON_BULLET] Grants access to Medieval Era Policy Branches, ignoring Era requirement.[NEWLINE] [ICON_BULLET] Provides [COLOR_CYAN]1[ENDCOLOR] point (of [COLOR_CYAN]3[ENDCOLOR] required in total) towards unlocking access to Ideologies.[NEWLINE] [ICON_BULLET] Allows for the purchase of [ICON_GREAT_ENGINEER] Great Ingénieurs with [ICON_PEACE] Foi starting in the Industrial Era.'
+SET Text = 'La [COLOR_POSITIVE_TEXT]Tradition[ENDCOLOR] se concerntre sur la génération de Personnages Illustres et la construction d''une capitale impressionante.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter la Tradition vous donne:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +3 [ICON_CULTURE] Culture et +2 [ICON_FOOD] Nouriture dans la [ICON_CAPITAL] Capitale. [NEWLINE] [ICON_BULLET] +5% [ICON_FOOD] de Croissance dans toutes vos villes.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Chaque politique Traditionelle vous donne aussi:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +4% [ICON_FOOD] Croissance dans toutes les villes, et +1 [ICON_FOOD] Nouriture dans votre [ICON_CAPITAL] Capitale.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter toutes les Doctrines Traditionelle vous donne:[ENDCOLOR][NEWLINE] [ICON_BULLET] Débloque les [COLOR_CYAN]Jardins Suspendus[ENDCOLOR]. [NEWLINE] [ICON_BULLET] +1 [ICON_FOOD] Nouriture pour toutes les aménagements de Personnages Illustres et pour les Monuments historiques, ainsi qu''une [COLOR_CYAN]Salle du trône[ENDCOLOR] gratuite dans votre [ICON_CAPITAL] Capitale (+1 à toutes les productions, 1 emplacement pour Musicien, 1 emplacement pour [ICON_GREAT_WORK] Chef-d''Oeuvre Musical, les [ICON_GOLDEN_AGE] Ages d''Or durent 25% plus longtemps).[NEWLINE] [ICON_BULLET]  Vous donne l''accès aux doctrines de l''ère Médiévale, peut importe votre ère actuelle. [NEWLINE] [ICON_BULLET] Vous donne [COLOR_CYAN]1[ENDCOLOR] point (sur [COLOR_CYAN]3[ENDCOLOR] requit au total) vers l''accès aux Idéologies. [NEWLINE] [ICON_BULLET] Vous permet d''acheter des [ICON_GREAT_ENGINEER] Ingénieurs illustres avec de la [ICON_PEACE] Foi à partir de l''ère Industrielle.'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_TRADITION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Aristocracy
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Justice[ENDCOLOR][NEWLINE]Villes avec un garrison gagnent +25% [ICON_RANGE_STRENGTH] Ranged Puissance de combat. [COLOR_CYAN]Royal Guardhouse[ENDCOLOR] built in [ICON_CAPITAL] Capital (1 Ingénieur Spécialiste, +3 [ICON_STRENGTH] Défense, +25 Hit Points, +2 [ICON_PRODUCTION] Production).'
+SET Text = '[COLOR_POSITIVE_TEXT]Justice[ENDCOLOR][NEWLINE]Les villes avec une garrison gagnent +25% [ICON_RANGE_STRENGTH]Puissance de combat à distance. La [COLOR_CYAN]Garde Royale[ENDCOLOR] est contruite dans votre [ICON_CAPITAL] Capitale (1 emplacement pour Ingénieur, +3 [ICON_STRENGTH] Défense, +25 Points de vie, +2 [ICON_PRODUCTION] Production).'
 WHERE Tag = 'TXT_KEY_POLICY_ARISTOCRACY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -854,59 +853,59 @@ SET Text = 'Justice'
 WHERE Tag = 'TXT_KEY_POLICY_ARISTOCRACY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Justice, in its broadest context, includes both the attainment of that which is just et the philosophical discussion of that which is just. The concept of justice is based on numerous fields, et many differing viewpoints et perspectives including the concepts of moral correctness based on law, equity, ethics, rationality, religion, et fairness. Often, the general discussion of justice is divided into the realm of societal justice as found in philosophy, theology et religion, and, procedural justice as found in the study et application of the law.'
+SET Text = 'La justice, dans son contexte le plus large, comprend à la fois la réalisation de ce qui est juste et la discussion philosophique de ce qui est juste. Le concept de justice est basée sur de nombreux domaines, et de nombreux points de vue différents et perspectives, y compris les concepts de la rectitude morale fondée sur le droit, l''équité, l''éthique, la rationalité, la religion, et l''équité. Souvent, la discussion générale à propos de la justice est scindé en justice sociale que l''on trouve dans la philosophie, la théologie et la religion, et la justice procédurale que l''on trouve dans l''étude et l''application de la loi.'
 WHERE Tag = 'TXT_KEY_POLICY_ARISTOCRACY_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Oligarchy
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Sovereignty[ENDCOLOR][NEWLINE]Culture cost of acquiring cases reduced by 20% in all Villes. [COLOR_CYAN]Court Chapel[ENDCOLOR] built in [ICON_CAPITAL] Capital (1 Artist Spécialiste, 1 [ICON_GREAT_WORK] Chef-d''Oeuvre Artistique slot, +2 [ICON_PEACE] Foi).'
+SET Text = '[COLOR_POSITIVE_TEXT]Souvraineté[ENDCOLOR][NEWLINE]Le coût en Culture pour acquérir de nouvelles cases est réduit de 20% dans toutes les villes. La [COLOR_CYAN]Chapelle Royale[ENDCOLOR] est construite dans votre [ICON_CAPITAL] Capitale (1 emplacement pour Artiste, 1 emplacement pour [ICON_GREAT_WORK] Chef-d''Oeuvre Artistique, +2 [ICON_PEACE] Foi).'
 WHERE Tag = 'TXT_KEY_POLICY_OLIGARCHY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Sovereignty'
+SET Text = 'Souvraineté'
 WHERE Tag = 'TXT_KEY_POLICY_OLIGARCHY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Sovereignty is understood in jurisprudence as the full right et power of a governing body to govern itself without any interference from outside sources or bodies. In political theory, sovereignty is a substantive term designating supreme authority over some polity. It is a basic principle underlying the dominant Westphalian model of state foundation.'
+SET Text = 'La souveraineté est, dans la jurisprudence, considéré comme étant le pouvoir et le droit complet d''un argane gouvernemental à se gouverner lui-même sans interférence issu de sources ou corps extérieur. Dans la théorie politique, la souveraineté est un terme substantif désignant l''autorité suprème d''un système politique. Il s''agit d''un principe de base qui sous-tend le modèle westphalien de la fondation de l''Etat.'
 WHERE Tag = 'TXT_KEY_POLICY_OLIGARCHY_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Monarchy
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Majesty[ENDCOLOR][NEWLINE]Spécialistes in [ICON_CAPITAL] Capital consume half the normal amount of [ICON_FOOD] Nouriture. [COLOR_CYAN]State Treasury[ENDCOLOR] built in [ICON_CAPITAL] Capital (1 Merchant Spécialiste, +2 [ICON_GOLD] Or, +15% [ICON_GREAT_PEOPLE] Personnage Illustre Rate in all Villes).'
+SET Text = '[COLOR_POSITIVE_TEXT]Majesté[ENDCOLOR][NEWLINE]Les Spécialistes dans votre [ICON_CAPITAL] Capitale consomment deux fois moins de [ICON_FOOD] Nouriture. Le [COLOR_CYAN]Trésor public[ENDCOLOR] est construit dans votre [ICON_CAPITAL] Capitale (1 emplacement pour Mearchant, +2 [ICON_GOLD] Or, +15% à la vitesse d''apparition des [ICON_GREAT_PEOPLE] Personnages Illustres dans toutes vos villes).'
 WHERE Tag = 'TXT_KEY_POLICY_MONARCHY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Majesty'
+SET Text = 'Majesté'
 WHERE Tag = 'TXT_KEY_POLICY_MONARCHY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Majesty is an English word derived ultimately from the Latin maiestas, meaning greatness, et used as a style by many monarchs, usually kings or emperors. Where used, the style outranks [Royal] Highness. It has cognates in many other languages.'
+SET Text = 'Majesté is un mot dérivé du Latin maiestas, signifiant Grandeur, et utilisé pour qualifer un monarque, la plupart du temps des roi ou des empereurs. Quand utilisé, ce prédicat surclasse ''Altesse''.'
 WHERE Tag = 'TXT_KEY_POLICY_MONARCHY_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Landed Elite
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Splendor[ENDCOLOR][NEWLINE]Expending a Personnage Illustre grants 50 [ICON_GOLDEN_AGE] Points d''Age d''Or et [ICON_CULTURE] Culture, le bonus s''améliore en changeant d''ére technologique. [COLOR_CYAN]Palace Jardin[ENDCOLOR] built in [ICON_CAPITAL] Capital (1 Writer Spécialiste, 1 [ICON_GREAT_WORK] Chef-d''Oeuvre of Writing slot, +2 [ICON_CULTURE] Culture from Monuments et Jardins).'
+SET Text = '[COLOR_POSITIVE_TEXT]Splendeur[ENDCOLOR][NEWLINE]Utiliser un Personnage Illustre vous octroye 50 [ICON_GOLDEN_AGE] Points d''Age d''Or et de [ICON_CULTURE] Culture, le bonus s''améliore en changeant d''ére technologique. Le [COLOR_CYAN]Jardin du palais[ENDCOLOR] est construit dans votre [ICON_CAPITAL] Capitale (1 emplacement pour Ecrivain, 1 emplacement pour [ICON_GREAT_WORK] Chef-d''Oeuvre littéraire, +2 [ICON_CULTURE] Culture pour les monuments et jardins).'
 WHERE Tag = 'TXT_KEY_POLICY_LANDED_ELITE_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Splendor'
+SET Text = 'Splendeur'
 WHERE Tag = 'TXT_KEY_POLICY_LANDED_ELITE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Splendor a term often used when describing the public activities of monarchs et aristocrats, specifically when referring to displays of power or prestige.'
+SET Text = 'La splendeur est un terme souvent utilisé pour décrire les activités publiques des monarques et des aristocrates , en particulier en se référant à des écrans de pouvoir ou de prestige.'
 WHERE Tag = 'TXT_KEY_POLICY_LANDED_ELITE_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Legalism
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Ceremony[ENDCOLOR][NEWLINE]Palace et National Wonders with Building requirements gagnent +2 [ICON_HAPPINESS_1] Bonheur. [COLOR_CYAN]Court Astrologer[ENDCOLOR] built in [ICON_CAPITAL] Capital (1 Scientifique Spécialiste, +2 [ICON_RESEARCH] Science).'
+SET Text = '[COLOR_POSITIVE_TEXT]Cérémonie[ENDCOLOR][NEWLINE]Le Palais et les Merveilles Nationales qui possèdent des prérequis immmobilier gagnent +2 [ICON_HAPPINESS_1] Bonheur. L''[COLOR_CYAN]Astrologue de la cour[ENDCOLOR] est construit dans votre [ICON_CAPITAL] Capitale (1 emplacement Scientifique, +2 [ICON_RESEARCH] Science).'
 WHERE Tag = 'TXT_KEY_POLICY_LEGALISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Ceremony'
+SET Text = 'Cérémonie'
 WHERE Tag = 'TXT_KEY_POLICY_LEGALISM' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'A ceremony is an event of ritual significance, performed on a special occasion. The word may be of Etruscan origin, via the Latin caerimonia. One of the major markers of a court is ceremony. Most monarchal courts included ceremonies concerning the investiture or coronation of the monarch et audiences with the monarch. Some courts had ceremonies around the waking et the sleeping of the monarch called a levee. Ordres of chivalry as honorific orders became an important part of court culture starting in the 15th century. They were the right of the monarch to create et grant as the fount of honour.'
+SET Text = 'Une Cérémonie est un événement d''une signification rituelle, effectuée pour une occasion spéciale. Le mot est peut être d''origine étrusque, par l''intermédiaire du caerimonia latine. L''un des principaux marqueurs d''une court est le cérémonial. La plupart des courts Royales comprennent des cérémonies relatives à l''investiture ou au couronnement du monarque ainsi que lors des audience entre le monarque et un public. Certaines courts ont eu des cérémonies autour de la veille et le sommeil du monarque. Utiliser les ordres de chevalerie comme titres honorifiques est devenu une part importante de la culture de cour à partir du 15ème siècle. Ils représentait pour monarque la possibilité de donner des subvention ainsi que des marques honorifiques.'
 WHERE Tag = 'TXT_KEY_POLICY_LEGALISM_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Finisher

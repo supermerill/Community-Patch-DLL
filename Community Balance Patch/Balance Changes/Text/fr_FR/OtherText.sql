@@ -18,7 +18,7 @@
 
 -- Help Text Changes
 	UPDATE Language_fr_FR
-	SET Text = 'Le [ICON_TOURISM] Tourisme est la ressoruce principale que vous utiliserez pour répandre votre influence culturelle sur les autres civilisations. Elle est générée passivement par les [COLOR_POSITIVE_TEXT]Chefs-d''Oeuvre[ENDCOLOR] ou les [COLOR_POSITIVE_TEXT]Artéfacts[ENDCOLOR, et peut aussi être généré activement par les [COLOR_POSITIVE_TEXT]Evenements Historique[ENDCOLOR] (pour plus d''informations à propos des ''Evenements Historique,'' regardez à la section correspondante). Lorsque vous plcez de plus en plus de Chefs-d''Oeuvre et Artéfacts dans vos Musées, Amphithéatres, Operas, etc., votre [ICON_TOURISM] Tourisme va continuer de s''accroître. De plus, vous pouvez booster votre génération de [ICON_TOURISM] Tourisme significativement avec le Libre Passage, les Routes Commerciales, partager la même Religion, et certaines doctrines Ideologique.'
+	SET Text = 'Le [ICON_TOURISM] Tourisme est la ressource principale que vous utiliserez pour répandre votre influence culturelle sur les autres civilisations. Elle est générée passivement par les [COLOR_POSITIVE_TEXT]Chefs-d''Oeuvre[ENDCOLOR] ou les [COLOR_POSITIVE_TEXT]Artéfacts[ENDCOLOR, et peut aussi être généré activement par les [COLOR_POSITIVE_TEXT]Evenements Historique[ENDCOLOR] (pour plus d''informations à propos des ''Evenements Historique,'' regardez à la section correspondante). Lorsque vous plcez de plus en plus de Chefs-d''Oeuvre et Artéfacts dans vos Musées, Amphithéatres, Operas, etc., votre [ICON_TOURISM] Tourisme va continuer de s''accroître. De plus, vous pouvez booster votre génération de [ICON_TOURISM] Tourisme significativement avec le Libre Passage, les Routes Commerciales, partager la même Religion, et certaines doctrines Ideologique.'
 	WHERE Tag = 'TXT_KEY_CULTURE_TOURISM_HEADING2_BODY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_CIVS' AND Value= 1 );
 
 -- Capture Popup
@@ -363,7 +363,7 @@ SET Text = 'Permet la construction de [COLOR_POSITIVE_TEXT]Frégate[ENDCOLOR] et 
 WHERE Tag = 'TXT_KEY_TECH_NAVIGATION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Recevez une [ICON_INTERNATIONAL_TRADE] Route Commerciale supplémentaire. Révèle l''[ICON_RES_ALUMINUM] Aluminum, une ressoruce untilisé par de nombreuses unités de fin de jeu. Permet aussi aux villes de cosntuire des [COLOR_POSITIVE_TEXT]Bourses[ENDCOLOR], un bâtiemnt qui génère de l''[ICON_GOLD] Or. Vous permet également de constuire la [COLOR_POSITIVE_TEXT]Centrale hydro-électrique[ENDCOLOR], qui augment le [ICON_PRODUCTION] Production des cases à coté d''une rivière.'
+SET Text = 'Recevez une [ICON_INTERNATIONAL_TRADE] Route Commerciale supplémentaire. Révèle l''[ICON_RES_ALUMINUM] Aluminum, une ressource untilisé par de nombreuses unités de fin de jeu. Permet aussi aux villes de cosntuire des [COLOR_POSITIVE_TEXT]Bourses[ENDCOLOR], un bâtiemnt qui génère de l''[ICON_GOLD] Or. Vous permet également de constuire la [COLOR_POSITIVE_TEXT]Centrale hydro-électrique[ENDCOLOR], qui augment le [ICON_PRODUCTION] Production des cases à coté d''une rivière.'
 WHERE Tag = 'TXT_KEY_TECH_ELECTRICITY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );
 
 -- Penicilin et Nanotech 

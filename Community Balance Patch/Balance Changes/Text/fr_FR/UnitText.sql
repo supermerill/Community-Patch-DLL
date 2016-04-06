@@ -118,11 +118,11 @@
 
 	-- Change Name of Great War Infantry/Bomber to be more 'generic'
 	UPDATE Language_fr_FR
-	SET Text = 'Rifleman'
+	SET Text = 'Fantassin'
 	WHERE Tag = 'TXT_KEY_UNIT_GREAT_WAR_INFANTRY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );
 
 	UPDATE Language_fr_FR
-	SET Text = 'The Rifleman is the basic Modern era combat unit. It is significantly stronger than its predecessor, the Fusilier.'
+	SET Text = 'The Fantassin is the basic Modern era combat unit. It is significantly stronger than its predecessor, the Fusilier.'
 	WHERE Tag = 'TXT_KEY_UNIT_GREAT_WAR_INFANTRY_STRATEGY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );
 
 	-- Musketman
@@ -150,7 +150,7 @@
 	WHERE Tag = 'TXT_KEY_UNIT_RIFLEMAN_STRATEGY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );
 
 	UPDATE Language_fr_FR
-	SET Text = 'Infantry is the basic Industrial era combat unit. It is significantly stronger than its predecessor, the Rifleman. Modern combat is increasingly complex, et on its own an Infantry unit is vulnerable to air, artillery et tank attack. When possible Infantry should be supported by artillery, tanks, et air (or anti-air) units.'
+	SET Text = 'Infantry is the basic Industrial era combat unit. It is significantly stronger than its predecessor, the Fantassin. Modern combat is increasingly complex, et on its own an Infantry unit is vulnerable to air, artillery et tank attack. When possible Infantry should be supported by artillery, tanks, et air (or anti-air) units.'
 	WHERE Tag = 'TXT_KEY_UNIT_INFANTRY_STRATEGY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );
 
 	UPDATE Language_fr_FR
