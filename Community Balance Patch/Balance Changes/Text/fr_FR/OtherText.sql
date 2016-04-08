@@ -263,7 +263,7 @@ UPDATE Language_fr_FR
 SET Text = 'Permet la construction de [COLOR_POSITIVE_TEXT]Cuirassé[ENDCOLOR], une puissante unité navale à distance de fin de jeu.'
 WHERE Tag = 'TXT_KEY_TECH_ELECTRONICS_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );
 
--- Fix Combined Arms Text
+-- Fix Armée combinée Text
 UPDATE Language_fr_FR
 SET Text = 'Permet la construction de [COLOR_POSITIVE_TEXT]Char[ENDCOLOR], une unité blindé rapide et mortelle.'
 WHERE Tag = 'TXT_KEY_TECH_COMBINED_ARMS_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );

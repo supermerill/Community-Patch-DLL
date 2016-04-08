@@ -1,7 +1,7 @@
 -- Clausewitz's Legacy
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Esprit Martial[ENDCOLOR][NEWLINE]+25% Bonus d''attaque for 50 tours. La [ICON_HAPPINESS_3] lassitude de guerre est réduite de 50%, et [ICON_RAZING] la vitesse de destructiond des villes est doublé.'
+SET Text = '[COLOR_POSITIVE_TEXT]Esprit Martial[ENDCOLOR][NEWLINE]+25% Bonus d''attaque pour 50 tours. La [ICON_HAPPINESS_3] lassitude de guerre est réduite de 50%, et [ICON_RAZING] la vitesse de destruction des villes est doublé.'
 WHERE Tag = 'TXT_KEY_POLICY_NEW_ORDER_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -82,8 +82,7 @@ SET Text = '[COLOR_POSITIVE_TEXT]Complexe militaro-industriel[ENDCOLOR][NEWLINE]
 WHERE Tag = 'TXT_KEY_POLICY_MOBILIZATION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Le complexe militaro-industriel, comprend les relations politiques et monétaires qui existent entre le législateur, les forces armées et les industriels de la défensequi les supportent. Ces relations comprennent des contributions politiques, des appuis politique pour les dépenses militaires, du lobbying pour soutenir la bureaucratie, et une surveillance des industriels. Le terme est souvent utilisé en référence au système militaire des Etats-Unis, où il a gagné en popularité après son utilisation dans la déclaration d''adieu du président Dwight D. Eisenhower le 17 janvier 1961, 
-It is a type of Fer triangle. The term is most often used in reference to the system behind the military of the United States, where it gagnented popularity after its use in the farewell address of President Dwight D. Eisenhower on January 17, 1961, bien que le terme soit aussi applicable à tout pays ayant développé une infrastructure similaire.'
+SET Text = 'Le complexe militaro-industriel est composé des relations politiques et monétaires qui existent entre le législateur, les forces armées et les industriels de la défensequi les supportent. Ces relations comprennent des contributions politiques, des appuis politique pour les dépenses militaires, du lobbying pour soutenir la bureaucratie, et une surveillance des industriels. Le terme est souvent utilisé en référence au système militaire des Etats-Unis, où il a gagné en popularité après son utilisation dans la déclaration d''adieu du président Dwight D. Eisenhower le 17 janvier 1961, bien que le terme soit aussi applicable à tout pays ayant développé une infrastructure similaire.'
 WHERE Tag = 'TXT_KEY_POLICY_MOBILIZATION_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Police State
@@ -224,7 +223,7 @@ SET Text = '[COLOR_POSITIVE_TEXT]Tactiques de guérilla[ENDCOLOR][NEWLINE]+15% bo
 WHERE Tag = 'TXT_KEY_POLICY_PATRIOTIC_WAR_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Les tactiques de guérilla permettent une forme de combats non conventionnel dans laquelle de petis groupes de combattants tels que des civils armés ou de troupe irrégulières utilisent des techniques tels que l''enbuscade, le sabotage, les raids, petite guerre, attaques éclairs, et utilisant leur mobilité pour combattre des troupes militaires régulières plus nombreuses et moins mobiles .'
+SET Text = 'Les tactiques de guérilla permettent une forme de combats non conventionnel dans laquelle de petis groupes de combattants tels que des civils armés ou de troupe irrégulières utilisent des techniques tels que l''enbuscade, le sabotage, les raids, petite guerre, attaques éclairs, et utilisant leur mobilité pour combattre des troupes militaires régulières plus nombreuses et moins mobiles.'
 WHERE Tag = 'TXT_KEY_POLICY_PATRIOTIC_WAR_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Resettlement
@@ -291,7 +290,7 @@ SET Text = 'Humanisme'
 WHERE Tag = 'TXT_KEY_POLICY_CULTURAL_CENTERS' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'L''humanisme est une philosophie statuant que l''être humain est l''élément le plus important de notre monde. Il n''existe ni être suprême, ni puissance surnaturelle auxquelles les humains se doivent de prêter allégeance. L''être humain est son propre guide et la source première de son savoir. Nous sommes seuls. L''humanisme existe, sous une forme ou une autre, depuis la Grèce antique. Il apparaît également dans des textes indiens et asiatiques vieux de deux à trois mille ans. Il a fait une réapparition remarquée à la Renaissance et reste encore aujourd''hui une force philosophique majeure..'
+SET Text = 'L''humanisme est une philosophie statuant que l''être humain est l''élément le plus important de notre monde. Il n''existe ni être suprême, ni puissance surnaturelle auxquelles les humains se doivent de prêter allégeance. L''être humain est son propre guide et la source première de son savoir. Nous sommes seuls. L''humanisme existe, sous une forme ou une autre, depuis la Grèce antique. Il apparaît également dans des textes indiens et asiatiques vieux de deux à trois mille ans. Il a fait une réapparition remarquée à la Renaissance et reste encore aujourd''hui une force philosophique majeure.'
 WHERE Tag = 'TXT_KEY_POLICY_CULTURAL_CENTERS_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Fine Arts
@@ -322,7 +321,7 @@ WHERE Tag = 'TXT_KEY_POLICY_FLOURISHING_OF_ARTS_TEXT' AND EXISTS (SELECT * FROM 
 
 -- Artistic Genius
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Trésor national[ENDCOLOR][NEWLINE]Un [ICON_GREAT_PEOPLE] Personnage Illustre de votre choix apparaît prêt de votre [ICON_CAPITAL] Capitale. +3 [ICON_CULTURE] Culture pour chaque amélioration de [ICON_GREAT_PEOPLE] Personnage Illustre.'
+SET Text = '[COLOR_POSITIVE_TEXT]Trésor national[ENDCOLOR][NEWLINE]Un [ICON_GREAT_PEOPLE] Personnage Illustre de votre choix apparaît prêt de votre [ICON_CAPITAL] Capitale. +3 [ICON_CULTURE] Culture pour chaque amélioration de [ICON_GREAT_PEOPLE] Personnages Illustres.'
 WHERE Tag = 'TXT_KEY_POLICY_ARTISTIC_GENIUS_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -379,36 +378,36 @@ UPDATE Language_fr_FR
 SET Text = 'Libre échange'
 WHERE Tag = 'TXT_KEY_POLICY_CARAVANS' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
-UPDATE Language_en_US
+UPDATE Language_fr_FR
 SET Text = 'Le libre-échange est une politique suivie par certains marchés internationaux dans lesquels les gouvernements ne limitent pas les importations ou exportations en provenance ou vers d''autres pays. Le libre-échange est illustré par l''Espace économique européen et de l''Accord de libre-échange nord-américain, qui ont établi des marchés ouverts. La plupart des pays sont aujourd''hui membres de l'' Organisation mondiale du commerce (OMC) et ont ratifiés des accords commerciaux multilatéraux. Cependant, la plupart des gouvernements imposent encore des politiques protectionnistes qui sont destinées à soutenir l''emploi local, telles que l''application de taxes à l''importation ou des subventions aux exportations. Les gouvernements peuvent également restreindre le libre-échange afin de limiter les exportations de ressources naturelles. D''autres obstacles qui peuvent entraver le commerce comprennent des quotas d''importation, les taxes et les obstacles non tarifaires, tels que la législation réglementaire.'
 WHERE Tag = 'TXT_KEY_POLICY_CARAVANS_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Mercantilism
-UPDATE Language_en_US
+UPDATE Language_fr_FR
 SET Text = '[COLOR_POSITIVE_TEXT]Mercantilisme[ENDCOLOR][NEWLINE] +2 [ICON_RESEARCH] Science and +2 [ICON_CULTURE] Culture pour chaque Bureau de douane, Banque et Bourse. L''efficacité des [ICON_INTERNATIONAL_TRADE] Routes commerciales internes est augmentés de 33%.'
 WHERE Tag = 'TXT_KEY_POLICY_MERCANTILISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Entrepreneurship
-UPDATE Language_en_US
+UPDATE Language_fr_FR
 SET Text = '[COLOR_POSITIVE_TEXT]Entreprenariat[ENDCOLOR][NEWLINE]Les Marchants illustres appraissent 25% plus vite. +1 [ICON_GOLD] Or et +1 [ICON_PRODUCTION] Production pour chaque Mine, Carrière et Scierie.'
 WHERE Tag = 'TXT_KEY_POLICY_ENTREPRENEURSHIP_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 --Protectionism
 
-UPDATE Language_en_US
+UPDATE Language_fr_FR
 SET Text = '[COLOR_POSITIVE_TEXT]Protectionisme[ENDCOLOR][NEWLINE]Recevez une [ICON_INTERNATIONAL_TRADE] Route commerciale supplémentaire, et recevez +2 [ICON_GOLD] Or des [ICON_INTERNATIONAL_TRADE] Routes commerciales internationales maritimes.'
 WHERE Tag = 'TXT_KEY_POLICY_PROTECTIONISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Opener -- Now called Imperialism -- Grants +1 Movement and +1 Sight for Naval Units, and speeds production of land units by +5%, with an additional +4% for every policy unlocked in Imperialism. Receive 1 extra happiness for every owned luxury, and 1 Happiness for every garrisoned unit.
-UPDATE Language_en_US
+UPDATE Language_fr_FR
 SET Text = 'IMPERIALISM'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_EXPLORATION_CAP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
-UPDATE Language_en_US
+UPDATE Language_fr_FR
 SET Text = 'Imperialisme'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_EXPLORATION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
-UPDATE Language_en_US
+UPDATE Language_fr_FR
 SET Text = '[COLOR_POSITIVE_TEXT]L''Imperialisme[ENDCOLOR] améliore votre capacité à agrandir votre empire à travers de votre capacité militaire, plus particulièrement votre supprémacie navale (et plus tard aérienne).[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter l''Imperialisme vous donne:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +1 [ICON_MOVES] Mouvement pour les unités navales et +1 vision pour les unités navales militaires. [NEWLINE] [ICON_BULLET] +5% [ICON_PRODUCTION] Production pour les unités navales et aérienne.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Chaque doctrine de l'' Imperialisme vous donne aussi:[ENDCOLOR] [NEWLINE] [ICON_BULLET] +4% [ICON_PRODUCTION] Production pour les unités navales et aérienne.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Adopter toutes les doctrines de l''Imperialisme vous donne:[ENDCOLOR][NEWLINE] [ICON_BULLET] Débloque la [COLOR_CYAN]Porte de Brandeburg[ENDCOLOR]. [NEWLINE] [ICON_BULLET] Les unités aérienne commencent avec la promotion [COLOR_POSITIVE_TEXT]Portée[ENDCOLOR], et les unités navales commencent avec la promotion [COLOR_POSITIVE_TEXT]Cuirasse[ENDCOLOR]. [NEWLINE] [ICON_BULLET] Toutes les cases d''ocean, de côtes et les lacs gagnent +1 [ICON_RESEARCH] Science et +1 [ICON_PRODUCTION] Production.[NEWLINE] [ICON_BULLET] Vous donne [COLOR_CYAN]1[ENDCOLOR] point (sur [COLOR_CYAN]3[ENDCOLOR] requit au total) t vers l''accès aux Idéologies. [NEWLINE] [ICON_BULLET] Vous permet d''acheter des [ICON_GREAT_ADMIRAL] Amiraux illustres avec de la [ICON_PEACE] Foi à partir de l''ère Industrielle.'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
@@ -431,7 +430,7 @@ SET Text = 'Exploitation'
 WHERE Tag = 'TXT_KEY_POLICY_MERCHANT_NAVY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Exploitation[ENDCOLOR][NEWLINE]Les Fermes et Plantations gagnent +1 [ICON_PRODUCTION] Production et +1 [ICON_FOOD] Nouriture. Les unités militaires peuvent être améliorés dans le territoire des cités-étatsalliés.'
+SET Text = '[COLOR_POSITIVE_TEXT]Exploitation[ENDCOLOR][NEWLINE]Les Fermes et Plantations gagnent +1 [ICON_PRODUCTION] Production et +1 [ICON_FOOD] Nouriture. Les unités militaires peuvent être améliorés dans le territoire des cités-états alliés.'
 WHERE Tag = 'TXT_KEY_POLICY_MERCHANT_NAVY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -448,7 +447,7 @@ SET Text = '[COLOR_POSITIVE_TEXT]Tradition militaire[ENDCOLOR][NEWLINE]Générez l
 WHERE Tag = 'TXT_KEY_POLICY_NAVAL_TRADITION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'La tradition militaire est l''ensemble des pratiques spécifiques associées à l''armée ou aux soldats en général. Le concept peut décrire les styles de l''uniforme militaire, des exercices, ou même la musique d''une unité militaire .'
+SET Text = 'La tradition militaire est l''ensemble des pratiques spécifiques associées à l''armée ou aux soldats en général. Le concept peut décrire les styles de l''uniforme militaire, des exercices, ou même la musique d''une unité militaire.'
 WHERE Tag = 'TXT_KEY_POLICY_NAVAL_TRADITION_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Navigation School -- Now called Exploration -- Recevez a free Great Admiral -- Reveals all Capitals et starts a Age d''Or.
@@ -548,11 +547,11 @@ WHERE Tag = 'TXT_KEY_POLICY_MILITARYCASTE_TEXT' AND EXISTS (SELECT * FROM COMMUN
 
 -- Professional Army (Now Martial Law)
 UPDATE Language_fr_FR
-SET Text = 'Honeur'
+SET Text = 'Honneur'
 WHERE Tag = 'TXT_KEY_POLICY_PROFESSIONAL_ARMY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Honeur[ENDCOLOR][NEWLINE]Les unités gagnent +10% [ICON_STRENGTH] de Force. Une Unité militaire apparaît prêt de toutes les villes qui atteignent une population ayant un multiple de 8 [ICON_CITIZEN] Citoyens (ou qui ont déjà plus de 8 [ICON_CITIZEN] Citoyens).'
+SET Text = '[COLOR_POSITIVE_TEXT]Honneur[ENDCOLOR][NEWLINE]Les unités gagnent +10% [ICON_STRENGTH] de Force. Une Unité militaire apparaît prêt de toutes les villes qui atteignent une population ayant un multiple de 8 [ICON_CITIZEN] Citoyens (ou qui ont déjà plus de 8 [ICON_CITIZEN] Citoyens).'
 WHERE Tag = 'TXT_KEY_POLICY_PROFESSIONAL_ARMY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -560,17 +559,17 @@ SET Text = 'Dans une société «honorable», le statut des citoyens repose sur le j
 WHERE Tag = 'TXT_KEY_POLICY_PROFESSIONALARMY_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Foreign Legion Text
-UPDATE Language_en_US
-SET Text = 'Unit" d''Infantrie spéciale de l''ère Moderne. Ne peut être reçu qu''en tant qu''unité gratuite à travers la doctrine Armée volontaire de l''idéologie Egalité, ou par un achat via de l''[ICON_GOLD] Or avec la complétion de la branche Authorité. Cette unité a un bonus de combat en dehors du territoire ami mais est sinon similaire au Fantassin.'
+UPDATE Language_fr_FR
+SET Text = 'Unité d''Infantrie spéciale de l''ère Moderne. Ne peut être reçu qu''en tant qu''unité gratuite à travers la doctrine Armée volontaire de l''idéologie Egalité, ou par un achat via de l''[ICON_GOLD] Or avec la complétion de la branche Authorité. Cette unité a un bonus de combat en dehors du territoire ami mais est sinon similaire au Fantassin.'
 WHERE Tag = 'TXT_KEY_UNIT_HELP_FOREIGN_LEGION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'The Foreign Legion is a special unit, only available as free units through the Volunteer Army principe of the Freedom Ideology, or for purchase through the completion of the Autorité Policy Branch. It receives a significant combat bonus when operating outside of home territoire, making it an excellent unit to use to gagnent control of foreign lands.'
+SET Text = 'La légion étrangère est une unité spéciale, uniquement disponible en tant qu''unité gratuite à travers le la doctrine de l''égalité ''Armée volontaire'', ou achetable si vous avez complétez la branche doctrinale ''Autorité''. Elle reçoit un bonus de puissance de combat significatif lorsque elle est utilisé en dehors de votre territoire, la fesant devenir une unité qui excelle à prendre le contrôle d''territoire ennemi.'
 WHERE Tag = 'TXT_KEY_UNIT_FRENCH_FOREIGNLEGION_STRATEGY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Liberty Opener
 UPDATE Language_fr_FR
-SET Text = 'PROGRESS'
+SET Text = 'PROGRES'
 WHERE Tag = 'TXT_KEY_POLICY_BRANCH_LIBERTY_CAP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -630,11 +629,11 @@ SET Text = 'Equité'
 WHERE Tag = 'TXT_KEY_POLICY_REPRESENTATION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Equité[ENDCOLOR][NEWLINE]+2 [ICON_PRODUCTION] Production dans chaque ville, et +1 [ICON_HAPPINESS_1] Bonheur pour chaque groupe de 15 [ICON_CITIZEN] Citoyens dans les [ICON_PUPPET] villes non-Fantoche .'
+SET Text = '[COLOR_POSITIVE_TEXT]Equité[ENDCOLOR][NEWLINE]+2 [ICON_PRODUCTION] Production dans chaque ville, et +1 [ICON_HAPPINESS_1] Bonheur pour chaque groupe de 15 [ICON_CITIZEN] Citoyens dans les [ICON_PUPPET] villes non-Fantoche.'
 WHERE Tag = 'TXT_KEY_POLICY_REPRESENTATION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'L''égalité sociale est une situation dans laquelle toutes les personnes au sein d''une société ou d''un groupe isolé ont le même statut, à certains égards, y compris souvent les droits civils, la liberté d''expression, les droits de propriété, et l''égalité d''accès aux biens et aux services sociaux. Toutefois, elle comprend également des concepts de l''équité en santé, l''égalité économique ainsi que d''autres service de sécurité sociale. Il comprend également l''égalité des chances et des obligations, et implique donc l'' ensemble de la société. L''égalité sociale exige l''absence de limites de classes ou de castes sociales imposées par la loi et l''absence de discrimination motivée par une partie inaliénable de l''identité d''une personne'
+SET Text = 'L''égalité sociale est une situation dans laquelle toutes les personnes au sein d''une société ou d''un groupe isolé ont le même statut, à certains égards, y compris souvent les droits civils, la liberté d''expression, les droits de propriété, et l''égalité d''accès aux biens et aux services sociaux. Toutefois, elle comprend également des concepts de l''équité en santé, l''égalité économique ainsi que d''autres service de sécurité sociale. Il comprend également l''égalité des chances et des obligations, et implique donc l'' ensemble de la société. L''égalité sociale exige l''absence de limites de classes ou de castes sociales imposées par la loi et l''absence de discrimination motivée par une partie inaliénable de l''identité d''une personne.'
 WHERE Tag = 'TXT_KEY_CIV5_POLICY_REPRESENTATION_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Meritocracy
@@ -781,11 +780,11 @@ WHERE Tag = 'TXT_KEY_POLICY_BRANCH_RATIONALISM_HELP' AND EXISTS (SELECT * FROM C
 
 -- Humanism (now Enlightenment) -- boost when happy
 UPDATE Language_fr_FR
-SET Text = 'Lumières'
+SET Text = 'Les lumières'
 WHERE Tag = 'TXT_KEY_POLICY_HUMANISM' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Lumières[ENDCOLOR][NEWLINE]+10% [ICON_RESEARCH] Science et +10% [ICON_FOOD] Croissance dans toutes les villes pendant un [ICON_GOLDEN_AGE] Age d''Or.'
+SET Text = '[COLOR_POSITIVE_TEXT]Les lumières[ENDCOLOR][NEWLINE]+10% [ICON_RESEARCH] Science et +10% [ICON_FOOD] Croissance dans toutes les villes pendant un [ICON_GOLDEN_AGE] Age d''Or.'
 WHERE Tag = 'TXT_KEY_POLICY_HUMANISM_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -802,7 +801,7 @@ SET Text = 'Académiciens'
 WHERE Tag = 'TXT_KEY_POLICY_SCIENTIFIC_REVOLUTION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Les académies sont des institutions reconnus nationalement et internationalement dans lesquels des savants, reconnus par leur pairs, veillent aux codes et usages de leur discipline. Le mot viens du grec ancien akademeia, qui dérive du nom du héros Athénien, Akademos. En-dehors des murs de la cité d''Athène,le  Outside the city walls of Athens, le gymnasium de Platon était un centre d''enseignement fameux. L''espace sacré, consacré à la déesse de la sagesse, Athena, The sacred space, dedicated to the goddess of wisdom, Athena, ayant été autrefois une oliveraie, d''où l''expression anglaise "the groves of Academe" (le monde académique).'
+SET Text = 'Les académies sont des institutions reconnus nationalement et internationalement dans lesquels des savants, reconnus par leur pairs, veillent aux codes et usages de leur discipline. Le mot viens du grec ancien akademeia, qui dérive du nom du héros Athénien, Akademos. En-dehors des murs de la cité d''Athène, le gymnasium de Platon était un centre d''enseignement fameux. L''espace sacré, consacré à la déesse de la sagesse, Athena, ayant été autrefois une oliveraie, d''où l''expression anglaise "the groves of Academe" (le monde académique).'
 WHERE Tag = 'TXT_KEY_POLICY_SCIENTIFIC_REVOLUTION_TEXT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 -- Secularism
@@ -826,7 +825,7 @@ SET Text = '[COLOR_POSITIVE_TEXT]Empirisme[ENDCOLOR][NEWLINE]+3 [ICON_RESEARCH] 
 WHERE Tag = 'TXT_KEY_POLICY_SOVEREIGNTY_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Empiricism'
+SET Text = 'Empirisme'
 WHERE Tag = 'TXT_KEY_POLICY_SOVEREIGNTY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
