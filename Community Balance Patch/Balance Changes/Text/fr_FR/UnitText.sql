@@ -340,6 +340,6 @@
 	WHERE Tag = 'TXT_KEY_UNIT_HELP_BAZOOKA' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );
 
 	UPDATE Language_fr_FR
-	SET Text = 'The Bazooka is the last non-siege ranged unit, et is capable of truly terrfiying amounts of damage, especially to Armor units. It is the most powerful ranged unit, but it is much weaker than other military units of its era. As such, it should be used as a source of attrition. Like the Machine Gun, it weakens nearby enemy units. When attacking, the Bazooka deals less damage to fortified Units et cities, but deals additional damage to Armored units. Cette makes it a great defense unit.'
+	SET Text = 'Le Bazooka est le dernier unité basique à distance du jeu, et est capable d''infliger des quantités terrifiante de dégats, en particulier aux unités blindées. Elle est l''unité à distance la plus puissante, mais est beaucoup plus faible que d''autres unités militaires de son époque. En tant que telle, elle doit être utilisé comme une source d''usure. Comme la mitrailleuse, il affaiblit les unités ennemies à proximité. Lors de l''attaque, le Bazooka inflige moins de dégâts aux unités et villes fortifiées, mais inflige des dégâts supplémentaires aux unités blindées. Cela en fait une unité grande défense.'
 	WHERE Tag = 'TXT_KEY_UNIT_BAZOOKA_STRATEGY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );
 
