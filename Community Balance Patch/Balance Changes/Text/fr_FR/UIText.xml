@@ -419,7 +419,7 @@
 			<Text>Demande de reliques valant {1_Value} [ICON_PEACE] Foi (-{2_NumInfluence} [ICON_INFLUENCE])</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POP_CSTATE_BULLY_VARIABLE_CBP">
-			<Text>Si cette Cité-Etat est plus [COLOR_POSITIVE_TEXT]éffrayée[ENDCOLOR] de vous qu'elle est [COLOR_WARNING_TEXT]résiliente[ENDCOLOR], Vous pouvez exiger d'elle un lourd tribut. Si vous choisissez cette voie, vous receverez de la [ICON_CULTURE] Culture, [ICON_RESEARCH] Science, [ICON_PRODUCTION] Production, [ICON_PEACE] Foi, or [ICON_FOOD] Nourriture, selon le type de la Cité-Etat ciblée.[NEWLINE][NEWLINE]Le montant que vous pouvez récupérer en tant que tribut est en focntion de la vitesse de jeu et du montant produite par votre capitale. Les productions locales, comme la [ICON_FOOD] Nourriture ou la [ICON_PRODUCTION] Production, seront acheminé à votre Capitale.[NEWLINE][NEWLINE]{1_FearLevel}{2_FactorDetails}</Text>
+			<Text>Si cette Cité-Etat est plus [COLOR_POSITIVE_TEXT]éffrayée[ENDCOLOR] de vous qu'elle est [COLOR_WARNING_TEXT]résiliente[ENDCOLOR], Vous pouvez exiger d'elle un lourd tribut. Si vous choisissez cette voie, vous receverez de la [ICON_CULTURE] Culture, [ICON_RESEARCH] Science, [ICON_PRODUCTION] Production, [ICON_PEACE] Foi, or [ICON_FOOD] Nourriture, selon le type de la Cité-Etat ciblée.[NEWLINE][NEWLINE]Le montant que vous pouvez récupérer en tant que tribut est en fonction de la vitesse de jeu et du montant produite par votre capitale. Les productions locales, comme la [ICON_FOOD] Nourriture ou la [ICON_PRODUCTION] Production, seront acheminé à votre Capitale.[NEWLINE][NEWLINE]{1_FearLevel}{2_FactorDetails}</Text>
 		</Row>
 
 		<!-- Tech Tree-->

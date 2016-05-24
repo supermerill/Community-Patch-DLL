@@ -499,7 +499,7 @@ SET Text = 'Imperium'
 WHERE Tag = 'TXT_KEY_POLICY_WARRIOR_CODE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Imperium[ENDCOLOR][NEWLINE]Un colon gratuit apparaît prêt de la[ICON_CAPITAL] Capitale. Recevez 50 [ICON_GOLDEN_AGE] Points d''Age d''Or et de [ICON_CULTURE] Culture lorsque vous fondez ou conquérez des villes, le bonus s''améliore en changeant d''ére technologique. Le bonus de Conquête s''améliroe aussi en focntion de la [ICON_CITIZEN] population de la ville.'
+SET Text = '[COLOR_POSITIVE_TEXT]Imperium[ENDCOLOR][NEWLINE]Un colon gratuit apparaît prêt de la[ICON_CAPITAL] Capitale. Recevez 50 [ICON_GOLDEN_AGE] Points d''Age d''Or et de [ICON_CULTURE] Culture lorsque vous fondez ou conquérez des villes, le bonus s''améliore en changeant d''ére technologique. Le bonus de Conquête s''améliroe aussi en fonction de la [ICON_CITIZEN] population de la ville.'
 WHERE Tag = 'TXT_KEY_POLICY_WARRIOR_CODE_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -525,7 +525,7 @@ SET Text = 'Domination'
 WHERE Tag = 'TXT_KEY_POLICY_MILITARY_TRADITION' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = '[COLOR_POSITIVE_TEXT]Domination[ENDCOLOR][NEWLINE]Eliminer une unité militaire génère de la [ICON_RESEARCH] Science en focntion de la [ICON_STRENGTH] Force de l''unité défaite. Toutes les unités en mélée se soignent de 20 points après l''élimination d''une unité militaire.'
+SET Text = '[COLOR_POSITIVE_TEXT]Domination[ENDCOLOR][NEWLINE]Eliminer une unité militaire génère de la [ICON_RESEARCH] Science en fonction de la [ICON_STRENGTH] Force de l''unité défaite. Toutes les unités en mélée se soignent de 20 points après l''élimination d''une unité militaire.'
 WHERE Tag = 'TXT_KEY_POLICY_MILITARY_TRADITION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
 UPDATE Language_fr_FR

@@ -96,7 +96,7 @@ SET Text = '10% de la [ICON_PRODUCTION] Production de la ville est ajoutée en t
 WHERE Tag = 'TXT_KEY_BUILDING_FORGE_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_BUILDINGS' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'La Forge améliore les ressources de [ICON_RES_IRON] Fer et [ICON_RES_COPPER] Cuivre autour de la ville, et augmente la [ICON_PRODUCTION] Production des Mines. Il améliore aussi la recherche Scienctifique en focntion de la production courante de la ville.'
+SET Text = 'La Forge améliore les ressources de [ICON_RES_IRON] Fer et [ICON_RES_COPPER] Cuivre autour de la ville, et augmente la [ICON_PRODUCTION] Production des Mines. Il améliore aussi la recherche Scienctifique en fonction de la production courante de la ville.'
 WHERE Tag = 'TXT_KEY_BUILDING_FORGE_STRATEGY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_BUILDINGS' AND Value= 1 );
 
 UPDATE Language_fr_FR
@@ -570,13 +570,13 @@ SET Text = '99.9% d''efficacité en moins pour les espions ennemis dans la ville
 WHERE Tag = 'TXT_KEY_BUILDING_GREAT_FIREWALL_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_BUILDINGS' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Permet à cette ville de [ICON_PRODUCTION] contribuer à l''Exposition Universelle.Le coût du projet eugmente en focntion du nombre de joueurs et de l''ère technologique.'
+SET Text = 'Permet à cette ville de [ICON_PRODUCTION] contribuer à l''Exposition Universelle. Le coût du projet augmente en fonction du nombre de joueurs et de l''ère technologique.'
 WHERE Tag = 'TXT_KEY_PROCESS_WORLD_FAIR_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_BUILDINGS' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Permet à cette ville de [ICON_PRODUCTION] contribuer aux Jeux Olympiques.Le coût du projet eugmente en focntion du nombre de joueurs et de l''ère technologique.'
+SET Text = 'Permet à cette ville de [ICON_PRODUCTION] contribuer aux Jeux Olympiques. Le coût du projet augmente en fonction du nombre de joueurs et de l''ère technologique.'
 WHERE Tag = 'TXT_KEY_PROCESS_WORLD_GAMES_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_BUILDINGS' AND Value= 1 );
 
 UPDATE Language_fr_FR
-SET Text = 'Permet à cette ville de [ICON_PRODUCTION] contribuer à la Station Spatiale Internationale.Le coût du projet eugmente en focntion du nombre de joueurs et de l''ère technologique.'
+SET Text = 'Permet à cette ville de [ICON_PRODUCTION] contribuer à la Station Spatiale Internationale. Le coût du projet augmente en fonction du nombre de joueurs et de l''ère technologique.'
 WHERE Tag = 'TXT_KEY_PROCESS_INTERNATIONAL_SPACE_STATION_HELP' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_BUILDINGS' AND Value= 1 );

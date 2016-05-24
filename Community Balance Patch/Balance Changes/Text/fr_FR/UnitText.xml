@@ -3,360 +3,360 @@
 <GameData>
 	<Language_fr_FR>
 		<Row Tag="TXT_KEY_PROMOTION_MARSH_WALKER">
-			<Text>Marsh Walkers</Text>
+			<Text>Marcheurs des marais</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MARSH_WALKER_HELP">
-			<Text>Double movement on Marsh et Flood Plain cases. Barbarian only.</Text>
+			<Text>Double la vitesse sur les cases de Marais et Plaines inondables. Barbares seulement.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_WHITE_WALKER">
-			<Text>White Walkers</Text>
+			<Text>Marcheurs blanc</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_WHITE_WALKER_HELP">
-			<Text>Double movement on Snow et Tundra cases. Barbarian only.</Text>
+			<Text>Double la vitesse sur les cases de Neige et de Tundra. Barbares seulement.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_WOODS_WALKER">
-			<Text>Woods Walkers</Text>
+			<Text>Marcheurs des bois</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_WOODS_WALKER_HELP">
-			<Text>Double movement on Forêt et Jungle cases. Barbarian only.</Text>
+			<Text>Double la vitesse sur les cases de Forêt et Jungle. Barbares seulement.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_DESERT_WALKER">
-			<Text>Desert Walkers</Text>
+			<Text>Marcheurs du désert</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DESERT_WALKER_HELP">
-			<Text>Double movement on Desert cases. Barbarian only.</Text>
+			<Text>Double la vitesse sur les cases de Désert. Barbares seulement.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_COAST_WALKER">
-			<Text>Coast Walkers</Text>
+			<Text>Marcheurs côtiers</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COAST_WALKER_HELP">
-			<Text>Double movement on Coastal cases. Barbarian only.</Text>
+			<Text>Double la vitesse sur les cases de Côtes. Barbares seulement.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_HILL_WALKER">
-			<Text>Hill Walkers</Text>
+			<Text>Marcheurs des collines</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HILL_WALKER_HELP">
-			<Text>Double movement on Hill cases. Barbarian only.</Text>
+			<Text>Double la vitesse sur les cases de Colline. Barbares seulement.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_DEFENSE_BOOST">
-			<Text>Fersides</Text>
+			<Text>Flancs renforcés</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_DEFENSE_BOOST_HELP">
-			<Text>+20% Combat Bonus when defending.</Text>
+			<Text>Puissance de combat +20% en défense.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_GUERILLA">
-			<Text>Mercenaries</Text>
+			<Text>Mercenaires</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_GUERILLA_TEXT">
-			<Text>Soldiers in private military companies (PMCs) are the contemporary strand of the mercenary trade, providing logistics, soldiers, military training, et other services. Thus, PMC contractors are civilians (in governmental, international, et civil organizations) authorized to accompany an army to the field; hence, the term civilian contractor. Nevertheless, PMCs may use armed force, hence defined as: "legally established enterprises that make a profit, by either providing services involving the potential exercise of [armed] force in a systematic way et by military means, and/or by the transfer of that potential to clients through training et other practices, such as logistics support, equipment procurement, et intelligence gathering."</Text>
+			<Text>Les soldats dans les sociétés militaires privées (SMP) sont le pendant contemporain du commerce de mercenaire, fournissant de la logistique, des soldats, dela formation militaire, et d'autres services. Ainsi, les entrepreneurs PMC sont des civils (dans les organisations gouvernementales, internationales et civiles) autorisés à accompagner une armée sur le terrain; d'où le terme d'etrepreneur civil. Néanmoins, les PMCs peuvent utiliser la force armée, et sont donc définie comme suit: "entreprises légalement établies qui font un profit, soit par des services de fourniture impliquant l'exercice éventuel de la force [armée] d'une manière systématique et par des moyens militaires, et/ou par le transfert de ce potentiel aux clients par le biais de la formation et d'autres pratiques, telles que le soutien logistique, l'achat de matériel, et la collecte de renseignements"</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_GUERILLA_STRATEGY">
-			<Text>Use Mercenaries as a cheap, if slightly less effective means of defending your land from invaders, or as the flanks of a precision attack. Mercenaries receive a large bonus for flanking, so deploy them wisely! Only available if you have unlocked the Finisher policy of the Autorité Branch. Can only be obtained via a [ICON_GOLD] Or purchase.</Text>
+			<Text>Utilisez les Mercenaires ccomme un moyen bon marché, même si un peu moins efficace, de défendre votre territoire contre les envahisseurs, ou comme les flancs d'une attaque de précision. Les Mercenaires reçoivent un grand bonus de contournement, donc utilisez-les intelligemment! Ils ne sont disponibles que si vous avez débloqué la doctrine finale de l'Autorité. Ne peut être obtenu par un [ICON_GOLD] achat d'or.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_GUERILLA">
-			<Text>Flank attack bonus increased, et receives bonuses when embarked or attacking over rivers.</Text>
+			<Text>Bonus de contournement amélioré, et reçoit des bonus lorsque dun débarquement ou lors d'une attaque par-dessus un fleuve.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_HONOR_BONUS">
 			<Text>Conscription</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HONOR_BONUS_HELP">
-			<Text>+10% [ICON_STRENGTH] Force</Text>
+			<Text>[ICON_STRENGTH] Puissance +10%</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_KILL_HEAL">
-			<Text>Logistics</Text>
+			<Text>Logistique</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_KILL_HEAL_HELP">
-			<Text>Heal 20 points when you destoy an enemy unit.</Text>
+			<Text>Soigne 20 points lorsque vous détruisez une unité ennemie.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_I">
-			<Text>Trailblazer I</Text>
+			<Text>Pionnier I</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_I_HELP">
-			<Text>Double Movement in Jungles et Forêts</Text>
+			<Text>Double la vitesse sur la Jungle et la Forêt</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_II">
-			<Text>Trailblazer II</Text>
+			<Text>Pionnier II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_II_HELP">
-			<Text>Double Movement in Desert et Snow</Text>
+			<Text>Double la vitesse sur le Desert et la Neige</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_III">
-			<Text>Trailblazer III</Text>
+			<Text>Pionnier III</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_WOODLAND_TRAILBLAZER_III_HELP">
-			<Text>Ignores Zone of Control, Can Use Enemy Roads/Railroads</Text>
+			<Text>Ignores la Zone de Contrôle, Peut utiliser les routes/rails ennemis</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_KNOCKOUT_I">
-			<Text>Bonus v. Gun (25)</Text>
+			<Text>Bonus v. Fusils (25)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_KNOCKOUT_I_HELP">
-			<Text>+20% [ICON_STRENGTH] Force VS Gun (Melee) Units</Text>
+			<Text>[ICON_STRENGTH] Puissance +20% VS unités avec Fusil (Melee)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_KNOCKOUT_II">
 			<Text>Bonus v. Siege (25)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_KNOCKOUT_II_HELP">
-			<Text>+25% [ICON_STRENGTH] Force VS Siege Units</Text>
+			<Text>[ICON_STRENGTH] Puissance +25% VS unités  de siège</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_COERCION">
-			<Text>Coercion</Text>
+			<Text>Coercition</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COERCION_HELP">
-			<Text>Defeated land units may join your side. +100% to Flank Attack Bonus.</Text>
+			<Text>Les unités terrestres vaincus peuvent rejoindre votre camp. +100% au bonus de contournement.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CHARGE_II">
 			<Text>Charge II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CHARGE_II_HELP">
-			<Text>+10% [ICON_STRENGTH] Puissance de combat when attacking in [COLOR_POSITIVE_TEXT]OPEN[ENDCOLOR] Terrain, +25% [ICON_STRENGTH] Puissance de combat VS [COLOR_POSITIVE_TEXT]Wounded Units[ENDCOLOR]</Text>
+			<Text> [ICON_STRENGTH] Puissance de combat +10% Lors d'une attaque enterrain [COLOR_POSITIVE_TEXT]OUVERT[ENDCOLOR],  [ICON_STRENGTH] Puissance de combat +25% VS [COLOR_POSITIVE_TEXT]unités bléssées[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_GUERILLA_FIGHTER_HELP">
-			<Text>+50% Flank Attack et Wounded Attack Bonus. Ignores ZOC et Terrain Movement Penalties, et +10 HP when healing in Friendly Territory.</Text>
+			<Text>+50% au bonus lors d'une attaque en contournement ou/et sur des bléssés. Ignore la ZOC, les malus de déplacement, et +10 HP lors d'un soin en territoire ami.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GUERILLA_FIGHTER">
-			<Text>Guerilla Fighter</Text>
+			<Text>Combattant de la Guerilla</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ATTACK_BONUS_SWEDEN_HELP">
-			<Text>+10% [ICON_STRENGTH] Force when attacking.</Text>
+			<Text>[ICON_STRENGTH] Puissance +10% en attaque.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ATTACK_BONUS_SWEDEN">
-			<Text>No Retreat</Text>
+			<Text>Pas de retraite</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ATLATL_ATTACK">
-			<Text>Atlatl Strike</Text>
+			<Text>Attaque Atlatl</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ATLATL_ATTACK_HELP">
-			<Text>+50% Ranged [ICON_RANGE_STRENGTH] Puissance de combat VS [COLOR_POSITIVE_TEXT]Wounded[ENDCOLOR] Units.</Text>
+			<Text>[ICON_RANGE_STRENGTH] Puissance de combat à distance +50% VS [COLOR_POSITIVE_TEXT]unités bléssés[ENDCOLOR].</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_MISFIRE">
-			<Text>Difficult Target</Text>
+			<Text>Cible difficile</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_MISFIRE_HELP">
-			<Text>-25% [ICON_RANGE_STRENGTH] Ranged Force vs. Naval units.</Text>
+			<Text>[ICON_RANGE_STRENGTH] Puissance à distance -25% vs. Naval units.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MODERN_RANGED_PENALTY_I">
-			<Text>Covering Fire I</Text>
+			<Text>Tir de couverture I</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MODERN_RANGED_PENALTY_I_HELP">
-			<Text>-50% [ICON_RANGE_STRENGTH] Ranged Force vs. Armor Units, Fortified Units, et Villes. +20% [ICON_STRENGTH] Force when defending, et enemy units dans un périmètre de 2 cases suffer -15% [ICON_STRENGTH] Force.</Text>
+			<Text>[ICON_RANGE_STRENGTH] Puissance à distance -50% vs. unités blindés, fortifiés, et Villes. [ICON_STRENGTH] Puissance +20% en défense, et les unités ennemies dans un périmètre de 2 cases souffrent de -15% [ICON_STRENGTH] de puissance.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MODERN_RANGED_PENALTY_II">
-			<Text>Covering Fire II</Text>
+			<Text>Tir de couverture II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MODERN_RANGED_PENALTY_II_HELP">
-			<Text>-25% [ICON_RANGE_STRENGTH] Ranged Force vs. Fortified Units et Villes. +15% [ICON_STRENGTH] Force when defending, et enemy units dans un périmètre de 2 cases suffer -10% [ICON_STRENGTH] Force.</Text>
+			<Text>[ICON_RANGE_STRENGTH] Puissance à distance -25% vs. unités fortifiés et Villes. [ICON_STRENGTH] Puissance +15% en défense, et les unités ennemies dans un périmètre de 2 cases souffrent de -10% [ICON_STRENGTH] de puissance.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ENSLAVEMENT">
-			<Text>Forced Labor</Text>
+			<Text>Travail forcé</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ENSLAVEMENT_HELP">
-			<Text>Recevez [ICON_PRODUCTION] Production in your Capital when you defeat an enemy unit.</Text>
+			<Text>Recevez de la [ICON_PRODUCTION] Production dans votre Capitale quand vous éliminez une unité ennemie.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_RAIDER">
-			<Text>Raider</Text>
+			<Text>Pilleur</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_RAIDER_HELP">
-			<Text>Flank attack bonus increased by 100%. Steal gold equal to 50% of the damage inflicted on a city. Is able to use enemy roads.</Text>
+			<Text>Bonus de contournement +100%. Vole de l'Or pour 50% des dégats infigés à la ville. peut utiliser les routes/rails ennemis.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_FALLOUT_REDUCTION">
-			<Text>Fallout Resistance</Text>
+			<Text>Résistance aux radiations</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FALLOUT_REDUCTION_HELP">
-			<Text>Damage from Fallout reduced by 10.</Text>
+			<Text>Dégats des retombés radioatives réduis de 10.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_FALLOUT_IMMUNITY">
-			<Text>Fallout Immunity</Text>
+			<Text>Immunité aux radiations</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FALLOUT_IMMUNITY_HELP">
-			<Text>Ignores damage from Fallout.</Text>
+			<Text>Ignore les dégats des retombés radioatives.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_ICE_BREAKERS">
-			<Text>Ice Breakers</Text>
+			<Text>Brise-glace</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ICE_BREAKERS_HELP">
-			<Text>Allows Workboats to move through Ice cases.</Text>
+			<Text>Permet aux bateaux-ateliers de se déplacer à travers les cases de glace.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_RECON_EXPERIENCE">
 			<Text>Reconnaissance</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_RECON_EXPERIENCE_HELP">
-			<Text>Gains XP from revealing cases</Text>
+			<Text>Gagnez de l'XP en révélant des cases</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_BIG_CITY_PENALTY">
-			<Text>Major Penalty Attacking Villes (75)</Text>
+			<Text>Pénalités majeure lors de l'attaque d'une ville(75)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_BIG_CITY_PENALTY_HELP">
-			<Text>75% Penalty Attacking Villes</Text>
+			<Text>75% de pénalité en attaquant une ville</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_FASTER_GENERAL">
-			<Text>Faster General</Text>
+			<Text>Prompt Général</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FASTER_GENERAL_HELP">
-			<Text>+1 [ICON_MOVES] Movement</Text>
+			<Text>+1 [ICON_MOVES] Mouvement</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_BARBARIAN_BONUS">
-			<Text>Brute Force</Text>
+			<Text>Force Brute</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_BARBARIAN_BONUS_HELP">
-			<Text>+33% [ICON_STRENGTH] Combat Bonus VS Barbarians</Text>
+			<Text>[ICON_STRENGTH] Puissance de combat +33% VS Barbares</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_BUSHIDO">
-			<Text>Eight Virtues of Bushido</Text>
+			<Text>Huit vertues du Bushido</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_BUSHIDO_HELP">
-			<Text>Promotion is replaced avec un randomly chosen new promotion after the unit completes its first combat</Text>
+			<Text>La promotion est remplacé par une autre choisie au hasard après que l'unité ai livré son premier combat</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_RIGHTEOUSNESS">
-			<Text>Righteousness</Text>
+			<Text>Droiture</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_RIGHTEOUSNESS_HELP">
-			<Text>Attack Wounded Mod (15%). +10 HP if you destroy an enemy unit</Text>
+			<Text>Modif attaque VS bléssés (15%). +10 HP si vous détruisez une unité ennemie</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_COURAGE">
 			<Text>Courage</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COURAGE_HELP">
-			<Text>Attack Fortified Mod (15%). +10 HP if you destroy an enemy unit</Text>
+			<Text>Modif attaque VS fortifiés (15%). +10 HP si vous détruisez une unité ennemie</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_BENEVOLENCE">
-			<Text>Benevolence</Text>
+			<Text>bienveillance</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_BENEVOLENCE_HELP">
-			<Text>Units in adjacent cases receive +5 HP when healing. +10 HP if you destroy an enemy unit</Text>
+			<Text>Les unités sur les cases adjacente reçoivent +5 HP si elles se soignent. +10 si vous détruisez une unité ennemie</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_RESPECT">
 			<Text>Respect</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_RESPECT_HELP">
-			<Text>+15% [ICON_STRENGTH] Force versus Melee et Gun units. +10 HP if you destroy an enemy unit</Text>
+			<Text>[ICON_STRENGTH] Puissance +15% VS unités en mélée et avec fusils. +10 HP si vous détruisez une unité ennemie</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_SINCERITY">
-			<Text>Sincerity</Text>
+			<Text>Sincérité</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SINCERITY_HELP">
-			<Text>+25% Experience gagnented from combat. +10 HP if you destroy an enemy unit</Text>
+			<Text>+25% Experience gagné au combat. +10 HP si vous détruisez une unité ennemie</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_BUSHIDO_HONOR">
 			<Text>Honor</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_BUSHIDO_HONOR_HELP">
-			<Text>+15% [ICON_STRENGTH] Force outside of friendly lands. +10 HP if you destroy an enemy unit</Text>
+			<Text>[ICON_STRENGTH] Puissance +15% en dehors des terres amies. +10 HP si vous détruisez une unité ennemie</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_LOYALTY">
-			<Text>Loyalty</Text>
+			<Text>Loyauté</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_LOYALTY_HELP">
-			<Text>+15% [ICON_STRENGTH] Force inside friendly lands. +10 HP if you destroy an enemy unit</Text>
+			<Text>[ICON_STRENGTH] Puissance +15% en terres amies. +10 HP si vous détruisez une unité ennemie</Text>
 		</Row>
-
 
 		<Row Tag="TXT_KEY_PROMOTION_SELF_CONTROL">
-			<Text>Self Control</Text>
+			<Text>Contrôle de soi</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SELF_CONTROL_HELP">
-			<Text>+15% [ICON_STRENGTH] Force when defending. +10 HP if you destroy an enemy unit</Text>
+			<Text>[ICON_STRENGTH] Puissance +15% en défense. +10 HP si vous détruisez une unité ennemie</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_HELP">
-			<Text>+150% [ICON_STRENGTH] Force versus Air et Helicopter Units</Text>
+			<Text>[ICON_STRENGTH] Puissance +150% VS unités aériennes et hélicoptères</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_II_HELP">
-			<Text>+150% [ICON_STRENGTH] Force versus Air et Helicopter Units</Text>
+			<Text>[ICON_STRENGTH] Puissance +150% VS unités aériennes et hélicoptères</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_EXPLORER_CBP">
-			<Text>Explorer</Text>
+			<Text>Exploreur</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_EXPLORER_STRATEGY_CBP">
-			<Text>Explorers are a useful counterpart to Caravels when setting out to explore across the ocean during the Medieval et Renaissance periods. They are fairly weak and, therefore, are easily defeated by contemporary military units, however their reconaissance abilities are unparalleled.</Text>
+			<Text>Les explorateurs sont une alternative utile face aux Caravelles pour explorer à travers les océans pendant les périodes médiévales et de la Renaissance. Ils sont assez faibles et, par conséquent, sont facilement vaincus par les unités militaires contemporaines, mais leurs capacités de reconaissance sont inégalées.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_EXPLORER_CBP">
-			<Text>Mid-game exploration unit that is stronger et has additional sight while embarked. Use these units to discover new lands.</Text>
+			<Text>Unité d'exploration de milieu de jeu qui est plus puissante et possède un champd e vision étendu si embarqué. Utilisez ces unités pour découvrir de nouvelles terres.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_EXPLORER_TEXT_CBP">
-			<Text>Exploration is the act of searching for the purpose of discovery of information or resources. Exploration occurs in all non-sessile animal species, including humans. In human history, its most dramatic rise was during the Age of Discovery when European explorers sailed et charted much of the rest of the world, largely in a pursuit of material wealth. Since then, major explorations after the Age of Discovery have occurred for reasons mostly aimed at information discovery.</Text>
+			<Text>L'exploration est le fait de la recherche dans le but de découvrir des informations ou des ressources. L'exploration se produit chez toutes les espèces animales non sessiles, y compris les humains. Dans l'histoire humaine, sa hausse la plus spectaculaire a été au cours de l' âge de la découverte lorsque les explorateurs européens ont navigué et cartographié une grande partie du reste du monde, en grande partie dans une poursuite de richesse matérielle. Depuis lors, les grandes explorations après l' âge de la découverte ont eu lieu pour des raisons principalement destinées à la découverte d'informations.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ZEPPELIN_CBP">
 			<Text>Zeppelin</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ZEPPELIN_STRATEGY_CBP">
-			<Text>Zeppelins are a useful exploration unit that apparaît during the Industrial Era. They are fairly weak and, therefore, are easily defeated by contemporary military units. Their reconaissance abilities are unparalleled, especially due to their ability to hover.</Text>
+			<Text>Les Zeppelins sont une unité d'exploration utile qui apparaît au cours de l'ère industrielle. Ils sont assez faibles et, par conséquent, sont facilement vaincus par les unités militaires contemporaines. Leurs capacités de reconaissance sont sans précédent, surtout en raison de leur capacité de vol stationnaire .</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_ZEPPELIN_CBP">
-			<Text>Industrial-era exploration unit. Use these units to explore or to monitor your borders. It is capable of hovering over all terrain, however it takes damage if it ends its turn on a mountain.</Text>
+			<Text>Unité d'exploration de l'ère industrielle. Utilisez ces unités pour explorer ou pour surveiller vos frontières. Elle est capable de survoler tous les terrains, mais elle reçoit des dégats si son tour se termine sur une montagne.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_ZEPPELIN_TEXT_CBP">
-			<Text>A Zeppelin was a type of rigid airship named after the German Count Ferdinand von Zeppelin who pioneered rigid airship development at the beginning of the 20th century. Zeppelin's ideas were first formulated in 1874 et developed in detail in 1893. They were patented in Germany in 1895 et in the United States in 1899. After the outstanding success of the Zeppelin design, the word zeppelin came to be commonly used to refer to all rigid airships. Zeppelins were first flown commercially in 1910 by Deutsche Luftschiffahrts-AG (DELAG), the world's first airline in revenue service. By mid-1914, DELAG had carried over 10,000 fare-paying passengers on over 1,500 flights. During World War I the German military made extensive use of Zeppelins as bombers et scouts, killing over 500 people in bombing raids in Britain.</Text>
+			<Text>Un Zeppelin était un type de dirigeable rigide nommé d'après le comte allemand Ferdinand von Zeppelin qui a lancé le développement de dirigeable rigide au début du 20e siècle. Les idées de Zeppelin ont été formulées première fois en 1874 et développé en détail en 1893. Ils ont été brevetés en Allemagne en 1895 et aux États-Unis en 1899. Après le succès remarquable de la conception Zeppelin, le mot zeppelin est venu à être couramment utilisé pour désigner tous les dirigeables rigides. Les Zeppelins ont d'abord été transportés pour le commerce en 1910 par Deutsche Luftschiffahrts - AG (DELAG), première compagnie aérienne au monde en service payant. À la mi-1914, DELAG avait transporté plus de 10.000 passagers payants sur plus de 1500 vols. Pendant la Première Guerre mondiale l'armée allemande a fait un large usage des Zeppelins comme bombardiers et en reconnaissance, tuant plus de 500 personnes dans les bombardements en Grande-Bretagne.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_EUPANEL_FRIENDLY_CITY_BELIEF_BONUS_CBP">
-			<Text>Defender of the Foi</Text>
+			<Text>Defenseur de la Foi</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_ENEMY_CITY_BELIEF_BONUS_CBP">
-			<Text>Crusader Zeal</Text>
+			<Text>Ferveur du croisé</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_NAVAL_DEFENSE_CITY">
-			<Text>Difficult Target</Text>
+			<Text>Cible difficile</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_TRAIT_LOW_POP_BONUS">
-			<Text>Lower Population than Enemy</Text>
+			<Text>Population plus faible que l'ennemi</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_ELEPHANT_RIDER">
-			<Text>War Elephant</Text>
+			<Text>Eléphant de guerre</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ELEPHANT_RIDER_STRATEGY">
-			<Text>War Elephants are more expensive et slower than the Cavalier, but they are also much more powerful. They can move after attacking et strike fear into nearby enemy units, giving them a negative combat modifier. You must have a source of [ICON_RES_IVORY] Ivory to construct War Elephants, et the city where you wish to build them must have a Casernes. Unlike other Unité militaires, War Elephants do not consume resources when constructed.</Text>
+			<Text>Les éléphants de guerre sont plus coûteux et plus lent que les cavaliers, mais ils sont aussi beaucoup plus puissant. Ils peuvent se déplacer après avoir attaqué et semer la peur dans les unités ennemies à proximité, en leur donnant un modificateur de combat négatif. Vous devez avoir une source de [ICON_RES_IVORY] Ivoire pour construire des éléphants de guerre, et la ville où vous souhaitez les construire doit avoir une caserne. Contrairement à d'autres unités militaires, les éléphants de guerre ne consomment pas de ressources lorsqu'ils sont construits.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ELEPHANT_RIDER_HELP">
-			<Text>Powerful early game Mounted Unit that is weak to Spearmen. This Unit has a higher [ICON_STRENGTH] Puissance de combat than other Mounted Units et strikes fear into nearby enemy units. It is, however, much slower et more expensive than the Cavalier. [NEWLINE][NEWLINE]You must have a source of [ICON_RES_IVORY] Ivory et a Casernes in order to construct this unit.</Text>
+			<Text>Très puissante unité montée de début de jeu. Cette unité a une puissance de combat [ICON_STRENGTH] supérieur à toute autre unité contemporaine et répand la peur au sein des rangs ennemis. Elle est, en revanche, plus lente et plus coûteuse que le cavalier.[NEWLINE][NEWLINE]Vous devez avoir une source d''[ICON_RES_IVORY] ivoire et une caserne afin de construire cette unité.
+			Powerful early game Mounted Unit that is weak to Spearmen. This Unit has a higher [ICON_STRENGTH] Puissance de combat than other Mounted Units et strikes fear into nearby enemy units. It is, however, much slower et more expensive than the Cavalier. [NEWLINE][NEWLINE]You must have a source of [ICON_RES_IVORY] Ivory et a Casernes in order to construct this unit.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ELEPHANT_RIDER_TEXT">
-			<Text>A War Elephant was an elephant trained et guided by humans for combat. Their main use was to charge the enemy, breaking their ranks et instilling terror. Elephantry are military units with elephant-mounted troops. They were first employed in India, the practice spreading out across south-east Asia et westwards into the Mediterranean. Their most famous use in the West was by the Greek general Pyrrhus of Epirus et in significant numbers by the armies of Carthage, including briefly by Hannibal.</Text>
+			<Text>Un éléphant de guerre était un éléphant formé et guidé par les humains pour le combat. Leur utilisation principale était de charger l'ennemi, brisant leurs rangs et de semer la terreur. Ils ont d'abord été utilisés en Inde, la pratique se propageant à travers l'Asie du sud-est et à l'ouest dans la Méditerranée. Leur utilisation la plus célèbre en Occident fut par le général grec d'Épire et Pyrrhus en grand nombre et par les armées de Carthage, y compris brièvement par Hannibal </Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MONGOL_TERROR">
-			<Text>Steppe Nomads</Text>
+			<Text>Nomades des steppes</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MONGOL_TERROR_HELP">
-			<Text>+2 [ICON_MOVES] Movement, et ignores Zone of Control</Text>
+			<Text>+2 [ICON_MOVES] Movement, et ignores la Zone de Contrôle</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_MISSION_FREE_LUXURY">
-			<Text>Voyage of Discovery</Text>
+			<Text>Voyage de Découverte</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MISSION_FREE_LUXURY_HELP">
-			<Text>If the unit is in owned territoire, this order will expend the unit, granting you two free copies of a Ressource de Luxe not available on this map. These Resources will not appear on the map, but can be traded to other civilizations.</Text>
+			<Text>Si l'unité est dans votre territoire, cet ordre utilisera cette unité, vous procurant deux copies gratuites d'une ressource de luxe qui n'est pas disponible sur cette carte. Ces ressources n'apparaitront pas sur la carte, mais vous pourrez les échangez avec d'autres civilisations.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MISSION_FREE_LUXURY_HELP_DISABLED">
-			<Text>Unit must be in owned territoire to use this ability.</Text>
+			<Text>L'unité doit être dans votre territoire pour utiliser cette capacité.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_EUPANEL_BUSHIDO">
@@ -364,32 +364,31 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_PIONEER">
-			<Text>Pioneer</Text>
+			<Text>Pionnier</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_PIONEER_STRATEGY">
-			<Text>Use this unit to construct new cities. It cannot defend itself, so accompany it avec un combat unit. When founded, cities built by Pioneers automatically receive a selection of buildings, start with 3 Citoyens, et claim additional territoire. As such, the costs of expansion, in terms of Bonheur et Maintenance are much greater than Settlers. [NEWLINE][NEWLINE]Note: the bonuses for constructing buildings from the Progrès et Industrie policy branches do apply to the buildings constructed by Pioneers, so expect a large boost to your culture or income when you settle new lands with this unit!</Text>
+			<Text>Utilisez cet appareil pour construire de nouvelles villes. Il ne peut pas se défendre, donc accompagnez-la d'une unité de combat. Lors de sa création, les villes construites par les pionniers reçoivent automatiquement une sélection de bâtiments, commencent avec 3 citoyens, et revendiquent du territoire supplémentaire. Ainsi, les coûts de l'expansion, en termes de bonheur et d'entretien sont beaucoup plus avantageux qu'avec un colon.[NEWLINE][NEWLINE] Note: les primes pour la construction de bâtiments à partir des branches doctrinales du progrès et de l'industrie s'appliquent aux bâtiments construits par les pionniers, alors attendez-vous un grand coup de pouce à votre culture ou à votre revenu lorsque vous installez de nouvelles villes avec cette unité!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_PIONEER_TEXT">
-			<Text>
-				Pioneers are any of the people in history who migrated to join in settling et developing new areas. The term especially refers to those who were going to settle any territoire which had previously not been settled or developed by European or American society, although the territoire may have been inhabited by or utilized by native peoples. The pioneer concept et ethos greatly predate the migration to parts of the United States now called Western, as many places now considered as East were also settled by pioneers from the coast. For example, Daniel Boone, a key figure in American history, settled in Kentucky, when that "Dark et Bloody Ground" was still undeveloped. One important development in the Western settlement was the Homestead Act, which provided formal legislation which regulated the settlement process.
+			<Text>Les pionniers sont des personnes dans l'histoire qui ont émigré pour se joindre à la colonisation et le développement de nouveaux domaines. Le terme se réfère en particulier à ceux qui allaient s'installer sur un territoire qui n'était auparavant pas revendiqué ou exploité par la société européenne ou américaine, bien que le territoire peut avoir été habité ou utilisé par les peuples autochtones. Le concept de pionnier et l'éthique sont largment antérieurs à la migration vers les parties ouest des États-Unis maintenant appelé Western, de nombreuses aprties de ce qui est considéré comme fesant partie de l'ouest américain ayant aussi été colonisé par des pionniers venant de la côte. Par exemple, Daniel Boone, un personnage clé dans l'histoire américaine, s'est installé dans le Kentucky, quand ce "sombre et sanglant sol" était encore peu développé. Un développement important dans la colonisation de l'Ouest a été le Homestead Act, qui prévoit la législation formelle qui réglemente le processus de colonistation.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_PIONEER">
-			<Text>Founds new Villes avec undvanced infrastructure et additional population. [NEWLINE][NEWLINE][ICON_FOOD] Growth of the Ville is stopped while this Unit is being built.</Text>
+			<Text>Foundez de nouvelles villes avec une infrastructure avancée et plus de population initiale.[NEWLINE][NEWLINE][ICON_FOOD] La croissance de la ville est arrêté tant que cette unité est en construction.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_COLONIST">
-			<Text>Colonist</Text>
+			<Text>Colonisateur</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_COLONIST_STRATEGY">
-			<Text>Use this unit to construct new cities. It cannot defend itself, so accompany it avec un combat unit. When founded, cities built by Colonists  automatically receive a selection of buildings, start with 5 Citoyens et claim additional territoire. As such, the costs of expansion, in terms of Bonheur et Maintenance are much greater than Pioneers. [NEWLINE][NEWLINE]Note: the bonuses for constructing buildings from the Progrès et Industrie policy branches do apply to the buildings constructed by Colonists, so expect a large boost to your Culture or income when you settle new lands with this unit!</Text>
+			<Text>Utilisez cette unité pour construire de nouvelles villes. Il ne peut pas se défendre, donc vous devez l'accompagner d'une unité de combat pour sa défense. Lors de sa création, les villes construites par les colonisateurs reçoivent automatiquement une sélection de bâtiments, commencent avec 5 citoyens et revendiquent du territoire supplémentaire. Ainsi, les coûts de l'expansion, en termes de bonheur et d'entretien sont sont plsu facile qu'avec les pionniers. [NEWLINE][ NEWLINE ] Note: les primes pour la construction de bâtiments à partir des branches doctrinales du progrès et l'industrie s'appliquent aux bâtiments construits par les colonisateurs, alors attendez-vous un grand coup de pouce à votre culture ou le revenu lorsque vous installez de nouvelles terres avec cette unité!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_COLONIST_TEXT">
 			<Text>
-				Studying throughout history, one can witness how colonists, a type of setter, very often occupied land previously home to long-established peoples, designated as indigenous (also called "natives", "Aborigines" or, in the Americas, "Indians"). In some cases (such as Australia), as colonialist mentalities et laws change, the legal ownership of some lands is contested by indigenous people, who either claim or seek restoration of traditional usage, land rights, native title et related forms of legal ownership or partial control. The word "settler" was not originally usually used in relation to unfree labour immigrants, such as slaves (e.g. in the United States), indentured labourers (such as in Colonial America), or convicts (such as in British America, c. 1615–1775; Australia 1788-1868). More recently descendants of these immigrants may argue that they have as much right to use the word "settler" as the descendants of free immigrants. In the figurative usage, a "person who goes first or does something first" also applies to the American English use of "pioneer" to refer to a settler—a person who has migrated to a less occupied area et established permanent residence there, often to colonize the area; as first recorded in English in 1605. In United States history it refers to those people who helped to settle new lands. In this usage, pioneers are usually among the first to an area, whereas settlers can arrive after first settlement et join others in the process of human settlement.[citation needed] This correlates with the work of military pioneers who were tasked with construction of camps before the main body of troops would arrive at the designated camp site.
+				En étudiant à travers l'histoire, on peut voir comment les colonisateurs, un type de colon, a très souvent occupé des terres appartenant auparavant à des peuples établis depuis longtemps, désignés comme autochtones (également appelés «indigènes», «aborigènes» ou, dans les Amériques, les «Indiens»). Dans certains cas (comme l'Australie), alors que les mentalités et les lois colonialistes changent, la propriété juridique de certaines terres est contestée par les populations autochtones, qui soit réclament ou demandent le rétablissement de l'usage traditionnel, de leurs droits fonciers, du titre d'autochtone et des formes connexes de propriété légale ou de contrôle partiel. Le mot «immigrant» n'a pas été initialement utilisé couramment en relation avec les travailleurs immigrés non libres, comme les esclaves (par exemple aux États-Unis), des travailleurs sous contrat (comme en Amérique du Colonial), ou condamnés (comme en Amérique du Nord britannique, c. 1615 -1775; Australie 1788-1868). Plus récemment, les descendants de ces immigrants peuvent faire valoir qu'ils ont autant le droit d'utiliser le mot «colon» que les descendants d'immigrants libres. Dans l'usage figuratif, une «personne qui commence ou fait quelque chose d'abord" applique également à l'usage anglais américain de «pionnier» pour désigner un colon-personne qui a migré vers une zone moins occupé et a établi sa résidence permanente, souvent pour coloniser la région; comme la première fois en anglais en 1605. Dans l'histoire des États-Unis, il se réfère à ces personnes qui ont aidé à coloniser de nouvelles terres. Dans cette utilisation, les pionniers sont habituellement parmi les premiers sur une zone, alors que les colons peuvent arriver après la première colonie et se joindre à d'autres dans le processus d'établissement humain. [Citation nécessaire] Cette corrélation avec le travail des pionniers militaires qui ont été chargé de la construction de camps avant que le corps principal des troupes arrivait sur le site du camp désigné.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_COLONIST">
-			<Text>Founds new Villes avec undvanced infrastructure et additional population. [NEWLINE][NEWLINE][ICON_FOOD] Growth of the Ville is stopped while this Unit is being built.</Text>
+			<Text>Foundez de nouvelles villes avec une infrastructure avancée et plus de population initiale.[NEWLINE][NEWLINE][ICON_FOOD] La croissance de la ville est arrêté tant que cette unité est en construction.</Text>
 		</Row>
 	</Language_fr_FR>
 </GameData>
