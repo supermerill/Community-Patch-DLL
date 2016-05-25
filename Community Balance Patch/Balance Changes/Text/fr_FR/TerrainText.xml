@@ -7,103 +7,103 @@
 			<Gender>neuter:an</Gender>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_EKI_TEXT">
-			<Text>'Eki' est un terme que les Huns ont probablement utilisé pour décrire la terre, en particulier celle qui est essentielle pour le pâturage du bétail. Le pastoralisme nomade est une forme de pastoralisme où le bétail est parqués afin de trouver de nouveaux pâturages sur lesquels paître. Strictly speaking, true nomads follow an irregular pattern of movement, in contrast with transhumance where seasonal pastures are fixed. However this distinction is often not observed et the term nomad used for both—in historical cases the regularity of movements is often unknown in any case. The herded livestock include cattle, yaks, sheep, goats, reindeer, horses, donkeys or camels, or mixtures of species. Nomadic pastoralism is commonly practised in regions with little arable land, typically in the developing world. Of the estimated 30 to 40 million nomadic pastoralists worldwide, most are found in central Asia et the Sahel region of West Africa. Increasing numbers of stock may lead to overgrazing of the area et desertification if lands are not allowed to fully recover between one grazing period et the next. Increased enclosure et fencing of land has reduced the amount of land available for this practice. [NEWLINE][NEWLINE]An Eki can only be built on flat Prairie or Plaines cases without access to Fresh Water. It provides [ICON_PRODUCTION] Production, [ICON_CULTURE] Culture, et [ICON_FOOD] Nouriture, as well as additional [ICON_PRODUCTION] Production if [COLOR_POSITIVE_TEXT]adjacent to two[ENDCOLOR] other Eki. Removes any features on the case. Can be built [COLOR_POSITIVE_TEXT]in or adjacent to[ENDCOLOR] Hunic territoire.</Text>
+			<Text>'Eki' est un terme que les Huns ont probablement utilisé pour décrire la terre, en particulier celle qui est essentielle pour le pâturage du bétail. Le pastoralisme nomade est une forme de pastoralisme où le bétail est parqués afin de trouver de nouveaux pâturages sur lesquels paître. Strictement parlant, les vrais nomades suivent un motif irrégulier de mouvements, en contraste avec la transhumance où les pâturages saisonniers sont fixes. Toutefois, cette distinction n'est souvent pas effectuée et le terme nomade est utilisé dans les deux cas - de toute façon, dans les cas historiques, la régularité des mouvements est souvent inconnue. Le bétail parqués comprennent les bovins, les yaks, moutons, chèvres, rennes, chevaux, ânes ou des chameaux, ou des mélanges d'espèces. Le pastoralisme nomade est couramment pratiquée dans les régions avec peu de terres arables, généralement dans les régions en développement. Sur les 30 à 40 millions de pasteurs nomades estimés à travers le monde, la plupart se retrouvent en Asie centrale et dans la région du Sahel en Afrique de l'Ouest. Un nombre croissant d'actions peut conduire au surpâturage de la région et la désertification si les terres ne sont pas autorisés à se remettre complètement entre une période de pâturage et la suivante. L'augmentation des enceinte et des clôtures a réduit la quantité de terres disponibles pour cette pratique.[NEWLINE][NEWLINE] Un Eki ne peut être construit que sur des prairies ou des plaines plates, sans accès à l'eau douce. Il fournit [ICON_PRODUCTION] Production, [ICON_CULTURE] Culture et [ICON_FOOD] nourriture, ainsi que de la [ICON_PRODUCTION] production si [COLOR_POSITIVE_TEXT] à côté de deux [ENDCOLOR] autre Eki. Supprime les caractéristiques sur la cases (forêt, jungle). Peut être construit [COLOR_POSITIVE_TEXT] dans ou à proximité du [ENDCOLOR] territoire Hun.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_EKI_HELP">
-			<Text>An Eki can only be built on flat Prairie or Plaines cases without access to Fresh Water. It provides [ICON_PRODUCTION] Production, [ICON_CULTURE] Culture, et [ICON_FOOD] Nouriture, as well as additional [ICON_PRODUCTION] Production if [COLOR_POSITIVE_TEXT]adjacent to two[ENDCOLOR] other Eki. Removes any features on the case. Can be built [COLOR_POSITIVE_TEXT]in or adjacent to[ENDCOLOR] Hunic territoire.</Text>
+			<Text>Un Eki ne peut être construit que sur des prairies ou des plaines plates, sans accès à l'eau douce. Il fournit [ICON_PRODUCTION] Production, [ICON_CULTURE] Culture et [ICON_FOOD] nourriture, ainsi que de la [ICON_PRODUCTION] production si [COLOR_POSITIVE_TEXT] à côté de deux [ENDCOLOR] autre Eki. Supprime les caractéristiques sur la cases (forêt, jungle). Peut être construit [COLOR_POSITIVE_TEXT] dans ou à proximité du [ENDCOLOR] territoire Hun.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_EKI">
-			<Text>Construct an [LINK=IMPROVEMENT_EKI]Eki[\LINK]</Text>
+			<Text>Construire un [LINK=IMPROVEMENT_EKI]Eki[\LINK]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_EKI_HELP">
-			<Text>Constructs an Eki, which increases [ICON_PRODUCTION] Production, [ICON_CULTURE] Culture, et [ICON_FOOD] Nouriture. Provides additional [ICON_PRODUCTION] Production if [COLOR_POSITIVE_TEXT]adjacent to two[ENDCOLOR] other Eki. Removes any features on the case. Must be build on flat Plaines or Prairies without access to Fresh Water. Can be built [COLOR_POSITIVE_TEXT]in or adjacent to[ENDCOLOR] Hunic territoire.</Text>
+			<Text>Construit un Eki, qui augmente la [ICON_PRODUCTION] Production, [ICON_CULTURE] Culture, et [ICON_FOOD] Nouriture. Permet d'avoir de la [ICON_PRODUCTION] Production supplémentaire si [COLOR_POSITIVE_TEXT]adjacent à deux[ENDCOLOR] autre Eki. Supprime toute caractéristique présente sur la case. Doit être construit sur des prairies ou des plaines plates, sans accès à l'eau douce. Peut être construit [COLOR_POSITIVE_TEXT] dans ou à proximité du [ENDCOLOR] territoire Hun.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_EKI_REC">
-			<Text>It will increase [ICON_PRODUCTION] Production, [ICON_CULTURE] Culture, et [ICON_FOOD] Nouriture. Provides additional [ICON_PRODUCTION] Production if [COLOR_POSITIVE_TEXT]adjacent to two[ENDCOLOR] other Eki. Can be built [COLOR_POSITIVE_TEXT]in or adjacent to[ENDCOLOR] Hunic territoire.</Text>
+			<Text>Il augmentera la [ICON_PRODUCTION] Production, [ICON_CULTURE] Culture, et [ICON_FOOD] Nouriture de la case. Permet d'avoir de la [ICON_PRODUCTION] Production supplémentaire si [COLOR_POSITIVE_TEXT]adjacent à deux[ENDCOLOR] autre Eki. Peut être construit [COLOR_POSITIVE_TEXT] dans ou à proximité du [ENDCOLOR] territoire Hun.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_IMPROVEMENT_KUNA">
 			<Text>Kuna</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_KUNA_TEXT">
-			<Text>'Kuna' is the Mayan word for temple or church. Mayan Kuna were similar in design to the ziggurats et pyramids of Eurasia. Though the Kuna themselves are largely all that remain of these ancient sites, they were once the focal points of large cities. Most famous of these is Chichen Itza, a sight so grand that it qualifies as a Merveille Mondiale![NEWLINE][NEWLINE]A Kuna can only be constructed in Forêts or Jungles, et cannot be adjacent to another Kuna. Grants [ICON_PEACE] Foi et [ICON_RESEARCH] Science to the Ville that works the case.</Text>
+			<Text>'Kuna' est le terme pour temple ou église. Le Kuna maya est simimlaire au niveau du design aux ziggurats et pyramides d'Eurasie. Bien que les Kuna représente la majeur partie des restes d'ancien sites, ceux-ci étaient auparavant le point focal de grandes villes. Le plus fameux de ceux-ci est Chitchen Itza, un spectacle si grand qu'il se qualifie comme une merveille mondaile![NEWLINE][NEWLINE]Un Kuna ne peut se construire que sur des cases de forêts et jungles, et ne peut être adjacent à un autre Kuna. Apporte de la [ICON_PEACE] Foi et de la  [ICON_RESEARCH] Science à la Ville qui travaille cette case.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_KUNA_HELP">
-			<Text>Can only be constructed in Forêts or Jungles, et cannot be adjacent to another Kuna. Generates [ICON_PEACE] Foi et [ICON_RESEARCH] Science.</Text>
+			<Text>Ne peut être construit que sur des cases de Forêts or Jungles, et ne peut pas être adjacent à un autre Kuna. Génère de la [ICON_PEACE] Foi et de la [ICON_RESEARCH] Science.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_KUNA">
-			<Text>Construct a [LINK=IMPROVEMENT_KUNA]Kuna[\LINK]</Text>
+			<Text>Construit un [LINK=IMPROVEMENT_KUNA]Kuna[\LINK]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_KUNA_HELP">
-			<Text>Constructs a Kuna, which increases [ICON_RESEARCH] Science et [ICON_PEACE] Foi.</Text>
+			<Text>Construit un Kuna, qui augmente la [ICON_RESEARCH] Science et la [ICON_PEACE] Foi.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_KUNA_REC">
-			<Text>It will increase [ICON_RESEARCH] Science et [ICON_PEACE] Foi.</Text>
+			<Text>Il augmentera la [ICON_RESEARCH] Science et la [ICON_PEACE] Foi.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_IMPROVEMENT_ENCAMPMENT_SHOSHONE">
-			<Text>Encampment</Text>
+			<Text>Campement</Text>
 			<Gender>neuter:an</Gender>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_ENCAMPMENT_SHOSHONE_TEXT">
-			<Text>An Encampment can only be built on flat cases, et no two Encampments can be adjacent. It provides additional [ICON_FOOD] Nouriture, [ICON_PRODUCTION] Production et [ICON_GOLD] Or. Encampments provide a small defense modifier to units stationed on them, et damage nearby enemy units (5) if they end their turn on or next to an Encampment. Must be built in Shoshone territoire.[NEWLINE][NEWLINE]A tipi is a conical tent, traditionally made of animal skins, et wooden poles. The tipi was used in the encampments of nomadic tribes of the Great Plaines in North America. Tipis are stereotypically associated with Native Americans in the United States in general, however Native Americans from places other than the Great Plaines mostly used different types of dwellings. The tipi is durable, provides warmth et comfort in winter, is cool in the heat of summer, et is dry during heavy rains. Tipis could be disassembled et packed away quickly when a tribe decided to move et could be reconstructed quickly upon settling in a new area. This portability was important to Plaines Indians with their nomadic lifestyle. Modern tipi covers are usually made of canvas. Contemporary users of tipis include historical reenactors, back-to-the-land devotees, et Native American families attending powwows or encampments who wish to preserve et pass on a part of their heritage et tradition.</Text>
+			<Text>Un Campement ne peut être construit que sur des cases plates, et aucun Campement ne peut être adjacent à un autre. Il fournit de la [ICON_FOOD] nourriture, [ICON_PRODUCTION] production et [ICON_GOLD] or supplémentaire. Les Campements fournissent un petit bonus de défense aux unités stationnées dessus, et infligent des dégats aux unités ennemies (5) si elles finissent leur tour sur ou à côté d'un Campement. Doit être construit sur le territoire Shoshone.[NEWLINE][NEWLINE]Un tipi est une tente conique, traditionnellement faite de peaux d'animaux, et des poteaux en bois. Le tipi a été utilisé dans les campements des tribus nomades des Grandes Plaines en Amérique du Nord. Les tipis sont un stéréotype associés aux Amérindiens aux États-Unis en général, cependant les Amérindiens des endroits autres que les Grandes Plaines utilisais principalement différents types de logements. Le tipi est durable, fournit de la chaleur et du confort en hiver, est frais dans la chaleur de l'été, et reste sec lors de fortes pluies. Les tipis peuvent être démontés et emballés rapidement quand une tribu a décidé de se déplacer et peuvent être reconstruit rapidement après l'installation dans un nouveau domaine. Cette portabilité est importante pour les Indiens des Plaines avec leur mode de vie nomade. Les couvertures de tipis modernes sont habituellement faites de toile. Les utilisateurs contemporains de tipis comprennent les reconstituteurs historiques, adeptes du retour à la terre, et les familles amérindiennes qui fréquentent les powwows ou les campements qui souhaitent préserver et transmettre une partie de leur patrimoine et de leurs traditions.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_ENCAMPMENT_SHOSHONE_HELP">
-			<Text>An Encampment can only be built on flat cases, et no two Encampments can be adjacent. It provides additional [ICON_FOOD] Nouriture, [ICON_PRODUCTION] Production et [ICON_GOLD] Or. Encampments provide a small defense modifier to units stationed on them, et damage nearby enemy units (5) if they end their turn on or next to an Encampment. Must be built in Shoshone territoire.</Text>
+			<Text>Un campement ne peut être construit que sur des cases plates, et deux Campements ne peuvent pas être adjacent. Il procure de la [ICON_FOOD] nouriture, [ICON_PRODUCTION] production et [ICON_GOLD] or. Les Campements procurent un petit bonus de défenseaux unités stationés dessus, et infligent des dégats aux unités ennemis (5) s'ils finissent leur tour sur ou à coté d'un canpement. Doit être construit dans le territoire Shoshone.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_ENCAMPMENT_SHOSHONE">
-			<Text>Construct an [LINK=IMPROVEMENT_ENCAMPMENT_SHOSHONE]Encampment[\LINK]</Text>
+			<Text>Construit un [LINK=IMPROVEMENT_ENCAMPMENT_SHOSHONE]Campement[\LINK]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_ENCAMPMENT_SHOSHONE_HELP">
-			<Text>Constructs an Encampment, which increases the amount of [ICON_FOOD] Nouriture, [ICON_PRODUCTION] Production, et [ICON_CULTURE] Culture provided by this case. Removes any features on the case. Provides a small defensive bonuse et damages adjacent enemy units for 5 Hit Points.</Text>
+			<Text>Construit un Campement, qui augmente la quantité de [ICON_FOOD] Nouriture, [ICON_PRODUCTION] Production, et [ICON_CULTURE] Culture produite par cette case. Supprime toute caractéristique présent sur cette case. Procure un petit bonus défensif et blesse les unité ennemis adjacente de 5 HP.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_ENCAMPMENT_SHOSHONE_REC">
-			<Text>It will increase the amount of [ICON_FOOD] Nouriture, [ICON_PRODUCTION] Production, et [ICON_CULTURE] Culture provided by this case. Removes any features on the case. Provides a small defensive bonuse et lightly damages adjacent enemy units.</Text>
+			<Text>Il augmentera la quantité de [ICON_FOOD] Nouriture, [ICON_PRODUCTION] Production, et [ICON_CULTURE] Culture produite par cette case. Supprime toute caractéristique présent sur la case. Procure un petit bonus défensif et blesse légèrement les unité ennemis adjacente.</Text>
 		</Row>
 
 
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_STRAT_HORSE">
-			<Text>[COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus:[ENDCOLOR] Units gagnent +10% [ICON_STRENGTH] Force when attacking.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole stratégique:[ENDCOLOR] Les unités gagnent +10% [ICON_STRENGTH] Puissance en attaque.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_STRAT_IRON">
-			<Text>[COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus:[ENDCOLOR] Units gagnent +10% [ICON_STRENGTH] Force when defending.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole stratégique:[ENDCOLOR] Les unités gagnent +10% [ICON_STRENGTH] Puissance en défense.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_STRAT_COAL">
-			<Text>[COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus:[ENDCOLOR] Naval Units gagnent +1 [ICON_MOVES] Movement.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole stratégique:[ENDCOLOR] Les unités navales gagnent +1 [ICON_MOVES] Mouvement.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_STRAT_ALUMINUM">
-			<Text>[COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus:[ENDCOLOR] Units gagnent +5 HP when Healing.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole stratégique:[ENDCOLOR] Les unités gagnent +5 HP lorsqu'elles se soignent.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_STRAT_OIL">
-			<Text>[COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus:[ENDCOLOR] Units gagnent +5 XP after combat.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole stratégique:[ENDCOLOR] Les unités gagnent +5 XP après un combat.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_STRAT_URANIUM">
-			<Text>[COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus:[ENDCOLOR] Units gagnent +10% [ICON_STRENGTH] Force when attacking.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole stratégique:[ENDCOLOR] Les unités gagnent +10% [ICON_STRENGTH] Puissance en attaqe.</Text>
 		</Row>
 
 
 		<Row Tag="TXT_KEY_GOODY_PRODUCTION">
-			<Text>You find a cache of supplies that boost the [ICON_PRODUCTION] Production of your nearest city!</Text>
+			<Text>Vous trouvez un stock de fournitures qui vous permettent de doper la [ICON_PRODUCTION] production de votre ville la plus proche!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GOODY_GOLDEN_AGE">
-			<Text>You find ancient relics that accelerate your civilization's progress towards a [ICON_GOLDEN_AGE] Age d'Or!</Text>
+			<Text>Vosu trouvez d'ancienne reliques qui accélèrent la progression de votre civilisation vers un [ICON_GOLDEN_AGE] Age d'Or!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GOODY_TILES">
-			<Text>You find a nomadic tribe that wishes to join your Civilization, granting you additional land around the nearest Ville!</Text>
+			<Text>Vous trouvez une tribut nomade qui désire se joindre à votre civilisation, vous octroyant  du territoire additionnel autour de votre ville la plus proche!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GOODY_CHOOSE_PRODUCTION">
-			<Text>Supplies for [ICON_PRODUCTION] Production in your nearest Ville.</Text>
+			<Text>Fournitures pour la [ICON_PRODUCTION] Production dans votre ville la plus proche.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GOODY_CHOOSE_GOLDEN_AGE">
-			<Text>Relics for [ICON_GOLDEN_AGE] Age d'Or points.</Text>
+			<Text>Reliques pour les points d'[ICON_GOLDEN_AGE] Age d'Or.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GOODY_CHOOSE_FREE_TILES">
-			<Text>A tribe that gives you land around your nearest Ville.</Text>
+			<Text>Une tribut qui vous donne des terres autour de votre ville la plus proche.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BARBARIAN_GOLDEN_AGE_HEADING4_TITLE">
 			<Text>Points d'Age d'Or</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BARBARIAN_GOLDEN_AGE_HEADING4_BODY">
-			<Text>The ruin contains relics, that grant Points d'Age d'Or.</Text>
+			<Text>La ruine contenait des reliques, ce qui vous donne des Points d'Age d'Or.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BARBARIAN_GOLDEN_AGE_ADV_QUEST">
 			<Text>Points d'Age d'Or?</Text>
@@ -112,7 +112,7 @@
 			<Text>Production</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BARBARIAN_PRODUCTION_HEADING4_BODY">
-			<Text>The ruin contains supplies, that grant Production to your nearest city.</Text>
+			<Text>La ruine contenait des fournitures, ce qui vous donne de la production dans votre ville la plus proche.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BARBARIAN_PRODUCTION_ADV_QUEST">
 			<Text>Production?</Text>
@@ -121,165 +121,166 @@
 			<Text>Tiles</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BARBARIAN_TILES_HEADING4_BODY">
-			<Text>The ruin contains settlers, that grant free Tiles to your nearest city.</Text>
+			<Text>La ruine contenait des settlers, ce qui vous donne des cases gratuites autour de votre ville la plus proche.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BARBARIAN_TILES_ADV_QUEST">
 			<Text>Tiles?</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_RESOURCE_YOU_GAIN_GLOBAL">
-			<Text>[COLOR_CYAN]Your current Global Monopoly Bonus:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
+			<Text>[COLOR_CYAN]Votre bonus de monopole commercial actuel:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_YOU_GAIN_GLOBAL_AND_STRATEGIC">
-			<Text>[COLOR_CYAN]Your current Global et Strategic Monopoly Bonuses:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
+			<Text>[COLOR_CYAN]Votre bonus de monopole global et stratégique actuel:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_YOU_GAIN_STRATEGIC">
-			<Text>[COLOR_CYAN]Your current Strategic Monopoly Bonus:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
+			<Text>[COLOR_CYAN]Votre bonus de monopole stratégique actuel:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_THEY_GAIN_BOTH">
-			<Text>[COLOR_NEGATIVE_TEXT]Their current Strategic et Global Monpoly Bonuses:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
+			<Text>[COLOR_NEGATIVE_TEXT]Leur bonus de monopole stratégique et global actuel:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_THEY_GAIN_GLOBAL">
-			<Text>[COLOR_NEGATIVE_TEXT]Their current Global Monopoly Bonus:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
+			<Text>[COLOR_NEGATIVE_TEXT]Leur bonus de monopole global actuel:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_THEY_GAIN_STRATEGIC">
-			<Text>[COLOR_NEGATIVE_TEXT]Their current Strategic Monopoly Bonus:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
+			<Text>[COLOR_NEGATIVE_TEXT]Leur bonus de monopole stratégique actuel:[ENDCOLOR][NEWLINE][NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_POTENTIAL">
-			<Text>Potential Global Monopoly Bonus:[NEWLINE][NEWLINE]</Text>
+			<Text>Bonus de monopole global potentiel:[NEWLINE][NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_POTENTIAL_STRATEGIC">
-			<Text>Potential Strategic et Global Monopoly Bonuses:[NEWLINE][NEWLINE]</Text>
+			<Text>Bonus de monopole stratégique et global potentiel:[NEWLINE][NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_BREAKDOWN">
-			<Text>{1_Num} of {2_Total} in World</Text>
+			<Text>{1_Num} sur {2_Total} dans le monde</Text>
 		</Row>
 		<Row Tag="TXT_KEY_HOVER_INFO">
-			<Text>(Hover over Corporation Icon or Name for details.)</Text>
+			<Text>(Survolez l'icône des corporations ou le nom pour plus de détails)</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_OTHER">
 			<Text>({2_CivName}) {1_Monopoly}%</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EO_LOCAL_RESOURCES_CONTROLLED">
-			<Text>Our Potential Monopolies</Text>
+			<Text>Vos monopoles potentiels</Text>
 		</Row>
 		<Row Tag="TXT_KEY_NOTIFICATION_MONOPOLY_GAINED">
-			<Text>You control over 50% of the World's [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR], et therefore have a Global Monopoly![NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
+			<Text>Vous contrôlez plus de 50% des [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR] du monde, et vous confère ainsi un monopole global![NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_MONOPOLY_GAINED">
-			<Text>Global Monopoly on [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
+			<Text>Monopole global sur les [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_NOTIFICATION_OTHER_PLAYER_MONOPOLY_GAINED">
-			<Text>{3_CivName} {3_CivName: plural 1?controls; other?control;} over 50% of the World's [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR], et therefore has a Global Monopoly![NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
+			<Text>{3_CivName} {3_CivName: plural 1?controlent; other?controle;} plus de 50% des [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR] du monde, et se voit ainsi conférer un monopole global![NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_OTHER_PLAYER_MONOPOLY_GAINED">
-			<Text>{2_CivName} {2_CivName: plural 1?has; other?have;} a Global Monopoly on [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
+			<Text>{2_CivName} {2_CivName: plural 1?a; other?ont;} un monopole global sur les [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_NOTIFICATION_MONOPOLY_LOST">
-			<Text>You [COLOR_NEGATIVE_TEXT]no longer have[ENDCOLOR] a Global Monopoly on [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]![NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Lost:[ENDCOLOR][NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
+			<Text>Vous [COLOR_NEGATIVE_TEXT]n'avez plus[ENDCOLOR] de monopole global sur les [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]![NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Perdu:[ENDCOLOR][NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_MONOPOLY_LOST">
-			<Text>Lost Global Monopoly on [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
+			<Text>Monopole global perdu pour les [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PRODMOD_YIELD_MONOPOLY_RESOURCE">
-			<Text>[NEWLINE][ICON_BULLET]Modifier from Resource Monopoly: {1_Num}%</Text>
+			<Text>[NEWLINE][ICON_BULLET]Modificateur issu du monopole global: {1_Num}%</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_HAPPINESS">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +5 [ICON_HAPPINESS_1] Global Bonheur</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +5 [ICON_HAPPINESS_1] Bonheur global</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_GA_LENGTH">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +25% [ICON_GOLDEN_AGE] Age d'Or Length</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +25% [ICON_GOLDEN_AGE] de durée pour les Ages d'Or</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_YIELD_PRODUCTION">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +3 [ICON_PRODUCTION] Production from Resource cases.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +3 [ICON_PRODUCTION] Production sur les cases de ressources.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_YIELD_GOLD">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +3 [ICON_GOLD] Or from Resource cases.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +3 [ICON_GOLD] Or sur les cases de ressources.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_YIELD_FOOD">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +3 [ICON_FOOD] Nouriture from Resource cases.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +3 [ICON_FOOD] Nouriture sur les cases de ressources.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_YIELD_CULTURE">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +3 [ICON_CULTURE] Culture from Resource cases.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +3 [ICON_CULTURE] Culture sur les cases de ressources.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_YIELD_SCIENCE">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +3 [ICON_RESEARCH] Science from Resource cases.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +3 [ICON_RESEARCH] Science sur les cases de ressources.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_MOD_PRODUCTION">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +10% [ICON_PRODUCTION] Production in all owned Villes.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +10% [ICON_PRODUCTION] Production dans toutes vos villes.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_MOD_GOLD">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +10% [ICON_GOLD] Or in all owned Villes.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +10% [ICON_GOLD] Or dans toutes vos villes.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_MOD_FOOD">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +20% [ICON_FOOD] Growth in all owned Villes.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +20% [ICON_FOOD] Croissance dans toutes vos villes.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_MOD_CULTURE">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +10% [ICON_CULTURE] Culture in all owned Villes.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +10% [ICON_CULTURE] Culture dans toutes vos villes.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_MOD_SCIENCE">
-			<Text>[COLOR_POSITIVE_TEXT]Monopoly Bonus:[ENDCOLOR] +10% [ICON_RESEARCH] Science in all owned Villes.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Bonus de monopole:[ENDCOLOR] +10% [ICON_RESEARCH] Science dans toutes vos villes.</Text>
 		</Row>
 
 		<!-- Strategic Help-->
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_YIELD_PRODUCTION_ALUMINUM">
-			<Text>Used by powerful late-game Units et Buildings.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus (25%):[ENDCOLOR] Units gagnent +5 HP when Healing.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Global Monopoly Bonus (50%):[ENDCOLOR] +3 [ICON_PRODUCTION] Production from Resource cases.</Text>
+			<Text>Utilisé par de puissantes unités et bâtiments de fin de jeu.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Bonus de monopole stratégique (25%):[ENDCOLOR] Les unités gagnent +5 HP lorsqu'elles se soignent.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Global Bonus de monopole (50%):[ENDCOLOR] +3 [ICON_PRODUCTION] Production sur les cases de ressources.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_YIELD_GOLD_COAL">
-			<Text>Used by powerful mid-game Units et Buildings.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus (25%):[ENDCOLOR] Naval Units gagnent +1 [ICON_MOVES] Movement.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Global Monopoly Bonus (50%):[ENDCOLOR] +3 [ICON_GOLD] Or from Resource cases.</Text>
+			<Text>Utilisé par de puissants bâtiments de milieu de jeu.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Bonus de monopole stratégique (25%):[ENDCOLOR] Les unités navales gagnent +1 [ICON_MOVES] mouvement.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT] Bonus de monopole global (50%):[ENDCOLOR] +3 [ICON_GOLD] Or sur les cases de ressources.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_YIELD_SCIENCE_OIL">
-			<Text>Used by powerful late-game Units et Buildings.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus (25%):[ENDCOLOR] Units gagnent +5 XP after combat.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Global Monopoly Bonus (50%):[ENDCOLOR] +3 [ICON_RESEARCH] Science from Resource cases.</Text>
+			<Text>Utilisé par de puissantes unités  et bâtimentsde fin de jeu.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Bonus de monopole stratégique (25%):[ENDCOLOR] Les unités gagnent +5 XP après un combat.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT] Bonus de monopole global (50%):[ENDCOLOR] +3 [ICON_RESEARCH] Science sur les cases de ressources.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_YIELD_SCIENCE_HORSE">
-			<Text>Used by powerful Units.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus (25%):[ENDCOLOR] Units gagnent +10% [ICON_STRENGTH] Force when attacking.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Global Monopoly Bonus (50%):[ENDCOLOR] +3 [ICON_RESEARCH] Science from Resource cases.</Text>
+			<Text>Utilisé par de puissante unités.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Bonus de monopole stratégique (25%):[ENDCOLOR] Les unités gagnent +10% [ICON_STRENGTH] Puissance en attaque.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Global Bonus de monopole (50%):[ENDCOLOR] +3 [ICON_RESEARCH] Science sur les cases de ressources.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_MOD_PRODUCTION_IRON">
-			<Text>Used by powerful Units throughout the game.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus (25%):[ENDCOLOR] Units gagnent +10% [ICON_STRENGTH] Force when defending.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Global Monopoly Bonus (50%):[ENDCOLOR] +3 [ICON_PRODUCTION] Production from Resource cases.</Text>
+			<Text>Utilisé par de puissante unités tout au long du jeu.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Bonus de monopole stratégique (25%):[ENDCOLOR] Les unités gagnent +10% [ICON_STRENGTH] Puissance en défense.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Global Bonus de monopole (50%):[ENDCOLOR] +3 [ICON_PRODUCTION] Production sur les cases de ressources.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOURCE_MONOPOLY_MOD_SCIENCE_URANIUM">
-			<Text>Used to build terrifying weapons of mass destruction.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Strategic Monopoly Bonus (25%):[ENDCOLOR] Units gagnent +10% [ICON_STRENGTH] Force when attacking.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Global Monopoly Bonus (50%):[ENDCOLOR] +10% [ICON_RESEARCH] Science in all owned Villes.</Text>
+			<Text>Utilisé pour construire de terrifiantes armes de destruction massive.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Bonus de monopole stratégique (25%):[ENDCOLOR] Les unités gagnent +10% [ICON_STRENGTH] Puissance en attaque.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Global Bonus de monopole (50%):[ENDCOLOR] +10% [ICON_RESEARCH] Science dans toutes vos villes.</Text>
 		</Row>
 
 		<!-- Tooltip for Strategic Monopolies -->
 		<Row Tag="TXT_KEY_NOTIFICATION_STRATEGIC_MONOPOLY_GAINED">
-			<Text>You control over 25% of the World's [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR], et therefore have a Strategic Monopoly![NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
+			<Text>Vous contrôlez plus de 25% des [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR] du monde, et vous avez don un monopole stratégique![NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_STRATEGIC_MONOPOLY_GAINED">
-			<Text>Strategic Monopoly on [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
+			<Text>Monopole stratégique sur les [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_NOTIFICATION_OTHER_PLAYER_STRATEGIC_MONOPOLY_GAINED">
-			<Text>{3_CivName} {3_CivName: plural 1?controls; other?control;} over 25% of the World's [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR], et therefore has a Strategic Monopoly![NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
+			<Text>{3_CivName} {3_CivName: plural 1?controle; other?controlent;} plus de 25% des [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR] du monde, et possède ainsi  un monopole stratégique![NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_OTHER_PLAYER_STRATEGIC_MONOPOLY_GAINED">
-			<Text>{2_CivName} {2_CivName: plural 1?has; other?have;} a Strategic Monopoly on [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
+			<Text>{2_CivName} {2_CivName: plural 1?a; other?ont;} un monopole stratégique sur les [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_NOTIFICATION_STRATEGIC_MONOPOLY_LOST">
-			<Text>You [COLOR_NEGATIVE_TEXT]no longer have[ENDCOLOR] a Strategic Monopoly on [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]![NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Lost:[ENDCOLOR][NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
+			<Text>Vous [COLOR_NEGATIVE_TEXT]n'avez plus[ENDCOLOR] de monopole stratégique sur les [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]![NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Perdu:[ENDCOLOR][NEWLINE][NEWLINE]{2_ResourceHelp}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_STRATEGIC_MONOPOLY_LOST">
-			<Text>Lost Strategic Monopoly on [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
+			<Text>Monopole statégique perdu pour les [COLOR_POSITIVE_TEXT]{1_ResourceNames}[ENDCOLOR]!</Text>
 		</Row>
 
 		<!-- Tooltip for Monopolies -->
 		<Row Tag="TXT_KEY_FOODMOD_MONOPOLY_RESOURCE">
-			<Text>[NEWLINE][ICON_BULLET]Resource Monopolies Modifier: {1_Num}%</Text>
+			<Text>[NEWLINE][ICON_BULLET]Modificateur des monopoles de ressources: {1_Num}%</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CULTURE_FROM_RESOURCE_MONOPOLY">
-			<Text>+{1_Num}% [ICON_CULTURE] for Resource Monopolies</Text>
+			<Text>+{1_Num}% [ICON_CULTURE] pour les monopoles de ressources</Text>
 		</Row>
 		<Row Tag="TXT_KEY_FAITH_FROM_RESOURCE_MONOPOLY">
-			<Text>+{1_Num}% [ICON_PEACE] from Resource Monopolies</Text>
+			<Text>+{1_Num}% [ICON_PEACE] des monopoles de ressources</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MONOPOLIES_TT">
-			<Text>Global Resource Monopolies are achieved when you control over 50% of a Luxury or Strategic Resource. This value can exceed 100% if you produce more of a Resource than exists on the Map. More than one Civilization can, therefore, have a Global Monopoly (though this is quite rare).</Text>
+			<Text>Les monopoles glabaux de ressources sont atteints lorsque vous contrôlez plus de 50% d'une ressource de luxe ou de ressources stratégiques. Cette valeur peut être supérieure à 100 % si vous produisez plus d'e ressource que ce qui existe sur la carte. Plus d'une civilisation peut donc avoir un monopole mondial (bien que ce soit assez rare).</Text>
 		</Row>
 	</Language_fr_FR>
+	<!-- ???? -->
 	<PostDefines>
 		<Row Name="TIPI_IMPROVEMENT">
 			<Key>IMPROVEMENT_ENCAMPMENT_SHOSHONE</Key>
