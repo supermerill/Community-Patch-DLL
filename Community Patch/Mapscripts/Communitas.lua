@@ -22,6 +22,8 @@ governed by the elevation map used to create the landforms.
 
 --]]------------------------------------------------------------------------------
 
+-- modified by merill on 14/04 to make experiment.
+
 include("MapGenerator")
 include("FeatureGenerator")
 include("TerrainGenerator")
@@ -527,31 +529,67 @@ function GetMapScriptInfo()
                 DefaultValue = 2,
                 SortPriority = 3,
             },
+			{
+                Name = "World size",
+                Values = {
+                    "Default",
+                    "Smaller"
+                },
+                DefaultValue = 1,
+                SortPriority = 4,
+            },
 		},
 	}
 end
 
 function GetMapInitData(worldSize)
 	print("GetMapInitData")
-	local worldsizes = {
-		[GameInfo.Worlds.WORLDSIZE_DUEL.ID] = {38, 26},
-		[GameInfo.Worlds.WORLDSIZE_TINY.ID] = {54, 36},
-		[GameInfo.Worlds.WORLDSIZE_SMALL.ID] = {66, 44},
-		[GameInfo.Worlds.WORLDSIZE_STANDARD.ID] = {76, 50},
-		[GameInfo.Worlds.WORLDSIZE_LARGE.ID] = {84, 56},
-		[GameInfo.Worlds.WORLDSIZE_HUGE.ID] = {92, 62}
-		}
-		
-	if Map.GetCustomOption(6) == 2 then
-		-- Enlarge terra-style maps 30% to create expansion room on the new world
-		worldsizes = {
-		[GameInfo.Worlds.WORLDSIZE_DUEL.ID] = {44, 28},
-		[GameInfo.Worlds.WORLDSIZE_TINY.ID] = {60, 40},
-		[GameInfo.Worlds.WORLDSIZE_SMALL.ID] = {74, 50},
-		[GameInfo.Worlds.WORLDSIZE_STANDARD.ID] = {86, 58},
-		[GameInfo.Worlds.WORLDSIZE_LARGE.ID] = {96, 64},
-		[GameInfo.Worlds.WORLDSIZE_HUGE.ID] = {106, 70}
-		}
+	
+	if Map.GetCustomOption(9) == 1 then
+		-- default size
+		local worldsizes = {
+			[GameInfo.Worlds.WORLDSIZE_DUEL.ID] = {38, 26},
+			[GameInfo.Worlds.WORLDSIZE_TINY.ID] = {54, 36},
+			[GameInfo.Worlds.WORLDSIZE_SMALL.ID] = {66, 44},
+			[GameInfo.Worlds.WORLDSIZE_STANDARD.ID] = {76, 50},
+			[GameInfo.Worlds.WORLDSIZE_LARGE.ID] = {84, 56},
+			[GameInfo.Worlds.WORLDSIZE_HUGE.ID] = {92, 62}
+			}
+			
+		if Map.GetCustomOption(6) == 2 then
+			-- Enlarge terra-style maps 30% to create expansion room on the new world
+			worldsizes = {
+			[GameInfo.Worlds.WORLDSIZE_DUEL.ID] = {44, 28},
+			[GameInfo.Worlds.WORLDSIZE_TINY.ID] = {60, 40},
+			[GameInfo.Worlds.WORLDSIZE_SMALL.ID] = {74, 50},
+			[GameInfo.Worlds.WORLDSIZE_STANDARD.ID] = {86, 58},
+			[GameInfo.Worlds.WORLDSIZE_LARGE.ID] = {96, 64},
+			[GameInfo.Worlds.WORLDSIZE_HUGE.ID] = {106, 70}
+			}
+		end
+	else
+		-- smaller size (30% less)
+		local worldsizes = {
+			[GameInfo.Worlds.WORLDSIZE_DUEL.ID] = {33, 23},
+			[GameInfo.Worlds.WORLDSIZE_TINY.ID] = {47, 31},
+			[GameInfo.Worlds.WORLDSIZE_SMALL.ID] = {57, 38},
+			[GameInfo.Worlds.WORLDSIZE_STANDARD.ID] = {66, 44},
+			[GameInfo.Worlds.WORLDSIZE_LARGE.ID] = {73, 49},
+			[GameInfo.Worlds.WORLDSIZE_HUGE.ID] = {80, 54}
+			}
+			
+		if Map.GetCustomOption(6) == 2 then
+			-- Enlarge terra-style maps 30% to create expansion room on the new world
+			worldsizes = {
+			[GameInfo.Worlds.WORLDSIZE_DUEL.ID] = {38, 26},
+			[GameInfo.Worlds.WORLDSIZE_TINY.ID] = {54, 36},
+			[GameInfo.Worlds.WORLDSIZE_SMALL.ID] = {66, 44},
+			[GameInfo.Worlds.WORLDSIZE_STANDARD.ID] = {76, 50},
+			[GameInfo.Worlds.WORLDSIZE_LARGE.ID] = {84, 56},
+			[GameInfo.Worlds.WORLDSIZE_HUGE.ID] = {92, 62}
+			}
+		end
+	
 	end
 	--
 	local grid_size = worldsizes[worldSize]
