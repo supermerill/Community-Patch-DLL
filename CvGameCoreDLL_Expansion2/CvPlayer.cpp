@@ -8197,6 +8197,17 @@ void CvPlayer::DoEventChoice(EventChoiceTypes eEventChoice, EventTypes eEvent)
 				if(iPassYield != 0)
 				{
 					iPassYield *= -1;
+					iPassYield *= GC.getGame().getGameSpeedInfo().getTrainPercent();
+					iPassYield /= 100;
+					if (pkEventChoiceInfo->IsEraScaling())
+					{
+						int iEra = GetCurrentEra();
+						if (iEra <= 0)
+						{
+							iEra = 1;
+						}
+						iPassYield *= iEra;
+					}
 					CvCity* pCity = getCapitalCity();
 					if(pCity != NULL)
 					{
@@ -8491,6 +8502,8 @@ void CvPlayer::DoEventChoice(EventChoiceTypes eEventChoice, EventTypes eEvent)
 						if(!pkEventChoiceInfo->isInstantYieldAllCities() && !pLoopCity->isCapital())
 							continue;
 
+						iPassYield *= GC.getGame().getGameSpeedInfo().getTrainPercent();
+						iPassYield /= 100;
 						doInstantYield(INSTANT_YIELD_TYPE_INSTANT, false, NO_GREATPERSON, NO_BUILDING, iPassYield, pkEventChoiceInfo->IsEraScaling(), NO_PLAYER, NULL, true, pLoopCity, false, true, true, eYield);
 					}
 				}
