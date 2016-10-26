@@ -444,6 +444,12 @@ public:
 	bool canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible = false, bool bTestGold = true) const;
 	bool build(BuildTypes eBuild);
 
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+	int getBuildCost(BuildingTypes eBuilding) const;
+	int getBuilderStrength() const;
+	void setBuilderStrength(const int newPower);
+#endif
+
 	bool canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const;
 	void promote(PromotionTypes ePromotion, int iLeaderUnitId);
 
@@ -1907,6 +1913,10 @@ protected:
 
 	CvUnitPromotions  m_Promotions;
 	CvUnitReligion* m_pReligion;
+
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+	FAutoVariable<int, CvUnit> m_iBuilderPower;
+#endif
 
 	FAutoVariable<std::map<TerrainTypes,int>, CvUnit> m_terrainDoubleMoveCount;
 	FAutoVariable<std::map<FeatureTypes,int>, CvUnit> m_featureDoubleMoveCount;

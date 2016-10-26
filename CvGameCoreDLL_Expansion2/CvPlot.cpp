@@ -11988,6 +11988,8 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePl
 	if(pkBuildInfo == NULL)
 		return false;
 
+	CUSTOMLOG("changeBuildProgress: iChange=%i for pkBuildInfo.cost=%i", iChange, pkBuildInfo->getCost());
+
 	if(iChange != 0)
 	{
 		if(NULL == m_paiBuildProgress)
@@ -12008,6 +12010,9 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePl
 				m_eImprovementTypeUnderConstruction = eImprovement;
 			}
 		}
+
+
+		CUSTOMLOG("changeBuildProgress: getBuildProgress(eBuild)=%i, getBuildTime(eBuild, ePlayer)=%i", getBuildProgress(eBuild), getBuildTime(eBuild, ePlayer));
 
 		m_paiBuildProgress[eBuild] += iChange;
 		CvAssert(getBuildProgress(eBuild) >= 0);

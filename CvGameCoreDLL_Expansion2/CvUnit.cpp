@@ -422,6 +422,10 @@ CvUnit::CvUnit() :
 #if defined(MOD_BALANCE_CORE)
 	, m_yieldFromScouting("CvUnit::m_yieldFromScouting", m_syncArchive/*, true*/)
 #endif
+
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+	, m_iBuilderPower("CvUnit::m_iBuilderPower", m_syncArchive)
+#endif
 {
 	initPromotions();
 	OBJECT_ALLOCATED
@@ -13255,7 +13259,10 @@ bool CvUnit::build(BuildTypes eBuild)
 		}
 	}
 
+	int workRateWithMoves = workRate(false);
+
 	int iStartedYet = pPlot->getBuildProgress(eBuild);
+	CUSTOMLOG("CVUNIT::build  : workRateWithMoves=%i , iStartedYet=%i", workRateWithMoves, iStartedYet);
 
 	// if we are starting something new wipe out the old thing immediately
 	if(iStartedYet == 0)
@@ -13281,11 +13288,11 @@ bool CvUnit::build(BuildTypes eBuild)
 
 		// wipe out all build progress also
 
-		bFinished = pPlot->changeBuildProgress(eBuild, workRate(false), getOwner());
+		bFinished = pPlot->changeBuildProgress(eBuild, workRateWithMoves, getOwner());
 
 	}
 
-	bFinished = pPlot->changeBuildProgress(eBuild, workRate(false), getOwner());
+	bFinished = pPlot->changeBuildProgress(eBuild, workRateWithMoves, getOwner());
 
 #if defined(MOD_EVENTS_PLOT)
 	if (MOD_EVENTS_PLOT) {
@@ -13523,6 +13530,25 @@ bool CvUnit::build(BuildTypes eBuild)
 #endif
 			}
 
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+			if (ACTIVATE_MOD_BALANCE_BUILDERSCIV6){
+				//if we are a builder
+				CUSTOMLOG("CVUNIT::build : before thing have a strenght of %i", getBuilderStrength());
+				if (getBuilderStrength() > 0){
+					//check the amount of work done
+					int workDone = workRateWithMoves;
+					if (iStartedYet < workRateWithMoves)
+					{
+						workDone = iStartedYet;
+					}
+					CUSTOMLOG("CVUNIT::build : amount of work to remove: %i", workDone);
+					// remove this amount (and kill me if it's too high)
+					setBuilderStrength(getBuilderStrength() - workDone);
+					CUSTOMLOG("CVUNIT::build  : now builder have a strenght of %i", getBuilderStrength());
+				}
+			}
+#endif
+
 			// Add to player's Improvement count, which will increase cost of future Improvements
 			if(pkBuildInfo->getImprovement() != NO_IMPROVEMENT || pkBuildInfo->getRoute() != NO_ROUTE)	// Prevents chopping Forest or Jungle from counting
 			{
@@ -13576,6 +13602,32 @@ bool CvUnit::build(BuildTypes eBuild)
 	}
 
 	return bFinished;
+}
+
+//	--------------------------------------------------------------------------------
+int CvUnit::getBuildCost(BuildingTypes eBuilding) const
+{
+	//todo: use xml value;
+	return 100;
+}
+
+//	--------------------------------------------------------------------------------
+int CvUnit::getBuilderStrength() const
+{
+	return m_iBuilderPower;
+}
+
+//	--------------------------------------------------------------------------------
+void CvUnit::setBuilderStrength(const int newPower)
+{
+	m_iBuilderPower = newPower;
+	if (m_iBuilderPower < 0) m_iBuilderPower = 0;
+	if (m_iBuilderPower == 0){
+
+		//delete unit
+		kill(true);
+	}
+
 }
 
 

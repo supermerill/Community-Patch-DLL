@@ -72,6 +72,9 @@ CvUnitEntry::CvUnitEntry(void) :
 	m_bFoundReligion(false),
 	m_bRequiresEnhancedReligion(false),
 	m_bProhibitsSpread(false),
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+	m_iBuilderStrength(0),
+#endif
 	m_bCanBuyCityState(false),
 #if defined(MOD_GLOBAL_SEPARATE_GREAT_ADMIRAL)
 	m_bCanRepairFleet(false),
@@ -289,6 +292,9 @@ bool CvUnitEntry::CacheResults(Database::Results& kResults, CvDatabaseUtility& k
 	m_bFoundReligion = kResults.GetBool("FoundReligion");
 	m_bRequiresEnhancedReligion = kResults.GetBool("RequiresEnhancedReligion");
 	m_bProhibitsSpread = kResults.GetBool("ProhibitsSpread");
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+	m_iBuilderStrength = kResults.GetInt("BuilderStrength");
+#endif
 	m_bCanBuyCityState = kResults.GetBool("CanBuyCityState");
 #if defined(MOD_GLOBAL_SEPARATE_GREAT_ADMIRAL)
 	m_bCanRepairFleet = kResults.GetBool("CanRepairFleet");
@@ -888,6 +894,14 @@ int CvUnitEntry::GetReligiousStrength() const
 {
 	return m_iReligiousStrength;
 }
+
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+/// How strong is this builder unit?
+int CvUnitEntry::GetBuilderStrength() const
+{
+	return m_iBuilderStrength;
+}
+#endif
 
 /// Can this Unit Found a Religion?
 bool CvUnitEntry::IsFoundReligion() const

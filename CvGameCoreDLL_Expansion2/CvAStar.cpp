@@ -388,7 +388,7 @@ bool CvAStar::FindPathWithCurrentConfiguration(int iXstart, int iYstart, int iXd
 		if (iStartIndex==giLastStartIndex && iStartIndex>0)
 		{
 			OutputDebugString("Repeated pathfinding start\n");
-			gStackWalker.ShowCallstack();
+			//gStackWalker.ShowCallstack();
 		}
 		giLastStartIndex = iStartIndex;
 

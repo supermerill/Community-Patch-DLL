@@ -290,9 +290,13 @@ SET PrereqTech = 'TECH_METAL_CASTING'
 WHERE Type = 'BUILD_LUMBERMILL' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_TERRAIN' AND Value= 1 );
 
 -- Railroads now more expensive (+1)
+-- Merill mod : no maintenance, as it's now expensive in hammer to build
 UPDATE Routes
-SET GoldMaintenance = '3'
+SET GoldMaintenance = '0'
 WHERE Type = 'ROUTE_RAILROAD';
+UPDATE Routes
+SET GoldMaintenance = '0'
+WHERE Type = 'ROUTE_ROAD';
 
 -- Farm
 UPDATE Builds

@@ -76,6 +76,9 @@ public:
 	bool IsRequiresEnhancedReligion() const;
 	bool IsProhibitsSpread() const;
 	bool IsRemoveHeresy() const;
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+	int GetBuilderStrength() const;
+#endif
 	bool IsCanBuyCityState() const;
 #if defined(MOD_GLOBAL_SEPARATE_GREAT_ADMIRAL)
 	bool IsCanRepairFleet() const;
@@ -290,6 +293,9 @@ private:
 	bool m_bRequiresEnhancedReligion;
 	bool m_bProhibitsSpread;
 	bool m_bRemoveHeresy;
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+	int m_iBuilderStrength;
+#endif
 	bool m_bCanBuyCityState;
 #if defined(MOD_GLOBAL_SEPARATE_GREAT_ADMIRAL)
 	bool m_bCanRepairFleet;
