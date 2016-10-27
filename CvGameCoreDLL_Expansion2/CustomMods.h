@@ -56,8 +56,8 @@
 
 /// merill additions
 #define MOD_BALANCE_MERILL_ADDITION
-#define ACTIVATE_MOD_BALANCE_AUTOCREATE_ROUTE true //TODO: pass it into an xml-defined value
-#define ACTIVATE_MOD_BALANCE_BUILDERSCIV6 true //TODO: pass it into an xml-defined value
+#define ACTIVATE_MOD_BALANCE_AUTOCREATE_ROAD true //TODO: pass it via an xml-defined value
+#define ACTIVATE_MOD_BALANCE_BUILDERSCIV6 true //TODO: pass it via an xml-defined value
 
 ///	air units take a flat amount of damage in each air strike (plus interceptions)
 #define MOD_CORE_AIRCOMBAT_SIMPLIFIED

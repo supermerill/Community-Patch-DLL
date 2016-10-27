@@ -424,7 +424,7 @@ CvUnit::CvUnit() :
 #endif
 
 #if defined(MOD_BALANCE_MERILL_ADDITION)
-	, m_iBuilderPower("CvUnit::m_iBuilderPower", m_syncArchive)
+	, m_iBuilderStrength("CvUnit::m_iBuilderStrength", m_syncArchive)
 #endif
 {
 	initPromotions();
@@ -13545,6 +13545,12 @@ bool CvUnit::build(BuildTypes eBuild)
 					// remove this amount (and kill me if it's too high)
 					setBuilderStrength(getBuilderStrength() - workDone);
 					CUSTOMLOG("CVUNIT::build  : now builder have a strenght of %i", getBuilderStrength());
+					if (m_iBuilderStrength == 0){
+
+						CUSTOMLOG("CVUNIT::build  : kill builder!");
+						//delete unit
+						kill(true);
+					}
 				}
 			}
 #endif
@@ -13614,19 +13620,14 @@ int CvUnit::getBuildCost(BuildingTypes eBuilding) const
 //	--------------------------------------------------------------------------------
 int CvUnit::getBuilderStrength() const
 {
-	return m_iBuilderPower;
+	return m_iBuilderStrength;
 }
 
 //	--------------------------------------------------------------------------------
 void CvUnit::setBuilderStrength(const int newPower)
 {
-	m_iBuilderPower = newPower;
-	if (m_iBuilderPower < 0) m_iBuilderPower = 0;
-	if (m_iBuilderPower == 0){
-
-		//delete unit
-		kill(true);
-	}
+	m_iBuilderStrength = newPower;
+	if (m_iBuilderStrength < 0) m_iBuilderStrength = 0;
 
 }
 

@@ -289,6 +289,12 @@ UPDATE Builds
 SET PrereqTech = 'TECH_METAL_CASTING'
 WHERE Type = 'BUILD_LUMBERMILL' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_TERRAIN' AND Value= 1 );
 
+--change build time to 100 for everything that have a time ( 400 for road and 700 for improvements in vanilla)
+UPDATE Builds
+SET Time = 100
+WHERE Time > 100;
+
+
 -- Railroads now more expensive (+1)
 -- Merill mod : no maintenance, as it's now expensive in hammer to build
 UPDATE Routes

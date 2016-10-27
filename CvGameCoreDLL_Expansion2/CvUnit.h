@@ -1915,7 +1915,7 @@ protected:
 	CvUnitReligion* m_pReligion;
 
 #if defined(MOD_BALANCE_MERILL_ADDITION)
-	FAutoVariable<int, CvUnit> m_iBuilderPower;
+	FAutoVariable<int, CvUnit> m_iBuilderStrength;
 #endif
 
 	FAutoVariable<std::map<TerrainTypes,int>, CvUnit> m_terrainDoubleMoveCount;
