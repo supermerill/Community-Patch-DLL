@@ -19,6 +19,7 @@
 	-- Workers Reduced Work Rate to slow down early growth
 	--merill : increase it to make each build instant (from 100~90)
 	UPDATE Units SET WorkRate = '1000' WHERE Type = 'UNIT_WORKER' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );
+	ALTER TABLE Units ADD BuilderStrength INTEGER DEFAULT 0;
 	UPDATE Units SET BuilderStrength = '300' WHERE Type = 'UNIT_WORKER' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );
 	-- from 70
 	UPDATE Units SET Cost = '30' WHERE Type = 'UNIT_WORKER' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_UNITS' AND Value= 1 );

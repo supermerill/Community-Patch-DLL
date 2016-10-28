@@ -2523,29 +2523,34 @@ void CvPlayerTrade::MoveUnits (void)
 						for (uint ui = 0; ui < nbPLotsInTradeRoute; ui++){
 							CvPlot* pRoadToBuildPlot = GC.getMap().plot(pTradeConnection->m_aPlotList[ui].m_iX, pTradeConnection->m_aPlotList[ui].m_iY);
 
-							// i didn't go by plot->changeBuildProgress to not fire unwanted things, like "BuildFinished".
-							// so it's mostlya copy-paste from the road section of this section
-
-							RouteTypes autoBuildRoadType = RouteTypes::ROUTE_ROAD;
-							if (GET_PLAYER(pTradeConnection->m_eOriginOwner).GetCurrentEra() >= 4)
+							//don't build roads on sea
+							if (pRoadToBuildPlot->IsPlotLand())
 							{
-								autoBuildRoadType = RouteTypes::ROUTE_RAILROAD;
-							}
-							//don't build road / change nationality (for the moment) of roads if already built.
-							if (pRoadToBuildPlot->getRouteType() != autoBuildRoadType){
-								CvRouteInfo* pkRouteInfo = GC.getRouteInfo(autoBuildRoadType);
-								if (pkRouteInfo)
-								{
-									pRoadToBuildPlot->setRouteType(autoBuildRoadType);
 
-									// Unowned plot, someone has to foot the bill
-									if (pRoadToBuildPlot->getOwner() == NO_PLAYER)
+								// i didn't go by plot->changeBuildProgress to not fire unwanted things, like "BuildFinished".
+								// so it's mostly a copy-paste from the road section of this method
+								RouteTypes autoBuildRoadType = RouteTypes::ROUTE_ROAD;
+								//TODO: check if the rairoad is unlocked (by tech).
+								if (GET_PLAYER(pTradeConnection->m_eOriginOwner).GetCurrentEra() >= 4)
+								{
+									autoBuildRoadType = RouteTypes::ROUTE_RAILROAD;
+								}
+								//don't build road / change nationality (for the moment) of roads if already built.
+								if (pRoadToBuildPlot->getRouteType() != autoBuildRoadType){
+									CvRouteInfo* pkRouteInfo = GC.getRouteInfo(autoBuildRoadType);
+									if (pkRouteInfo)
 									{
-										if (pRoadToBuildPlot->MustPayMaintenanceHere(pTradeConnection->m_eOriginOwner))
+										pRoadToBuildPlot->setRouteType(autoBuildRoadType);
+
+										// Unowned plot, someone has to foot the bill
+										if (pRoadToBuildPlot->getOwner() == NO_PLAYER)
 										{
-											GET_PLAYER(pTradeConnection->m_eOriginOwner).GetTreasury()->ChangeBaseImprovementGoldMaintenance(pkRouteInfo->GetGoldMaintenance());
+											if (pRoadToBuildPlot->MustPayMaintenanceHere(pTradeConnection->m_eOriginOwner))
+											{
+												GET_PLAYER(pTradeConnection->m_eOriginOwner).GetTreasury()->ChangeBaseImprovementGoldMaintenance(pkRouteInfo->GetGoldMaintenance());
+											}
+											pRoadToBuildPlot->SetPlayerResponsibleForRoute(pTradeConnection->m_eOriginOwner);
 										}
-										pRoadToBuildPlot->SetPlayerResponsibleForRoute(pTradeConnection->m_eOriginOwner);
 									}
 								}
 							}

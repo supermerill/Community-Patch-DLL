@@ -2930,6 +2930,12 @@ int CvPlot::getBuildTime(BuildTypes eBuild, PlayerTypes ePlayer) const
 			iTime += GET_TEAM(eTeam).getBuildTimeChange(eBuild);
 		}
 	}
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+	if (ePlayer != NO_PLAYER && GC.getBuildInfo(eBuild)->getRoute() != NO_ROUTE && GET_PLAYER(ePlayer).GetRouteTimeMod() != 0){
+		iTime *= (100 + GET_PLAYER(ePlayer).GetRouteTimeMod());
+		iTime /= 100;
+	}
+#endif
 
 	// Repair is either 3 turns or the original build time, whichever is shorter
 	if(GC.getBuildInfo(eBuild)->isRepair())

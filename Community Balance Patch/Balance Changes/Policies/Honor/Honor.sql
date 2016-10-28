@@ -94,6 +94,12 @@ UPDATE Policies
 SET RouteGoldMaintenanceMod = '-50'
 WHERE Type = 'POLICY_MILITARY_CASTE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
 
+--merill addition: RouteGoldMaintenanceMod -> RouteCostMod
+ALTER TABLE Policies ADD RouteCostMod INTEGER DEFAULT 0;
+UPDATE Policies
+SET RouteCostMod = '-50'
+WHERE Type = 'POLICY_MILITARY_CASTE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_POLICIES' AND Value= 1 );
+
 -- Professional Army (Now Heroism)
 UPDATE Policies
 SET UnitUpgradeCostMod = '0'

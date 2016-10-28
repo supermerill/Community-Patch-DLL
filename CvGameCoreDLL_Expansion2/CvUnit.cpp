@@ -582,6 +582,14 @@ void CvUnit::initWithSpecificName(int iID, UnitTypes eUnit, const char* strKey, 
 	{
 		kPlayer.ChangeNumBuilders(1);
 	}
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+	//get builder strength
+	if (getUnitInfo().GetBuilderStrength() > 0)
+	{
+		// use speed modifier to increase the work count. *4 because a 25% increase = +1 work = +100 strength
+		setBuilderStrength(getUnitInfo().GetBuilderStrength() + kPlayer.getWorkerSpeedModifier() * 4 + kPlayer.GetPlayerTraits()->GetWorkerSpeedModifier() * 4);
+	}
+#endif
 
 	// Units can add Unhappiness
 	if(GC.getUnitInfo(getUnitType())->GetUnhappiness() != 0)
@@ -969,6 +977,7 @@ void CvUnit::initWithNameOffset(int iID, UnitTypes eUnit, int iNameOffset, UnitA
 
 	initPromotions();
 	m_pReligion->Init();
+
 
 	//--------------------------------
 	// Init saved data
@@ -6099,6 +6108,14 @@ int CvUnit::GetScrapGold() const
 	iNumGold *= GC.getGame().getGameSpeedInfo().getTrainPercent();
 	iNumGold /= 100;
 
+#if defined(MOD_BALANCE_MERILL_ADDITION)
+	//if we are a builder (something with builderstrength), our value decrease with our build strength
+	if (getBuilderStrength() > 0)
+	{
+		iNumGold *= getUnitInfo().GetBuilderStrength() - getBuilderStrength();
+		iNumGold /= getUnitInfo().GetBuilderStrength();
+	}
+#endif
 
 	// Check to see if we are transporting other units and add in their scrap value as well.
 	CvPlot* pPlot = plot();
@@ -13263,6 +13280,7 @@ bool CvUnit::build(BuildTypes eBuild)
 
 	int iStartedYet = pPlot->getBuildProgress(eBuild);
 	CUSTOMLOG("CVUNIT::build  : workRateWithMoves=%i , iStartedYet=%i", workRateWithMoves, iStartedYet);
+	
 
 	// if we are starting something new wipe out the old thing immediately
 	if(iStartedYet == 0)
@@ -13531,26 +13549,33 @@ bool CvUnit::build(BuildTypes eBuild)
 			}
 
 #if defined(MOD_BALANCE_MERILL_ADDITION)
-			if (ACTIVATE_MOD_BALANCE_BUILDERSCIV6){
-				//if we are a builder
-				CUSTOMLOG("CVUNIT::build : before thing have a strenght of %i", getBuilderStrength());
-				if (getBuilderStrength() > 0){
-					//check the amount of work done
-					int workDone = workRateWithMoves;
-					if (iStartedYet < workRateWithMoves)
-					{
-						workDone = iStartedYet;
-					}
-					CUSTOMLOG("CVUNIT::build : amount of work to remove: %i", workDone);
-					// remove this amount (and kill me if it's too high)
-					setBuilderStrength(getBuilderStrength() - workDone);
-					CUSTOMLOG("CVUNIT::build  : now builder have a strenght of %i", getBuilderStrength());
-					if (m_iBuilderStrength == 0){
+			//if we are a builder (something with builderstrength)
+			CUSTOMLOG("CVUNIT::build : thing have a strenght of %i before building", getBuilderStrength());
+			if (getBuilderStrength() > 0){
+				//check the amount of work done
+				int totalCost = pkBuildInfo->getTime();
+				int workDone = workRateWithMoves;
+				int currentCost = totalCost - workDone;
+				CUSTOMLOG("CVUNIT::build : totalCost=%i, workDone=%i, currentCost=%i, workRateWithMoves=%i", totalCost, workDone, currentCost, workRateWithMoves);
+				if (currentCost < workRateWithMoves)
+				{
+					workDone = currentCost;
+				}
+				//do not remove most of that cost
+				if (pkBuildInfo->getRoute() != NO_ROUTE){
+					workDone = workDone * (100 + kPlayer.GetRouteTimeMod());
+					workDone /= 100;
+				}
 
-						CUSTOMLOG("CVUNIT::build  : kill builder!");
-						//delete unit
-						kill(true);
-					}
+				CUSTOMLOG("CVUNIT::build : amount of work to remove: %i", workDone);
+				// remove this amount (and kill me if it's too high)
+				setBuilderStrength(getBuilderStrength() - workDone);
+				CUSTOMLOG("CVUNIT::build  : now builder have a strenght of %i", getBuilderStrength());
+				if (m_iBuilderStrength == 0){
+
+					CUSTOMLOG("CVUNIT::build  : kill builder!");
+					//delete unit
+					kill(true);
 				}
 			}
 #endif
