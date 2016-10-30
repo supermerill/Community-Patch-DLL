@@ -207,6 +207,9 @@ public:
 	bool IsConvertEnemyUnitToBarbarian() const;
 	bool IsWLTKDFromBirth() const;
 	bool IsGoldenAgeFromBirth() const;
+	bool IsCultureBoost() const;
+	bool IsExtraAttackHealthOnKill() const;
+	bool IsHighSeaRaider() const;
 #endif
 	// Accessor Functions (Arrays)
 	int GetPrereqAndTechs(int i) const;
@@ -385,6 +388,9 @@ private:
 	bool m_bConvertEnemyUnitToBarbarian;
 	bool m_bWLTKD;
 	bool m_bGoldenAge;
+	bool m_bCultureBoost;
+	bool m_bExtraAttackHealthOnKill;
+	bool m_bHighSeaRaider;
 #endif
 	int m_iCultureBombRadius;
 	int m_iGoldenAgeTurns;
