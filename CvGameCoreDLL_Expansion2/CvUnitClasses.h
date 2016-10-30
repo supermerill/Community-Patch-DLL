@@ -76,7 +76,7 @@ public:
 	bool IsRequiresEnhancedReligion() const;
 	bool IsProhibitsSpread() const;
 	bool IsRemoveHeresy() const;
-#if defined(MOD_BALANCE_MERILL_ADDITION)
+#if defined(MOD_CIV6_WORKER)
 	int GetBuilderStrength() const;
 #endif
 	bool IsCanBuyCityState() const;
@@ -293,7 +293,7 @@ private:
 	bool m_bRequiresEnhancedReligion;
 	bool m_bProhibitsSpread;
 	bool m_bRemoveHeresy;
-#if defined(MOD_BALANCE_MERILL_ADDITION)
+#if defined(MOD_CIV6_WORKER)
 	int m_iBuilderStrength;
 #endif
 	bool m_bCanBuyCityState;

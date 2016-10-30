@@ -54,11 +54,6 @@
 /// for testing
 #define MOD_CORE_REDUCE_RANDOMNESS
 
-/// merill additions
-#define MOD_BALANCE_MERILL_ADDITION
-#define ACTIVATE_MOD_BALANCE_AUTOCREATE_ROAD true //TODO: pass it via an xml-defined value
-#define ACTIVATE_MOD_BALANCE_BUILDERSCIV6 true //TODO: pass it via an xml-defined value
-
 ///	air units take a flat amount of damage in each air strike (plus interceptions)
 #define MOD_CORE_AIRCOMBAT_SIMPLIFIED
 
@@ -383,6 +378,11 @@
 #define MOD_BALANCE_CORE_EVENTS						(MOD_COMMUNITY_PATCH && gCustomMods.isBALANCE_CORE_EVENTS())
 #define MOD_NO_RANDOM_TEXT_CIVS						(MOD_COMMUNITY_PATCH && gCustomMods.isNO_RANDOM_TEXT_CIVS())
 #define MOD_BALANCE_RETROACTIVE_PROMOS				(MOD_COMMUNITY_PATCH && gCustomMods.isBALANCE_RETROACTIVE_PROMOS())
+
+// Add a "worker cost" to improvement and delete the worker when he expands all his "strength"
+#define MOD_CIV6_WORKER								gCustomMods.isCIV6_TYPE_WORKER()
+// Roads are created by trade routes.
+#define MOD_CIV6_ROADS								gCustomMods.isCIV6_ROADS()
 
 #endif
 // Changes melee ship units to be cargo carrying units with added promotions for ship and cargo
@@ -1445,6 +1445,9 @@ public:
 	MOD_OPT_DECL(BALANCE_CORE_EVENTS);
 	MOD_OPT_DECL(NO_RANDOM_TEXT_CIVS);
 	MOD_OPT_DECL(BALANCE_RETROACTIVE_PROMOS);
+
+	MOD_OPT_DECL(CIV6_WORKER);
+	MOD_OPT_DECL(CIV6_ROADS);
 
 	MOD_OPT_DECL(DIPLOMACY_CIV4_FEATURES);
 	MOD_OPT_DECL(CARGO_SHIPS);

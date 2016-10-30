@@ -423,7 +423,7 @@ CvUnit::CvUnit() :
 	, m_yieldFromScouting("CvUnit::m_yieldFromScouting", m_syncArchive/*, true*/)
 #endif
 
-#if defined(MOD_BALANCE_MERILL_ADDITION)
+#if defined(MOD_CIV6_WORKER)
 	, m_iBuilderStrength("CvUnit::m_iBuilderStrength", m_syncArchive)
 #endif
 {
@@ -582,7 +582,7 @@ void CvUnit::initWithSpecificName(int iID, UnitTypes eUnit, const char* strKey, 
 	{
 		kPlayer.ChangeNumBuilders(1);
 	}
-#if defined(MOD_BALANCE_MERILL_ADDITION)
+#if defined(MOD_CIV6_WORKER)
 	//get builder strength
 	if (getUnitInfo().GetBuilderStrength() > 0)
 	{
@@ -1163,6 +1163,14 @@ void CvUnit::initWithNameOffset(int iID, UnitTypes eUnit, int iNameOffset, UnitA
 	{
 		kPlayer.ChangeNumBuilders(1);
 	}
+#if defined(MOD_CIV6_WORKER)
+	//get builder strength
+	if (getUnitInfo().GetBuilderStrength() > 0)
+	{
+		// use speed modifier to increase the work count. *4 because a 25% increase = +1 work = +100 strength
+		setBuilderStrength(getUnitInfo().GetBuilderStrength() + kPlayer.getWorkerSpeedModifier() * 4 + kPlayer.GetPlayerTraits()->GetWorkerSpeedModifier() * 4);
+	}
+#endif
 #if defined(MOD_BALANCE_CORE_SETTLER_RESET_FOOD)
 	if(MOD_BALANCE_CORE_SETTLER_RESET_FOOD && getUnitInfo().IsFound())
 	{
@@ -6108,7 +6116,7 @@ int CvUnit::GetScrapGold() const
 	iNumGold *= GC.getGame().getGameSpeedInfo().getTrainPercent();
 	iNumGold /= 100;
 
-#if defined(MOD_BALANCE_MERILL_ADDITION)
+#if defined(MOD_CIV6_WORKER)
 	//if we are a builder (something with builderstrength), our value decrease with our build strength
 	if (getBuilderStrength() > 0)
 	{
@@ -13276,11 +13284,12 @@ bool CvUnit::build(BuildTypes eBuild)
 		}
 	}
 
-	int workRateWithMoves = workRate(false);
+	int iWorkRateWithMoves = workRate(false);
 
 	int iStartedYet = pPlot->getBuildProgress(eBuild);
-	CUSTOMLOG("CVUNIT::build  : workRateWithMoves=%i , iStartedYet=%i", workRateWithMoves, iStartedYet);
-	
+#if defined(MOD_CIV6_WORKER)
+	int iMaxTimetoBuild = pPlot->getBuildTime(eBuild, getOwner());
+#endif
 
 	// if we are starting something new wipe out the old thing immediately
 	if(iStartedYet == 0)
@@ -13306,11 +13315,11 @@ bool CvUnit::build(BuildTypes eBuild)
 
 		// wipe out all build progress also
 
-		bFinished = pPlot->changeBuildProgress(eBuild, workRateWithMoves, getOwner());
+		bFinished = pPlot->changeBuildProgress(eBuild, iWorkRateWithMoves, getOwner());
 
 	}
 
-	bFinished = pPlot->changeBuildProgress(eBuild, workRateWithMoves, getOwner());
+	bFinished = pPlot->changeBuildProgress(eBuild, iWorkRateWithMoves, getOwner());
 
 #if defined(MOD_EVENTS_PLOT)
 	if (MOD_EVENTS_PLOT) {
@@ -13548,32 +13557,35 @@ bool CvUnit::build(BuildTypes eBuild)
 #endif
 			}
 
-#if defined(MOD_BALANCE_MERILL_ADDITION)
+#if defined(MOD_CIV6_WORKER)
 			//if we are a builder (something with builderstrength)
-			CUSTOMLOG("CVUNIT::build : thing have a strenght of %i before building", getBuilderStrength());
-			if (getBuilderStrength() > 0){
+			if (getBuilderStrength() > 0)
+			{
 				//check the amount of work done
-				int totalCost = pkBuildInfo->getTime();
-				int workDone = workRateWithMoves;
-				int currentCost = totalCost - workDone;
-				CUSTOMLOG("CVUNIT::build : totalCost=%i, workDone=%i, currentCost=%i, workRateWithMoves=%i", totalCost, workDone, currentCost, workRateWithMoves);
-				if (currentCost < workRateWithMoves)
+				int iTotalCost = pkBuildInfo->getBuilderCost();
+				int iTimeUsed = pPlot->getBuildProgress(eBuild) - iStartedYet;
+				if (bFinished)
 				{
-					workDone = currentCost;
+					iTimeUsed = iMaxTimetoBuild - iStartedYet;
 				}
-				//do not remove most of that cost
-				if (pkBuildInfo->getRoute() != NO_ROUTE){
-					workDone = workDone * (100 + kPlayer.GetRouteTimeMod());
-					workDone /= 100;
+				int iCostThisTurn = iTotalCost * iTimeUsed;
+				iCostThisTurn /= iMaxTimetoBuild;
+				
+				//special mod for route construction (used by a policy)
+				if (pkBuildInfo->getRoute() != NO_ROUTE)
+				{
+					iCostThisTurn *= 100 + kPlayer.GetRouteCostMod();
+					iCostThisTurn /= 100;
+				}
+				//half cost for repair (todo: do not hardcode it)
+				if (pkBuildInfo->isRepair())
+				{
+					iCostThisTurn /= 2;
 				}
 
-				CUSTOMLOG("CVUNIT::build : amount of work to remove: %i", workDone);
 				// remove this amount (and kill me if it's too high)
-				setBuilderStrength(getBuilderStrength() - workDone);
-				CUSTOMLOG("CVUNIT::build  : now builder have a strenght of %i", getBuilderStrength());
+				setBuilderStrength(getBuilderStrength() - iCostThisTurn);
 				if (m_iBuilderStrength == 0){
-
-					CUSTOMLOG("CVUNIT::build  : kill builder!");
 					//delete unit
 					kill(true);
 				}
@@ -13633,13 +13645,6 @@ bool CvUnit::build(BuildTypes eBuild)
 	}
 
 	return bFinished;
-}
-
-//	--------------------------------------------------------------------------------
-int CvUnit::getBuildCost(BuildingTypes eBuilding) const
-{
-	//todo: use xml value;
-	return 100;
 }
 
 //	--------------------------------------------------------------------------------

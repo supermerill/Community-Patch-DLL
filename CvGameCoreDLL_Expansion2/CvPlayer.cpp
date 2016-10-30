@@ -259,8 +259,8 @@ CvPlayer::CvPlayer() :
 	, m_iGoldPerUnit("CvPlayer::m_iGoldPerUnit", m_syncArchive)
 	, m_iGoldPerMilitaryUnit("CvPlayer::m_iGoldPerMilitaryUnit", m_syncArchive)
 	, m_iImprovementGoldMaintenanceMod("CvPlayer::m_iImprovementGoldMaintenanceMod", m_syncArchive)
-#if defined(MOD_BALANCE_MERILL_ADDITION)
-	, m_iRouteTimeMod("CvPlayer::m_iRouteTimeMod", m_syncArchive)
+#if defined(MOD_CIV6_WORKER)
+	, m_iRouteCostMod("CvPlayer::m_iRouteCostMod", m_syncArchive)
 #endif
 	, m_iBuildingGoldMaintenanceMod("CvPlayer::m_iBuildingGoldMaintenanceMod", m_syncArchive)
 	, m_iUnitGoldMaintenanceMod("CvPlayer::m_iUnitGoldMaintenanceMod", m_syncArchive)
@@ -892,7 +892,7 @@ void CvPlayer::init(PlayerTypes eID)
 		GetTreasury()->ChangeCityConnectionTradeRouteGoldChange(GetPlayerTraits()->GetCityConnectionTradeRouteChange());
 		changeWonderProductionModifier(GetPlayerTraits()->GetWonderProductionModifier());
 		ChangeImprovementGoldMaintenanceMod(GetPlayerTraits()->GetImprovementMaintenanceModifier());
-		// TODO ChangeRouteTimeMod(GetPlayerTraits()->GetRouteTimeModifier());
+		// TODO ChangeRouteCostMod(GetPlayerTraits()->GetRouteCostModifier());
 
 		for(iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
@@ -1437,8 +1437,8 @@ void CvPlayer::uninit()
 	m_iGoldPerUnit = 0;
 	m_iGoldPerMilitaryUnit = 0;
 	m_iImprovementGoldMaintenanceMod = 0;
-#if defined(MOD_BALANCE_MERILL_ADDITION)
-	m_iRouteTimeMod = 0;
+#if defined(MOD_CIV6_WORKER)
+	m_iRouteCostMod = 0;
 #endif
 	m_iBuildingGoldMaintenanceMod = 0;
 	m_iUnitGoldMaintenanceMod = 0;
@@ -26748,19 +26748,19 @@ void CvPlayer::ChangeImprovementGoldMaintenanceMod(int iChange)
 	}
 }
 
-#if defined(MOD_BALANCE_MERILL_ADDITION)
+#if defined(MOD_CIV6_WORKER)
 //	--------------------------------------------------------------------------------
-int CvPlayer::GetRouteTimeMod() const
+int CvPlayer::GetRouteCostMod() const
 {
-	return m_iRouteTimeMod;
+	return m_iRouteCostMod;
 }
 
 //	--------------------------------------------------------------------------------
-void CvPlayer::ChangeRouteTimeMod(int iChange)
+void CvPlayer::ChangeRouteCostMod(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iRouteTimeMod = (m_iRouteTimeMod + iChange);
+		m_iRouteCostMod = (m_iRouteCostMod + iChange);
 	}
 }
 #endif
@@ -38512,7 +38512,7 @@ void CvPlayer::processPolicies(PolicyTypes ePolicy, int iChange)
 	changeSettlerProductionModifier(pPolicy->GetSettlerProductionModifier() * iChange);
 	changeCapitalSettlerProductionModifier(pPolicy->GetCapitalSettlerProductionModifier() * iChange);
 	ChangeImprovementGoldMaintenanceMod(pPolicy->GetImprovementGoldMaintenanceMod() * iChange);
-	ChangeRouteTimeMod(pPolicy->GetRouteTimeMod() * iChange);
+	ChangeRouteCostMod(pPolicy->GetRouteCostMod() * iChange);
 	ChangeBuildingGoldMaintenanceMod(pPolicy->GetBuildingGoldMaintenanceMod() * iChange);
 	ChangeUnitGoldMaintenanceMod(pPolicy->GetUnitGoldMaintenanceMod() * iChange);
 	ChangeUnitSupplyMod(pPolicy->GetUnitSupplyMod() * iChange);

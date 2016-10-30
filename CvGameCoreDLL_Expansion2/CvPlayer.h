@@ -1241,9 +1241,9 @@ public:
 	int GetImprovementGoldMaintenanceMod() const;
 	void ChangeImprovementGoldMaintenanceMod(int iChange);
 
-#if defined(MOD_BALANCE_MERILL_ADDITION)
-	int GetRouteTimeMod() const;
-	void ChangeRouteTimeMod(int iChange);
+#if defined(MOD_CIV6_WORKER)
+	int GetRouteCostMod() const;
+	void ChangeRouteCostMod(int iChange);
 #endif
 
 	int GetBuildingGoldMaintenanceMod() const;
@@ -2950,8 +2950,8 @@ protected:
 	FAutoVariable<int, CvPlayer> m_iGoldPerUnit;
 	FAutoVariable<int, CvPlayer> m_iGoldPerMilitaryUnit;
 	FAutoVariable<int, CvPlayer> m_iImprovementGoldMaintenanceMod;
-#if defined(MOD_BALANCE_MERILL_ADDITION)
-	FAutoVariable<int, CvPlayer> m_iRouteTimeMod;
+#if defined(MOD_CIV6_WORKER)
+	FAutoVariable<int, CvPlayer> m_iRouteCostMod;
 #endif
 	FAutoVariable<int, CvPlayer> m_iBuildingGoldMaintenanceMod;
 	FAutoVariable<int, CvPlayer> m_iUnitGoldMaintenanceMod;

@@ -142,8 +142,8 @@ public:
 	int GetNewCityExtraPopulation() const;
 	int GetFreeFoodBox() const;
 	int GetImprovementGoldMaintenanceMod() const;
-#if defined(MOD_BALANCE_MERILL_ADDITION)
-	int GetRouteTimeMod() const;
+#if defined(MOD_CIV6_WORKER)
+	int GetRouteCostMod() const;
 #endif
 	int GetBuildingGoldMaintenanceMod() const;
 	int GetUnitGoldMaintenanceMod() const;
@@ -471,8 +471,8 @@ private:
 	int m_iNewCityExtraPopulation;
 	int m_iFreeFoodBox;
 	int m_iImprovementGoldMaintenanceMod;
-#if defined(MOD_BALANCE_MERILL_ADDITION)
-	int m_iRouteTimeMod;
+#if defined(MOD_CIV6_WORKER)
+	int m_iRouteCostMod;
 #endif
 	int m_iBuildingGoldMaintenanceMod;
 	int m_iUnitGoldMaintenanceMod;

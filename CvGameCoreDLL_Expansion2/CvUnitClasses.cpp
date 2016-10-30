@@ -72,7 +72,7 @@ CvUnitEntry::CvUnitEntry(void) :
 	m_bFoundReligion(false),
 	m_bRequiresEnhancedReligion(false),
 	m_bProhibitsSpread(false),
-#if defined(MOD_BALANCE_MERILL_ADDITION)
+#if defined(MOD_CIV6_WORKER)
 	m_iBuilderStrength(0),
 #endif
 	m_bCanBuyCityState(false),
@@ -292,7 +292,7 @@ bool CvUnitEntry::CacheResults(Database::Results& kResults, CvDatabaseUtility& k
 	m_bFoundReligion = kResults.GetBool("FoundReligion");
 	m_bRequiresEnhancedReligion = kResults.GetBool("RequiresEnhancedReligion");
 	m_bProhibitsSpread = kResults.GetBool("ProhibitsSpread");
-#if defined(MOD_BALANCE_MERILL_ADDITION)
+#if defined(MOD_CIV6_WORKER)
 	m_iBuilderStrength = kResults.GetInt("BuilderStrength");
 #endif
 	m_bCanBuyCityState = kResults.GetBool("CanBuyCityState");
@@ -895,7 +895,7 @@ int CvUnitEntry::GetReligiousStrength() const
 	return m_iReligiousStrength;
 }
 
-#if defined(MOD_BALANCE_MERILL_ADDITION)
+#if defined(MOD_CIV6_WORKER)
 /// How strong is this builder unit?
 int CvUnitEntry::GetBuilderStrength() const
 {

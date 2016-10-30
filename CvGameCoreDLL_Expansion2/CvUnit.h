@@ -444,8 +444,7 @@ public:
 	bool canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible = false, bool bTestGold = true) const;
 	bool build(BuildTypes eBuild);
 
-#if defined(MOD_BALANCE_MERILL_ADDITION)
-	int getBuildCost(BuildingTypes eBuilding) const;
+#if defined(MOD_CIV6_WORKER)
 	int getBuilderStrength() const;
 	void setBuilderStrength(const int newPower);
 #endif
@@ -1914,7 +1913,7 @@ protected:
 	CvUnitPromotions  m_Promotions;
 	CvUnitReligion* m_pReligion;
 
-#if defined(MOD_BALANCE_MERILL_ADDITION)
+#if defined(MOD_CIV6_WORKER)
 	FAutoVariable<int, CvUnit> m_iBuilderStrength;
 #endif
 

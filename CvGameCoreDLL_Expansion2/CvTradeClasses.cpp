@@ -2513,8 +2513,9 @@ void CvPlayerTrade::MoveUnits (void)
 					}
 
 
-#if defined(MOD_BALANCE_MERILL_ADDITION)
-					if (ACTIVATE_MOD_BALANCE_AUTOCREATE_ROAD)
+#if defined(MOD_CIV6_ROADS)
+					CUSTOMLOG("CvTradeClasses::moveunits : MOD_CIV6_ROADS= %s", MOD_CIV6_ROADS?"activated":"notAct, error");
+					if (MOD_CIV6_ROADS)
 					{
 						//build land routes
 
