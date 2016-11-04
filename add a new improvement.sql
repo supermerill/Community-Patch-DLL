@@ -1,4 +1,16 @@
 
+---- eras ------
+
+ALTER TABLE Eras ADD MeanBuildingCost INTEGER DEFAULT 0;
+UPDATE	Eras	SET	'MeanBuildingCost'	= 100		WHERE	Type = 'ERA_ANCIENT';
+UPDATE	Eras	SET	'MeanBuildingCost'	= 200		WHERE	Type = 'ERA_CLASSICAL';
+UPDATE	Eras	SET	'MeanBuildingCost'	= 300		WHERE	Type = 'ERA_MEDIEVAL';
+UPDATE	Eras	SET	'MeanBuildingCost'	= 450		WHERE	Type = 'ERA_RENAISSANCE';
+UPDATE	Eras	SET	'MeanBuildingCost'	= 750		WHERE	Type = 'ERA_MODERN';
+UPDATE	Eras	SET	'MeanBuildingCost'	= 1100		WHERE	Type = 'ERA_POSTMODERN';
+UPDATE	Eras	SET	'MeanBuildingCost'	= 1400		WHERE	Type = 'ERA_FUTURE';
+
+
 ---- science district ------
 /* INSERT INTO Improvement_Yields
 	(ImprovementType, YieldType, Yield)
