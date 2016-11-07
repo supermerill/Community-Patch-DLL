@@ -76,6 +76,9 @@ CvBuildingEntry::CvBuildingEntry(void):
 	m_iFreePromotion(NO_PROMOTION),
 	m_iTrainedFreePromotion(NO_PROMOTION),
 	m_iFreePromotionRemoved(NO_PROMOTION),
+#if defined(MOD_CIV6_DISTRICTS)
+	m_iCostIncreasePerEraMod(0),
+#endif
 	m_iProductionCost(0),
 	m_iFaithCost(0),
 	m_iLeagueCost(0),
@@ -138,6 +141,10 @@ CvBuildingEntry::CvBuildingEntry(void):
 	m_iGlobalEspionageModifier(0),
 	m_iExtraSpies(0),
 	m_iSpyRankChange(0),
+#if defined(MOD_CIV6_DISTRICTS)
+	m_ppiTradeRouteYieldChanges(NULL),
+	//	m_iTradeRouteBonusYieldType(-1),
+#else
 	m_iTradeRouteRecipientBonus(0),
 	m_iTradeRouteTargetBonus(0),
 	m_iNumTradeRouteBonus(0),
@@ -145,6 +152,10 @@ CvBuildingEntry::CvBuildingEntry(void):
 	m_iTradeRouteSeaGoldBonus(0),
 	m_iTradeRouteLandDistanceModifier(0),
 	m_iTradeRouteLandGoldBonus(0),
+#endif
+	m_iNumTradeRouteBonus(0),
+	m_iTradeRouteSeaDistanceModifier(0),
+	m_iTradeRouteLandDistanceModifier(0),
 	m_iCityStateTradeRouteProductionModifier(0),
 #if defined(MOD_RELIGION_CONVERSION_MODIFIERS)
 	m_iConversionModifier(0),
@@ -470,6 +481,9 @@ CvBuildingEntry::~CvBuildingEntry(void)
 	CvDatabaseUtility::SafeDelete2DArray(m_ppiBuildingClassLocalYieldChanges);
 	SAFE_DELETE_ARRAY(m_paiSpecificGreatPersonRateModifier);
 #endif
+#if defined(MOD_CIV6_DISTRICTS)
+	CvDatabaseUtility::SafeDelete2DArray(m_ppiTradeRouteYieldChanges);
+#endif
 }
 
 /// Read from XML file
@@ -556,6 +570,9 @@ bool CvBuildingEntry::CacheResults(Database::Results& kResults, CvDatabaseUtilit
 	m_bExtraLuxuries = kResults.GetBool("ExtraLuxuries");
 	m_bDiplomaticVoting = kResults.GetBool("DiplomaticVoting");
 	m_bAllowsWaterRoutes = kResults.GetBool("AllowsWaterRoutes");
+#if defined(MOD_CIV6_DISTRICTS)
+	m_iCostIncreasePerEraMod = kResults.GetInt("CostIncreasePerEraMod");
+#endif
 	m_iProductionCost = kResults.GetInt("Cost");
 	m_iFaithCost = kResults.GetInt("FaithCost");
 	m_iLeagueCost = kResults.GetInt("LeagueCost");
@@ -638,13 +655,16 @@ bool CvBuildingEntry::CacheResults(Database::Results& kResults, CvDatabaseUtilit
 	m_iGlobalEspionageModifier = kResults.GetInt("GlobalEspionageModifier");
 	m_iExtraSpies = kResults.GetInt("ExtraSpies");
 	m_iSpyRankChange = kResults.GetInt("SpyRankChange");
+#if !defined(MOD_CIV6_DISTRICTS)
+	//m_iTradeRouteRecipientBonus = kResults.GetInt("TradeRouteRecipientBonus");
 	m_iTradeRouteRecipientBonus = kResults.GetInt("TradeRouteRecipientBonus");
 	m_iTradeRouteTargetBonus = kResults.GetInt("TradeRouteTargetBonus");
+	m_iTradeRouteSeaGoldBonus = kResults.GetInt("TradeRouteSeaGoldBonus");
+	m_iTradeRouteLandGoldBonus = kResults.GetInt("TradeRouteLandGoldBonus");
+#endif
 	m_iNumTradeRouteBonus = kResults.GetInt("NumTradeRouteBonus");
 	m_iTradeRouteSeaDistanceModifier = kResults.GetInt("TradeRouteSeaDistanceModifier");
-	m_iTradeRouteSeaGoldBonus = kResults.GetInt("TradeRouteSeaGoldBonus");
 	m_iTradeRouteLandDistanceModifier = kResults.GetInt("TradeRouteLandDistanceModifier");
-	m_iTradeRouteLandGoldBonus = kResults.GetInt("TradeRouteLandGoldBonus");
 	m_iCityStateTradeRouteProductionModifier = kResults.GetInt("CityStateTradeRouteProductionModifier");
 #if defined(MOD_RELIGION_CONVERSION_MODIFIERS)
 	m_iConversionModifier = kResults.GetInt("ConversionModifier");
@@ -1164,6 +1184,32 @@ bool CvBuildingEntry::CacheResults(Database::Results& kResults, CvDatabaseUtilit
 		}
 	}
 #endif
+#if defined(MOD_CIV6_DISTRICTS)
+	//TradeRouteYieldChange
+	{
+		kUtility.Initialize2DArray(m_ppiTradeRouteYieldChanges, kUtility.MaxRows("Yields"), MAX_YIELD_CHANGE_TR);
+
+		std::string strKey("Building_TradeRouteYieldChanges");
+		Database::Results* pResults = kUtility.GetResults(strKey);
+		if (pResults == NULL)
+		{
+			pResults = kUtility.PrepareResults(strKey, "select Yields.ID as YieldID, YieldChange, TradeRouteDir from Building_BuildingClassLocalTradeRouteYieldChanges inner join Yields on Yields.Type = YieldType where BuildingType = ?");
+		}
+
+		pResults->Bind(1, szBuildingType);
+
+		while (pResults->Step())
+		{
+			const int iYieldID = pResults->GetInt(0);
+			const int iYieldChange = pResults->GetInt(1);
+			const int iTradeRouteDirFlags = pResults->GetInt(2);
+			if (iTradeRouteDirFlags > -1 && iTradeRouteDirFlags < 32 && iYieldChange > 0 && iYieldChange <= MAX_YIELD_CHANGE_TR)
+			{
+				m_ppiTradeRouteYieldChanges[iYieldID][iYieldChange-1] = iTradeRouteDirFlags;
+			}
+		}
+	}
+#endif
 	{
 		//Initialize Theming Bonuses
 		const int iNumThemes = MAX_THEMING_BONUSES; /* 12 */
@@ -1475,7 +1521,57 @@ int CvBuildingEntry::GetFreePromotionRemoved() const
 	return m_iFreePromotionRemoved;
 }
 
-/// Shields to construct the building
+#if defined(MOD_CIV6_DISTRICTS)
+/// Cost increase per era
+int CvBuildingEntry::GetCostIncreasePerEraMod() const
+{
+	return m_iCostIncreasePerEraMod;
+}
+
+/// Shields to construct the building (now hammers, and gears in the futur) at this era, with cost scaling
+int CvBuildingEntry::GetProductionCost(const CvPlayer* currentPlayer) const
+{
+	EraTypes currentEra = currentPlayer->GetCurrentEra();
+	int iProductionCost = m_iProductionCost;
+	if (GetCostIncreasePerEraMod() != 0 && GetPrereqAndTech() != NO_TECH)
+	{
+		CvTechEntry* pkTechInfo = GC.getTechInfo((TechTypes)GetPrereqAndTech());
+		if (pkTechInfo)
+		{
+			// Loop through all eras and apply Building production mod based on how much time has passed
+			//int iTotalEraMod = 100;
+			EraTypes eBuildingUnlockedEra = (EraTypes)pkTechInfo->GetEra();
+
+			if (eBuildingUnlockedEra < currentEra)
+			{
+				CvEraInfo* eraBefore = GC.getEraInfo((EraTypes)eBuildingUnlockedEra);
+				CvEraInfo* eraNow = GC.getEraInfo(currentEra);
+
+				if (eraBefore && eraNow)
+				{
+					int buildingCostBefore = eraBefore->getMeanBuildingCost();
+					int buildingCostNow = eraNow->getMeanBuildingCost();
+					int nbTechInEraNow = GET_TEAM(currentPlayer->getTeam()).GetTeamTechs()->GetNumTechsKnownInEra(currentEra);
+					int nbTechInEra = GC.GetGameTechs()->GetNumTechsInEra(currentEra);
+
+					//reduce the diff between buildingCostNow and buildingCostBefore by the number of tech in this era
+					//note: beelining increase greatly the cost when passing in an other era (as you bypassed many techs)
+					buildingCostNow = buildingCostBefore + ((buildingCostNow - buildingCostBefore) * nbTechInEraNow) / nbTechInEra;
+
+					// mult the diff cost (bad precision, and then cut to 10 Prod)
+					iProductionCost *= ((GetCostIncreasePerEraMod() * buildingCostNow) / buildingCostBefore);
+					iProductionCost /= 1000;
+					iProductionCost *= 10;
+				}
+			}
+		}
+	}
+
+	return iProductionCost;
+}
+#endif
+/// Shields to construct the building (now hammers, and gears in the futur) at the era it appear.
+/// Don't scale the cost with era. Use it to see if the building can be constructed with hammers (if value != -1)
 int CvBuildingEntry::GetProductionCost() const
 {
 	return m_iProductionCost;
@@ -1897,6 +1993,86 @@ int CvBuildingEntry::GetSpyRankChange() const
 	return m_iSpyRankChange;
 }
 
+
+#if defined(MOD_CIV6_DISTRICTS)
+/// What yield the trade recipient gets for a trade route being establish with/to the city
+//int CvBuildingEntry::GetTradeRouteBonusYieldType() const
+//{
+//	return m_iTradeRouteBonusYieldType;
+//}
+/// Trade route yield change by yield type and filtered by flags
+int CvBuildingEntry::GetTradeRouteYieldChange(int iYieldType, int iDirectionFlags) const
+{
+	CvAssertMsg(iYieldType < NUM_YIELD_TYPES, "Index out of bounds");
+	CvAssertMsg(iYieldType > -1, "Index out of bounds");
+	CvAssertMsg(iDirection < 32, "Index out of bounds");
+	CvAssertMsg(iDirection > -1, "Index out of bounds");
+	int nbYields = 0;
+	//for each yield value
+	for (int i = 0; i < MAX_YIELD_CHANGE_TR; i++)
+	{
+		//check if flags are ok
+		if ((m_ppiTradeRouteYieldChanges[iYieldType][iDirectionFlags] & iDirectionFlags) == iDirectionFlags)
+		{
+			//add yields (+1 because it start at 1)
+			nbYields += i + 1;
+		}
+	}
+	//return value
+	return nbYields;
+}
+/// Trade route yield change filtered by flags
+int CvBuildingEntry::GetTradeRouteYieldChange(int iDirectionFlags) const
+{
+	CvAssertMsg(iYieldType < NUM_YIELD_TYPES, "Index out of bounds");
+	CvAssertMsg(iYieldType > -1, "Index out of bounds");
+	CvAssertMsg(iDirection < 32, "Index out of bounds");
+	CvAssertMsg(iDirection > -1, "Index out of bounds");
+	int nbYields = 0;
+	//for each yield value
+	for (int iYieldType = 0; iYieldType < NUM_YIELD_TYPES; iYieldType++)
+	{
+		for (int i = 0; i < MAX_YIELD_CHANGE_TR; i++)
+		{
+			//check if flags are ok
+			if ((m_ppiTradeRouteYieldChanges[iYieldType][iDirectionFlags] & iDirectionFlags) == iDirectionFlags)
+			{
+				//add yields (+1 because it start at 1)
+				nbYields += i + 1;
+			}
+		}
+	}
+	//return value
+	return nbYields;
+}
+/// Trade route yield changes by yield type, in the form of (flags | yield<<5)
+vector<int> CvBuildingEntry::GetTradeRouteYieldChangeWithDir(int iYieldType) const
+{
+	CvAssertMsg(iYieldType < NUM_YIELD_TYPES, "Index out of bounds");
+	CvAssertMsg(iYieldType > -1, "Index out of bounds");
+	vector<int> vectorToRet;
+	for (int i = 0; i < MAX_YIELD_CHANGE_TR; i++)
+	{
+		if (m_ppiTradeRouteYieldChanges[iYieldType][i] > 0)
+		{
+			vectorToRet.push_back(m_ppiTradeRouteYieldChanges[iYieldType][i] | ((i + 1) << MAX_TRADE_ROUTE_FLAGS_POW2));
+		}
+	}
+	return vectorToRet;
+}
+
+///// How much the trade recipient gets for a trade route being establish with the city
+//int CvBuildingEntry::GetTradeRouteRecipientBonus(int iYield) const
+//{
+//	return GetTradeRouteYieldChange(iYield, TRADE_ROUTE_FLAGS::RECIPIENT);
+//}
+//
+///// How much the trade recipient gets for a trade route being establish with the city
+//int CvBuildingEntry::GetTradeRouteTargetBonus(int iYield) const
+//{
+//	return GetTradeRouteYieldChange(iYield, TRADE_ROUTE_FLAGS::TARGET);
+//}
+#else
 /// How much the trade recipient gets for a trade route being establish with the city
 int CvBuildingEntry::GetTradeRouteRecipientBonus() const
 {
@@ -1909,6 +2085,17 @@ int CvBuildingEntry::GetTradeRouteTargetBonus() const
 	return m_iTradeRouteTargetBonus;
 }
 
+int CvBuildingEntry::GetTradeRouteSeaGoldBonus() const
+{
+	return m_iTradeRouteSeaGoldBonus;
+}
+
+int CvBuildingEntry::GetTradeRouteLandGoldBonus() const
+{
+	return m_iTradeRouteLandGoldBonus;
+}
+#endif
+
 int CvBuildingEntry::GetNumTradeRouteBonus() const
 {
 	return m_iNumTradeRouteBonus;
@@ -1919,19 +2106,9 @@ int CvBuildingEntry::GetTradeRouteSeaDistanceModifier() const
 	return m_iTradeRouteSeaDistanceModifier;
 }
 
-int CvBuildingEntry::GetTradeRouteSeaGoldBonus() const
-{
-	return m_iTradeRouteSeaGoldBonus;
-}
-
 int CvBuildingEntry::GetTradeRouteLandDistanceModifier() const
 {
 	return m_iTradeRouteLandDistanceModifier;
-}
-
-int CvBuildingEntry::GetTradeRouteLandGoldBonus() const
-{
-	return m_iTradeRouteLandGoldBonus;
 }
 
 int CvBuildingEntry::GetCityStateTradeRouteProductionModifier() const

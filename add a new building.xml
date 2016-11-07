@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 3/3/2016 6:05:17 PM -->
 <GameData>
+	<!-- Buildings: Allows buildings to add any yield to trade routes. -->
+	<!-- note: max value of 5 for YieldChange, primary key on {BuildingType,YieldType,YieldChange}  -->
+	<Table name="Building_TradeRouteYieldChanges">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="YieldChange" type="integer" default="0"/>
+		<!-- flags: 1: bonus, 2: recipient, 4: target, 8:land, 16:sea , must be <32 and >0-->
+		<!-- &1: bonus: gain yield for setting your trade route from this city -->
+		<!-- &2: recipient: gain yield because a trade route target your city -->
+		<!-- &4: target: an other player gain yield because he target your city -->
+		<!-- &8: affect land routes -->
+		<!-- &16: affect sea routes -->
+		<!-- note 1: land & sea distinction are only used for "bonus" type, (for now) -->
+		<!--    but you should set land & sea to 1 if you create a recipient or target rule, to be consistent. -->
+		<Column name="TradeRouteDirFlags" type="integer" default="0"/>
+	</Table>
 	<BuildingClasses>
 		<!-- Science District -->
 		<Row>

@@ -2519,7 +2519,7 @@ void CvPlayerTrade::MoveUnits (void)
 						//build land routes
 
 						//iterate on plots
-						int nbPLotsInTradeRoute = pTradeConnection->m_aPlotList.size();
+						uint nbPLotsInTradeRoute = (uint)pTradeConnection->m_aPlotList.size();
 						for (uint ui = 0; ui < nbPLotsInTradeRoute; ui++){
 							CvPlot* pRoadToBuildPlot = GC.getMap().plot(pTradeConnection->m_aPlotList[ui].m_iX, pTradeConnection->m_aPlotList[ui].m_iY);
 
@@ -2529,11 +2529,11 @@ void CvPlayerTrade::MoveUnits (void)
 
 								// i didn't go by plot->changeBuildProgress to not fire unwanted things, like "BuildFinished".
 								// so it's mostly a copy-paste from the road section of this method
-								RouteTypes autoBuildRoadType = RouteTypes::ROUTE_ROAD;
+								RouteTypes autoBuildRoadType = ROUTE_ROAD;
 								//TODO: check if the rairoad is unlocked (by tech).
 								if (GET_PLAYER(pTradeConnection->m_eOriginOwner).GetCurrentEra() >= 4)
 								{
-									autoBuildRoadType = RouteTypes::ROUTE_RAILROAD;
+									autoBuildRoadType = ROUTE_RAILROAD;
 								}
 								//don't build road / change nationality (for the moment) of roads if already built.
 								if (pRoadToBuildPlot->getRouteType() != autoBuildRoadType){
@@ -2809,11 +2809,13 @@ int CvPlayerTrade::GetTradeConnectionYourBuildingValueTimes100(const TradeConnec
 	{
 		return 0;
 	}
-	
+
+#if !defined(MOD_CIV6_DISTRICTS)
 	if (eYield != YIELD_GOLD)
 	{
 		return 0;
 	}
+#endif
 
 	CvPlot* pOriginPlot = GC.getMap().plot(kTradeConnection.m_iOriginX, kTradeConnection.m_iOriginY);
 	CvPlot* pDestPlot = GC.getMap().plot(kTradeConnection.m_iDestX, kTradeConnection.m_iDestY);
@@ -2834,7 +2836,16 @@ int CvPlayerTrade::GetTradeConnectionYourBuildingValueTimes100(const TradeConnec
 	if (bAsOriginPlayer)
 	{
 		CvCity* pOriginCity = CvGameTrade::GetOriginCity(kTradeConnection);
-
+#if defined(MOD_CIV6_DISTRICTS)
+		if (kTradeConnection.m_eDomain == DOMAIN_SEA)
+		{
+			iBonus += pOriginCity->GetTradeRouteBonus(eYield, TR_BONUS | TR_SEA);
+		}
+		else if (kTradeConnection.m_eDomain == DOMAIN_LAND)
+		{
+			iBonus += pOriginCity->GetTradeRouteBonus(eYield, TR_BONUS | TR_LAND);
+		}
+#else
 		if (kTradeConnection.m_eDomain == DOMAIN_SEA)
 		{
 			iBonus += pOriginCity->GetTradeRouteSeaGoldBonus();
@@ -2843,6 +2854,7 @@ int CvPlayerTrade::GetTradeConnectionYourBuildingValueTimes100(const TradeConnec
 		{
 			iBonus += pOriginCity->GetTradeRouteLandGoldBonus();
 		}
+#endif
 	}
 
 	if (bAsOriginPlayer)
@@ -2898,10 +2910,12 @@ int CvPlayerTrade::GetTradeConnectionTheirBuildingValueTimes100(const TradeConne
 		return 0;
 	}
 
+#if !defined(MOD_CIV6_DISTRICTS)
 	if (eYield != YIELD_GOLD)
 	{
 		return 0;
 	}
+#endif
 
 	CvPlot* pOriginPlot = GC.getMap().plot(kTradeConnection.m_iOriginX, kTradeConnection.m_iOriginY);
 	CvPlot* pDestPlot = GC.getMap().plot(kTradeConnection.m_iDestX, kTradeConnection.m_iDestY);
@@ -2925,7 +2939,11 @@ int CvPlayerTrade::GetTradeConnectionTheirBuildingValueTimes100(const TradeConne
 	{
 		if (kTradeConnection.m_eOriginOwner == m_pPlayer->GetID())
 		{
+#if defined(MOD_CIV6_DISTRICTS)
+			iBonus += pDestCity->GetTradeRouteBonus(eYield, TR_TARGET) * 100;
+#else
 			iBonus += pDestCity->GetTradeRouteTargetBonus() * 100;
+#endif
 
 #if defined(MOD_BALANCE_CORE)
 			CorporationTypes eCorporation = GET_PLAYER(kTradeConnection.m_eDestOwner).GetCorporations()->GetFoundedCorporation();
@@ -2942,7 +2960,11 @@ int CvPlayerTrade::GetTradeConnectionTheirBuildingValueTimes100(const TradeConne
 
 		if (kTradeConnection.m_eDestOwner == m_pPlayer->GetID())
 		{
+#if defined(MOD_CIV6_DISTRICTS)
+			iBonus += pDestCity->GetTradeRouteBonus(eYield, TR_RECIPIENT) * 100;
+#else
 			iBonus += pDestCity->GetTradeRouteRecipientBonus() * 100;
+#endif
 
 #if defined(MOD_BALANCE_CORE)
 			CorporationTypes eCorporation = GET_PLAYER(kTradeConnection.m_eOriginOwner).GetCorporations()->GetFoundedCorporation();

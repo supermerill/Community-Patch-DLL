@@ -193,10 +193,14 @@ CvCity::CvCity() :
 	, m_iCountExtraLuxuries("CvCity::m_iCountExtraLuxuries", m_syncArchive)
 	, m_iCheapestPlotInfluence("CvCity::m_iCheapestPlotInfluence", m_syncArchive)
 	, m_iEspionageModifier("CvCity::m_iEspionageModifier", m_syncArchive)
+#if defined(MOD_CIV6_DISTRICTS)
+	, m_iTradeRouteBonus("CvCity::m_iTradeRouteBonus", m_syncArchive)
+#else
 	, m_iTradeRouteRecipientBonus("CvCity::m_iTradeRouteRecipientBonus", m_syncArchive)
+	, m_iTradeRouteTargetBonus("CvCity::m_iTradeRouteTargetBonus", m_syncArchive)
 	, m_iTradeRouteSeaGoldBonus("CvCity::m_iTradeRouteSeaGoldBonus", m_syncArchive)
 	, m_iTradeRouteLandGoldBonus("CvCity::m_iTradeRouteLandGoldBonus", m_syncArchive)
-	, m_iTradeRouteTargetBonus("CvCity::m_iTradeRouteTargetBonus", m_syncArchive)
+#endif
 	, m_iNumTradeRouteBonus("CvCity::m_iNumTradeRouteBonus", m_syncArchive)
 	, m_unitBeingBuiltForOperation()
 	, m_bNeverLost("CvCity::m_bNeverLost", m_syncArchive)
@@ -1349,11 +1353,15 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iMaxAirUnits = GC.getBASE_CITY_AIR_STACKING();
 	m_iAirModifier = 0; // unused
 	m_iNukeModifier = 0;
+#if defined(MOD_CIV6_DISTRICTS)
+	m_iTradeRouteBonus.resize(NUM_YIELD_TYPES);
+#else
 	m_iTradeRouteRecipientBonus = 0;
+	m_iTradeRouteTargetBonus = 0;
 	m_iTradeRouteSeaGoldBonus = 0;
 	m_iTradeRouteLandGoldBonus = 0;
+#endif
 	m_iNumTradeRouteBonus = 0;
-	m_iTradeRouteTargetBonus = 0;
 	m_iCultureUpdateTimer = 0;
 	m_iCitySizeBoost = 0;
 	m_iSpecialistFreeExperience = 0;
@@ -13652,13 +13660,40 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bFirst, 
 		ChangeConversionModifier(pBuildingInfo->GetConversionModifier() * iChange);
 		owningPlayer.ChangeConversionModifier(pBuildingInfo->GetGlobalConversionModifier() * iChange);
 #endif
-
+#if defined(MOD_CIV6_DISTRICTS)
+		//vector<int> viYieldChanges;
+		CvAssertMsg(NUM_YIELD_TYPES < MAX_NUM_YIELD_TYPES, "NUM_YIELD_TYPES IS TOO HIGH");
+		for (int iYield = 0; iYield < NUM_YIELD_TYPES; iYield++)
+		{
+			vector<int> viYieldChangeForSpecificYield = pBuildingInfo->GetTradeRouteYieldChangeWithDir(iYield);
+			if (viYieldChangeForSpecificYield.size() > 0)
+			{
+				for (vector<int>::iterator itYieldChange = viYieldChangeForSpecificYield.begin();
+					itYieldChange != viYieldChangeForSpecificYield.end(); ++itYieldChange)
+				{
+					int yieldChangeWithFlags = *itYieldChange;
+					int yieldChange = yieldChangeWithFlags >> MAX_TRADE_ROUTE_FLAGS_POW2;
+					yieldChange *= iChange;
+					//viYieldChanges.push_back(iYield | (yieldChangeWithFlags << MAX_NUM_YIELD_TYPES_POW2));
+					ChangeTradeRouteBonus((YieldTypes)iYield, yieldChange, (yieldChangeWithFlags & TR_ALL));
+				}
+			}
+		}
+		/*if (pBuildingInfo->GetTradeRouteBonusYieldType() != NO_YIELD &&
+			(pBuildingInfo->GetTradeRouteTargetBonus > () > 0 || pBuildingInfo->GetTradeRouteRecipientBonus() > 0))
+		{
+			ChangeTradeRouteTargetBonus(pBuildingInfo->GetTradeRouteTargetBonus() * iChange);
+			ChangeTradeRouteRecipientBonus(pBuildingInfo->GetTradeRouteRecipientBonus() * iChange);
+		}
+		ChangeTradeRouteSeaGoldBonus(pBuildingInfo->GetTradeRouteSeaGoldBonus() * iChange);
+		ChangeTradeRouteLandGoldBonus(pBuildingInfo->GetTradeRouteLandGoldBonus() * iChange);*/
+#else
 		ChangeTradeRouteTargetBonus(pBuildingInfo->GetTradeRouteTargetBonus() * iChange);
 		ChangeTradeRouteSeaGoldBonus(pBuildingInfo->GetTradeRouteSeaGoldBonus() * iChange);
 		ChangeTradeRouteLandGoldBonus(pBuildingInfo->GetTradeRouteLandGoldBonus() * iChange);
 		ChangeTradeRouteRecipientBonus(pBuildingInfo->GetTradeRouteRecipientBonus() * iChange);
-		ChangeNumTradeRouteBonus(pBuildingInfo->GetTradeRouteLandGoldBonus() * iChange);
-		
+#endif
+		ChangeNumTradeRouteBonus(pBuildingInfo->GetNumTradeRouteBonus() * iChange);
 
 		if (pBuildingInfo->AffectSpiesNow() && iChange > 0)
 		{
@@ -18621,60 +18656,179 @@ void CvCity::changeNukeModifier(int iChange)
 	m_iNukeModifier = (m_iNukeModifier + iChange);
 }
 
+#if defined(MOD_CIV6_DISTRICTS)
+//	--------------------------------------------------------------------------------
+int CvCity::GetTradeRouteBonus(YieldTypes type, int iFlags) const
+{
+	VALIDATE_OBJECT
+	int vals = m_iTradeRouteBonus[type];
+	int valRet = 0;
+	if ((iFlags & (TR_BONUS | TR_LAND)) == (TR_BONUS | TR_LAND))
+	{
+		valRet += vals & 7;
+	}
+	vals = vals >> 4;
+	if ((iFlags & (TR_RECIPIENT | TR_LAND)) == (TR_RECIPIENT | TR_LAND))
+	{
+		valRet += vals & 7;
+	}
+	vals = vals >> 4;
+	if ((iFlags & (TR_TARGET | TR_LAND)) == (TR_TARGET | TR_LAND))
+	{
+		valRet += vals & 7;
+	}
+	vals = vals >> 4;
+	if ((iFlags & (TR_BONUS | TR_SEA)) == (TR_BONUS | TR_SEA))
+	{
+		valRet += vals & 7;
+	}
+	vals = vals >> 4;
+	if ((iFlags & (TR_RECIPIENT | TR_SEA)) == (TR_RECIPIENT | TR_SEA))
+	{
+		valRet += vals & 7;
+	}
+	vals = vals >> 4;
+	if ((iFlags & (TR_TARGET | TR_SEA)) == (TR_TARGET | TR_SEA))
+	{
+		valRet += vals & 7;
+	}
+
+	return valRet;
+}
+
+//	--------------------------------------------------------------------------------
+void CvCity::ChangeTradeRouteBonus(YieldTypes type, int iChange, int iFlags)
+{
+	VALIDATE_OBJECT
+	if (iChange <= 0) return;
+	int valsInit = m_iTradeRouteBonus[type];
+	int valRead = valsInit;
+	int newVals = 0;
+
+	//create new val
+	if ((iFlags & (TR_BONUS | TR_LAND)) == (TR_BONUS | TR_LAND))
+	{
+		newVals += valRead & 7 + iChange & 7;
+	}
+	valRead = valRead >> 4;
+	iChange = iChange >> 4;
+	if ((iFlags & (TR_RECIPIENT | TR_LAND)) == (TR_RECIPIENT | TR_LAND))
+	{
+		newVals += valRead & 7 + iChange & 7;
+	}
+	valRead = valRead >> 4;
+	iChange = iChange >> 4;
+	if ((iFlags & (TR_TARGET | TR_LAND)) == (TR_TARGET | TR_LAND))
+	{
+		newVals += valRead & 7 + iChange & 7;
+	}
+	valRead = valRead >> 4;
+	iChange = iChange >> 4;
+	if ((iFlags & (TR_BONUS | TR_SEA)) == (TR_BONUS | TR_SEA))
+	{
+		newVals += valRead & 7 + iChange & 7;
+	}
+	valRead = valRead >> 4;
+	iChange = iChange >> 4;
+	if ((iFlags & (TR_RECIPIENT | TR_SEA)) == (TR_RECIPIENT | TR_SEA))
+	{
+		newVals += valRead & 7 + iChange & 7;
+	}
+	valRead = valRead >> 4;
+	iChange = iChange >> 4;
+	if ((iFlags & (TR_TARGET | TR_SEA)) == (TR_TARGET | TR_SEA))
+	{
+		newVals += valRead & 7 + iChange & 7;
+	}
+
+	//if changed, set
+	if (newVals != valsInit)
+	{
+		m_iTradeRouteBonus.setAt(type, newVals);
+	}
+}
+////	--------------------------------------------------------------------------------
+//int CvCity::GetTradeRouteTargetBonus(YieldTypes type) const
+//{
+//	VALIDATE_OBJECT
+//	return m_iTradeRouteTargetBonus[type];
+//}
+//
+////	--------------------------------------------------------------------------------
+//void CvCity::ChangeTradeRouteTargetBonus(YieldTypes type, int iChange)
+//{
+//	VALIDATE_OBJECT
+//	m_iTradeRouteTargetBonus[type] += iChange;
+//}
+//
+////	--------------------------------------------------------------------------------
+//int CvCity::GetTradeRouteRecipientBonus(YieldTypes type) const
+//{
+//	VALIDATE_OBJECT
+//	return m_iTradeRouteRecipientBonus[type];
+//}
+//
+////	--------------------------------------------------------------------------------
+//void CvCity::ChangeTradeRouteRecipientBonus(YieldTypes type, int iChange)
+//{
+//	VALIDATE_OBJECT
+//	m_iTradeRouteRecipientBonus[type] += iChange;
+//}
+#else
 //	--------------------------------------------------------------------------------
 int CvCity::GetTradeRouteTargetBonus() const
 {
 	VALIDATE_OBJECT
-	return m_iTradeRouteTargetBonus;
+		return m_iTradeRouteTargetBonus;
 }
 
 //	--------------------------------------------------------------------------------
 void CvCity::ChangeTradeRouteTargetBonus(int iChange)
 {
 	VALIDATE_OBJECT
-	m_iTradeRouteTargetBonus += iChange;
+		m_iTradeRouteTargetBonus += iChange;
 }
 
 //	--------------------------------------------------------------------------------
 int CvCity::GetTradeRouteRecipientBonus() const
 {
 	VALIDATE_OBJECT
-	return m_iTradeRouteRecipientBonus;
+		return m_iTradeRouteRecipientBonus;
 }
 
 //	--------------------------------------------------------------------------------
 void CvCity::ChangeTradeRouteRecipientBonus(int iChange)
 {
 	VALIDATE_OBJECT
-	m_iTradeRouteRecipientBonus += iChange;
+		m_iTradeRouteRecipientBonus += iChange;
 }
-
 //	--------------------------------------------------------------------------------
 int CvCity::GetTradeRouteSeaGoldBonus() const
 {
 	VALIDATE_OBJECT
-	return m_iTradeRouteSeaGoldBonus;
+		return m_iTradeRouteSeaGoldBonus;
 }
-
 //	--------------------------------------------------------------------------------
 void CvCity::ChangeTradeRouteSeaGoldBonus(int iChange)
 {
 	VALIDATE_OBJECT
-	m_iTradeRouteSeaGoldBonus += iChange;
+		m_iTradeRouteSeaGoldBonus += iChange;
 }
 
 //	--------------------------------------------------------------------------------
 int CvCity::GetTradeRouteLandGoldBonus() const
 {
 	VALIDATE_OBJECT
-	return m_iTradeRouteLandGoldBonus;
+		return m_iTradeRouteLandGoldBonus;
 }
 //	--------------------------------------------------------------------------------
 void CvCity::ChangeTradeRouteLandGoldBonus(int iChange)
 {
 	VALIDATE_OBJECT
-	m_iTradeRouteLandGoldBonus += iChange;
+		m_iTradeRouteLandGoldBonus += iChange;
 }
+#endif
+
 
 //	--------------------------------------------------------------------------------
 int CvCity::GetNumTradeRouteBonus() const
@@ -20367,7 +20521,11 @@ BuildingTypes CvCity::ChooseFreeCultureBuilding() const
 			if(!isWorldWonderClass(kBuildingClassInfo) && !isNationalWonderClass(kBuildingClassInfo))
 			{
 				int iCulture = pkBuildingInfo->GetYieldChange(YIELD_CULTURE);
+#if defined(MOD_CIV6_DISTRICTS)
+				int iCost = pkBuildingInfo->GetProductionCost(GetPlayer());
+#else
 				int iCost = pkBuildingInfo->GetProductionCost();
+#endif
 				if(getFirstBuildingOrder(eBuilding) != -1 || canConstruct(eBuilding))
 				{
 					if(iCulture > 0 && iCost > 0)
@@ -20415,7 +20573,11 @@ BuildingTypes CvCity::ChooseFreeFoodBuilding() const
 				{
 #endif
 					int iFood = pkBuildingInfo->GetFoodKept();
+#if defined(MOD_CIV6_DISTRICTS)
+					int iCost = pkBuildingInfo->GetProductionCost(GetPlayer());
+#else
 					int iCost = pkBuildingInfo->GetProductionCost();
+#endif
 					if(iFood > 0 && iCost > 0)
 					{
 						int iWeight = iFood * 10000 / iCost;

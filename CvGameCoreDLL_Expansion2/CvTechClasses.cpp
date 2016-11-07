@@ -656,6 +656,21 @@ int CvTechXMLEntries::GetNumTechs()
 	return m_paTechEntries.size();
 }
 
+#if defined(MOD_CIV6_DISTRICTS)
+/// How many total Techs does this team have?
+int CvTechXMLEntries::GetNumTechsInEra(EraTypes era)
+{
+	int nb = 0;
+	for (uint index = 0; index < m_paTechEntries.size(); index++)
+	{
+		if (m_paTechEntries[index]->GetEra() == era)
+		{
+			nb++;
+		}
+	}
+	return nb;
+}
+#endif
 /// Clear tech entries
 void CvTechXMLEntries::DeleteArray()
 {
@@ -1952,10 +1967,10 @@ void CvTeamTechs::Init(CvTechXMLEntries* pTechs, CvTeam* pTeam)
 	CvAssertMsg(m_pabNoTradeTech==NULL, "about to leak memory, CvTeamTechs::m_pabNoTradeTech");
 	m_pabNoTradeTech = FNEW(bool[m_pTechs->GetNumTechs()], c_eCiv5GameplayDLL, 0);
 	CvAssertMsg(m_paiResearchProgress==NULL, "about to leak memory, CvTeamTechs::m_paiResearchProgress");
-	m_paiResearchProgress = FNEW(int [m_pTechs->GetNumTechs()], c_eCiv5GameplayDLL, 0);
-	CvAssertMsg(m_paiTechCount==NULL, "about to leak memory, CvTeamTechs::m_paiTechCount");
-	m_paiTechCount = FNEW(int [m_pTechs->GetNumTechs()], c_eCiv5GameplayDLL, 0);
-
+	m_paiResearchProgress = FNEW(int[m_pTechs->GetNumTechs()], c_eCiv5GameplayDLL, 0);
+	CvAssertMsg(m_paiTechCount == NULL, "about to leak memory, CvTeamTechs::m_paiTechCount");
+	m_paiTechCount = FNEW(int[m_pTechs->GetNumTechs()], c_eCiv5GameplayDLL, 0);
+	
 	Reset();
 }
 
@@ -1966,6 +1981,7 @@ void CvTeamTechs::Uninit()
 	SAFE_DELETE_ARRAY(m_pabNoTradeTech);
 	SAFE_DELETE_ARRAY(m_paiResearchProgress);
 	SAFE_DELETE_ARRAY(m_paiTechCount);
+
 }
 
 /// Reset tech status arrays
@@ -2114,9 +2130,9 @@ int CvTeamTechs::GetNumTechsKnown() const
 {
 	int iNumTechs = 0;
 
-	for(int iTechLoop = 0; iTechLoop < GC.getNumTechInfos(); iTechLoop++)
+	for (int iTechLoop = 0; iTechLoop < GC.getNumTechInfos(); iTechLoop++)
 	{
-		if(HasTech((TechTypes) iTechLoop))
+		if (HasTech((TechTypes)iTechLoop))
 		{
 			iNumTechs++;
 		}
@@ -2124,6 +2140,29 @@ int CvTeamTechs::GetNumTechsKnown() const
 
 	return iNumTechs;
 }
+
+#if defined(MOD_CIV6_DISTRICTS)
+/// How many total Techs does this team have?
+int CvTeamTechs::GetNumTechsKnownInEra(EraTypes era) const
+{
+	int iNumTechs = 0;
+
+	for (int iTechLoop = 0; iTechLoop < GC.getNumTechInfos(); iTechLoop++)
+	{
+		if (HasTech((TechTypes)iTechLoop))
+		{
+			CvTechEntry* pTechInfo = GetTechs()->GetEntry(iTechLoop);
+			CvAssertMsg(pTechInfo, "null tech entry");
+			if (pTechInfo && pTechInfo->GetEra() == era)
+			{
+				iNumTechs++;
+			}
+		}
+	}
+
+	return iNumTechs;
+}
+#endif
 
 /// Has this team researched all techs once?
 bool CvTeamTechs::HasResearchedAllTechs() const

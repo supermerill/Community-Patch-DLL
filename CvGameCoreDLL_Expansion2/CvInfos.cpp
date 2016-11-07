@@ -7280,9 +7280,12 @@ CvEraInfo::CvEraInfo() :
 	m_iTradeRouteProductionBonusTimes100(0),
 	m_iLeaguePercent(0),
 	m_iWarmongerPercent(0),
-	#if defined(MOD_DIPLOMACY_CIV4_FEATURES)
+#if defined(MOD_DIPLOMACY_CIV4_FEATURES)
 	m_bVassalageEnabled(false),
-	#endif
+#endif
+#if defined(MOD_CIV6_DISTRICTS)
+	m_iMeanBuildingCost(0),
+#endif
 	m_bNoGoodies(false),
 	m_bNoBarbUnits(false),
 	m_bNoReligion(false),
@@ -7518,6 +7521,13 @@ const char* CvEraInfo::getAbbreviation() const
 {
 	return m_strAbbreviation.c_str();
 }
+#if defined(MOD_CIV6_DISTRICTS)
+//------------------------------------------------------------------------------
+int CvEraInfo::getMeanBuildingCost() const
+{
+	return m_iMeanBuildingCost;
+}
+#endif
 
 //------------------------------------------------------------------------------
 bool CvEraInfo::CacheResults(Database::Results& kResults, CvDatabaseUtility& kUtility)
@@ -7565,6 +7575,10 @@ bool CvEraInfo::CacheResults(Database::Results& kResults, CvDatabaseUtility& kUt
 	if (MOD_DIPLOMACY_CIV4_FEATURES) {
 		m_bVassalageEnabled			= kResults.GetBool("VassalageEnabled");
 	}
+#endif
+
+#if defined(MOD_CIV6_DISTRICTS)
+	m_iMeanBuildingCost			= kResults.GetInt("MeanBuildingCost");
 #endif
 
 	m_strCityBombardEffectTag	= kResults.GetText("CityBombardEffectTag");

@@ -741,6 +741,15 @@ public:
 	int getNukeModifier() const;
 	void changeNukeModifier(int iChange);
 
+#if defined(MOD_CIV6_DISTRICTS)
+	int GetTradeRouteBonus(YieldTypes type, int iFlags) const;
+	void ChangeTradeRouteBonus(YieldTypes type, int iChange, int iFlags);
+	/*int GetTradeRouteTargetBonus(YieldTypes type) const;
+	void ChangeTradeRouteTargetBonus(YieldTypes type, int iChange);
+
+	int GetTradeRouteRecipientBonus(YieldTypes type) const;
+	void ChangeTradeRouteRecipientBonus(YieldTypes type, int iChange);*/
+#else
 	int GetTradeRouteTargetBonus() const;
 	void ChangeTradeRouteTargetBonus(int iChange);
 
@@ -752,6 +761,7 @@ public:
 
 	int GetTradeRouteLandGoldBonus() const;
 	void ChangeTradeRouteLandGoldBonus(int iChange);
+#endif
 
 	int GetNumTradeRouteBonus() const;
 	void ChangeNumTradeRouteBonus(int iChange);
@@ -1583,10 +1593,20 @@ protected:
 	FAutoVariable<int, CvCity> m_iMaxAirUnits;
 	FAutoVariable<int, CvCity> m_iAirModifier; // unused
 	FAutoVariable<int, CvCity> m_iNukeModifier;
+#if defined(MOD_CIV6_DISTRICTS)
+	//FAutoVariable<std::vector<int>, CvCity> m_iTradeRouteLandOwnerBonus;
+	//FAutoVariable<std::vector<int>, CvCity> m_iTradeRouteLandTargetBonus;
+	//FAutoVariable<std::vector<int>, CvCity> m_iTradeRouteLandRecipientBonus;
+	//FAutoVariable<std::vector<int>, CvCity> m_iTradeRouteSeaOwnerBonus;
+	//FAutoVariable<std::vector<int>, CvCity> m_iTradeRouteSeaTargetBonus;
+	//FAutoVariable<std::vector<int>, CvCity> m_iTradeRouteSeaRecipientBonus;
+	FAutoVariable<std::vector<int>, CvCity> m_iTradeRouteBonus;
+#else
 	FAutoVariable<int, CvCity> m_iTradeRouteTargetBonus;
 	FAutoVariable<int, CvCity> m_iTradeRouteRecipientBonus;
 	FAutoVariable<int, CvCity> m_iTradeRouteSeaGoldBonus;
 	FAutoVariable<int, CvCity> m_iTradeRouteLandGoldBonus;
+#endif
 	FAutoVariable<int, CvCity> m_iNumTradeRouteBonus;
 	FAutoVariable<int, CvCity> m_iCultureUpdateTimer;
 	FAutoVariable<int, CvCity> m_iCitySizeBoost;

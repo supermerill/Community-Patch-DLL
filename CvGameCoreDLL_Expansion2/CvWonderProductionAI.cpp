@@ -249,7 +249,11 @@ BuildingTypes CvWonderProductionAI::ChooseWonder(bool /* bAdjustForOtherPlayers 
 			if(IsWonder(kBuilding) && HaveCityToBuild((BuildingTypes)iBldgLoop))
 #endif
 			{
+#if defined(MOD_CIV6_DISTRICTS)
+				iTurnsRequired = std::max(1, kBuilding.GetProductionCost(m_pPlayer) / iEstimatedProductionPerTurn);
+#else
 				iTurnsRequired = std::max(1, kBuilding.GetProductionCost() / iEstimatedProductionPerTurn);
+#endif
 
 				// if we are forced to restart a wonder, give one that has been started already a huge bump
 				bool bAlreadyStarted = pWonderCity->GetCityBuildings()->GetBuildingProduction(eBuilding) > 0;

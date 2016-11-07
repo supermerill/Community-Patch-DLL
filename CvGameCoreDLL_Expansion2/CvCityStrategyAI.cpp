@@ -4816,10 +4816,18 @@ int CityStrategyAIHelpers::GetBuildingYieldValue(CvCity *pCity, BuildingTypes eB
 			}
 		}
 	}
+#if defined(MOD_CIV6_DISTRICTS)
+	if (pkBuildingInfo->GetTradeRouteYieldChange(eYield, TR_RECIPIENT) > 0 || pkBuildingInfo->GetTradeRouteYieldChange(eYield, TR_TARGET) > 0)
+	{
+		iFlatYield += (kPlayer.GetTrade()->GetTradeValuesAtCityTimes100(pCity, eYield) 
+			* (pkBuildingInfo->GetTradeRouteYieldChange(eYield, TR_RECIPIENT) + pkBuildingInfo->GetTradeRouteYieldChange(eYield, TR_TARGET)));
+	}
+#else
 	if (pkBuildingInfo->GetTradeRouteRecipientBonus() > 0 || pkBuildingInfo->GetTradeRouteTargetBonus() > 0 && eYield == YIELD_GOLD)
 	{
 		iFlatYield += (kPlayer.GetTrade()->GetTradeValuesAtCityTimes100(pCity, YIELD_GOLD) * (pkBuildingInfo->GetTradeRouteRecipientBonus() + pkBuildingInfo->GetTradeRouteTargetBonus()));
 	}
+#endif
 
 	int iYieldPolicyBonus = kPlayer.GetBuildingClassYieldChange((BuildingClassTypes)pkBuildingInfo->GetBuildingClassType(), eYield) + kPlayer.GetPlayerPolicies()->GetBuildingClassYieldChange((BuildingClassTypes)pkBuildingInfo->GetBuildingClassType(), eYield);
 	if (iYieldPolicyBonus > 0)

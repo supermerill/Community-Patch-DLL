@@ -457,7 +457,14 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
 	iBonus += iDefense;
 
 	//No Land trade connections?
-	if(pkBuildingInfo->GetTradeRouteLandDistanceModifier() > 0 || pkBuildingInfo->GetTradeRouteLandGoldBonus() > 0 || pkBuildingInfo->GetLandTourismEnd() > 0)
+#if defined(MOD_CIV6_DISTRICTS)
+	//??
+	if (pkBuildingInfo->GetTradeRouteLandDistanceModifier() > 0 
+		|| pkBuildingInfo->GetTradeRouteYieldChange(TR_BONUS | TR_LAND) > 0
+		|| pkBuildingInfo->GetLandTourismEnd() > 0)
+#else
+	if (pkBuildingInfo->GetTradeRouteLandDistanceModifier() > 0 || pkBuildingInfo->GetTradeRouteLandGoldBonus() > 0 || pkBuildingInfo->GetLandTourismEnd() > 0)
+#endif
 	{	
 		if(iNumLandConnection <= 0)
 		{
@@ -477,7 +484,13 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
 	bool bGoodforGPTHappiness = false;
 
 	//No Sea Trade Connections?
-	if(pkBuildingInfo->GetTradeRouteSeaDistanceModifier() > 0 || pkBuildingInfo->GetTradeRouteSeaGoldBonus() > 0 || pkBuildingInfo->GetSeaTourismEnd() > 0)
+#if defined(MOD_CIV6_DISTRICTS)
+	if(pkBuildingInfo->GetTradeRouteSeaDistanceModifier() > 0 
+		|| pkBuildingInfo->GetTradeRouteYieldChange(TR_BONUS | TR_SEA) > 0 
+		|| pkBuildingInfo->GetSeaTourismEnd() > 0)
+#else
+	if (pkBuildingInfo->GetTradeRouteSeaDistanceModifier() > 0 || pkBuildingInfo->GetTradeRouteSeaGoldBonus() > 0 || pkBuildingInfo->GetSeaTourismEnd() > 0)
+#endif
 	{
 		CvCity* pCapital = kPlayer.getCapitalCity();
 		if(pkBuildingInfo->AllowsWaterRoutes())

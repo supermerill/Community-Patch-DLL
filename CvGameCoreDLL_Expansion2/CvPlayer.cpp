@@ -15364,7 +15364,11 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 		return 1;
 	}
 
+#if defined(MOD_CIV6_DISTRICTS)
+	iProductionNeeded = pkBuildingInfo->GetProductionCost(this);
+#else 
 	iProductionNeeded = pkBuildingInfo->GetProductionCost();
+#endif
 
 	if(pkBuildingInfo->GetNumCityCostMod() > 0 && getNumCities() > 0)
 	{

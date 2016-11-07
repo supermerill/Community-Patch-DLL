@@ -383,6 +383,8 @@
 #define MOD_CIV6_WORKER								gCustomMods.isCIV6_TYPE_WORKER()
 // Roads are created by trade routes.
 #define MOD_CIV6_ROADS								gCustomMods.isCIV6_ROADS()
+// cost of buildings increased per era
+#define MOD_CIV6_DISTRICTS							gCustomMods.isCIV6_DISTRICTS()
 
 #endif
 // Changes melee ship units to be cargo carrying units with added promotions for ship and cargo
@@ -1448,6 +1450,7 @@ public:
 
 	MOD_OPT_DECL(CIV6_WORKER);
 	MOD_OPT_DECL(CIV6_ROADS);
+	MOD_OPT_DECL(CIV6_DISTRICTS);
 
 	MOD_OPT_DECL(DIPLOMACY_CIV4_FEATURES);
 	MOD_OPT_DECL(CARGO_SHIPS);

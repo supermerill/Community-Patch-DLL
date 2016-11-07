@@ -6265,7 +6265,11 @@ GreatWorkSlotType CvCityCulture::GetSlotTypeFirstAvailableCultureBuilding() cons
 				{
 					if (m_pCity->canConstruct(eBuilding))
 					{
+#if defined(MOD_CIV6_DISTRICTS)
+						int iCost = pkBuilding->GetProductionCost(m_pCity->GetPlayer());
+#else
 						int iCost = pkBuilding->GetProductionCost();
+#endif
 						if (iCost < iCheapest)
 						{
 							iCheapest = iCost;

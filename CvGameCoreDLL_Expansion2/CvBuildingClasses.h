@@ -13,6 +13,10 @@
 #include "CvDatabaseUtility.h"
 
 #define MAX_THEMING_BONUSES 12
+#if defined(MOD_CIV6_DISTRICTS)
+#define MAX_YIELD_CHANGE_TR 5
+#endif
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  class : CvThemingBonusInfo
@@ -145,6 +149,10 @@ public:
 	int GetFreePromotion() const;
 	int GetTrainedFreePromotion() const;
 	int GetFreePromotionRemoved() const;
+#if defined(MOD_CIV6_DISTRICTS)
+	int GetCostIncreasePerEraMod() const;
+	int GetProductionCost(const CvPlayer* currentEra) const;
+#endif
 	int GetProductionCost() const;
 	int GetFaithCost() const;
 	int GetLeagueCost() const;
@@ -206,8 +214,8 @@ public:
 	int GetBlockBuildingDestruction() const;
 	int GetBlockWWDestruction() const;
 	int GetBlockUDestruction() const;
-	int GetBlockGPDestruction() const;
 	int GetBlockRebellion() const;
+	int GetBlockGPDestruction() const;
 	int GetBlockUnrest() const;
 	int GetBlockScience() const;
 	int GetBlockGold() const;
@@ -258,8 +266,23 @@ public:
 	int GetGlobalEspionageModifier() const;
 	int GetExtraSpies() const;
 	int GetSpyRankChange() const;
+#if defined(MOD_CIV6_DISTRICTS)
+	int GetTradeRouteYieldChange(int iYieldType, int iDirectionFlags) const;
+	int GetTradeRouteYieldChange(int iDirectionFlags) const;
+	//return a compact int with the 5 first bit used to store the "direction flags" and the others the change number.
+	vector<int> GetTradeRouteYieldChangeWithDir(int iYieldType) const;
+	//int GetTradeRouteBonusYieldType() const;
+	//int GetTradeRouteRecipientBonus(int iYield) const;
+	//int GetTradeRouteTargetBonus(int iYield) const;
+#else
 	int GetTradeRouteRecipientBonus() const;
 	int GetTradeRouteTargetBonus() const;
+	int GetTradeRouteSeaGoldBonus() const;
+	int GetTradeRouteLandGoldBonus() const;
+#endif
+	int GetTradeRouteSeaDistanceModifier() const;
+	int GetTradeRouteLandDistanceModifier() const;
+	int GetCityStateTradeRouteProductionModifier() const;
 	int GetNumTradeRouteBonus() const;
 	int GetInstantSpyRankChange() const;
 #if defined(MOD_RELIGION_CONVERSION_MODIFIERS)
@@ -270,11 +293,6 @@ public:
 	int GetInstantMilitaryIncrease() const;
 	int GetGreatWorksTourismModifier() const;
 	int GetXBuiltTriggersIdeologyChoice() const;
-	int GetTradeRouteSeaDistanceModifier() const;
-	int GetTradeRouteSeaGoldBonus() const;
-	int GetTradeRouteLandDistanceModifier() const;
-	int GetTradeRouteLandGoldBonus() const;
-	int GetCityStateTradeRouteProductionModifier() const;
 	int GetGreatScientistBeakerModifier() const;
 	int GetExtraLeagueVotes() const;
 #if defined(MOD_DIPLOMACY_CITYSTATES)
@@ -569,6 +587,9 @@ private:
 	int m_iFreePromotion;
 	int m_iTrainedFreePromotion;
 	int m_iFreePromotionRemoved;
+#if defined(MOD_CIV6_DISTRICTS)
+	int m_iCostIncreasePerEraMod;
+#endif
 	int m_iProductionCost;
 	int m_iFaithCost;
 	int m_iLeagueCost;
@@ -655,6 +676,14 @@ private:
 	int m_iInstantMilitaryIncrease;
 	int m_iGreatWorksTourismModifier;
 	int m_iXBuiltTriggersIdeologyChoice;
+#if defined(MOD_CIV6_DISTRICTS)
+	// yieldType->yieldValue->flagsForTRDirections
+	int** m_ppiTradeRouteYieldChanges;
+	int m_iTradeRouteSeaDistanceModifier;
+	int m_iTradeRouteLandDistanceModifier;
+	int m_iNumTradeRouteBonus;
+	//	int m_iTradeRouteBonusYieldType;
+#else
 	int m_iTradeRouteRecipientBonus;
 	int m_iTradeRouteTargetBonus;
 	int m_iNumTradeRouteBonus;
@@ -662,6 +691,7 @@ private:
 	int m_iTradeRouteSeaGoldBonus;
 	int m_iTradeRouteLandDistanceModifier;
 	int m_iTradeRouteLandGoldBonus;
+#endif
 	int m_iCityStateTradeRouteProductionModifier;
 	int m_iGreatScientistBeakerModifier;
 	int m_iExtraLeagueVotes;

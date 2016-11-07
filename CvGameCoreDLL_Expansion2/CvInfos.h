@@ -2409,6 +2409,10 @@ public:
 	bool getVassalageEnabled() const;
 #endif
 
+#if defined(MOD_CIV6_DISTRICTS)
+	int getMeanBuildingCost() const;
+#endif
+
 	const char* GetCityBombardEffectTag() const;
 	uint GetCityBombardEffectTagHash() const;
 
@@ -2469,6 +2473,10 @@ protected:
 
 #if defined(MOD_DIPLOMACY_CIV4_FEATURES)
 	bool m_bVassalageEnabled;
+#endif
+
+#if defined(MOD_CIV6_DISTRICTS)
+	int m_iMeanBuildingCost;
 #endif
 
 	CvString m_strCityBombardEffectTag;

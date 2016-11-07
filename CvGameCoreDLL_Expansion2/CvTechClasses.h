@@ -209,6 +209,9 @@ public:
 	// Accessor functions
 	std::vector<CvTechEntry*>& GetTechEntries();
 	int GetNumTechs();
+#if defined(MOD_CIV6_DISTRICTS)
+	int GetNumTechsInEra(EraTypes era);
+#endif
 	_Ret_maybenull_ CvTechEntry* GetEntry(int index);
 
 	void DeleteArray();
@@ -327,6 +330,9 @@ public:
 	void SetLastTechAcquired(TechTypes eTech);
 
 	int GetNumTechsKnown() const;
+#if defined(MOD_CIV6_DISTRICTS)
+	int GetNumTechsKnownInEra(EraTypes era) const;
+#endif
 	bool HasResearchedAllTechs() const;
 
 	void SetNoTradeTech(TechTypes eIndex, bool bNewValue);

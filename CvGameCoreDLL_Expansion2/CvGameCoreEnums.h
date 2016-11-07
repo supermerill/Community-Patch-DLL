@@ -41,6 +41,33 @@ enum YieldTypes
     NUM_YIELD_TYPES
 };
 
+#if defined(MOD_CIV6_DISTRICTS)
+//If you want more than MAX_NUM_YIELD_TYPES types of yield, please change the MAX_NUM_YIELD_TYPES define and the MAX_NUM_YIELD_TYPES_POW2
+// 2^MAX_NUM_YIELD_TYPES_POW2 == MAX_NUM_YIELD_TYPES
+#define MAX_NUM_YIELD_TYPES 64
+#define MAX_NUM_YIELD_TYPES_POW2 6
+// Don't use it to store values, store an int!
+// it's mainly here to help understand values and ease requests.
+#define MAX_TRADE_ROUTE_FLAGS_POW2 5
+enum TRADE_ROUTE_FLAGS
+{
+	TR_NO_FLAGS = 0,
+
+	TR_BONUS = 1,
+	TR_RECIPIENT = 2,
+	TR_TARGET = 4,
+	TR_LAND = 8,
+	TR_SEA = 16,
+	TR_SEA_LAND = 24,
+	TR_ALL = 31
+
+};
+inline TRADE_ROUTE_FLAGS operator|(TRADE_ROUTE_FLAGS a, TRADE_ROUTE_FLAGS b)
+{
+	return static_cast<TRADE_ROUTE_FLAGS>(static_cast<int>(a) | static_cast<int>(b));
+}
+#endif
+
 // Popups specific to this DLL
 
 // Hashed values.  Use FStringHashGen to create!
