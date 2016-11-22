@@ -3811,56 +3811,374 @@ void CvMilitaryAI::UpdateMilitaryStrategies()
 void CvMilitaryAI::DoNuke(PlayerTypes ePlayer)
 {
 	bool bLaunchNuke = false;
-	// only evaluate nukes when we have nukes and we've declared war on someone
-	if (m_pPlayer->getNumNukeUnits() > 0) 
+#if !defined(MOD_NUCLEAR_TERROR)
+	//if (gCustomMods.isNUCLEAR_TERROR())
+	//{
+	//	// only evaluate nukes when we have nukes and we've declared war on someone
+	//	if (m_pPlayer->getNumNukeUnits() > 0)
+	//	{
+	//		// they nuked us, so we can nuke them.
+	//		if (m_pPlayer->GetDiplomacyAI()->GetNumTimesNuked(ePlayer) > 0)
+	//		{
+	//			bLaunchNuke = true;
+	//		}
+	//		// if we already nuked them, uhhh, keep it up!
+	//		else if (GET_PLAYER(ePlayer).GetDiplomacyAI()->GetNumTimesNuked(m_pPlayer->GetID()) > 0)
+	//		{
+	//			bLaunchNuke = true;
+	//		}
+	//		else
+	//		{
+
+	//	}
+	//}
+	//else
+	//{
+#endif
+		// only evaluate nukes when we have nukes and we've declared war on someone
+	if (m_pPlayer->getNumNukeUnits() > 0)
 	{
-		// they nuked us, so we can nuke them.
-		if (m_pPlayer->GetDiplomacyAI()->GetNumTimesNuked(ePlayer) > 0)
-		{	
-			bLaunchNuke = true;
-		}
-		// if we already nuked them, uhhh, keep it up!
-		else if (GET_PLAYER(ePlayer).GetDiplomacyAI()->GetNumTimesNuked(m_pPlayer->GetID()) > 0)
+#if defined(MOD_NUCLEAR_TERROR)
+		//TODO: check if an nuclear operatino isn't already active vs this player
+		//TODO: check for NPT, if NPT then be more careful with your nuks
+
+		// it is ok to launch a tactical or strategic bomb on them?
+		bool okBombing = false;
+		// can we planned a destruction of all enemy nukes?
+		bool needFirstStrike = false;
+		// total destruction ordered?
+		bool totalBombing = false;
+
+		if (GET_PLAYER(ePlayer).isMajorCiv())
 		{
-			bLaunchNuke = true;
-		}
-		else 
-		{
-			bool bRollForNuke = false;
-			WarProjectionTypes eCurrentWarProjection = m_pPlayer->GetDiplomacyAI()->GetWarProjection(ePlayer);
-			if(GET_PLAYER(ePlayer).isMajorCiv())
+
+			//check second strike
+			CvPlayerAI oEnemyPlayer = GET_PLAYER(ePlayer);
+			CvTeam enemyTeam = GET_TEAM(oEnemyPlayer.getTeam());
+			vector<PlayerTypes> vEnemies = enemyTeam.getPlayers();
+			CvTeam myTeam = GET_TEAM(m_pPlayer->getTeam());
+			vector<PlayerTypes> vTeam = myTeam.getPlayers();
+			for (int iEnemyPlayerLoop = 0; iEnemyPlayerLoop < vEnemies.size(); iEnemyPlayerLoop++)
 			{
-				MajorCivOpinionTypes eMajorCivOpinion = m_pPlayer->GetDiplomacyAI()->GetMajorCivOpinion(ePlayer);
-				if (eCurrentWarProjection <= WAR_PROJECTION_DEFEAT)
+				for (int iAllyPlayerLoop = 0; iAllyPlayerLoop < vTeam.size(); iAllyPlayerLoop++)
 				{
-					// roll every turn
-					bRollForNuke = true;
-				}
-				else if(eMajorCivOpinion <= MAJOR_CIV_OPINION_ENEMY)
-				{
-					bRollForNuke = true;
-				}
-				else if(m_pPlayer->GetDiplomacyAI()->IsGoingForWorldConquest())
-				{
-					bRollForNuke = true;
-				}
-				else if(m_pPlayer->GetDiplomacyAI()->GetPlayerMilitaryStrengthComparedToUs(ePlayer) >= STRENGTH_POWERFUL)
-				{
-					bRollForNuke = true;
-				}
-				if (bRollForNuke)
-				{
-					int iFlavorNuke = m_pPlayer->GetGrandStrategyAI()->GetPersonalityAndGrandStrategy((FlavorTypes)GC.getInfoTypeForString("FLAVOR_USE_NUKE"));
-					int iRoll = GC.getGame().getSmallFakeRandNum(10, ePlayer);
-					int iRoll2 = GC.getGame().getSmallFakeRandNum(10, ePlayer);
-					if (iRoll < iFlavorNuke && iRoll2 < iFlavorNuke)
+					// they nuked us?
+					if (GET_PLAYER(vTeam[iAllyPlayerLoop]).GetDiplomacyAI()->GetNumTimesNuked(vEnemies[iEnemyPlayerLoop]) > 0)
 					{
-						bLaunchNuke = true;
+						//we should nuke them to the ground
+						totalBombing = true;
+					}
+					// we already nuked them?
+					if (GET_PLAYER(vEnemies[iEnemyPlayerLoop]).GetDiplomacyAI()->GetNumTimesNuked(vTeam[iAllyPlayerLoop]) > 0)
+					{
+						//we should nuke them to the ground, anyway
+						okBombing = true;
+					}
+				}
+			}
+			if (totalBombing && okBombing && enemyTeam.getNuclearPower() == 0)
+			{
+				//first exchange are already made, they didn't have an other nuclear bomb, now we can calm down.
+				totalBombing = false;
+			}
+
+			//if the nuclear war isn't started yet. Do we start it?
+			if (!totalBombing && !okBombing)
+			{
+				int iEnemyNuclearPower = oEnemyPlayer.getNuclearPower();
+				int iEnemyTeamNuclearPower = enemyTeam.getNuclearPower();
+				int iEnemyDefPactNuclearPower = 0;
+				int iEnemyFriendNuclearPower = 0;
+				int iEnemyAlliesNuclearPower = 0;
+				int iEnemyBrothersNuclearPower = 0;
+				int iOurNuclearPower = m_pPlayer->getNuclearPower();
+				int iTeamNuclearPower = myTeam.getNuclearPower();
+
+				int iOkForNuke = 0;
+
+				// get ennemy nuclear power
+				//for (int iEnemyPlayerLoop = 0; iEnemyPlayerLoop < vEnemies.size(); iEnemyPlayerLoop++)
+				//{
+				//	iEnemyNuclearPower += GET_PLAYER(vEnemies[iEnemyPlayerLoop]).getNuclearPower();
+				//}
+				//// get our team nuclear power
+				//for (int iAllyPlayerLoop = 0; iAllyPlayerLoop < vTeam.size(); iAllyPlayerLoop++)
+				//{
+				//	iTeamNuclearPower += GET_PLAYER(vTeam[iAllyPlayerLoop]).getNuclearPower();
+				//}
+				for (int iT = 0; iT < MAX_TEAMS; ++iT)
+				{
+					CvTeam randomTeam = GET_TEAM((TeamTypes)iT);
+					if (randomTeam.isAlive())
+					{
+						if (randomTeam.IsHasDefensivePact(enemyTeam.GetID()))
+						{
+							iEnemyDefPactNuclearPower += randomTeam.getNuclearPower();
+							/*vector<PlayerTypes> vEnemyDefPact = randomTeam.getPlayers();
+							for (int iEnemyDefPactPlayerLoop = 0; iEnemyDefPactPlayerLoop < vEnemyDefPact.size(); iEnemyDefPactPlayerLoop++)
+							{
+							iEnemyDefPactNuclearPower += GET_PLAYER(vEnemyDefPact[iEnemyDefPactPlayerLoop]).getNuclearPower();
+							}*/
+						}
+						else if (randomTeam.IsVassal(enemyTeam.GetID()))
+						{
+							iEnemyTeamNuclearPower += randomTeam.getNuclearPower();
+						}
+						else if (randomTeam.IsVassal(myTeam.GetID()))
+						{
+							iTeamNuclearPower += randomTeam.getNuclearPower();
+						}
+					}
+
+				}
+				for (int iP = 0; iP < MAX_PLAYERS; ++iP)
+				{
+					CvPlayerAI oRandomPlayer = GET_PLAYER((PlayerTypes)iP);
+					if (oRandomPlayer.isAlive() && !enemyTeam.isMember((PlayerTypes)iP) && !GET_TEAM(oRandomPlayer.getTeam()).IsVassalOfSomeone())
+					{
+						if (oRandomPlayer.GetDiplomacyAI()->GetDoFType(ePlayer) > DOF_TYPE_FRIENDS)
+						{
+							iEnemyFriendNuclearPower += oRandomPlayer.getNuclearPower();
+							if (oRandomPlayer.GetDiplomacyAI()->GetDoFType(ePlayer) > DOF_TYPE_ALLIES)
+							{
+								iEnemyAlliesNuclearPower += oRandomPlayer.getNuclearPower();
+								if (oRandomPlayer.GetDiplomacyAI()->GetDoFType(ePlayer) > DOF_TYPE_BATTLE_BROTHERS)
+								{
+									iEnemyBrothersNuclearPower += oRandomPlayer.getNuclearPower();
+								}
+							}
+						}
+					}
+				}
+
+				//now we can make an informed decision about the possibility to lunch a nuke
+
+				//check if it is safe to nuke
+				bool isSafeToNuke = false;
+				if (iEnemyTeamNuclearPower == 0 && iEnemyDefPactNuclearPower == 0)
+				{
+					isSafeToNuke = true;
+				}
+				//check how much dangerous an escalation is
+				int nukeEscalationDanger100 = 0;
+				nukeEscalationDanger100 += (int)sqrtl(iEnemyBrothersNuclearPower) * 100;
+				nukeEscalationDanger100 += (int)sqrtl(iEnemyAlliesNuclearPower) * 30;
+				nukeEscalationDanger100 += (int)sqrtl(iEnemyFriendNuclearPower) * 10;
+
+				// ---------------- iOkForNuke:  make a strategic decision about nukes (0-100) -----------------
+
+				int iFlavorNuke = m_pPlayer->GetGrandStrategyAI()->GetPersonalityAndGrandStrategy((FlavorTypes)GC.getInfoTypeForString("FLAVOR_USE_NUKE"));
+				MajorCivOpinionTypes eMajorCivOpinion = m_pPlayer->GetDiplomacyAI()->GetMajorCivOpinion(ePlayer);
+				WarProjectionTypes eCurrentWarProjection = m_pPlayer->GetDiplomacyAI()->GetWarProjection(ePlayer);
+
+				//case 1: safe to nuke and escalation is not a big danger.
+				if (isSafeToNuke && nukeEscalationDanger100 < iTeamNuclearPower * 100)
+				{
+					iOkForNuke = 100;
+				}
+				//case 2: safe to nuke and we need it
+				else if (isSafeToNuke && m_pPlayer->GetDiplomacyAI()->IsGoingForWorldConquest())
+				{
+					iOkForNuke = 60;
+					if (eCurrentWarProjection <= WAR_PROJECTION_DEFEAT)
+					{
+						iOkForNuke = 100;
+					}
+				}
+				//case 3: safe to nuke but escalation can be dangerous
+				else if (isSafeToNuke && nukeEscalationDanger100 >= iTeamNuclearPower * 100)
+				{
+					if (eMajorCivOpinion == MAJOR_CIV_OPINION_UNFORGIVABLE)
+					{
+						iOkForNuke = 60;
+					}
+					else if (eMajorCivOpinion == MAJOR_CIV_OPINION_ENEMY)
+					{
+						iOkForNuke = 30;
+					}
+					else
+					{
+						iOkForNuke = 10;
+					}
+					if (eCurrentWarProjection == WAR_PROJECTION_DESTRUCTION)
+					{
+						iOkForNuke += 20;
+					}
+				}
+
+				if (!isSafeToNuke)
+				{
+					//not safe to nuke them
+					//check if we're a fool
+					if (eMajorCivOpinion <= MAJOR_CIV_OPINION_ENEMY && m_pPlayer->GetDiplomacyAI()->IsGoingForWorldConquest() && iFlavorNuke > 5)
+					{
+						iOkForNuke = 10 * iFlavorNuke;
+					}
+				}
+
+				//TODO: if iOkForNuk is low and iFlavorNuke is low, odd of defeat is low then it's not possible to launch a nuk. 
+				// If iOkForNuk is high and iFlavorNuke is highand we want a conquest, then it's always launched.
+				// if it's middle-ground, then we can randomize the thing a bit, but make it very dependant on our military situation:
+				//		if we're ok, odds of launch are low
+				//		if we're deseperate, odds of launch are high
+
+
+				//iOkForNuke => strategic decision
+				//eCurrentWarProjection => tactical decision, if strategic can't decide
+
+				//after that, we ahve to decide if we use our precious bomb for this target 
+				// or we need to keep them for a more powerful/threatening other one.
+
+				//4 types of high-level nuk decision:
+				// 1- no nuk bombing
+				// 2- limited nuk Bombing on ennemy team => use nuk where you like but don't reduce our stockpile too much, we need some deterent.
+				// 3- first strike nuk bombing on enemy team (or abord) => absolute need to removeanemy nuk asap, even if we need to spend our last one.
+				// 4- unlimited strike => it's already loosed (score, war, or nuked), so spend all we have to turn them back to ancient era! 
+				// 
+
+				// 1 -> if !nuk
+				// 2 -> if nuk & !loose
+				// 3 -> if nuk & enemyhasNuk
+				// 4 -> if nuk & (loose | (nukedUs & !nukedThem))
+
+
+				//temp solution, for testing: not random decision
+				if (iOkForNuke < 40)
+				{
+					okBombing = false;
+					needFirstStrike = false;
+					totalBombing = false;
+				}
+				else if (!isSafeToNuke)
+				{
+					needFirstStrike = true;
+				}
+				else if (eCurrentWarProjection > WAR_PROJECTION_DEFEAT)
+				{
+					okBombing = true;
+				}
+				else if (eCurrentWarProjection <= WAR_PROJECTION_DEFEAT)
+				{
+					totalBombing = true;
+				}
+
+
+
+				if (GC.getLogging() && GC.getAILogging())
+				{
+					CvString strOutBuf;
+					CvString strTemp;
+					CvString playerName;
+					CvCity* pCity;
+					CvString cityName;
+					FILogFile* pLog;
+
+					// Open the right file
+					playerName = GetPlayer()->getCivilizationShortDescription();
+					pLog = LOGFILEMGR.GetLog(GetLogFileName(playerName), FILogFile::kDontTimeStamp);
+
+					// our & enemy
+					strOutBuf.Format("NUK: myPower=%d, myTeamP=%d, enemyP=%d, enemyPTeam=%d,enemyDefPactP=%d",
+						iOurNuclearPower, iTeamNuclearPower, iEnemyNuclearPower, iEnemyTeamNuclearPower, iEnemyDefPactNuclearPower);
+
+					// enemy allies
+					strTemp.Format(", enemyFriendP = %d, enemyAlliesP = %d, enemyBrtoherP = %d",
+						iEnemyFriendNuclearPower, iEnemyAlliesNuclearPower, iEnemyBrothersNuclearPower);
+					strOutBuf += strTemp;
+
+					//other results
+					strTemp.Format(", iFlavorNuke=%d, iOkForNuke=%d, isSafeToNuke=%d", iFlavorNuke, iOkForNuke, isSafeToNuke);
+					strOutBuf += strTemp;
+					strTemp.Format(", okBombing=%d, totalBombing=%d, needFirstStrike=%d", okBombing, totalBombing, needFirstStrike);
+
+
+					pLog->Msg(strOutBuf);
+
+				}
+			}
+		}
+
+		bLaunchNuke = false;
+
+		if (needFirstStrike)
+		{
+			CvAIOperation* pOperation = m_pPlayer->addAIOperation(AI_OPERATION_NUKE_FIRST_STRIKE, ePlayer);
+			if (pOperation != NULL && pOperation->GetOperationState() != AI_OPERATION_STATE_ABORTED)
+			{
+
+			}
+		}
+		else if (okBombing)
+		{
+			CvAIOperation* pOperation = m_pPlayer->addAIOperation(AI_OPERATION_NUKE_ATTACK_CONSERVATIVE, ePlayer);
+			if (pOperation != NULL && pOperation->GetOperationState() != AI_OPERATION_STATE_ABORTED)
+			{
+				
+			}
+		}
+		else if (totalBombing)
+		{
+			CvAIOperation* pOperation = m_pPlayer->addAIOperation(AI_OPERATION_NUKE_ATTACK_FULL, ePlayer);
+			if (pOperation != NULL && pOperation->GetOperationState() != AI_OPERATION_STATE_ABORTED)
+			{
+
+			}
+		}
+
+	} 
+	if (false)
+	{
+#endif
+			// they nuked us, so we can nuke them.
+			if (m_pPlayer->GetDiplomacyAI()->GetNumTimesNuked(ePlayer) > 0)
+			{
+				bLaunchNuke = true;
+			}
+			// if we already nuked them, uhhh, keep it up!
+			else if (GET_PLAYER(ePlayer).GetDiplomacyAI()->GetNumTimesNuked(m_pPlayer->GetID()) > 0)
+			{
+				bLaunchNuke = true;
+			}
+			else
+			{
+				bool bRollForNuke = false;
+				WarProjectionTypes eCurrentWarProjection = m_pPlayer->GetDiplomacyAI()->GetWarProjection(ePlayer);
+				if (GET_PLAYER(ePlayer).isMajorCiv())
+				{
+					MajorCivOpinionTypes eMajorCivOpinion = m_pPlayer->GetDiplomacyAI()->GetMajorCivOpinion(ePlayer);
+					if (eCurrentWarProjection <= WAR_PROJECTION_DEFEAT)
+					{
+						// roll every turn
+						bRollForNuke = true;
+					}
+					else if (eMajorCivOpinion <= MAJOR_CIV_OPINION_ENEMY)
+					{
+						bRollForNuke = true;
+					}
+					else if (m_pPlayer->GetDiplomacyAI()->IsGoingForWorldConquest())
+					{
+						bRollForNuke = true;
+					}
+					else if (m_pPlayer->GetDiplomacyAI()->GetPlayerMilitaryStrengthComparedToUs(ePlayer) >= STRENGTH_POWERFUL)
+					{
+						bRollForNuke = true;
+					}
+					if (bRollForNuke)
+					{
+						int iFlavorNuke = m_pPlayer->GetGrandStrategyAI()->GetPersonalityAndGrandStrategy((FlavorTypes)GC.getInfoTypeForString("FLAVOR_USE_NUKE"));
+						int iRoll = GC.getGame().getSmallFakeRandNum(10, ePlayer);
+						int iRoll2 = GC.getGame().getSmallFakeRandNum(10, ePlayer);
+						if (iRoll < iFlavorNuke && iRoll2 < iFlavorNuke)
+						{
+							bLaunchNuke = true;
+						}
 					}
 				}
 			}
 		}
+#if !defined(MOD_NUCLEAR_TERROR)
 	}
+#endif
 
 	if (bLaunchNuke)
 	{

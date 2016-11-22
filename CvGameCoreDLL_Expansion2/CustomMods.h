@@ -392,6 +392,8 @@
 #define MOD_CIV6_ROADS								gCustomMods.isCIV6_ROADS()
 // activate eureka for tech cost bonus 'quest'
 #define MOD_CIV6_EUREKA								gCustomMods.isCIV6_EUREKAS()
+// activate eureka for tech cost bonus 'quest'
+#define MOD_NUCLEAR_TERROR								gCustomMods.isNUCLEAR_TERROR()
 
 #endif
 // Changes melee ship units to be cargo carrying units with added promotions for ship and cargo
@@ -1458,6 +1460,7 @@ public:
 	MOD_OPT_DECL(CIV6_WORKER);
 	MOD_OPT_DECL(CIV6_ROADS);
 	MOD_OPT_DECL(CIV6_EUREKAS);
+	MOD_OPT_DECL(NUCLEAR_TERROR);
 
 	MOD_OPT_DECL(DIPLOMACY_CIV4_FEATURES);
 	MOD_OPT_DECL(CARGO_SHIPS);

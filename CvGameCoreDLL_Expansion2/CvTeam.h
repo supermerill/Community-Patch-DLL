@@ -523,6 +523,9 @@ public:
 	void SetNumTurnsSinceVassalTaxSet(PlayerTypes ePlayer, int iValue);
 	void ChangeNumTurnsSinceVassalTaxSet(PlayerTypes ePlayer, int iChange);
 #endif
+#if defined(MOD_NUCLEAR_TERROR)
+	int getNuclearPower();
+#endif
 
 	// Wrapper for giving Players on this Team a notification message
 	void AddNotification(NotificationTypes eNotificationType, const char* strMessage, const char* strSummary, int iX = -1, int iY = -1, int iGameDataIndex = -1, int iExtraGameData = -1);

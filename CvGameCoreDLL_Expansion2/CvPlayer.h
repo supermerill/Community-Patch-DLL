@@ -2569,6 +2569,10 @@ public:
 	int CountAllTerrain(TerrainTypes iTerrainType);
 	int CountAllWorkedTerrain(TerrainTypes iTerrainType);
 #endif
+#if defined(MOD_NUCLEAR_TERROR)
+	int getNuclearPower();
+	void changeNuclearPower(int mod);
+#endif
 
 	// for serialization
 	virtual void Read(FDataStream& kStream);
