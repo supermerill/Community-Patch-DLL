@@ -718,6 +718,7 @@ SPath CvAStar::GetCurrentPath() const
 		return ret;
 	}
 
+	ret.iTotalCost = pNode->m_iKnownCost;
 	ret.iNormalizedDistance = pNode->m_iKnownCost / m_iBasicPlotCost + 1;
 	ret.iTotalTurns = pNode->m_iTurns;
 
@@ -761,7 +762,7 @@ bool CvAStar::VerifyPath(const SPath& path)
 		if ( udFunc(udValid, &current, &next, 0, m_sData) )
 		{
 			iKnownCost += udFunc(udCost, &current, &next, 0, m_sData);
-			if (iKnownCost > path.iNormalizedDistance*m_iBasicPlotCost)
+			if (iKnownCost > path.iTotalCost)
 			{
 				bResult = false;
 				break;
@@ -801,7 +802,6 @@ struct UnitPathCacheData
 	bool m_bCanAttack;
 	bool m_bDoDanger;
 
-	inline bool DoDanger() const { return m_bDoDanger; }
 	inline int baseMoves(DomainTypes eType) const { return m_aBaseMoves[eType]; }
 	inline PlayerTypes getOwner() const { return m_ePlayerID; }
 	inline TeamTypes getTeam() const { return m_eTeamID; }
@@ -812,6 +812,7 @@ struct UnitPathCacheData
 	inline bool CanEverEmbark() const { return m_bCanEverEmbark; }
 	inline bool isEmbarked() const { return m_bIsEmbarked; }
 	inline bool IsCanAttack() const { return m_bCanAttack; }
+	inline bool doDanger() const { return m_bDoDanger; }
 };
 
 //-------------------------------------------------------------------------------------
@@ -835,8 +836,7 @@ void UnitPathInitialize(const SPathFinderUserData& data, CvAStar* finder)
 	pCacheData->m_bCanEverEmbark = pUnit->CanEverEmbark();
 	pCacheData->m_bIsEmbarked = pUnit->isEmbarked();
 	pCacheData->m_bCanAttack = pUnit->IsCanAttack();
-	//danger is relevant for AI controlled units, if we didn't explicitly disable it
-	pCacheData->m_bDoDanger = pCacheData->isAIControl() && (!finder->HaveFlag(CvUnit::MOVEFLAG_IGNORE_DANGER) || finder->HaveFlag(CvUnit::MOVEFLAG_SAFE_EMBARK));
+	pCacheData->m_bDoDanger = !finder->HaveFlag(CvUnit::MOVEFLAG_IGNORE_DANGER);
 }
 
 //	--------------------------------------------------------------------------------
@@ -848,7 +848,7 @@ void UnitPathUninitialize(const SPathFinderUserData&, CvAStar*)
 //-------------------------------------------------------------------------------------
 // get all information which depends on a particular node. 
 // this is versioned, so we don't need to recalculate during the same pathfinding operation
-void UpdateNodeCacheData(CvAStarNode* node, const CvUnit* pUnit, bool bDoDanger, const CvAStar* finder)
+void UpdateNodeCacheData(CvAStarNode* node, const CvUnit* pUnit, const CvAStar* finder)
 {
 	if (!node || !pUnit)
 		return;
@@ -934,10 +934,7 @@ void UpdateNodeCacheData(CvAStarNode* node, const CvUnit* pUnit, bool bDoDanger,
 	kToNodeCacheData.bCanEnterTerrainPermanent = pUnit->canEnterTerrain(*pPlot,iMoveFlags|CvUnit::MOVEFLAG_DESTINATION); //assuming we will stop here
 	kToNodeCacheData.bCanEnterTerritory = pUnit->canEnterTerritory(ePlotTeam,finder->HaveFlag(CvUnit::MOVEFLAG_IGNORE_RIGHT_OF_PASSAGE));
 
-	if (bDoDanger)
-		kToNodeCacheData.iPlotDanger = GET_PLAYER(pUnit->getOwner()).GetPlotDanger(*pPlot, pUnit);
-	else
-		kToNodeCacheData.iPlotDanger = 0;
+	kToNodeCacheData.iPlotDanger = pCacheData->isAIControl() ? GET_PLAYER(pUnit->getOwner()).GetPlotDanger(*pPlot, pUnit) : 0;
 
 	//special for approximate pathfinding - don't hang around on dangerous plots
 	if (DestinationReached(node->m_iX,node->m_iY,finder->GetData(),finder) && 
@@ -1151,7 +1148,7 @@ int PathEndTurnCost(CvPlot* pToPlot, const CvPathNodeCacheData& kToNodeCacheData
 		iCost += PATH_END_TURN_NO_ROUTE;
 
 	//danger check
-	if ( pUnitDataCache->DoDanger() )
+	if ( pUnitDataCache->doDanger() || kToNodeCacheData.bIsNonNativeDomain )
 	{
 		//invisible plots might be dangerous without us knowing
 		if (!pToPlot->isVisible(eUnitTeam))
@@ -1404,10 +1401,6 @@ int PathValid(const CvAStarNode* parent, const CvAStarNode* node, int, const SPa
 			if (finder->HaveFlag(CvUnit::MOVEFLAG_NO_EMBARK) && kToNodeCacheData.bIsNonNativeDomain && !kFromNodeCacheData.bIsNonNativeDomain)
 				return FALSE;
 
-			//don't move to dangerous water plots (unless the current plot is dangerous too)
-			if (finder->HaveFlag(CvUnit::MOVEFLAG_SAFE_EMBARK) && kToNodeCacheData.bIsNonNativeDomain && kToNodeCacheData.iPlotDanger>10 && kFromNodeCacheData.iPlotDanger<kToNodeCacheData.iPlotDanger*2)
-				return FALSE;
-
 			//embark required and possible?
 			if(!kFromNodeCacheData.bIsNonNativeDomain && kToNodeCacheData.bIsNonNativeDomain && kToNodeCacheData.bIsRevealedToTeam && !pUnit->canEmbarkOnto(*pFromPlot, *pToPlot, true, kToNodeCacheData.iMoveFlags))
 				return FALSE;
@@ -1450,7 +1443,7 @@ int PathAdd(CvAStarNode*, CvAStarNode* node, int operation, const SPathFinderUse
 		node->m_iMoves = finder->GetData().iStartMoves;
 		node->m_iTurns = 1;
 
-		UpdateNodeCacheData(node,pUnit,pCacheData->DoDanger(),finder);
+		UpdateNodeCacheData(node,pUnit,finder);
 	}
 	else
 	{
@@ -1464,13 +1457,13 @@ int PathAdd(CvAStarNode*, CvAStarNode* node, int operation, const SPathFinderUse
 	for(int i = 0; i < 6; i++)
 	{
 		CvAStarNode* neighbor = node->m_apNeighbors[i];
-		UpdateNodeCacheData(neighbor,pUnit,pCacheData->DoDanger(),finder);
+		UpdateNodeCacheData(neighbor,pUnit,finder);
 	}
 
 	for(int i = 0; i < finder->GetNumExtraChildren(node); i++)
 	{
 		CvAStarNode* neighbor = finder->GetExtraChild(node,i);
-		UpdateNodeCacheData(neighbor,pUnit,pCacheData->DoDanger(),finder);
+		UpdateNodeCacheData(neighbor,pUnit,finder);
 	}
 
 	return 1;
@@ -2457,6 +2450,74 @@ ReachablePlots CvPathFinder::GetPlotsInReach(const CvPlot * pStartPlot, const SP
 		return ReachablePlots();
 
 	return GetPlotsInReach(pStartPlot->getX(),pStartPlot->getY(),data);
+}
+
+map<CvPlot*,SPath> CvPathFinder::GetMultiplePaths(const CvPlot* pStartPlot, vector<CvPlot*> vDestPlots, const SPathFinderUserData& data)
+{
+	//make sure we don't call this from dll and lua at the same time
+	CvGuard guard(m_cs);
+
+	map<CvPlot*,SPath> result;
+
+	if (!Configure(data.ePathType) || !pStartPlot)
+		return result;
+
+	//sort for fast search
+	struct PrSortByPlotIndex
+	{
+		bool operator()(const CvPlot* lhs, const CvPlot* rhs) const { return lhs->GetPlotIndex() < rhs->GetPlotIndex(); }
+	};
+	std::sort( vDestPlots.begin(), vDestPlots.end(), PrSortByPlotIndex() );
+
+	//there is no destination! the return value will always be false
+	CvAStar::FindPathWithCurrentConfiguration(pStartPlot->getX(),pStartPlot->getY(), -1, -1, data);
+
+	//iterate all previously touched nodes
+	for (std::vector<CvAStarNode*>::const_iterator it=m_closedNodes.begin(); it!=m_closedNodes.end(); ++it)
+	{
+		CvAStarNode* temp = *it;
+
+		if (temp->m_iTurns > data.iMaxTurns)
+			continue;
+		if (temp->m_iTurns == data.iMaxTurns && temp->m_iMoves < data.iMinMovesLeft)
+			continue;
+
+		std::pair<std::vector<CvPlot*>::iterator,std::vector<CvPlot*>::iterator> bounds =
+			std::equal_range( vDestPlots.begin(), vDestPlots.end(), GC.getMap().plot(temp->m_iX,temp->m_iY), PrSortByPlotIndex() );
+
+		if (bounds.first != bounds.second)
+		{
+			//need to check this here, during pathfinding we don't know that we're not just moving through
+			//this is practially a PathDestValid check after the fact. also compare the PathCost turn end checks.
+			if (CanEndTurnAtNode(temp))
+			{
+				SPath path;
+				path.iTurnGenerated = GC.getGame().getGameTurn();
+				path.sConfig = m_sData;
+				path.iTotalCost = temp->m_iKnownCost;
+				path.iNormalizedDistance = temp->m_iKnownCost / m_iBasicPlotCost + 1;
+				path.iTotalTurns = temp->m_iTurns;
+
+				CvAStarNode* node = temp;
+				while (node)
+				{
+					path.vPlots.push_back( SPathNode(node) );
+					node = node->m_pParent;
+				}
+
+				//make it so that the destination comes last
+				std::reverse(path.vPlots.begin(),path.vPlots.end());
+
+				//store it
+				result[ *bounds.first ] = path;
+			}
+
+			//don't need to check this again
+			vDestPlots.erase(bounds.first);
+		}
+	}
+
+	return result;
 }
 
 //	--------------------------------------------------------------------------------

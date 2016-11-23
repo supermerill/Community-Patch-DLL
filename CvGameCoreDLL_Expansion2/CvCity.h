@@ -85,8 +85,8 @@ public:
 	void SetStaticYield(YieldTypes eYield, int iValue);
 	int GetStaticYield(YieldTypes eYield) const;
 
-	void SetThreatCritera(int iValue);
-	int GetThreatCriteria() const;
+	void SetThreatRank(int iValue);
+	int GetThreatRank() const;
 
 	void SetTradePriorityLand(int iValue);
 	int GetTradePriorityLand(void) const;
@@ -1043,6 +1043,12 @@ public:
 	int GetYieldFromUnitLevelUp(YieldTypes eIndex) const;
 	void ChangeYieldFromUnitLevelUp(YieldTypes eIndex, int iChange);
 
+	int GetYieldPerAlly(YieldTypes eIndex) const;
+	void ChangeYieldPerAlly(YieldTypes eYield, int iChange);
+
+	int GetYieldPerFriend(YieldTypes eIndex) const;
+	void ChangeYieldPerFriend(YieldTypes eYield, int iChange);
+
 	int GetBuildingScienceFromYield(YieldTypes eIndex1) const;
 	void ChangeBuildingScienceFromYield(YieldTypes eIndex, int iChange);
 
@@ -1658,13 +1664,15 @@ protected:
 	FAutoVariable<std::vector<int>, CvCity> m_aiYieldFromPolicyUnlock;
 	FAutoVariable<std::vector<int>, CvCity> m_aiYieldFromPurchase;
 	FAutoVariable<std::vector<int>, CvCity> m_aiYieldFromUnitLevelUp;
+	FAutoVariable<std::vector<int>, CvCity> m_aiYieldPerAlly;
+	FAutoVariable<std::vector<int>, CvCity> m_aiYieldPerFriend;
 	FAutoVariable<std::vector<int>, CvCity> m_aiScienceFromYield;
 	FAutoVariable<std::vector<int>, CvCity> m_aiBuildingScienceFromYield;
 	FAutoVariable<std::vector<int>, CvCity> m_aiSpecialistRateModifier;
 	FAutoVariable<std::vector<int>, CvCity> m_aiThemingYieldBonus;
 	FAutoVariable<std::vector<int>, CvCity> m_aiNumTimesOwned;
 	FAutoVariable<std::vector<int>, CvCity> m_aiStaticCityYield;
-	FAutoVariable<int, CvCity> m_iThreatCriteria;
+	FAutoVariable<int, CvCity> m_iThreatRank;
 	FAutoVariable<int, CvCity> m_iTradePriorityLand;
 	FAutoVariable<int, CvCity> m_iTradePrioritySea;
 	FAutoVariable<int, CvCity> m_iNearbySettlerValue;

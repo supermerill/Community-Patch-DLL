@@ -909,10 +909,10 @@ void CvHomelandAI::FindHomelandTargets()
 						}
 
 
-						if (m_pPlayer->getNumCities() > 1 && pWorkingCity->GetThreatCriteria() != -1)
+						if (m_pPlayer->getNumCities() > 1 && pWorkingCity->GetThreatRank() != -1)
 						{
 							//More cities = more threat.
-							int iThreat = (m_pPlayer->getNumCities() - pWorkingCity->GetThreatCriteria()) * 10;
+							int iThreat = (m_pPlayer->getNumCities() - pWorkingCity->GetThreatRank()) * 10;
 							if (iThreat > 0)
 							{
 								iWeight += iThreat;
@@ -1670,8 +1670,6 @@ void CvHomelandAI::PlotOpportunisticSettlementMoves()
 		return;
 	}
 
-	CvUnit* pLoopUnit;
-
 	if (m_pPlayer->GetHappiness() <= iMinHappiness) {
 		return;
 	}
@@ -1680,42 +1678,31 @@ void CvHomelandAI::PlotOpportunisticSettlementMoves()
 		return;
 	}
 	
-	int iLoop;
-	for (pLoopUnit = m_pPlayer->firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = m_pPlayer->nextUnit(&iLoop)) 
-	{
-		if ((!pLoopUnit->IsCombatUnit() && pLoopUnit->isFound()) || (pLoopUnit->IsCombatUnit() && pLoopUnit->AI_getUnitAIType() == UNITAI_SETTLE))
-		{
-			return;
-		}
-	}
-	
 	// Make a list of all combat units that can do this.
 	MoveUnitsArray PossibleSettlerUnits;
-	int iDistance = 0;
-	ReachablePlots turnsFromMuster;
+	int iTurnDistance = INT_MAX;
+
 	for(list<int>::iterator it = m_CurrentTurnUnits.begin(); it != m_CurrentTurnUnits.end(); ++it) 
 	{
 		CvUnit* pUnit = m_pPlayer->getUnit(*it);
-		if (pUnit) {
-			if (pUnit->IsCombatUnit()) 
+		if (pUnit && pUnit->IsCombatUnit() && (pUnit->isFound() || pUnit->IsFoundAbroad() || pUnit->IsFoundLate() || pUnit->IsFoundMid()))
+		{
+			//fake this, the distance check is irrelevant here
+			ReachablePlots turnsFromMuster;
+			turnsFromMuster.insert( SMovePlot(pUnit->plot()->GetPlotIndex(),0,0) );
+
+			if(OperationalAIHelpers::IsUnitSuitableForRecruitment(pUnit,pUnit->plot(),turnsFromMuster,pUnit->plot(),false,false,iTurnDistance))
 			{
-				CvUnit* pTestUnit = pUnit;
-				if(pTestUnit)
+				CvHomelandUnit unit;
+				unit.SetID(pUnit->GetID());
+				unit.SetAuxIntData(plotDistance(pUnit->getX(), pUnit->getY(), iCapitalX, iCapitalY));
+				PossibleSettlerUnits.push_back(unit);
+				if(GC.getLogging() && GC.getAILogging())
 				{
-					if(OperationalAIHelpers::IsUnitSuitableForRecruitment(pTestUnit,pTestUnit->plot(), turnsFromMuster, pTestUnit->plot(),false,false,iDistance))
-					{
-						CvHomelandUnit unit;
-						unit.SetID(pUnit->GetID());
-						unit.SetAuxIntData(plotDistance(pUnit->getX(), pUnit->getY(), iCapitalX, iCapitalY));
-						PossibleSettlerUnits.push_back(unit);
-						if(GC.getLogging() && GC.getAILogging())
-						{
-							CvString strLogString;
-							CvString strTemp;
-							strLogString.Format("%s (%d): found secondary settler, X: %d, Y: %d", strTemp.GetCString(), pUnit->GetID(), pUnit->getX(), pUnit->getY());
-							LogHomelandMessage(strLogString);
-						}
-					}
+					CvString strLogString;
+					CvString strTemp;
+					strLogString.Format("%s (%d): found secondary settler, X: %d, Y: %d", strTemp.GetCString(), pUnit->GetID(), pUnit->getX(), pUnit->getY());
+					LogHomelandMessage(strLogString);
 				}
 			}
 		}
@@ -4019,10 +4006,6 @@ void CvHomelandAI::ExecuteMoveToTarget(CvUnit* pUnit, CvPlot* pTarget, int iFlag
 		else
 			pUnit->PushMission(CvTypes::getMISSION_SKIP());
 
-		if(bFinishMoves)
-		{
-			UnitProcessed(pUnit->GetID());
-		}
 #if defined(MOD_BALANCE_CORE)
 		if(GC.getLogging() && GC.getAILogging())
 		{
@@ -4031,19 +4014,16 @@ void CvHomelandAI::ExecuteMoveToTarget(CvUnit* pUnit, CvPlot* pTarget, int iFlag
 			LogHomelandMessage(strLogString);
 		}
 #endif
-		return;
 	}
 	else
 	{
 		// Best units have already had a full path check to the target, so just add the move
-		MoveToUsingSafeEmbarkButDontEndTurn(pUnit, pTarget, iFlags);
-		if(bFinishMoves)
-		{
-			pUnit->finishMoves();
-			UnitProcessed(pUnit->GetID());
-		}
-		return;
+		MoveToTargetButDontEndTurn(pUnit, pTarget, iFlags);
 	}
+
+	//don't actually call finish moves, it will prevent healing
+	if(bFinishMoves)
+		UnitProcessed(pUnit->GetID());
 }
 
 /// Great writer moves
@@ -4765,7 +4745,7 @@ void CvHomelandAI::ExecuteDiplomatMoves()
 				}
 				else if (pUnit->GetDanger()>0)
 				{
-					ExecuteMoveToTarget(pUnit, pTarget, CvUnit::MOVEFLAG_SAFE_EMBARK|CvUnit::MOVEFLAG_TERRITORY_NO_ENEMY, true);
+					ExecuteMoveToTarget(pUnit, pTarget, CvUnit::MOVEFLAG_TERRITORY_NO_ENEMY, true);
 
 					if(GC.getLogging() && GC.getAILogging())
 					{
@@ -5246,7 +5226,7 @@ void CvHomelandAI::ExecuteGeneralMoves()
 				else
 				{
 					//continue moving to target
-					if (MoveToUsingSafeEmbarkButDontEndTurn(pUnit, pTargetPlot, 0))
+					if (MoveToTargetButDontEndTurn(pUnit, pTargetPlot, 0))
 					{
 						vPlotsToAvoid.push_back(pTargetPlot);
 						pUnit->finishMoves();
@@ -5571,7 +5551,7 @@ void CvHomelandAI::ExecuteGeneralMoves()
 				// Move normally to this city
 				else if(pChosenCity)
 				{
-					MoveToUsingSafeEmbarkButDontEndTurn(pUnit,pChosenCity->plot(),0);
+					MoveToTargetButDontEndTurn(pUnit,pChosenCity->plot(),0);
 					pUnit->finishMoves();
 					UnitProcessed(pUnit->GetID());
 
@@ -6769,7 +6749,7 @@ bool CvHomelandAI::MoveCivilianToGarrison(CvUnit* pUnit)
 				LogHomelandMessage(strLogString);
 			}
 
-			MoveToUsingSafeEmbarkButDontEndTurn(pUnit, pBestPlot, 0);
+			MoveToTargetButDontEndTurn(pUnit, pBestPlot, 0);
 			return true;
 		}
 	}
@@ -6922,7 +6902,7 @@ bool CvHomelandAI::MoveCivilianToSafety(CvUnit* pUnit, bool bIgnoreUnits)
 				LogHomelandMessage(strLogString);
 			}
 
-			MoveToUsingSafeEmbarkButDontEndTurn(pUnit, pBestPlot, 0);
+			MoveToTargetButDontEndTurn(pUnit, pBestPlot, 0);
 			return true;
 		}
 	}
@@ -8213,12 +8193,11 @@ void CvHomelandAI::ClearCurrentMoveHighPriorityUnits()
 
 #if defined(MOD_BALANCE_CORE_MILITARY)
 
-bool CvHomelandAI::MoveToUsingSafeEmbarkButDontEndTurn(CvUnit* pUnit, CvPlot* pTargetPlot, int iFlags)
+bool CvHomelandAI::MoveToTargetButDontEndTurn(CvUnit* pUnit, CvPlot* pTargetPlot, int iFlags)
 {
-	int iMoveFlags = iFlags | CvUnit::MOVEFLAG_SAFE_EMBARK;
-	if(pUnit->GeneratePath(pTargetPlot,iMoveFlags))
+	if(pUnit->GeneratePath(pTargetPlot,iFlags))
 	{
-		pUnit->PushMission(CvTypes::getMISSION_MOVE_TO(), pTargetPlot->getX(), pTargetPlot->getY(), iMoveFlags);
+		pUnit->PushMission(CvTypes::getMISSION_MOVE_TO(), pTargetPlot->getX(), pTargetPlot->getY(), iFlags);
 		return true;
 	}
 	else
@@ -8261,13 +8240,13 @@ bool CvHomelandAI::MoveToEmptySpaceNearTarget(CvUnit* pUnit, CvPlot* pTarget, Do
 		return true;
 	}
 
-	int iFlags = CvUnit::MOVEFLAG_APPROX_TARGET_RING2 | CvUnit::MOVEFLAG_SAFE_EMBARK;
+	int iFlags = CvUnit::MOVEFLAG_APPROX_TARGET_RING2;
 	if (eDomain == pTarget->getDomain())
 		iFlags |= CvUnit::MOVEFLAG_APPROX_TARGET_NATIVE_DOMAIN;
 
 	int iTurns = pUnit->TurnsToReachTarget(pTarget, iFlags, iMaxTurns);
 	if (iTurns <= iMaxTurns)
-		return MoveToUsingSafeEmbarkButDontEndTurn(pUnit, pTarget, iFlags);
+		return MoveToTargetButDontEndTurn(pUnit, pTarget, iFlags);
 
 	return false;
 }
@@ -8519,7 +8498,7 @@ std::vector<CvPlot*> HomelandAIHelpers::GetAggressivePatrolTargets(PlayerTypes e
 			iEnemyPower += pZone->GetEnemyNavalUnitCount() * 100;
 		}
 
-		iEnemyPower += (GET_PLAYER(ePlayer).getNumCities() - pZoneCity->GetThreatCriteria()) * 100;
+		iEnemyPower += (GET_PLAYER(ePlayer).getNumCities() - pZoneCity->GetThreatRank()) * 100;
 
 		const std::vector<int>& vNeighborZones = pZone->GetNeighboringZones();
 		for (size_t i=0; i<vNeighborZones.size(); i++)
@@ -8538,7 +8517,7 @@ std::vector<CvPlot*> HomelandAIHelpers::GetAggressivePatrolTargets(PlayerTypes e
 			CvCity* pOtherZoneCity = pOtherZone->GetZoneCity();
 			if (pOtherZoneCity)
 			{
-				iEnemyPower += (GET_PLAYER(ePlayer).getNumCities() - pOtherZoneCity->GetThreatCriteria()) * 100;
+				iEnemyPower += (GET_PLAYER(ePlayer).getNumCities() - pOtherZoneCity->GetThreatRank()) * 100;
 			}
 
 			if(bWater)
@@ -8597,7 +8576,7 @@ std::vector<CvPlot*> HomelandAIHelpers::GetPatrolTargets(PlayerTypes ePlayer, bo
 		if(bWater)
 			iEnemyPower += pZone->GetEnemyNavalUnitCount() * 100;
 
-		iEnemyPower += (GET_PLAYER(ePlayer).getNumCities() - pZoneCity->GetThreatCriteria()) * 100;
+		iEnemyPower += (GET_PLAYER(ePlayer).getNumCities() - pZoneCity->GetThreatRank()) * 100;
 
 		const std::vector<int>& vNeighborZones = pZone->GetNeighboringZones();
 		for (size_t i=0; i<vNeighborZones.size(); i++)
@@ -8617,7 +8596,7 @@ std::vector<CvPlot*> HomelandAIHelpers::GetPatrolTargets(PlayerTypes ePlayer, bo
 
 			CvCity* pOtherZoneCity = pOtherZone->GetZoneCity();
 			if (pOtherZoneCity)
-				iEnemyPower += (GET_PLAYER(ePlayer).getNumCities() - pOtherZoneCity->GetThreatCriteria()) * 100;
+				iEnemyPower += (GET_PLAYER(ePlayer).getNumCities() - pOtherZoneCity->GetThreatRank()) * 100;
 
 			if(bWater)
 				iEnemyPower += pZone->GetEnemyNavalUnitCount() * 100;

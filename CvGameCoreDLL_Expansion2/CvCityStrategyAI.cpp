@@ -3741,7 +3741,7 @@ bool CityStrategyAIHelpers::IsTestCityStrategy_CapitalUnderThreat(CvCity* pCity)
 
 		if (!bAtPeace && !kPlayer.isMinorCiv())
 		{
-			CvCity *pMostThreatened = kPlayer.GetThreatenedCityRank();
+			CvCity *pMostThreatened = kPlayer.GetThreatenedCityByRank();
 #if defined(MOD_BALANCE_CORE_MILITARY)
 			//threat value is now calculated differently
 			if (pMostThreatened == pCity && pMostThreatened->getThreatValue() > GC.getCITY_HIT_POINTS_HEALED_PER_TURN()*2)
@@ -5425,6 +5425,14 @@ int CityStrategyAIHelpers::GetBuildingGrandStrategyValue(CvCity *pCity, Building
 	{
 		iCultureValue += pkBuildingInfo->GetLandmarksTourismPercent();
 	}
+	if (pkBuildingInfo->GetGreatWorksTourismModifierGlobal() > 0)
+	{
+		iCultureValue += pkBuildingInfo->GetGreatWorksTourismModifierGlobal() * kPlayer.getNumCities();
+	}
+	if (pkBuildingInfo->GetLandmarksTourismPercentGlobal() > 0)
+	{
+		iCultureValue += pkBuildingInfo->GetLandmarksTourismPercentGlobal() * kPlayer.getNumCities();
+	}
 	if(pkBuildingInfo->GetLandTourismEnd() > 0)
 	{
 		iCultureValue += (pkBuildingInfo->GetLandTourismEnd() * 10);
@@ -5437,7 +5445,7 @@ int CityStrategyAIHelpers::GetBuildingGrandStrategyValue(CvCity *pCity, Building
 	{
 		iCultureValue += (pkBuildingInfo->GetTechEnhancedTourism() * 10);
 	}
-	if(pCity != NULL && pkBuildingInfo->GetLandmarksTourismPercent() > 0)
+	if(pCity != NULL && (pkBuildingInfo->GetLandmarksTourismPercent() > 0 || pkBuildingInfo->GetLandmarksTourismPercentGlobal() > 0))
 	{
 		int iFromWonders = pCity->GetCityCulture()->GetCultureFromWonders();
 		int iFromNaturalWonders = pCity->GetCityCulture()->GetCultureFromNaturalWonders();
@@ -5445,14 +5453,14 @@ int CityStrategyAIHelpers::GetBuildingGrandStrategyValue(CvCity *pCity, Building
 
 		int iTest = (iFromWonders + iFromNaturalWonders + iFromImprovements);
 
-		iCultureValue += (iTest / pkBuildingInfo->GetLandmarksTourismPercent());
+		iCultureValue += (iTest / max(1, (pkBuildingInfo->GetLandmarksTourismPercent() + pkBuildingInfo->GetLandmarksTourismPercentGlobal())));
 	}
-	if(pCity != NULL && pkBuildingInfo->GetGreatWorksTourismModifier() > 0)
+	if(pCity != NULL && (pkBuildingInfo->GetGreatWorksTourismModifier() > 0 || pkBuildingInfo->GetGreatWorksTourismModifierGlobal() > 0))
 	{
 		int iWorks = pCity->GetCityCulture()->GetNumGreatWorks() + GC.getBASE_TOURISM_PER_GREAT_WORK();
 
 		//Higher value the higher the number of works.
-		iCultureValue += (iWorks * pkBuildingInfo->GetGreatWorksTourismModifier());
+		iCultureValue += (iWorks * (pkBuildingInfo->GetGreatWorksTourismModifier() + pkBuildingInfo->GetGreatWorksTourismModifierGlobal()));
 	}
 
 	//Take the bonus from above and multiply it by the priority value / 10 (as most are 100+, so we're getting a % interest here).

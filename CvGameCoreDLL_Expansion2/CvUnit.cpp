@@ -15486,15 +15486,11 @@ int CvUnit::GetGenericMaxStrengthModifier(const CvUnit* pOtherUnit, const CvPlot
 		{
 			if(!pOtherUnit->isBarbarian() && !GET_PLAYER(pOtherUnit->getOwner()).isMinorCiv() && pOtherUnit->getOwner() != NO_PLAYER)
 			{
-				ReligionTypes eFoundedReligion = GC.getGame().GetGameReligions()->GetFounderBenefitsReligion(kPlayer.GetID());
-				if(eFoundedReligion == NO_RELIGION)
-				{
-					eFoundedReligion = kPlayer.GetReligions()->GetReligionCreatedByPlayer();
-				}
-				ReligionTypes eTheirReligion = GC.getGame().GetGameReligions()->GetFounderBenefitsReligion(pOtherUnit->getOwner());
+				ReligionTypes eFoundedReligion = GC.getGame().GetGameReligions()->GetReligionCreatedByPlayer(kPlayer.GetID());
+				ReligionTypes eTheirReligion = GC.getGame().GetGameReligions()->GetReligionCreatedByPlayer(pOtherUnit->getOwner());
 				if(eTheirReligion == NO_RELIGION)
 				{
-					eTheirReligion = GET_PLAYER(pOtherUnit->getOwner()).GetReligions()->GetReligionCreatedByPlayer();
+					eTheirReligion = GET_PLAYER(pOtherUnit->getOwner()).GetReligions()->GetReligionInMostCities();
 				} 
 				if(eTheirReligion != NO_RELIGION)
 				{
@@ -27200,14 +27196,16 @@ bool CvUnit::VerifyCachedPath(const CvPlot* pDestPlot, int iFlags, int iMaxTurns
 		//normally we would allow an attack at the destination
 		//since it was invisible we didn't even know that there's a unit there
 		//but we do allow attacks on cities
-		if (pkNextPlot!=pDestPlot || !pDestPlot->isEnemyCity(*this))
-			iModifiedFlags ^= CvUnit::MOVEFLAG_ATTACK;
-
-		if ( canMoveInto(*pkNextPlot,iModifiedFlags) )
-			//no problem, continue
-			bHaveValidPath = true;
+		if (pkNextPlot==pDestPlot && pDestPlot->isEnemyCity(*this))
+			iModifiedFlags |= CvUnit::MOVEFLAG_ATTACK;
 		else
-			//need to recompute
+			iModifiedFlags &= ~CvUnit::MOVEFLAG_ATTACK;
+
+		bHaveValidPath = canMoveInto(*pkNextPlot,iModifiedFlags);
+
+		//don't recompute for the destination plot because it's pointless and because it could succeed 
+		//(the pathfinder dynamically sets the attack flag for the destination)
+		if (!bHaveValidPath && pkNextPlot!=pDestPlot)
 			bHaveValidPath = ComputePath(pDestPlot, iFlags, iMaxTurns);
 	}
 	else

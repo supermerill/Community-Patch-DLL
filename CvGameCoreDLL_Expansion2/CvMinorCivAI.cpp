@@ -15430,7 +15430,7 @@ int CvMinorCivAI::CalculateBullyMetric(PlayerTypes eBullyPlayer, bool bForUnit, 
 #if defined(MOD_BALANCE_CORE_MINORS)
 			if(MOD_BALANCE_CORE_MINORS)
 			{
-				iGlobalMilitaryScore = (int)(fRankRatio * 100); // A score between 50*(1 / num majors alive) and 100, with the highest rank major getting 100
+				iGlobalMilitaryScore = (int)(fRankRatio * 110); // A score between 50*(1 / num majors alive) and 110, with the highest rank major getting 110
 			}
 			else
 			{
@@ -15457,11 +15457,7 @@ int CvMinorCivAI::CalculateBullyMetric(PlayerTypes eBullyPlayer, bool bForUnit, 
 	//
 	// +0 ~ +125
 	// **************************
-#if defined(MOD_BALANCE_CORE_MINORS)
-	int iComparisonRadius = std::max(GC.getMap().getGridWidth() / 15, 4);
-#else
 	int iComparisonRadius = std::max(GC.getMap().getGridWidth() / 10, 5);
-#endif
 	CvCity* pMinorCapital = GetPlayer()->getCapitalCity();
 	if(pMinorCapital == NULL)
 		return iFailScore;
@@ -15693,7 +15689,7 @@ int CvMinorCivAI::CalculateBullyMetric(PlayerTypes eBullyPlayer, bool bForUnit, 
 	{
 		if(iLastBullyTurn + 10 >= GC.getGame().getGameTurn())
 		{
-			int iBulliedVeryRecentlyScore = iFailScore;
+			int iBulliedVeryRecentlyScore = (((iLastBullyTurn + 10) - (GC.getGame().getGameTurn())) * -150);
 			iScore += iBulliedVeryRecentlyScore;
 			if (sTooltipSink)
 			{
@@ -15705,7 +15701,7 @@ int CvMinorCivAI::CalculateBullyMetric(PlayerTypes eBullyPlayer, bool bForUnit, 
 		}
 		else if(iLastBullyTurn + 20 >= GC.getGame().getGameTurn())
 		{
-			int iBulliedRecentlyScore = -40;
+			int iBulliedRecentlyScore = (((iLastBullyTurn + 20) - (GC.getGame().getGameTurn())) * -100);
 			iScore += iBulliedRecentlyScore;
 			if (sTooltipSink)
 			{

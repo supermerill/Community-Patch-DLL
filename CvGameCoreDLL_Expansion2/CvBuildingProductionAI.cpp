@@ -319,10 +319,10 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
 	int iNumWar = kPlayer.GetMilitaryAI()->GetNumberCivsAtWarWith(false);
 	if(iNumWar > 0 && pkBuildingInfo->GetDefenseModifier() <= 0 && !m_pCity->IsPuppet())
 	{
-		if(kPlayer.getNumCities() > 1 && m_pCity->GetThreatCriteria() != -1)
+		if(kPlayer.getNumCities() > 1 && m_pCity->GetThreatRank() != -1)
 		{
 			//More cities = more threat.
-			int iThreat = (kPlayer.getNumCities() - m_pCity->GetThreatCriteria());
+			int iThreat = (kPlayer.getNumCities() - m_pCity->GetThreatRank());
 			if(iThreat > 0)
 			{
 				iBonus -= iThreat * 2;
@@ -332,7 +332,7 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
 		{
 			iBonus -= (iNumWar * 100);
 		}
-		if(m_pCity->IsBlockadedWaterAndLand() || m_pCity->IsBlockaded(true) || m_pCity->IsBlockaded(false))
+		if( m_pCity->IsBlockaded(true) || m_pCity->IsBlockaded(false))
 		{
 			iBonus -= (iNumWar * 150);
 		}
@@ -985,7 +985,7 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
 	//UB?
 	if (kPlayer.getCivilizationInfo().isCivilizationBuildingOverridden(pkBuildingInfo->GetBuildingClassType()))
 	{
-		iBonus *= 5;
+		iBonus *= 10;
 	}
 
 	/////
