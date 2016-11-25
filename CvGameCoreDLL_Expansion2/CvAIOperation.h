@@ -23,34 +23,40 @@ enum AIOperationTypes
 {
 	INVALID_AI_OPERATION = -1,
 	AI_OPERATION_FOUND_CITY,
-    AI_OPERATION_FOUND_CITY_QUICK,
+	AI_OPERATION_FOUND_CITY_QUICK,
 	AI_OPERATION_FOUND_CITY_OVERSEAS,
 
 	AI_OPERATION_DESTROY_BARBARIAN_CAMP,
-    AI_OPERATION_PILLAGE_ENEMY,
+	AI_OPERATION_PILLAGE_ENEMY,
 
 	AI_OPERATION_CITY_CLOSE_DEFENSE,
 	AI_OPERATION_CITY_CLOSE_DEFENSE_PEACE,
-    AI_OPERATION_RAPID_RESPONSE,
+	AI_OPERATION_RAPID_RESPONSE,
 
 	AI_OPERATION_CITY_BASIC_ATTACK,
-    AI_OPERATION_CITY_SNEAK_ATTACK,
-    AI_OPERATION_CITY_STATE_ATTACK,
+	AI_OPERATION_CITY_SNEAK_ATTACK,
+	AI_OPERATION_CITY_STATE_ATTACK,
 
-    AI_OPERATION_NAVAL_INVASION,
-    AI_OPERATION_NAVAL_INVASION_SNEAKY,
-    AI_OPERATION_NAVAL_INVASION_CITY_STATE,
+	AI_OPERATION_NAVAL_INVASION,
+	AI_OPERATION_NAVAL_INVASION_SNEAKY,
+	AI_OPERATION_NAVAL_INVASION_CITY_STATE,
 
 	AI_OPERATION_NAVAL_ONLY_CITY_ATTACK,
-    AI_OPERATION_NAVAL_SUPERIORITY,
+	AI_OPERATION_NAVAL_SUPERIORITY,
 	AI_OPERATION_NAVAL_BOMBARDMENT,
 
 	AI_OPERATION_NUKE_ATTACK,
 	AI_OPERATION_ALLY_DEFENSE,
 
 	AI_OPERATION_CONCERT_TOUR,
-    AI_OPERATION_MERCHANT_DELEGATION,
+	AI_OPERATION_MERCHANT_DELEGATION,
 	AI_OPERATION_DIPLOMAT_DELEGATION,
+
+#if defined(MOD_NUCLEAR_TERROR)
+	AI_OPERATION_NUKE_FIRST_STRIKE,
+	AI_OPERATION_NUKE_ATTACK_CONSERVATIVE,
+	AI_OPERATION_NUKE_ATTACK_FULL,
+#endif
 
 	NUM_AI_OPERATIONS,
 };
@@ -1133,5 +1139,67 @@ namespace OperationalAIHelpers
 	CvCity* GetNearestCoastalCityFriendly(PlayerTypes ePlayer, PlayerTypes eEnemy);
 	CvCity* GetNearestCoastalCityEnemy(PlayerTypes ePlayer, PlayerTypes eEnemy);
 }
+#if defined(MOD_NUCLEAR_TERROR)
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//  CLASS:      CvAIOperationNukeAttack
+//!  \brief		When you care enough to send the very best
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+class CvAIOperationNukeAttackConservative : public CvAIOperationMilitary
+{
+public:
+
+	CvAIOperationNukeAttackConservative();
+	virtual ~CvAIOperationNukeAttackConservative();
+	virtual void Init(int iID, PlayerTypes eOwner, PlayerTypes eEnemy, int iAreaID, CvCity* pTarget = NULL, CvCity* pMuster = NULL, bool bOceanMoves = false);
+
+	virtual int GetOperationType() const
+	{
+		return AI_OPERATION_NUKE_ATTACK_CONSERVATIVE;
+	}
+	virtual const char* GetOperationName() const
+	{
+		return "AI_OPERATION_NUKE_ATTACK_CONSERVATIVE";
+	}
+	virtual MultiunitFormationTypes GetFormation() const
+	{
+		return MUFORMATION_NUKE_ATTACK;
+	}
+	virtual int GetDeployRange() const
+	{
+		return 12;
+	}
+	virtual AITacticalTargetType GetTargetType() const
+	{
+		return AI_TACTICAL_TARGET_NONE;
+	}
+	virtual AIOperationAbortReason VerifyOrAdjustTarget(CvArmyAI* pArmy);
+
+	virtual bool FindBestFitReserveUnit(OperationSlot thisOperationSlot, WeightedUnitIdVector& UnitChoices);
+
+	virtual bool CheckTransitionToNextStage();
+
+protected:
+	virtual CvPlot* FindBestTarget(CvPlot** ppMuster) const;
+};
+
+
+namespace OperationalAIHelpers
+{
+	int GetGatherRangeForXUnits(int iTotalUnits);
+	CvPlot* FindBestCoastalBombardmentTarget(PlayerTypes ePlayer, PlayerTypes eEnemy, CvPlot** ppMuster);
+	CvPlot* FindBestBarbCamp(PlayerTypes ePlayer, CvPlot** ppMuster);
+	CvPlot* FindEnemies(PlayerTypes ePlayer, PlayerTypes eEnemy, DomainTypes eDomain, bool bHomelandOnly, int iRefArea, CvPlot* pRefPlot);
+	bool IsSlotRequired(PlayerTypes ePlayer, const OperationSlot& thisOperationSlot);
+	bool IsUnitSuitableForRecruitment(CvUnit* pLoopUnit, CvPlot* pMusterPlot, const ReachablePlots& turnsFromMuster, CvPlot* pTargetPlot, bool bMustNaval, bool bMustBeDeepWaterNaval, int& iDistance, CvMultiUnitFormationInfo* thisFormation = NULL, CvArmyAI* pThisArmy = NULL);
+	CvCity* GetNearestCoastalCityFriendly(PlayerTypes ePlayer, CvPlot* pRefPlot);
+	CvCity* GetNearestCoastalCityFriendly(PlayerTypes ePlayer, PlayerTypes eEnemy);
+	CvCity* GetNearestCoastalCityEnemy(PlayerTypes ePlayer, PlayerTypes eEnemy);
+}
+//AI_OPERATION_NUKE_FIRST_STRIKE,
+//AI_OPERATION_NUKE_ATTACK_FULL,
+
+#endif
 
 #endif
