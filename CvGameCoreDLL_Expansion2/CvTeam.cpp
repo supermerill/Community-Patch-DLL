@@ -10618,6 +10618,22 @@ int CvTeam::GetNumVassals()
 	return iVassals;
 }
 
+#if defined(MOD_NUCLEAR_TERROR)
+int CvTeam::getNuclearPower()
+{
+	int retValue = 0;
+	for (std::vector<PlayerTypes>::const_iterator ePlayer = getPlayers().begin(); ePlayer != getPlayers().end(); ++ePlayer)
+	{
+		CvPlayerAI& kPlayer = GET_PLAYER(*ePlayer);
+		if (kPlayer.isAlive())
+		{
+			retValue += kPlayer.getNuclearPower();
+		}
+	}
+	return retValue;
+}
+#endif
+
 //	--------------------------------------------------------------------------------
 /// Can we trade this tech?
 bool CvTeam::IsTradeTech(TechTypes eTech) const

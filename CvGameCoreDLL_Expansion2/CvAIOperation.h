@@ -1126,27 +1126,33 @@ protected:
 	virtual CvPlot* FindBestTarget(CvPlot** ppMuster) const;
 };
 
-
-namespace OperationalAIHelpers
-{
-	int GetGatherRangeForXUnits(int iTotalUnits);
-	CvPlot* FindBestCoastalBombardmentTarget(PlayerTypes ePlayer, PlayerTypes eEnemy, CvPlot** ppMuster);
-	CvPlot* FindBestBarbCamp(PlayerTypes ePlayer, CvPlot** ppMuster);
-	CvPlot* FindEnemies(PlayerTypes ePlayer, PlayerTypes eEnemy, DomainTypes eDomain, bool bHomelandOnly, int iRefArea, CvPlot* pRefPlot);
-	bool IsSlotRequired(PlayerTypes ePlayer, const OperationSlot& thisOperationSlot);
-	bool IsUnitSuitableForRecruitment(CvUnit* pLoopUnit, CvPlot* pMusterPlot, const ReachablePlots& turnsFromMuster, CvPlot* pTargetPlot, bool bMustNaval, bool bMustBeDeepWaterNaval, int& iDistance, CvMultiUnitFormationInfo* thisFormation = NULL, CvArmyAI* pThisArmy = NULL);
-	CvCity* GetNearestCoastalCityFriendly(PlayerTypes ePlayer, CvPlot* pRefPlot);
-	CvCity* GetNearestCoastalCityFriendly(PlayerTypes ePlayer, PlayerTypes eEnemy);
-	CvCity* GetNearestCoastalCityEnemy(PlayerTypes ePlayer, PlayerTypes eEnemy);
-}
 #if defined(MOD_NUCLEAR_TERROR)
+
+class CvAIOperationNukeAttackAbstract : public CvAIOperationMilitary
+{
+public:
+	CvAIOperationNukeAttackAbstract();
+	virtual ~CvAIOperationNukeAttackAbstract();
+
+	virtual int GetDeployRange() const;
+
+	virtual MultiunitFormationTypes GetFormation() const
+	{
+		return MUFORMATION_NUKE_ATTACK;
+	}
+
+	virtual AITacticalTargetType GetTargetType() const
+	{
+		return AI_TACTICAL_TARGET_NONE;
+	}
+};
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  CLASS:      CvAIOperationNukeAttack
 //!  \brief		When you care enough to send the very best
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvAIOperationNukeAttackConservative : public CvAIOperationMilitary
+class CvAIOperationNukeAttackConservative : public CvAIOperationNukeAttackAbstract
 {
 public:
 
@@ -1162,17 +1168,37 @@ public:
 	{
 		return "AI_OPERATION_NUKE_ATTACK_CONSERVATIVE";
 	}
-	virtual MultiunitFormationTypes GetFormation() const
+
+	virtual AIOperationAbortReason VerifyOrAdjustTarget(CvArmyAI* pArmy);
+
+	virtual bool FindBestFitReserveUnit(OperationSlot thisOperationSlot, WeightedUnitIdVector& UnitChoices);
+
+	virtual bool CheckTransitionToNextStage();
+
+protected:
+	virtual CvPlot* FindBestTarget(CvPlot** ppMuster) const;
+};
+
+//AI_OPERATION_NUKE_ATTACK_FULL,
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//  CLASS:      CvAIOperationNukeAttack
+//!  \brief		When you care enough to send the very best
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+class CvAIOperationNukeAttackFull : public CvAIOperationNukeAttackAbstract
+{
+public:
+
+	CvAIOperationNukeAttackFull();
+	virtual ~CvAIOperationNukeAttackFull();
+	virtual void Init(int iID, PlayerTypes eOwner, PlayerTypes eEnemy, int iAreaID, CvCity* pTarget = NULL, CvCity* pMuster = NULL, bool bOceanMoves = false);
+
+	virtual int GetOperationType() const
 	{
-		return MUFORMATION_NUKE_ATTACK;
+		return AI_OPERATION_NUKE_ATTACK_FULL;
 	}
-	virtual int GetDeployRange() const
+	virtual const char* GetOperationName() const
 	{
-		return 12;
-	}
-	virtual AITacticalTargetType GetTargetType() const
-	{
-		return AI_TACTICAL_TARGET_NONE;
+		return "AI_OPERATION_NUKE_ATTACK_FULL";
 	}
 	virtual AIOperationAbortReason VerifyOrAdjustTarget(CvArmyAI* pArmy);
 
@@ -1183,6 +1209,9 @@ public:
 protected:
 	virtual CvPlot* FindBestTarget(CvPlot** ppMuster) const;
 };
+//AI_OPERATION_NUKE_FIRST_STRIKE,
+
+#endif
 
 
 namespace OperationalAIHelpers
@@ -1197,9 +1226,5 @@ namespace OperationalAIHelpers
 	CvCity* GetNearestCoastalCityFriendly(PlayerTypes ePlayer, PlayerTypes eEnemy);
 	CvCity* GetNearestCoastalCityEnemy(PlayerTypes ePlayer, PlayerTypes eEnemy);
 }
-//AI_OPERATION_NUKE_FIRST_STRIKE,
-//AI_OPERATION_NUKE_ATTACK_FULL,
-
-#endif
 
 #endif

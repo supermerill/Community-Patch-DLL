@@ -2571,7 +2571,7 @@ public:
 #endif
 #if defined(MOD_NUCLEAR_TERROR)
 	int getNuclearPower();
-	void changeNuclearPower(int mod);
+	//void changeNuclearPower(int mod);
 #endif
 
 	// for serialization

@@ -3874,7 +3874,8 @@ bool OperationalAIHelpers::IsSlotRequired(PlayerTypes ePlayer, const OperationSl
 }
 
 bool OperationalAIHelpers::IsUnitSuitableForRecruitment(CvUnit* pLoopUnit, CvPlot* pMusterPlot, const ReachablePlots& turnsFromMuster, 
-														CvPlot* pTargetPlot, bool bMustNaval, bool bMustBeDeepWaterNaval, int& iDistance, CvMultiUnitFormationInfo* thisFormation, CvArmyAI* pArmy)
+														CvPlot* pTargetPlot, bool bMustNaval, bool bMustBeDeepWaterNaval, int& iDistance, 
+CvMultiUnitFormationInfo* thisFormation, CvArmyAI* pArmy)
 {
 	if (!pLoopUnit->canRecruitFromTacticalAI() || pLoopUnit->isTrade())
 		return false;
@@ -4261,3 +4262,32 @@ CvCity* OperationalAIHelpers::GetNearestCoastalCityEnemy(PlayerTypes ePlayer, Pl
 
 	return pBestCoastalCity;
 }
+
+
+#if defined(MOD_NUCLEAR_TERROR)
+int CvAIOperationNukeAttackFull::GetDeployRange() const
+{
+	CvArmyAI* pThisArmy = GET_PLAYER(m_eOwner).getArmyAI(m_viArmyIDs[0]);
+	CvUnit* pUnit;
+	
+	int minRadius = 1000;
+	pUnit = pThisArmy->GetFirstUnit();
+	while (pUnit)
+	{
+		if (pUnit->canNuke(NULL))
+		{
+			minRadius = min(minRadius, pUnit->GetRange());
+		}
+		pUnit = pThisArmy->GetNextUnit();
+	}
+
+	//failback to vanilla value, but it shouldn't be the case
+	if (minRadius == 1000)
+	{
+		CUSTOMLOG("Error, cannot find a nuclear unit inside the army which is going to nuke something");
+		minRadius = 12;
+	}
+	return minRadius;
+}
+#endif
+

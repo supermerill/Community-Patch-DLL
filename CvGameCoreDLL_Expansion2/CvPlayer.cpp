@@ -45185,6 +45185,27 @@ int CvPlayer::CountAllWorkedTerrain(TerrainTypes iTerrainType)
 }
 #endif
 
+
+#if defined(MOD_NUCLEAR_TERROR)
+int CvPlayer::getNuclearPower()
+{
+	int rtnValue = 0;
+	const CvUnit* pLoopUnit;
+	int iLoop;
+
+	for (pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+	{
+		if (!pLoopUnit->GetNukeDamageLevel() < 0)
+			continue;
+
+		//it's exponential
+		rtnValue += (int)pow(5.0f, pLoopUnit->GetNukeDamageLevel());
+	}
+
+	return rtnValue;
+}
+#endif
+
 void CvPlayer::invalidatePlotFoundValues()
 {
 	m_iPlotFoundValuesUpdateTurn = -1;

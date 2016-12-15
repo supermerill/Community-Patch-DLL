@@ -3854,9 +3854,9 @@ void CvMilitaryAI::DoNuke(PlayerTypes ePlayer)
 
 			//check second strike
 			CvPlayerAI oEnemyPlayer = GET_PLAYER(ePlayer);
-			CvTeam enemyTeam = GET_TEAM(oEnemyPlayer.getTeam());
+			CvTeam& enemyTeam = GET_TEAM(oEnemyPlayer.getTeam());
 			vector<PlayerTypes> vEnemies = enemyTeam.getPlayers();
-			CvTeam myTeam = GET_TEAM(m_pPlayer->getTeam());
+			CvTeam& myTeam = GET_TEAM(m_pPlayer->getTeam());
 			vector<PlayerTypes> vTeam = myTeam.getPlayers();
 			for (int iEnemyPlayerLoop = 0; iEnemyPlayerLoop < vEnemies.size(); iEnemyPlayerLoop++)
 			{
@@ -3908,7 +3908,7 @@ void CvMilitaryAI::DoNuke(PlayerTypes ePlayer)
 				//}
 				for (int iT = 0; iT < MAX_TEAMS; ++iT)
 				{
-					CvTeam randomTeam = GET_TEAM((TeamTypes)iT);
+					CvTeam& randomTeam = GET_TEAM((TeamTypes)iT);
 					if (randomTeam.isAlive())
 					{
 						if (randomTeam.IsHasDefensivePact(enemyTeam.GetID()))
@@ -4110,6 +4110,7 @@ void CvMilitaryAI::DoNuke(PlayerTypes ePlayer)
 		}
 		else if (okBombing)
 		{
+			//TODO: check if uour arsenal isn't too shallow?
 			CvAIOperation* pOperation = m_pPlayer->addAIOperation(AI_OPERATION_NUKE_ATTACK_CONSERVATIVE, ePlayer);
 			if (pOperation != NULL && pOperation->GetOperationState() != AI_OPERATION_STATE_ABORTED)
 			{
