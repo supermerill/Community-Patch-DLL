@@ -10,5 +10,6 @@
 // #define MOD_GLOBAL_MAX_MAJOR_CIVS (34)
 // #define MOD_GLOBAL_MAX_MAJOR_CIVS (43)
 // #define MOD_GLOBAL_MAX_MAJOR_CIVS (62)
+#define MOD_GLOBAL_MAX_MAJOR_CIVS (51)
 
 #endif
