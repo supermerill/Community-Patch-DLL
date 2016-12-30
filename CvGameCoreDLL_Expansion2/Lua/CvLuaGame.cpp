@@ -2844,6 +2844,13 @@ int CvLuaGame::lGetHolyCityForReligion(lua_State* L)
 int CvLuaGame::lGetReligionName(lua_State* L)
 {
 	const ReligionTypes eReligion = static_cast<ReligionTypes>(luaL_checkint(L, 1));
+	
+	//someone as called an incorrect religion number (b80) > 120
+	if (eReligion >= GC.getNumReligionInfos() || eReligion < 0)
+	{
+		return 0;
+	}
+	
 	const CvReligion* pkReligion = GC.getGame().GetGameReligions()->GetReligion(eReligion, NO_PLAYER);
 	if(pkReligion && strlen(pkReligion->m_szCustomName) > 0)
 	{

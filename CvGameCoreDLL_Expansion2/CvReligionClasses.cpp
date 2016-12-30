@@ -970,9 +970,18 @@ void CvGameReligions::FoundPantheon(PlayerTypes ePlayer, BeliefTypes eBelief)
 	iIncrement /= 100;
 	SetMinimumFaithNextPantheon(GetMinimumFaithNextPantheon() + iIncrement);
 
+#if defined(MOD_BALANCE_CORE)
+	CvCity* pCapital = kPlayer.getCapitalCity();
+	if (!pCapital)
+	{
+		//just take the first city
+		int iIdx;
+		pCapital = kPlayer.firstCity(&iIdx);
+	}
+#endif
 #if defined(MOD_EVENTS_FOUND_RELIGION)
 	if (MOD_EVENTS_FOUND_RELIGION) {
-		GAMEEVENTINVOKE_HOOK(GAMEEVENT_PantheonFounded, ePlayer, GET_PLAYER(ePlayer).getCapitalCity()->GetID(), RELIGION_PANTHEON, eBelief);
+		GAMEEVENTINVOKE_HOOK(GAMEEVENT_PantheonFounded, ePlayer, pCapital ? pCapital->GetID() : 0, RELIGION_PANTHEON, eBelief);
 	} else {
 #endif
 		ICvEngineScriptSystem1* pkScriptSystem = gDLL->GetScriptSystem();
@@ -986,13 +995,6 @@ void CvGameReligions::FoundPantheon(PlayerTypes ePlayer, BeliefTypes eBelief)
 			CvLuaArgsHandle args;
 			args->Push(ePlayer);
 #if defined(MOD_BALANCE_CORE)
-			CvCity* pCapital = kPlayer.getCapitalCity();
-			if (!pCapital)
-			{
-				//just take the first city
-				int iIdx;
-				pCapital = kPlayer.firstCity(&iIdx);
-			}
 			args->Push(pCapital ? pCapital->GetID() : 0);
 #else
 			args->Push(GET_PLAYER(ePlayer).getCapitalCity()->GetID());
