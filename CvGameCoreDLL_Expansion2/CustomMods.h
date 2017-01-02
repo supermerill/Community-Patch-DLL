@@ -398,6 +398,9 @@
 #define MOD_CIV6_ROADS								gCustomMods.isCIV6_ROADS()
 // scale city-state yield per city owned
 #define MOD_CITY_STATE_SCALE						gCustomMods.isCITY_STATE_SCALE()
+// add a define to modify the score of chokepoint for fort placement
+#define MOD_CHOKEPOINT_FORT_SCORE					gCustomMods.isCHOKEPOINT_FORT_SCORE	()
+
 // allow anyone to choose his panthon, even if an other player has already choosed it.
 #define MOD_ANY_PANTHEON						gCustomMods.isANY_PANTHEON()
 // do not receive tourism from annexed cities, unless a building is present.
@@ -1471,10 +1474,10 @@ public:
 	MOD_OPT_DECL(CIV6_ROADS);
 	MOD_OPT_DECL(CIV6_EUREKAS);
 	MOD_OPT_DECL(CITY_STATE_SCALE);
-	MOD_OPT_DECL(ANY_PANTHEON);
+
+	MOD_OPT_DECL(CHOKEPOINT_FORT_SCORE);	MOD_OPT_DECL(ANY_PANTHEON);
 	MOD_OPT_DECL(NO_TOURISM_CONQUEST);
 	MOD_OPT_DECL(LIBERATE_WITH_TECHS);
-
 	MOD_OPT_DECL(DIPLOMACY_CIV4_FEATURES);
 	MOD_OPT_DECL(CARGO_SHIPS);
 	MOD_OPT_DECL(BARBARIAN_GG_GA_POINTS);

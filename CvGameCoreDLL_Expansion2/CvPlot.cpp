@@ -15699,11 +15699,23 @@ int CvPlot::GetDefenseBuildValue(PlayerTypes eOwner)
 		//Big bonus if chokepoint
 		if(IsLandbridge(12,54))
 		{
+#if defined(MOD_CHOKEPOINT_FORT_SCORE)
+			iScore *= GC.getBALANCE_CHOKEPOINT_FORT_MOD() * 2 - 100;
+			iScore /= 100;
+			iScore += GC.getBALANCE_CHOKEPOINT_FORT_SCORE() * 2;
+#else
 			iScore *= 33;
+#endif
 		}
 		else if(IsChokePoint())
 		{
+#if defined(MOD_CHOKEPOINT_FORT_SCORE)
+			iScore *= GC.getBALANCE_CHOKEPOINT_FORT_MOD();
+			iScore /= 100;
+			iScore += GC.getBALANCE_CHOKEPOINT_FORT_SCORE() * 2;
+#else
 			iScore *= 17;
+#endif
 		}
 		return iScore;
 	}
