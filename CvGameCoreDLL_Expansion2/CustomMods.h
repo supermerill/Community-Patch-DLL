@@ -399,7 +399,9 @@
 // scale city-state yield per city owned
 #define MOD_CITY_STATE_SCALE						gCustomMods.isCITY_STATE_SCALE()
 // add a define to modify the score of chokepoint for fort placement
-#define MOD_CHOKEPOINT_FORT_SCORE					gCustomMods.isCHOKEPOINT_FORT_SCORE	()
+#define MOD_CHOKEPOINT_FORT_SCORE					gCustomMods.isCHOKEPOINT_FORT_SCORE()
+// add a possibility to found city on atoll for one unittype or civ
+#define MOD_CITY_ON_ATOLL								gCustomMods.isCITY_ON_ATOLL()
 // allow anyone to choose his panthon, even if an other player has already choosed it.
 #define MOD_ANY_PANTHEON						gCustomMods.isANY_PANTHEON()
 // do not receive tourism from annexed cities, unless a building is present.
@@ -1240,6 +1242,7 @@ enum BattleTypeTypes
 #define GAMEEVENT_CityRazed					"CityRazed", "iii"
 #define GAMEEVENT_CityInvestedBuilding		"CityInvestedBuilding", "iiii"
 #define GAMEEVENT_CityInvestedUnit			"CityInvestedUnit", "iiii"
+#define GAMEEVENT_PlayerSettleSiteMultiplier	"PlayerSettleSiteMultiplier", "iii"
 // City and Player Events
 #define GAMEEVENT_EventActivated			"EventActivated", "ii"
 #define GAMEEVENT_CityEventActivated		"CityEventActivated", "iii"
@@ -1473,8 +1476,10 @@ public:
 	MOD_OPT_DECL(CIV6_ROADS);
 	MOD_OPT_DECL(CIV6_EUREKAS);
 	MOD_OPT_DECL(CITY_STATE_SCALE);
+	MOD_OPT_DECL(CITY_ON_ATOLL);
 
-	MOD_OPT_DECL(CHOKEPOINT_FORT_SCORE);	MOD_OPT_DECL(ANY_PANTHEON);
+	MOD_OPT_DECL(CHOKEPOINT_FORT_SCORE);
+	MOD_OPT_DECL(ANY_PANTHEON);
 	MOD_OPT_DECL(NO_TOURISM_CONQUEST);
 	MOD_OPT_DECL(LIBERATE_WITH_TECHS);
 	MOD_OPT_DECL(DIPLOMACY_CIV4_FEATURES);

@@ -1087,11 +1087,44 @@ bool CvPlot::isAdjacentToIce() const
 }
 #endif
 
+#if defined(MOD_CITY_ON_ATOLL)
+//	--------------------------------------------------------------------------------
+bool CvPlot::isCoastal(int iMinWaterSize) const
+{
+	// If -1 was passed in (default argument) use min water size for ocean define
+	if (iMinWaterSize == -1)
+	{
+		iMinWaterSize = GC.getMIN_WATER_SIZE_FOR_OCEAN();
+	}
 
+	CvPlot** aPlotsToCheck = GC.getMap().getNeighborsUnchecked(this);
+	for (int iCount = 0; iCount<NUM_DIRECTION_TYPES; iCount++)
+	{
+		const CvPlot* pAdjacentPlot = aPlotsToCheck[iCount];
+		if (pAdjacentPlot != NULL)
+		{
+			if (pAdjacentPlot->isWater() && pAdjacentPlot->getFeatureType() != FEATURE_ICE)
+			{
+				if (iMinWaterSize <= 1)
+				{
+					return true;
+				}
+				CvLandmass* pAdjacentBodyOfWater = GC.getMap().getLandmass(pAdjacentPlot->getLandmass());
+				if (pAdjacentBodyOfWater && pAdjacentBodyOfWater->getNumTiles() >= iMinWaterSize)
+				{
+					return true;
+				}
+			}
+		}
+	}
+
+	return false;
+}
+#endif
 //	--------------------------------------------------------------------------------
 bool CvPlot::isCoastalLand(int iMinWaterSize) const
 {
-	if(isWater())
+	if (isWater())
 	{
 		return false;
 	}

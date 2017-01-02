@@ -83,6 +83,18 @@ bool CvCitySiteEvaluator::CanFound(CvPlot* pPlot, const CvPlayer* pPlayer, bool 
 	bool bValid(false);
 
 	// Used to have a Python hook: CANNOT_FOUND_CITY_CALLBACK
+#if defined(MOD_CITY_ON_ATOLL)
+#if defined(MOD_EVENTS_CITY_FOUNDING)
+	if (MOD_EVENTS_CITY_FOUNDING) {
+		if (GAMEEVENTINVOKE_TESTANY(GAMEEVENT_PlayerCanFoundCityRegardless, pPlayer->GetID(), pPlot->getX(), pPlot->getY()) == GAMEEVENTRETURN_TRUE) {
+			return true;
+		}
+		if (GAMEEVENTINVOKE_TESTALL(GAMEEVENT_PlayerCanFoundCity, pPlayer->GetID(), pPlot->getX(), pPlot->getY()) == GAMEEVENTRETURN_FALSE) {
+			return false;
+		}
+	}
+#endif
+#endif
 
 	if(GC.getGame().isFinalInitialized())
 	{
@@ -619,6 +631,19 @@ int CvCitySiteEvaluator::PlotFoundValue(CvPlot* pPlot, const CvPlayer* pPlayer, 
 	//civ-specific bonuses
 	if (pPlayer)
 	{
+#if defined(MOD_CITY_ON_ATOLL)
+#if defined(MOD_EVENTS_CITY_FOUNDING)
+		if (MOD_EVENTS_CITY_FOUNDING) {
+			int iValue = 0;
+			if (GAMEEVENTINVOKE_VALUE(iValue, GAMEEVENT_PlayerSettleSiteMultiplier, pPlayer->GetID(), pPlot->getX(), pPlot->getY()) == GAMEEVENTRETURN_VALUE) {
+				// Defend against modder stupidity!
+				if (iValue >= NO_UNIT && (iValue == NO_UNIT || GC.getUnitInfo((UnitTypes)iValue) != NULL)) {
+					iCivModifier += iValue;
+				}
+			}
+		}
+#endif
+#endif
 		if (pPlayer->GetPlayerTraits()->IsFaithFromUnimprovedForest())
 		{
 			if (iCelticForestCount >= 3)
@@ -1317,7 +1342,12 @@ int CvSiteEvaluatorForSettler::PlotFoundValue(CvPlot* pPlot, const CvPlayer* pPl
 	// Is there any reason this site doesn't work for a settler?
 	//
 	// First must be on coast if settling a new continent
+#if defined(MOD_CITY_ON_ATOLL)
 	bool bIsCoastal = pPlot->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN());
+	if (MOD_CITY_ON_ATOLL) bIsCoastal = pPlot->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN());
+#else
+	bool bIsCoastal = pPlot->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN());
+#endif
 	CvArea* pArea = pPlot->area();
 	CvAssert(pArea);
 	if(!pArea) 

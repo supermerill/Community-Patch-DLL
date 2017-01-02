@@ -42973,7 +42973,12 @@ CvPlot* CvPlayer::GetBestSettlePlot(const CvUnit* pUnit, int iTargetArea, bool& 
 		int iScale = MapToPercent( iRelevantDistance, iEvalDistance, GC.getSETTLER_DISTANCE_DROPOFF_MODIFIER() );
 
 		//on a new continent we want to settle along the coast
+#if defined(MOD_CITY_ON_ATOLL)
+		if (!MOD_CITY_ON_ATOLL && bNewContinent && !pPlot->isCoastalLand()
+			|| MOD_CITY_ON_ATOLL && bNewContinent && !pPlot->isCoastal())
+#else
 		if (bNewContinent && !pPlot->isCoastalLand())
+#endif
 			iScale = 1;
 
 		//if we want offshore expansion, distance doesn't matter, use a flat scale

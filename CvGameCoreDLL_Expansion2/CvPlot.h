@@ -123,6 +123,9 @@ public:
 	bool isAdjacentToIce() const;
 #endif
 	bool isCoastalLand(int iMinWaterSize = -1) const;
+#if defined(MOD_CITY_ON_ATOLL)
+	bool isCoastal(int iMinWaterSize = -1) const;
+#endif
 	int GetSizeLargestAdjacentWater() const;
 
 	bool isVisibleWorked() const;
