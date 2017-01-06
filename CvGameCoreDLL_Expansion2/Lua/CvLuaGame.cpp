@@ -1587,6 +1587,15 @@ int CvLuaGame::lGetBuildingClassCreatedCount(lua_State* L)
 {
 	return BasicLuaMethod(L, &CvGame::getBuildingClassCreatedCount);
 }
+#if defined(MOD_API_LUA_EXTENSIONS)
+//------------------------------------------------------------------------------
+//int getBuildingClassCreatedCount();
+int CvLuaGame::lGetBuildingCreatedCount(lua_State* L)
+{
+	lua_pushinteger(L, GC.getNumBuildingInfos());
+	return true;
+}
+#endif
 //------------------------------------------------------------------------------
 //bool isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra);
 int CvLuaGame::lIsBuildingClassMaxedOut(lua_State* L)

@@ -221,6 +221,9 @@ protected:
 	static int lIsUnitClassMaxedOut(lua_State* L);
 	static int lGetBuildingClassCreatedCount(lua_State* L);
 	static int lIsBuildingClassMaxedOut(lua_State* L);
+#if defined(MOD_API_LUA_EXTENSIONS)
+	static int lGetBuildingCreatedCount(lua_State* L);
+#endif
 
 	static int lGetProjectCreatedCount(lua_State* L);
 	static int lIsProjectMaxedOut(lua_State* L);
