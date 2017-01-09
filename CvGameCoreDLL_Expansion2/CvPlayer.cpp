@@ -43072,7 +43072,7 @@ CvPlot* CvPlayer::GetBestSettlePlot(const CvUnit* pUnit, int iTargetArea, bool& 
 	//by default we return the best plot whether it's safe or not
 	//however, if we find a safe plot which is only marginally worse, return that one
 	CvPlot* pBestFoundPlot = NULL;
-	bool pBestPlotSafe = false;
+	bool bBestPlotSafe = false;
 
 	//see where our settler can go
 	ReachablePlots reachablePlots;
@@ -43126,7 +43126,9 @@ CvPlot* CvPlayer::GetBestSettlePlot(const CvUnit* pUnit, int iTargetArea, bool& 
 		{
 			//first iteration
 			pBestFoundPlot = vSettlePlots[i].pPlot;
-			pBestPlotSafe = !isDangerous;
+			bBestPlotSafe = !isDangerous;
+			if (bBestPlotSafe)
+				break;
 		}
 		else
 		{
@@ -43135,13 +43137,13 @@ CvPlot* CvPlayer::GetBestSettlePlot(const CvUnit* pUnit, int iTargetArea, bool& 
 			{
 				//hooray! we found an alternative
 				pBestFoundPlot = vSettlePlots[i].pPlot;
-				pBestPlotSafe = true;
+				bBestPlotSafe = true;
 				break;
 			}
 		}
 	}
 
-	bIsSafe = pBestPlotSafe;
+	bIsSafe = bBestPlotSafe;
 	return pBestFoundPlot;
 }
 

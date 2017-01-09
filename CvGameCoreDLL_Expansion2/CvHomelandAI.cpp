@@ -1304,7 +1304,6 @@ void CvHomelandAI::PlotGarrisonMoves(bool bCityStateOnly)
 						ExecuteMoveToTarget(pGarrison, pTarget, 0);
 #if defined(MOD_BALANCE_CORE)
 						TacticalAIHelpers::PerformRangedAttackWithoutMoving(pGarrison);
-						pGarrison->finishMoves();
 						UnitProcessed(pGarrison->GetID());
 #endif
 						if(GC.getLogging() && GC.getAILogging())
@@ -3169,6 +3168,8 @@ void CvHomelandAI::PlotAirliftMoves()
 void CvHomelandAI::ReviewUnassignedUnits()
 {
 	ClearCurrentMoveUnits();
+	m_CurrentMoveUnits.setCurrentHomelandMove(AI_HOMELAND_MOVE_UNASSIGNED);
+
 	// Loop through all remaining units
 	for(list<int>::iterator it = m_CurrentTurnUnits.begin(); it != m_CurrentTurnUnits.end(); ++it)
 	{
@@ -3672,8 +3673,8 @@ void CvHomelandAI::ExecuteExplorerMoves(bool bSecondPass)
 					if(GC.getLogging() && GC.getAILogging())
 					{
 						CvString strTemp = pUnit->getUnitInfo().GetDescription();
-						CvString msg = CvString::format("Checking plots for scouting unit %s is %d, %d with base %d, extra %d, bonus %d\n",
-							strTemp.GetCString(), pBestPlot->getX(), pBestPlot->getY(), iScoreBase, iScoreExtra, iScoreBonus);
+						CvString msg = CvString::format("Checking plot (%d:%d) for scout %s %d - base score %d, extra %d, bonus %d\n",
+							pBestPlot->getX(), pBestPlot->getY(), strTemp.GetCString(), pUnit->GetID(), iScoreBase, iScoreExtra, iScoreBonus);
 						LogHomelandMessage(msg);
 					}
 				}
@@ -8271,6 +8272,7 @@ const char* homelandMoveNames[] =
 	"H_MOVE_TO_SAFETY",
 	"H_MOVE_MOBILE_RESERVE",
 	"H_MOVE_SENTRY",
+	"H_MOVE_SENTRY_NAVAL",
 	"H_MOVE_WORKER",
 	"H_MOVE_WORKER_SEA",
 	"H_MOVE_PATROL",
@@ -8297,6 +8299,8 @@ const char* homelandMoveNames[] =
 	"H_MOVE_AIRLIFT",
 	"H_MOVE_DIPLOMAT_EMBASSY",
 	"H_MOVE_MESSENGER",
+	"H_MOVE_SECONDARY_SETTLER",
+	"H_MOVE_SECONDARY_WORKER",
 };
 
 const char* directiveNames[] = 
