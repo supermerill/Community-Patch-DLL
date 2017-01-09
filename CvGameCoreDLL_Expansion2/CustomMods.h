@@ -400,7 +400,6 @@
 #define MOD_CITY_STATE_SCALE						gCustomMods.isCITY_STATE_SCALE()
 // add a define to modify the score of chokepoint for fort placement
 #define MOD_CHOKEPOINT_FORT_SCORE					gCustomMods.isCHOKEPOINT_FORT_SCORE	()
-
 // allow anyone to choose his panthon, even if an other player has already choosed it.
 #define MOD_ANY_PANTHEON						gCustomMods.isANY_PANTHEON()
 // do not receive tourism from annexed cities, unless a building is present.
