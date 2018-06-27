@@ -477,17 +477,17 @@
 	WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_NATIONAL_HAPPINESS' AND Value= 1 );
 
 	UPDATE Language_pl_PL
-	SET Text = '{@1_CityName} nie może dłużej tworzyć {@2_BldgName[2]}. Utracona [ICON_PRODUCTION] zostaje zamieniona na {3_NumGold}[ICON_CULTURE]!'
+	SET Text = '{1_CityName} nie może dłużej tworzyć {@2_BldgName[2]}. Utracona [ICON_PRODUCTION] zostaje zamieniona na {3_NumGold}[ICON_CULTURE]!'
 	WHERE Tag = 'TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_WONDER_CONSOLATION_TWEAK' AND Value= 2 );
 
 	UPDATE Language_pl_PL
-	SET Text = '{@1_CityName} nie może dłużej tworzyć {@2_BldgName[2]}. Utracona [ICON_PRODUCTION] zostaje zamieniona na {3_NumGold}[ICON_GOLDEN_AGE]!'
+	SET Text = '{1_CityName} nie może dłużej tworzyć {@2_BldgName[2]}. Utracona [ICON_PRODUCTION] zostaje zamieniona na {3_NumGold}[ICON_GOLDEN_AGE]!'
 	WHERE Tag = 'TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_WONDER_CONSOLATION_TWEAK' AND Value= 3 );
 
 	UPDATE Language_pl_PL
-	SET Text = '{@1_CityName} nie może dłużej tworzyć {@2_BldgName[2]}. Utracona [ICON_PRODUCTION] zostaje zamieniona na {3_NumGold}[ICON_RESEARCH]!'
+	SET Text = '{1_CityName} nie może dłużej tworzyć {@2_BldgName[2]}. Utracona [ICON_PRODUCTION] zostaje zamieniona na {3_NumGold}[ICON_RESEARCH]!'
 	WHERE Tag = 'TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_WONDER_CONSOLATION_TWEAK' AND Value= 4 );
 
 	UPDATE Language_pl_PL
-	SET Text = '{@1_CityName} nie może dłużej tworzyć {@2_BldgName[2]}. Utracona [ICON_PRODUCTION] zostaje zamieniona na {3_NumGold}[ICON_PEACE]!'
+	SET Text = '{1_CityName} nie może dłużej tworzyć {@2_BldgName[2]}. Utracona [ICON_PRODUCTION] zostaje zamieniona na {3_NumGold}[ICON_PEACE]!'
 	WHERE Tag = 'TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='COMMUNITY_CORE_BALANCE_WONDER_CONSOLATION_TWEAK' AND Value= 5 );

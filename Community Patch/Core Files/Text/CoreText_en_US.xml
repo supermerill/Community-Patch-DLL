@@ -2332,10 +2332,10 @@
 
 		<!-- Capture City -->
 		<Row Tag="TXT_KEY_NOTIFICATION_QUEST_CAPTURE_CITY">
-			<Text>Tactical experts from {@2_CivName} believe {@1_CityName} to be of significant strategic importance. Acquire it by any means, and you will be greatly rewarded!</Text>
+			<Text>Tactical experts from {@2_CivName} believe {1_CityName} to be of significant strategic importance. Acquire it by any means, and you will be greatly rewarded!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_CAPTURE_CITY">
-			<Text>Tacticians from {@2_CivName} want you to capture {@1_CityName}</Text>
+			<Text>Tacticians from {@2_CivName} want you to capture {1_CityName}</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_NOTIFICATION_QUEST_GET_CITY_COMPLETE">
@@ -2347,7 +2347,7 @@
 
 		<!-- Coup -->
 		<Row Tag="TXT_KEY_NOTIFICATION_QUEST_COUP">
-			<Text>Intelligence reports from {@2_CivName} indicate that {@1_CityName} is ripe for a coup. Complete this coup, and you will be greatly rewarded!</Text>
+			<Text>Intelligence reports from {@2_CivName} indicate that {1_CityName} is ripe for a coup. Complete this coup, and you will be greatly rewarded!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_QUEST_COUP">
 			<Text>Intelligence from {@1_CivName}</Text>
@@ -5250,7 +5250,7 @@
 
 		<!-- Attack City -->
 		<Row Tag="TXT_KEY_MISC_YOU_ATTACKED_CITY_CP">
-			<Text>Your {@2_UnitName} bombarded the enemy City of {@1_CityName} ({3_Num} damage)!</Text>
+			<Text>Your {@2_UnitName} bombarded the enemy City of {1_CityName} ({3_Num} damage)!</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_MISC_YOU_ATTACK_BY_AIR_ACTUALLY">
@@ -5262,7 +5262,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR_CITY">
-			<Text>The City of {@1_CityName} ({3_Num} damage) was bombarded by an enemy {@2_EnUName}!</Text>
+			<Text>The City of {1_CityName} ({3_Num} damage) was bombarded by an enemy {@2_EnUName}!</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_MISC_ENEMY_AIR_UNIT_INTERCEPTED_CITY">

@@ -2300,7 +2300,7 @@
 
 		<!-- Capture City -->
 		<Row Tag="TXT_KEY_NOTIFICATION_QUEST_CAPTURE_CITY">
-			<Text>Eksperci od taktyki z {@2_CivName} wierzą, że miasto {@1_CityName} ma istotne znaczenie strategiczne. Zdobądź je za wszelką cenę, a spotka cię duża nagroda!</Text>
+			<Text>Eksperci od taktyki z {@2_CivName} wierzą, że miasto {1_CityName} ma istotne znaczenie strategiczne. Zdobądź je za wszelką cenę, a spotka cię duża nagroda!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_CAPTURE_CITY">
 			<Text>Stratedzy z {@2_CivName[2]}, chcą abyśmy zajęli {@1_CityName[4]}</Text>
@@ -2315,7 +2315,7 @@
 
 		<!-- Coup -->
 		<Row Tag="TXT_KEY_NOTIFICATION_QUEST_COUP">
-			<Text>Doniesienia wywiadu z {@2_CivName[2]} wskazują na to, że {@1_CityName} {@1_CityName: plural 1?{@1_CityName:gender masculine?dojrzał; feminine?dojrzała; neuter?dojrzało}; 2?{@1_CityName: gender masculine?dojrzeli; *?dojrzały}} do zamachu stanu. Dokonaj go, a spotka cię duża nagroda!</Text>
+			<Text>Doniesienia wywiadu z {@2_CivName[2]} wskazują na to, że {1_CityName} {@1_CityName: plural 1?{@1_CityName:gender masculine?dojrzał; feminine?dojrzała; neuter?dojrzało}; 2?{@1_CityName: gender masculine?dojrzeli; *?dojrzały}} do zamachu stanu. Dokonaj go, a spotka cię duża nagroda!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_QUEST_COUP">
 			<Text>Doniesienia z {@1_CivName[2]}</Text>
@@ -5174,7 +5174,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR_CITY">
-			<Text>Miasto {@1_CityName} ({3_Num} {3: plural 1?obrażenie; 2?obrażenia; 3?obrażeń}) zostało zbombardowane przez {@2_EnUName: plural 1?{@2_EnUName: gender masculine?wrogiego; feminine?wrogą; neuter?wrogie;}; 2?{@2_EnUName: gender masculine?wrogich; feminine?wrogie; *?wrogie;}} {@2_EnUName}!</Text>
+			<Text>Miasto {1_CityName} ({3_Num} {3: plural 1?obrażenie; 2?obrażenia; 3?obrażeń}) zostało zbombardowane przez {@2_EnUName: plural 1?{@2_EnUName: gender masculine?wrogiego; feminine?wrogą; neuter?wrogie;}; 2?{@2_EnUName: gender masculine?wrogich; feminine?wrogie; *?wrogie;}} {@2_EnUName}!</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_MISC_ENEMY_AIR_UNIT_INTERCEPTED_CITY">

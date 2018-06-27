@@ -102,7 +102,7 @@
 			<Text>Enact an Open Door policy for a City-State. If successful, all civilizations will immediately have their [ICON_INFLUENCE] Influence set at 40 with the City-State, and no one can become the City-State's Ally until this Proposal is repealed.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOLUTION_CHOICE_CITY_CSD">
-			<Text>{@1_CityName}</Text>
+			<Text>{1_CityName}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_LEAGUE_OVERVIEW_PREFIX_PROPOSER">
 			<Text>{1_CivAdj}</Text>

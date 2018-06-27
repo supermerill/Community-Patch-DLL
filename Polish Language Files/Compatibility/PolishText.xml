@@ -996,7 +996,7 @@ Project.xml
 			<Text>Uchwalenie polityki otwartych drzwi w państwie-mieście. Jeśli się powiedzie, [ICON_INFLUENCE] wpływy wszystkich cywilizacji ustalą się natychmiast na poziomie 40 w tym państwie-mieście i nikt nie będzie mógł się stać sojusznikiem tego państwa-miasta dopóki ta rezolucja nie zostanie odrzucona.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RESOLUTION_CHOICE_CITY_CSD">
-			<Text>{@1_CityName}</Text>
+			<Text>{1_CityName}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_LEAGUE_OVERVIEW_PREFIX_PROPOSER">
 			<Text>{1_CivAdj}</Text>
