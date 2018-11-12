@@ -128,6 +128,9 @@ CvCity::CvCity() :
 	, m_iCityBuildingRangeStrikeModifier("CvCity::m_iCityBuildingRangeStrikeModifier", m_syncArchive)
 #endif
 	, m_iPopulation("CvCity::m_iPopulation", m_syncArchive)
+#if defined(MOD_MAX_CITY_POP)
+	, m_iMaxPopulation("CvCity::m_iMaxPopulation", m_syncArchive)
+#endif
 	, m_iHighestPopulation("CvCity::m_iHighestPopulation", m_syncArchive)
 	, m_iExtraHitPoints("CvCity::m_iExtraHitPoints", m_syncArchive)
 	, m_iNumGreatPeople("CvCity::m_iNumGreatPeople", m_syncArchive)
@@ -1454,6 +1457,9 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iGameTurnFounded = 0;
 	m_iGameTurnAcquired = 0;
 	m_iPopulation = 0;
+#if defined(MOD_MAX_CITY_POP)
+	m_iMaxPopulation = 0;
+#endif
 #if defined(MOD_BALANCE_CORE)
 	m_iAdditionalFood = 0;
 	m_iCityBuildingBombardRange = 0;
@@ -16917,6 +16923,24 @@ long CvCity::getRealPopulation() const
 	VALIDATE_OBJECT
 	return (((long)(pow((double)getPopulation(), 2.8))) * 1000);
 }
+
+
+//	--------------------------------------------------------------------------------
+#if defined(MOD_MAX_CITY_POP)
+int CvCity::getMaxPopulation() const
+{
+	VALIDATE_OBJECT
+	return m_iMaxPopulation;
+}
+
+void CvCity::setMaxPopulation(int iNewValue)
+{
+	VALIDATE_OBJECT
+	m_iMaxPopulation = iNewValue;
+	CvAssert(getMaxPopulation() >= 0);
+}
+#endif
+
 
 //	--------------------------------------------------------------------------------
 int CvCity::getHighestPopulation() const

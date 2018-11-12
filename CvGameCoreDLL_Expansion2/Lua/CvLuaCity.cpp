@@ -2848,6 +2848,25 @@ int CvLuaCity::lGetRealPopulation(lua_State* L)
 	return BasicLuaMethod(L, &CvCity::getRealPopulation);
 }
 //------------------------------------------------------------------------------
+#if defined(MOD_MAX_CITY_POP)
+//int getMaxPopulation();
+int CvLuaCity::lGetMaxPopulation(lua_State* L)
+{
+	return BasicLuaMethod(L, &CvCity::getMaxPopulation);
+}
+//------------------------------------------------------------------------------
+//void setMaxPopulation(int iNewValue);
+int CvLuaCity::lSetMaxPopulation(lua_State* L)
+{
+	CvCity* pkCity = GetInstance(L);
+	int iValue = lua_tointeger(L, 2);
+	pkCity->setMaxPopulation(iValue);
+
+	return 1;
+	//	return BasicLuaMethod(L, &CvCity::setMaxPopulation);
+}
+#endif
+//------------------------------------------------------------------------------
 //int getHighestPopulation();
 int CvLuaCity::lGetHighestPopulation(lua_State* L)
 {

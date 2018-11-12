@@ -231,6 +231,10 @@ protected:
 	static int lSetPopulation(lua_State* L);
 	static int lChangePopulation(lua_State* L);
 	static int lGetRealPopulation(lua_State* L);
+#if defined(MOD_MAX_CITY_POP)
+	static int lGetMaxPopulation(lua_State* L);
+	static int lSetMaxPopulation(lua_State* L);
+#endif
 
 	static int lGetHighestPopulation(lua_State* L);
 	static int lSetHighestPopulation(lua_State* L);

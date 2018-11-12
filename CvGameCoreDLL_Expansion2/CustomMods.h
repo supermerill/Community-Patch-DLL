@@ -424,8 +424,10 @@
 #define MOD_CIV6_ROADS								gCustomMods.isCIV6_ROADS()
 // scale city-state yield per city owned
 #define MOD_CITY_STATE_SCALE						gCustomMods.isCITY_STATE_SCALE()
+// Hard cap for pop for a city, set by lua code
+#define MOD_MAX_CITY_POP							gCustomMods.isMAX_CITY_POP()
 // allow anyone to choose his panthon, even if an other player has already choosed it.
-#define MOD_ANY_PANTHEON						gCustomMods.isANY_PANTHEON()
+#define MOD_ANY_PANTHEON							gCustomMods.isANY_PANTHEON()
 // Changes melee ship units to be cargo carrying units with added promotions for ship and cargo
 #define MOD_CARGO_SHIPS								gCustomMods.isCARGO_SHIPS()
 // Changes for the CivIV Diplomacy Features mod by Putmalk - AFFECTS SAVE GAME DATA FORMAT (v36)
@@ -1529,6 +1531,7 @@ public:
 	MOD_OPT_DECL(CIV6_ROADS);
 	MOD_OPT_DECL(CIV6_EUREKAS);
 	MOD_OPT_DECL(CITY_STATE_SCALE);
+	MOD_OPT_DECL(MAX_CITY_POP);
 	MOD_OPT_DECL(ANY_PANTHEON);
 
 	MOD_OPT_DECL(DIPLOMACY_CIV4_FEATURES);

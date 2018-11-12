@@ -582,7 +582,10 @@ public:
 	void changePopulation(int iChange, bool bReassignPop = true);
 
 	long getRealPopulation() const;
-
+#if defined(MOD_MAX_CITY_POP)
+	int getMaxPopulation() const;
+	void setMaxPopulation(int iNewValue);
+#endif
 	int getHighestPopulation() const;
 	void setHighestPopulation(int iNewValue);
 
@@ -1695,6 +1698,9 @@ protected:
 	FAutoVariable<int, CvCity> m_iPopulation;
 	FAutoVariable<int, CvCity> m_iHighestPopulation;
 	FAutoVariable<int, CvCity> m_iExtraHitPoints;
+#if defined(MOD_MAX_CITY_POP)
+	FAutoVariable<int, CvCity> m_iMaxPopulation;
+#endif
 
 	FAutoVariable<int, CvCity> m_iNumGreatPeople;
 	FAutoVariable<int, CvCity> m_iBaseGreatPeopleRate;

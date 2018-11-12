@@ -1043,6 +1043,11 @@ bool CvCityCitizens::IsAvoidGrowth()
 
 bool CvCityCitizens::IsForcedAvoidGrowth()
 {
+#if defined(MOD_MAX_CITY_POP)
+	if (m_pCity->getMaxPopulation() > 0 && m_pCity->getPopulation() >= m_pCity->getMaxPopulation()) {
+		return true;
+	}
+#endif
 	return m_bForceAvoidGrowth;
 }
 
